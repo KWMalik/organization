@@ -1,0 +1,9 @@
+
+Adding org as a place to push to/pull from:
+	git remote add org git@github.com:tobyjbanks/organization.git
+
+Now I can run commands such as:
+	git push org 
+	git pull org 
+
+
