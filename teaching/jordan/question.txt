@@ -1,0 +1,6 @@
+1. Write a function to compute the area of a square?
+2. Write a class that represents a 2D point.
+3. Write a function that computes the area of a rectangle that is defined as two points
+4. 
+
+

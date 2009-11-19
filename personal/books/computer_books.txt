@@ -1,0 +1,7 @@
+
+Numerical Recipes -
+	A lot of different algorithms for doing complex mathematics.
+
+DSP Books - 
+	See my DSP guide.
+

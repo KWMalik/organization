@@ -1,0 +1,154 @@
+
+Production/Design:
+	What makes a videogame good?
+	What makes a videogame sell?
+	Looking at the language of videogame design
+
+Math
+	Vectors and Matrices
+	Quaternions
+	Probabilities
+	Simulation
+	Trigonometry
+	Calculus
+
+C++
+	Design Patterns
+		Prototype
+		Pimpl
+		Singleton
+		Abstract Factory
+
+	Data structures
+		Vector
+		Linked List
+		Stack
+		Queue
+		Array
+		IndexedArray
+
+	Memory Management and Tools
+		My quick pool
+		Operator Overloading
+		All allocations go through one tunnel
+			Advantages and Disadvantages
+
+	Profiling and optimization
+	Templating vs. virtual functions
+	Compile-time decisions
+	Reducing compile times
+		Pimpl
+		Precompiled headers
+		Function Objects
+		
+	Dynamic Libraries
+		PSP
+		Wii
+		PS3
+		Xbox 360
+		Mac/Linux/Unix
+		Windows
+
+	C++0x
+		RValue References
+		Concepts
+		What else is in it?
+
+
+Scripting
+	Lua
+	Python
+
+Build Systems
+	Make
+	QMake
+	Scons
+	Nant
+	Dave's
+
+	
+Technologies for the Future
+	GPU Computing
+		CUDA/OpenCL
+	DirectX 11
+	OpenGL 3.1
+	Ray-tracing
+	Voxels
+	Multithreading
+		Intel Thread Building Blocks
+		Grand Central Dispatch
+
+Game Programming
+	Artificial Intelligence
+		Multithreading update loops
+		Using GPU acceleration for solving common problems.
+
+
+3D Rendering
+	Pipelines and building triangle lists
+	Optimizing 3D pipelines with OpenCL
+	Design decisions in 3D pipelines
+	COLLADA
+	UV Mapping
+	MegaTexture/Virtual Texturing/Clipmapping
+
+Shaders
+	Tools
+		Mac OpenGL Shader Builder
+		RenderMonkey (ATI)
+		FX Composer (NVidia)
+	Vertex
+	Fragment/Pixel
+	Geometry
+	Common Shading Algorithms
+		Lambert
+		Gouraud
+		Phong
+		Blinn
+		Oren-Nayar
+		Cook-Torrance
+		Ward Anisotropic
+	Concepts
+		Specular Highlight
+		How materials come from Maya
+	http://en.wikipedia.org/wiki/Category:3D_computer_graphics
+
+
+
+Physics
+	Collision Detection
+	Joints
+	Kinematics
+	Particles
+
+
+
+Difference in Hardware Architecture
+	PS3 vs. Wii vs. 360 vs. Larabee vs. GPU
+	Planning for bus optimization
+
+Audio
+	Musimathics
+	Hardware capabilites
+	OpenAL
+	CoreAudio
+		Architecture
+		What can be learned?
+
+DSP
+	What is it?
+	What is involved?
+	Where it may apply to games in the future?
+
+
+Open Source Libraries
+	Intel Thread Building Blocks
+	Bullet/ODE
+	Ogre3D
+	Boost
+	SQL Lite
+		
+
+
+
+

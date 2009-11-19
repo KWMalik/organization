@@ -1,0 +1,217 @@
+Lecture 20, Oct. 30, 2009
+=========================
+scribed by Matt Orr
+
+Today: continue the discussion about built-in data structures!
+
+We were talking about pairs previously.
+It turns out that we can have groupings of other sizes as well!
+
+Ex.
+
+Triple (3,5,7)
+
+Quadruple('abc',True,5.0)...objects don't all have to be intergers, they can be a mix!
+.
+.
+.Etc. 
+
+Also, there is a zero element tuple!: ( )
+This is a tuple with nothing in it.
+
+There is also a one element tuple:
+We cannot represent it as (4), because that would be interpreted as just the number 4 with brackets!
+So, we represent a single element tuple like this: (4,), with a comma following the element!
+This comma is needed to distinguish a single element tuple from an argument containing an object.
+
+Lists! (The built-in kind)
+=========================
+
+Turns out that Python already knows what a list is!
+
+So, we now have tuples and lists to group data!
+When do we use tuples and when do we use lists?
+
+We use tuples when data elements are fixed (Ex. in max_min_list, you knew there were exactly
+two items).
+
+We use Lists when the number of data elements are nto fixed and may be arbitrarily large.
+
+This is a bit of an oversimplification. The true difference is a bit more subtle than this!
+However, this is good enough for now. More details will come once the "horrors" are unleashed.
+
+Recall: There is something awful that Lushman has been keeping from us up until now.
+
+SO! What does a list look like?
+
+>>> L = [1,2,3,4,5]
+>>> L[0]
+1
+>>> L[1]
+2
+
+Lists are indexed the same way as we've seen before with other objects.
+
+We can also add lists the way we used to:
+
+>>> [1,2,3] + [4,5,6]
+[1,2,3,4,5,6]
+>>>3 * [1,2,3]
+[1,2,3,1,2,3,1,2,3]
+
+We can also do things like...
+
+>>>[1,2,3,4,5,6][2:4]
+[3,4]
+
+What does this mean?
+This is called using a "slice" (the slice being [2:4]).
+The number before the slice denotes the index of the first item to be included in the list 
+that will be returned. The second number, after the colon, is the index of the first item to
+exclude from the list that will be returned.
+
+So, saying [2:4] means that the returned list will start at the 2nd element in the list (in 
+this case 3) and end at the 3rd element (in this case, 4) and exclude the 4th element (5).
+
+Can also do...
+
+>>>[1,2,3,4,5,6][2:] < this one only tells it where to begin. Giving th rest of the list after that.
+[3,4,5,6]
+
+>>>[1,2,3,4,5,6][:]<doesn't specify a beginning or an end, so it returns all of the list.
+[1,2,3,4,5,6]
+
+>>>[1,2,3,4,5,6][:2]<only tells which values to exclude.
+[1,2]
+
+What we want to ask is:
+"If I want to write a function on a list like this, what would that function look like?"
+The data, the list, should guide the form of the function!
+
+We know that the lists we constructed previously have two characteristics:
+>Clear head and tail
+>Tail is a list
+
+This gives us the template:
+
+def list_fn(L)
+	# if L == Empty
+		# base case
+	#else:
+		#...L.hd...list_fn(L.tl)
+
+Nothing is stopping us from doing the same for the built-in lists.
+
+You could make the template:
+
+def list_fn(L):
+	#if L == [L]:
+		#base case
+	#else:
+		#... L[0]... List_fn(L[1:])
+
+Although this works, it does not seem to match the appearance of the built-in lists,
+as the elements are presented all at once, instead of one at a time.
+
+With the list objects we went through each element and once. Built-in lists have data lain 
+out. We need to make a template that fits this.
+
+We need to make a template that allows us to accomadate the indefinite ammount of data but
+but addresses the elements of the list all at once.
+
+What comes to mind, then, would be to do something like the following:
+
+def list_fn(L):
+	#for each x in L
+		#do something with x (this is vague!)
+
+So what might we do?
+
+Look at the language of the template above! This is the first time we've used language in a
+commanding fashion! This signifies a pardigm shift towards our functions.
+
+What should we do with x?
+
+Should probably do something that results in the length of the list!
+
+What we would like to do requires us to do something new! To make this model workable,
+moving into command-oriented models, a HORRIBLE seceret must be revealed!
+
+Once this secret is revealed... EVERYTHING WILL CHANGE!
+
+<Stephen King quote>
+
+THE SECRET IS:
+==============
+
+YOU CAN CHANGE THE VALUES OF A VARIABLE!
+========================================
+
+This is something we have not encountered yet!
+
+Up until now, we've used variables to name values of interest - but have never changed them.
+We have never changed the value of a variable once declared.
+
+May not seem like a big deal , but a lot things we've been doing easily will now cause worry
+and chaos because of this!
+
+What DOES it mean to change a variable?
+
+Example!
+========
+
+def f(n):
+	a = 1
+	b = a + 1
+	a = 2 * a + 3 # a is now equal to 5. The value of a has been changed. A new a is not being declared.
+
+
+Recall: scope inside and outside of a function.
+======
+
+This is NOT declaring two different a's, but declaring one, then changing it.
+
+In particular, not the line: a = 2 * a + 3.
+It may seem strange, since it looks like you're setting up an equation in a variable and asking the computer to solve it. It is NOT. Instead it says this:
+
+new value of a = 2 * (old value of a) + 3
+
+By now the functions we've been writing are clearly correct and won't fail once we've written them out.
+
+Trying to convince yourself of the same thing with changing variables is not so easy. You have variables changing over time, which can become confusing!
+
+So, now, let's make use of this template and write a function!
+
+We can use this idea to find the length of a built-in list:
+
+We want to return something to the user, so we will set up a variable that will return the length. This will be called "result". It will start as 0, every time there is an x in L, it will increase by one!
+
+def length(L):
+	result = 0
+	for x in L:
+		result = result + 1
+	return result
+
+What does this mean?
+
+for every <var> in <List>:
+	<commands>
+
+This is a LOOP!
+
+<var> takes on the values of successive items in the <List>. For each such value of the vriable, it executes the <commands>
+
+There is also a built in function that does this for you! If you did want to know the length of a list, you wouldn't need to write this out!
+
+Exercise!
+========
+
+Find the sum of the elements in a list.
+
+def sum_list(L):
+	result = 0
+	for x in L:
+		result = result + x
+	return result
+
+This also has a built in function, called Sum, that does this for you. Once we begin using built-in lists, we have access to built-in functions to use on them!

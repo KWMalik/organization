@@ -1,0 +1,43 @@
+CSCI 1105/INFX 1604  Assignment 2
+=================================
+
+Place all of your solutions in a file called a2.py.
+
+Provide appropriate documentation for all functions and classes you write.
+
+1) Write a function but_not_both that takes two Boolean parameters x and y.
+  but_not_both should return True if *exactly one* of x and y is True;
+  otherwise, it returns False.  In other words, this function should mimic
+  the common English understanding of the word "or".  Note:  it is possible to
+  write this function *very* succinctly.  See if you can do it.
+
+2) Define a class to represent 3-dimensional points.  Your class should have
+  a single initialization method that takes three parameters (in addition
+  to self) and uses these to initialize fields x, y, and z accordingly.
+  Use this class to solve the remaining questions.
+
+3) Write a function called interpolate that takes three parameters p1, p2, and
+  k, where p1 and p2 are points, and k is assumed to lie between 0 and 1.  The
+  function should return a new point that is k of the distance along the line
+  from p1 to p2.  For example, if k=0.5, the function should return the point
+  halfway between p1 and p2, and if k=0.25, the function should return the
+  point one quarter of the way from p1 to p2.  To compute this point, add k
+  times the coordinate-wise difference between p1 and p2, to the coordinates
+  of p1, to get the coordinates of the new point.
+
+4) Develop a function called classify_triangle that takes three 3-dimensional
+  points and returns a string indicating what kind of triangle the three
+  points define.  Possible returned strings include:
+
+   * "scalene" if all side lengths are different
+   * "isosceles" if two side lengths are the same
+   * "equilateral" if all side lengths are the same
+   * (BONUS) "not a triangle" if two or more points are the same, or the
+     points all lie on a straight line
+
+  Note:  it is not necessary to use the sqrt function to compare side lengths;
+   if x = y then sqrt(x) = sqrt(y), so you can do the comparisons without
+   taking square roots.  The "not a triangle" case can be done without
+   square roots as well, though the calculation is less straightforward.
+   If you choose not to solve the bonus component of this question, then you
+   may assume that the input will always be a valid triangle.

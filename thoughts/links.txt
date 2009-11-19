@@ -1,0 +1,56 @@
+http://www.gamedaily.com/articles/features/report-online-to-represent-one-third-of-total-game-software-market-in-2011/70898/?biz=1
+
+http://www.next-gen.biz/news/online-game-sales-to-top-11b-this-year-analyst
+
+http://www.next-gen.biz/news/tiga-urges-govt-investment-in-start-up-games-firms
+
+http://www.next-gen.biz/news/ea-ceo-sees-digital-future
+
+http://www.next-gen.biz/news/ea-core-business-model-“a-burning-platform”
+
+http://games.slashdot.org/article.pl?sid=07/09/12/1412249
+
+
+
+http://www.gamesindustry.biz/articles/tiga-calls-for-new-government-investment
+
+
+
+http://www.gamesindustry.biz/articles/14-percent-of-americans-have-gaming-subscriptions
+
+
+http://www.gamesindustry.biz/articles/ico-partners-thomas-bidaux-interview
+
+Technology:
+ - Microsoft Visual Studio
+ - NVidia PhysX
+ - Boost
+ - Loki
+
+Engines:
+ - Unreal
+ - Unity
+
+Modeling/Animation:
+ - Maya
+ - Mudbox
+
+Animation:
+ - Natural Motion
+ - MotionBuilder
+
+GA:
+ - Photoshop
+ - Illustrator
+
+Zoho
+
+Competition:
+ - Zynga
+
+
+Revision Control:
+ - github (depends on speed)
+ - git server
+ - Perforce Server
+

@@ -1,0 +1,121 @@
+Notes
+
+not x is True if x is False, False, if x is True
+
+So any time you have 
+	if condition:
+		return False
+	else:
+		return True
+
+You can replace it with
+	return not (condition
+
+Short-circuit Boolean evaluation
+
+x and y
+
+if x is True the result is True if y is True, False if y is False.
+if x is True, the result is y.
+
+BUT
+
+if x is False, then the result is False, no matter what y is.
+So if Python is evaluating x and y and discovers that x is False, it knows the answer is false without even looking at y - so it doesn't.
+
+In evaluating an and:
+
+	a and b and c and d....
+
+Python evaluates the operands left-to-right and stops if it ever encounters a False - because then the whole expression is False.
+
+Similarly: x or y - if x is false, the result is y
+
+BUT if x is True, the result is True no matter what y is.
+
+So when Python evaluates a or b or c or d.....
+it evaluates the operands left-t-right, and stops if it even encounters a True, because then the whole expression is True.
+
+Why is this useful?
+
+1. Suppose condition 1 is slow to evaluate and condition 2 is quick to evaluate and usually False
+Then:
+		condition 1 and condition2
+
+ALWAYS evaluates condition1 - slow
+
+BUT 
+	condition2 AND condition1
+
+usually doesn't evaluate condition1 - quick.
+
+So you may get faster programs if you order your conditions carefully.
+
+2. Suppose condition2 only makes sense if condition1 is True.
+eg.
+	condition1: b != 0
+	condition2: a/b < c # if b = 0, this doesn't make sense - div by 0.
+
+if a/b < c and b != 0 # crashes when b = 0
+
+BUT
+
+b != 0 and a/b <c # doesn't crash when b = 0 (yay)
+
+Without short-circuiting:
+	if b != 0:
+		if a/b < c:
+
+
+------------------------section break you guys-----------------------------------------------------------
+Aggregate Data
+
+Exercize: 
+Suppose you have two points in the plane, (x, y) and (x2, y2) and you want to figure out the distance between them.
+
+SQRT([x1-x2]^2+[y1-y2]^2)
+
+Note: we'll need the square root function from the math library
+
+>>> from math import sqrt
+
+def distance (x1, y1, x2, y2):
+	return sqrt((x1 - x2) ** 2 + (y1 - y2) ** 2)
+
+This works, but having parameters like (x1, y1, x2, y2) is cumbersome!
+
+Exercize:
+Find the midpoint of (x1, y1), (x2, y2)
+
+([x1 + x2] / 2, [y1 + y2] / 2)
+
+Now you need to return two pieces of data.
+We want to package (x1, y1) together as a unit, and also (x2, y2).
+
+The we cound write distance as def distance (p1, p2): # Much clearer.
+We want to create a new kind of data: a Point.
+
+>>> class Point:
+	pass   # Pass means do nothing
+
+What does this give us?  The ability to make Point:
+
+>>> p1 = Point () # So a class is like a function that returns a "thing" called a Point.
+			  # These "things" called Objects.
+>>> p1
+<__main__.Point instance at 0x00000000032or something>
+>>> p1.x = 2
+>>> p1.x
+2
+>>> p1.y = 3
+>>> p1.x
+2
+>>> p1.y
+3
+
+And any other tags we want.
+
+Now we can write our distance function:
+
+def distance (p1, p2):
+	return sqrt [ (p1.x - p2.x) **2 + (p1.y - p2.y) ** 2 ]

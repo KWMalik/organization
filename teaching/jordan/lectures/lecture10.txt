@@ -1,0 +1,104 @@
+October 2nd, Friday NOTE DAY
+
+>>> def list.fn(l)
+	# if l is empty
+		# handle the empty case
+	# else l is not empty
+		# ... l.hd ... l.tl
+
+But l.tl is another list! So what are we likely to want to do with it?
+- The same thing we're doing to the original list!
+
+>>> def list.fn(l)
+	# if l is empty
+		# handle the empty case
+	# else l is not empty
+		# ... l.hd ... list.fn(l.tl) ...
+
+example:
+determine the length of a list
+ie: the number of elements in it
+
+>>> def length(l):
+	if l == Empty:     # the length of an empty list is 0
+		return 0
+	else:
+		return 1 + length(l.tl)     # the length of a non empty list 
+					# is one more than the length of its tail
+
+there we have a function calling itself as a helper function!
+does this work?
+
+>>> length(Empty)
+0
+>>> length(List(2, Empty))
+1
+>>> length(List('a', List('b', List('c', Empty))))
+3
+
+Trace the steps python performs
+>>> length(List('a', List('b', List('c', Empty))))
+=> 1 + length(List('b', List('c', Empty)))
+=> 1 + 1 + length(List('c', Empty))
+=> 1 + 1 + 1 + length(List(Empty))
+=> 1 + 1 + 1 + 0
+=> 3
+
+It works because everytime length calls itself, the argument is a shorter list
+So eventually the argument is empty and then length stops calling itself
+
+The technique of having a function call itself is called recursion
+List is a recursive data structure  - it uses its own definition to define itself
+Length is a recursive function - it uses its own definition to achieve its purpose
+
+Example:
+Take a list and return the list that results from doubling every term
+
+>>> def double(l):
+	if l = empty:
+		return Empty
+	else:
+		return List(2*l.hd, double(l.tl))
+
+Example:
+Take a list of years and return a list of all the leap years in the original list
+
+	Skeleton of the Answer
+def leap.years(l):
+	if l == Empty
+		
+	else:
+		l.hd, leap.years(l.tl)
+
+	Answer
+def leap.years(l):
+	if l == Empty
+		return Empty
+	else:
+		if is_leap_year(l.hd), leap.years(l.tl):		# function from assignment 1
+			return List(l.hd, leap.years(l.tl))		# if the year in the head is a leap
+		else:						# year add it to our return list otherwise
+			return leap.years(l.tl)			#  get rid of it and look at the tail
+
+Example: Cards
+A card is a suit and a rank (2-14)    # Aces are high. Jack=11, Queen=12, King=13, Ace=14
+
+Class Card:
+>>> def__init__(self,suit,rank):
+	self.suit=suit
+	self.rank=rank
+
+Given a hand (ie: a non-empty list of cards), what is the highest rank in the hand?
+
+We can modify the data definition for lists to describe non empty lists.
+
+A non-empty list id either
+1) a singleton list ie:one element
+or
+2) List(head,tail), where tail is a non-empty list	# this looks a lot like the original definition we were given for list, so that's good
+
+>>> def non-empty_list_fn(l):
+	# if the list is a singleton
+		# base case ... l.hd ...
+	# else
+		# ... l.hd ... non-empty_list_fn(l.tl)

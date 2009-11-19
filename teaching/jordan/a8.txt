@@ -1,0 +1,62 @@
+CSCI 1105/INFX 1604  Assignment 8
+=================================
+
+Place all of your solutions in a file called a8.py.
+
+Provide appropriate documentation for all functions and classes you write.
+
+1) In lectures, we wrote a function that computes the product of all of the
+  odd elements of a built-in list.  In this question, you will write a function
+  called prod_odd_positions that computes the product of all of the elements in
+  odd *positions* in a built-in list.  The odd positions are positions 1, 3, 5,
+  etc., where positions are counted starting from 0.  For example, the call
+      prod_odd_positions([2,4,5,1,6,9])
+  should produce the value 4 * 1 * 9 (i.e., 36).
+
+  You are to accomplish this task using a loop over the elements of the list.
+
+2) In this question, you will use the List and Empty classes from lectures.
+
+   Rewrite the function deep_copy_int_list from lectures using map instead
+  of explicit recursion.
+
+3) In this question, you will use the List and Empty classes from lectures.
+
+   Write a general deep copying routine for List objects that also creates
+  deep copies of the elements in the List, in addition to the List structure
+  itself.  Because the exact steps needed to make a deep copy of a data
+  structure depend on what the data structure itself looks like (for example,
+  deep copying a Contact is not the same as deep copying a LineSeg), your
+  function will take an additional function as parameter, which knows how to
+  create deep copies of the elements of the list.  For example, the call
+
+   deep_copy_list(List(LineSeg(Point(1,2), Point(3,4)), \
+      List(LineSeg(Point(5,6), Point(7,8)), Empty)), deep_copy_lineseg)
+
+  would create a deep copy of the given List of LineSeg objects.
+
+4) Write a function called mult_table that takes a single parameter n >= 0,
+  and constructs the multiplication table on the numbers 0,...,n-1.  The
+  multiplication table will be represented as a (built-in) list of (built-in)
+  lists of integers.  Each list within the list of lists represents a row
+  of the table.  For example, the call mult_table(3) would produce the
+  result
+     [[0,0,0], [0,1,2], [0,2,4]]
+
+5) Write a function that takes in a built-in list as a parameter and returns
+  a new list, which is the same as the original list, but with the elements
+  in reverse.  For example, reverse([1,2,3]) should produce the list [3,2,1].
+  Do not be concerned about deep-copying the individual elements of the list;
+  instead just do straightforward copying or aliasing (according to whether
+  the list elements are value or reference data).
+
+6) Write a function called reverse_in_place that takes a built-in list as
+  a parameter, and reverses the elements *in place*.  In other words, the
+  original list is modified so that its elements are in reversed order; a new
+  list is not returned.  For example:
+
+>>> L = [1,2,3]
+>>> reverse_in_place(L)  # Note:  returns nothing
+>>> L
+[3,2,1]
+

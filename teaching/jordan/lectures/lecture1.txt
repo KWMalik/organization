@@ -1,0 +1,114 @@
+Lecture 1, Sept. 11, 2009
+=========================
+scribed by Brad Lushman
+
+What you need to know about computers
+-------------------------------------
+
+                                             +----------+
+                                            /          /
+                                           /          /     \
+                                         +--------------+   |
+          +------------------------------|              |   |
+    CPU   |                              |              |   |
+   +--------+                            +--------------+   |
+   | +----+ |      +-----------------+        printer       |
+   | +----+ |------| +-------------+ |                       \  output devices
+   |        |      | |             | |                       /
+   | +----+ |      | |             | |  screen              |
+   | +----+ |      | |             | |                      |
+   |        |      | |             | |                      |
+   | +----+ |      | +-------------+ |                      |
+   | |    | |      +-----------------+                      |
+   | |    | |            /     \                            /
+   | +----+ |           +-------+
+   +--------+
+    |     |       +-------------------+           \
+    |     +-------| ++++++++++++ ++++ |           |
+    |             | ++++++++++++ ++++ |  keyboard |
+    |             | ++++++++++++ ++++ |           |
+    |             +-------------------+            \  input devices
+    |     +-+-+                                    /
+    +-----| | |                                   |
+          +-+-+                                   |
+          |   |  mouse                            |
+          +---+                                   /
+
+
+
+(inside main unit)
+
+   +--------------------+
+   |                    |
+   |    +----------+    |     +------------------+
+   |    |  CPU     |    |-----| External storage |
+   |    +----------+    |     +------------------+
+   |       |    |       |       (hard drives, CD-ROM, etc.)
+   |    +----------+    |
+   |    |Main memory    |
+   |    +----------+    |
+   |                    |
+   +--------------------+
+
+
+CPU - Central Processing Unit - reads and executes "machine instructions"
+
+Main Memory (also RAM - "Random Access Memory")
+  - where the computer stores information
+  - programs (instruction sequences) and data *both* stored in main memory
+  - volatile (erased when computer shuts down)
+  - limited (can run out) - typically 1-4 GB
+
+External Storage
+  - more permanent - not erased on shutdown
+  - typically more available external storage than main memory
+  - but slower to access
+
+How to get the CPU to do things
+  (i.e. how to get the computer to run a program)
+
+  - Put a sequence of instructions somewhere in main memory
+  - Point the CPU to the beginning of the sequence
+
+What do CPU instructions look like?
+
+  Example:
+     0000 0000 0010 0010 0001 1000 0010 0000
+
+   - stored in memory as a sequence of high (1) and low (0) voltage
+
+   - example above might mean, "Add the numbers stored _here_ and _here_, and
+     store the result _there_."
+
+So computers are hard to speak to in their native language.
+
+Need a way to make the job easier.
+
+The computer can help with that!
+ - Computer programs that facilitate the programming task.
+
+We'll decide what language we want to speak and have a computer program
+translate them into the CPU's native language.
+
+Translator program called a "compiler" if it outputs translated instructions,
+or an "interpreter" if it skips the translation and simply reads and executes
+our commands.
+
+OK, so we can pick our own language - how about English?
+
+Human languages, including English, are hard to translate.
+  - Structure is very complex, meanings often ambiguous.
+  - Nuances of spoken language not captured in text.
+  - Computers are not mind readers - no one has adequately programmed human
+    intuition yet.
+
+So we need a more artificial language, with a simple structure and clear
+meaning.
+
+Literally hundreds or thousands of choices.
+
+We'll use Python.
+
+You will need a Python interpreter - download from python.org.
+
+

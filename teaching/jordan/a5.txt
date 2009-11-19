@@ -1,0 +1,97 @@
+CSCI 1105/INFX 1604  Assignment 5
+=================================
+
+Place all of your solutions in a file called a5.py.
+
+Provide appropriate documentation for all functions and classes you write.
+
+1) A roulette wheel consists of 38 numbered slots:  18 are red, 18 are black,
+  and two are green.  The game of roulette consists of betting on where a ball,
+  set in motion around the outside of the wheel, will land.  There are many
+  kinds of bets that can be made; for this exercise we will assume that we
+  always bet that the ball will land in a red slot.  If the ball lands in a red
+  slot, we win a dollar; if the ball lands in a black or green slot, we lose
+  a dollar.  In this question, you will write the function roulette_bust that
+  takes a parameter n denoting the number of dollars we start off with, and
+  runs a Monte-Carlo simulation to determine how many rounds we can play before
+  we go broke.
+
+  You must solve the problem via recursion on the natural number n.  Note,
+  however, that as we win or lose money, the value of n may grow or shrink.
+  Thus the recursion is not strictly count-up, and not strictly count-down.
+  Depending on our luck at the roulette wheel, you may have to do one or the
+  other.
+
+  The probability of winning a round of roulette is 18/38; the probability of
+  losing is 20/38.  To mimic these probabilities, generate a random number
+  x between 0 and 1 using the random() libary function call.  x will be less
+  than 18/38 with probability 18/38, and greater than or equal to 18/38 with
+  probability 20/38.
+
+
+2) The solutions you provide for this question will be based on the List,
+  Empty, and Point classes that were defined in lectures:
+
+class Empty:
+   pass
+
+class List:
+   def __init__(self, head, tail):
+      self.hd = head
+      self.tl = tail
+   def __repr__(self):
+      if self.tl == Empty:
+         return 'List(' + repr(self.hd) + ', Empty)'
+      else:
+         return 'List(' + repr(self.hd) + ', ' + repr(self.tl) + ')'
+
+class Point:
+   def __init__(self, x, y):
+      self.x = x
+      self.y = y
+   def __repr__(self):
+      return 'Point(' + repr(self.x) + ', ' + repr(self.y) + ')'
+
+  Use the higher-order function map, as given in class, to implement the
+  following functions on List objects:
+
+  a)  the function xs that takes a List of Point objects and returns a List
+      object containing all the x-coordinates of the Point objects in the
+      original list.  For example,
+         xs(List(Point(1,2), List(Point(4,3), Empty)))
+      should return a List object equivalent to
+         List(1, List(4, Empty))
+
+  b)  the function ys that takes a List of Point objects and returns a List
+      object containing all the y-coordinates of the Point objects in the
+      original list.  For example,
+         ys(List(Point(1,2), List(Point(4,3), Empty)))
+      should return a List object equivalent to
+         List(2, List(3, Empty))
+
+  c)  the function sum_coords that takes a List of Point objects and returns
+      a List object in which each entry is the sum of the x- and y-coordinates
+      of the Point object in the corresponding entry of the original list.
+      For example,
+         sum_coords(List(Point(1,2), List(Point(4,3), Empty)))
+      should return a List object equivalent to
+         List(3, List(7, Empty))
+
+  d)  the function max_coords that takes a List of Point objects and returns
+      a List object in which each entry is the larger of the x- and
+      y-coordinates of the Point object in the corresponding entry of the
+      original list.  For example,
+         max_coords(List(Point(1,2), List(Point(4,3), Empty)))
+      should return a List object equivalent to
+         List(2, List(4, Empty))
+
+  e)  the function reverse_coords that takes a List of Point objects and
+      returns a List object which contains the same Points as the original
+      list, except with their coordinates swapped.  For example,
+         reverse_coords(List(Point(1,2), List(Point(4,3), Empty)))
+      should return a List object equivalent to
+         List(Point(2,1), List(Point(3,4), Empty))
+
+  You should not be executing any explicit recursive calls in solving these
+  problems; instead, you should be letting the function map handle the
+  recursion for you.

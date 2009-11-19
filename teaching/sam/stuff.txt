@@ -1,0 +1,88 @@
+
+
+How do you know the size of a structure?
+Bit-packing the easy way.
+Bit-packing the hard way.
+Easy optimizations (if statement quick bail outs)
+Inheritance (public vs. protected vs. private).
+Designing classes via policies.
+Map files and what they are good for. 
+Object Lifetimes - When to kill it.
+Design pattern - Singleton
+Design pattern - Factory
+Design pattern - Abstract Factory
+Design pattern - Visitor
+Design pattern - Double-Dispatch
+Small Object Allocators
+STL
+	Vectors
+		How do they grow?
+		How to initialize them?
+		Special Case: Boolean
+		What is a vector's iterator?
+		What are the different types of iterators?
+	Generic Programming
+		When to use it? (only in libraries)
+		What makes std::store() generic.
+	typeof/typeid
+		
+
+C++ Build Systems
+C++ compilers
+C++ Basic Template operators
+C++ Pointers to functions
+C++ Pointers to Member functions 
+C++ Function objects (Costs vs. Advantages)
+C++ Calling Conventions (vs. C calling conventions)
+
+
+C++0x - What's new? What's left?
+
+Object initialization (when is a copy constructor called).
+Overloading operators (specifically >> and <<)
+Why my objects should have friends?
+How do things affect map files?
+Knowing your C++ debugger? How to get at hidden variables.
+Linker files - Demangling
+Run-time linking (.dll's, .rso)
+
+Scaling across multiple processors. 
+Threading
+Threading libraries 
+
+
+Unit testing
+	The value is in making you think about completeness. What could break this function?
+
+C++ Compilation Order: Preprocessor, Template Processor, C++ compiler, linker.
+What extern vs. static means?
+Where do static variables go?
+Where do static constant variables go?
+
+
+What can the C++ compiler remove at compile time?
+What can the linker remove?
+Namespaces - General Use
+Namespaces - Private
+Namespaces - Good for intellisense
+
+
+What is a type?
+	What is a built in type?
+	
+What does inline do? Why is this a mixed blessing?
+What can be used to make a decision at compile time?
+
+
+What are references? What advantages do they have? What disadvantages do they bring?
+
+
+
+
+
+----------------------------------------------------------
+Video Game Stuff.
+
+
+
+

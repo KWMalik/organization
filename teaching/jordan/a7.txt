@@ -1,0 +1,94 @@
+CSCI 1105/INFX 1604  Assignment 7
+=================================
+
+Place all of your solutions in a file called a7.py.
+
+Provide appropriate documentation for all functions and classes you write.
+
+1) In this question, you will use the List and Empty classes from lectures,
+  as well as the Contact class:
+
+      class Contact:
+         def __init__(self, name, address):
+            self.name = name
+            self.addr = address
+         def __repr__(self):
+            return 'Contact(' + self.name + ', ' + self.addr + ')'
+
+  Your task is to rewrite the address book lookup function from lectures:
+
+      def lookup(L, name):
+         if L == Empty:
+            return "not found"
+         elif L.hd.name == name:
+            return L.hd.addr
+         else:
+            return lookup(L.tl, name)
+
+  Recall that this function had a couple of deficiencies:
+   1) It doesn't handle the case where there is no match very well (returning
+      the string "not found" is something of a hack)
+   2) If there are more than one match for a name it always returns the first
+      match and ignores all others.
+
+  Your implementation will fix both of these problems, by making the following
+  modification.  Instead of returning a single address corresponding to the
+  given name, your implementation will return a *List* of all addresses in
+  the address book that are associated with a given name.  Thus:
+
+   1) If there is no match, your version of lookup should return an empty List.
+   2) If there is just one match, it should return a singleton List with just
+      the one address.
+   3) If there are multiple matches for the name, it will return a
+      multi-element List containing all of the matching elements.
+
+  You are to accomplish this without using explicit recursion.  Instead, you
+  will do it all using only map and filter.
+
+2) Suppose you want to check whether a list contains duplicate entries.  One
+  way to do that is to attempt to sort the list by insertion sort, and for
+  each item, when trying to insert it in the result, if the comparison between
+  the current item and an item in the result ever comes out even, the list
+  obviously contains duplicates.
+
+  For your convenience, the insertion sort function (minus the functional
+  parameter lessthan) is reproduced below:
+
+    def insertion_sort(L):
+       def insert(e, L):
+          if L == Empty:
+             return List(e, Empty)
+          elif e < L.hd:
+             return List(e, L)
+          else:
+             return List(L.hd, insert(e, L.tl))
+       if L == Empty:
+          return Empty
+       else:
+          return insert(L.hd, insertion_sort(L.tl))
+
+  You will modify this implementation as described above -- if the comparison
+  ever comes out equal, you will raise an exception, signalling that a
+  duplication has been found.  Declare an appropriate exception class to
+  describe this signal.  Include at least a message field that would be
+  displayed automatically by Python.
+
+  When we discuss how to recover from exceptions, we will see how to write
+  a function that responds to the exception, and uses it to answer True to
+  the question of whether the list contains duplicates.  You do not need to
+  worry about this issue on this assignment.
+
+3) Write the function unzip that turns a List of pairs into a pair of Lists.
+  For example, the call unzip(List((1, 3), List((2, 5), List((4, 7), Empty))
+  should return the pair of Lists
+    (List(1, List(2, List(4, Empty))), List(3, List(5, List(7, Empty))))
+  Also, the call unzip(Empty) should return the pair (Empty, Empty).
+  Use recursion and the template for functions that operate on Lists, and
+  follow the example from lectures on working with functions that return pairs.
+
+4) Write the function builtin_unzip that turns a built-in list of pairs into
+  a pair of built-in lists.  For example, the call
+    builtin_unzip([(1, 3), (2, 5), (4, 7)])
+  should return the pair of lists ([1, 2, 4], [3, 5, 7]).  Do not use
+  recursion.  Use a loop.
+

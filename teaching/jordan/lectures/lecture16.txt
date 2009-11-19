@@ -1,0 +1,192 @@
+October 19, 2009
+Jonathan Moore
+Lecture 16
+
+
+----String Representations----
+
+
+How can we view the contents of a list without picking it apart via hd and tl?
+
+Built-in function:  repr   # representation
+	- gives you the string that Python uses to display the value
+
+>>> repr (2) 		# Displays what it would show if you just inputed the value
+'2'
+
+>>> 2
+2
+
+>>> repr (Empty)
+'<class __main__.Empty at 0x17ad270>'
+
+
+How can we use?
+Currently classes have the __init__ function for initialization.
+
+The __repr__ function allows us to specify how objects are diplayed by inputing a function that is structured to show data how you want it
+
+	class Point:
+		def __init__ (self, x,y):  
+			self.x = x
+			self.y = y
+
+		def __repr__ (self):
+			return 'Point(' + repr (self.x) + ',' + repr (self.y) + ')'
+
+Forms a string that looks like the expression we want (i.e Point (x,y))
+
+>>> p = Point (1,5)
+>>> p
+Point (1,5)			# givs you the representation when ask for p
+>>> p.x 			# can still pick apart
+1
+>>> p.y
+5
+
+For Lists: need recursion because lists are a recursive data structure.
+
+	class List:
+		def __init__ (self, head, tail):
+			self.hd = head
+			self.tl = tail
+
+		def __repr__ (self):
+			if self.tl == Empty:							# base case is a one element list
+				return 'List (' + repr (self.hd) + ',Empty)'
+			else:
+				return 'List(' + repr(self.hd) + ',' + repr (self.tl) + ')'     # has recursive call on self.tl
+Try it:
+
+>>> List (1, List (3, List (6, Empty)))
+List (1, List (3, List (6, Empty)))
+
+>>> l = List (1, List (3, List (6, Empty)))
+>>> l.hd
+1
+
+>>> l.tl
+List (3, List (6, Empty))
+
+>>> l
+List (1, List (3, List (6, Empty)))
+
+
+
+----Higher order functions (cont'd)-----
+Functions that takes another function as a parameter
+
+General template for functions from last day:
+
+	def fn (L):
+		if L == Empty:
+			return Empty
+		else:
+			return List (____(L.hd)____, fn (L.tl))  # only difference between functions was the blank ____(L.hd)____ that defined what was done to the head.
+
+So, we made a higher order function:
+
+	def map (f, L):		# f = a functions, L = a list
+		if L == Empty:
+			return Empty
+		else:
+			return List (f (L.hd), map (f, L.tl))
+
+
+Now we can re-implement double_list, add1_list and square_list as follows:
+
+	def double (x):   		# write a function that doubles
+		return x+x
+
+	def double_list (L):
+		return map (double, L)
+
+>>> double_list (List (1, List (2, List (3, Empty))))
+List (2, List (4, List (6, Empty)))
+
+
+	def add1_list (L)			# exposed guys before, instead we put other function inside
+		def add1 (x):
+			return x +1
+		return map (add1, L)		# only have to write recusion once (in map). We don't have as many chances of getting something wrong
+
+To finish off the functions from last day:
+
+	def square_list (L):
+		def square (x) :
+			return x*x
+		return map (square, L)
+
+Have streamlined, but it is awkward to define double, add1, and square when the only reason we're writing them is so we can pass them to map.
+	- No intent to reuse double, add1, or square.
+
+We can streamline even more by using Python's lambda feature to write anonymous functions.
+	- functions we can drop into expressions without naming them
+
+Format:
+	
+	lambda var : expresssion
+
+-represents function that take parameter var and returns expr.
+
+Example:
+	lambda x : x+x 		# doubles argument
+
+>>> (lambda x : x+x) (4)   	# wrote function without naming it
+
+
+So, we can go back to our three functions:
+
+	def double_list (L):
+		return map (lambda x : x+x, L)
+
+	def add1_list (L):
+		return map (lambda x : x+1, L)
+
+	def square_list (L):
+		return map (lambda x : x*x, L)
+
+They are all much shorter now.
+
+
+What else can we do with map?
+
+Recall:
+
+	def concat (L1, L2):			# give list of all elements added together (cross-product)
+		def cat_helper (s,L):
+			if L == Empty:
+				return Empty
+			else:
+				return List (s + L.hd, cat_helper (s, L.tl))
+		if L1 == Empty:
+			return Empty
+		else:
+			return append (cat_helper (l1.hd, L2), concat (L1.tl, L2))
+
+How can we use map to help shorten?
+
+cat_helper (s,L2) attaches the string s to every string in L2.
+
+	Use map with what function?
+		the function that attaches a particular string to the currrent element of the list.
+
+To be concluded Friday...
+		
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,117 @@
+
+Python
+
+
+Looking at programming:
+ -Very difficult to learn
+ -Radical Novelty
+ -
+ -Ability = Effort * Targeted Learning
+ -Hypothesis testing -> Create a hypothesis, test, evaluate results -> Repeat.
+ -
+
+Representing Concepts:
+ -Types
+ -Functions, Classes.
+ -Components of a computer - RAM 
+
+
+
+Things to know:
+ -types (strings/unicode)
+ -if/else if/else statements
+ -for/while statements
+ -range statement
+
+Elements:
+ -creating functions
+   -def fib(n):  ...
+   -default arguments -> def fib(n = 10): ...
+     -default arguments are only evaluated once:
+
+def f(a, L=[]):
+	L.append(a)
+	return L
+
+print f(1)
+print f(2)
+print f(3)
+
+This will print:
+
+[1]
+[1, 2]
+[1, 2, 3]
+
+
+If you don’t want the default to be shared between subsequent calls, you can write the function like this instead:
+
+def f(a, L=None):
+    if L is None:
+        L = []
+    L.append(a)
+    return L
+
+
+ 
+
+ -creating classes
+ -inheritence
+ -class versus instance
+ -break
+   -Breaks out of the smallest enclosing for/while loop.
+ -continue
+   -Skips to the next iteration of the loop.
+ -else statements for loops
+   -Called when iteration is complete. 
+   -Is not called if 'break' is used.
+ -pass statement
+   -used as placeholder for a function to allow the programmer to mark something up and come back to it later
+   -Used to create empty classes (usually to come back to later).
+   -
+
+Debugging:
+ -printing
+ -printing contents of the instance of a class
+ -
+
+
+Keywords (make sure you understand the uses of the following):
+	and       del       from      not       while
+	as        elif      global    or        with
+	assert    else      if        pass      yield
+	break     except    import    print
+	class     exec      in        raise
+	continue  finally   is        return 
+	def       for       lambda    try
+
+
+Creation of new objects. For example, when does python use more memory. 
+
+
+For Statements:
+
+# Measure some strings:
+	a = ['cat', 'window', 'defenestrate']
+for x in a:
+	print x, len(x)
+
+cat 3
+window 6
+defenestrate 12
+
+
+It is not safe to modify the sequence being iterated over in the loop (this can only happen for mutable sequence types, such as lists). If you need to modify the list you are iterating over (for example, to duplicate selected items) you must iterate over a copy. The slice notation makes this particularly convenient:
+
+for x in a[:]: # make a slice copy of the entire list
+	if len(x) > 6: a.insert(0, x)
+
+a
+['defenestrate', 'cat', 'window', 'defenestrate']
+
+
+
+pickling data - writing instances of classes out to files.
+
+
+

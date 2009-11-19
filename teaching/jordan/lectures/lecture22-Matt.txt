@@ -1,0 +1,200 @@
+﻿Lecture notes 22 – November 4th, 2009
+Scribed by Matt Orr
+
+Last day: intricacies of assignments. Tried to write functions that changed certain aspects of parameters. had to do with the way things were laid out in memory. Reference data vs. ____ data.
+
+Today:
+continuing along that line to expose the same issue, but in a different light.
+
+So, we're talking about copies and aliases.
+
+>>>x = 5
+>>>y = x
+>>>x
+5
+>>>y
+5
+>>>y = y + 1
+>>>y
+6
+>>>x
+5
+
+So, he updated y. y changes, x does not. This is the behavior you would expect!
+
+Now, let's try something else!
+
+>>>p = Point(3,4)
+>>>q = p
+>>>p
+Point(3,4)
+>>>q
+Point(3,4)
+>>>q.y = q.y + 2
+>>>q
+Point(3,5)
+>>>p
+Point(3,5)
+
+Only changed q, but both p and q changed!! p and q both change when q is updated.
+
+Why? What is going on that would explain why what is happening is happening?
+
+Well, let's look at the first example...
+
+x = 5 < sets aside a piece of memory called x, and inside that memory there is a 5.
+y = x < sets aside a piece of memory called y and fills it with the value of x, so 5.
+y is a copy of x!
+
+y = y + 1
+y = 6
+x = 5 < not affected by operation.
+
+OK, if we take a look at the second example now, things are a little different.
+
+We execute p = Point(3,4). As we saw last day, objects are different from points in that they're reference data. Inside the piece of memory labeled “p”, we have an address that leads to a place in memory holding the point data. So, the address is where in memory you would find the data of the object.
+
+When we execute q = p it also sets aside a piece of memory called q, also holding the address that p does. So, p and q both lead to the same piece of memory. This copy of p makes a reference to the same location in memory.
+
+So, if we then say q.y = q.y + 1 what happens is that we have p and q both pointing to the same piece of memory. You change the y value of q from 4 to 5, and since both p and q point to the same point in memory the changes in q are visible in p. And vice versa.
+
+When something like this happens, we say that p and q are aliases. Different names for the same area of memory. Big thing about aliases is that when you have aliases and you change one of them, the other, by necessity, must change too.
+
+So, q is an alias of p and vice versa.
+
+What if you want to make a copy of p instead of an alias???? What would you do?
+
+We have p  = Point(3,4), we would like q to be a copy of this instead of an alias.
+
+>>>q = Point(p.x, p.y)
+
+Pull out the components of p and make a new point out of them!
+
+Having worked that out,we can make this into a function if we want to.
+
+def copy_point(p):
+	return Point(p.x, p.y)
+
+>>>q = copy_point(p)
+
+This problem, between copies and aliases, has been encountered in this class before. It was ignored. It can be ignored no longer!!!
+
+Before, we wrote a class called line_seg which represented the end points of a line segment:
+
+class line_seg:
+	def __init__(self, p1,p2):
+		self.p1 = p1 #p1 and p2 are assumed to be points
+		self.p2 = p2
+
+p1 and p2 were assumed to be points and since we needed to store two points inside the line segment we initialized for that.
+
+The two lines that initialize the points look an awful lot like the line q =p. self. p1 and self.p2 are aliases of the particular p1 and p2 used to initialize the line segment.
+
+What does that mean?
+
+If we did something like:
+
+>>>p1 = Point(1,2)
+>>>p2 = Point(3,4)
+>>>seg = Line_seg(p1,p2)
+>>>p1.x = 5 < would change the x value of p1 to 5)
+>>>seg.p1.x
+5 < should have been 1!
+
+So when p1 or p2 changes, seg also changes. This is not something we had to worry about before when we were designing Line_seg, but now we do.
+
+Very likely that when you create the line segment and the points you forget that they're linked! You may change them and later mess up your program because of it!
+
+So, if we don't want this behavior. If we want the segment to remain the same even if the values of the points change, it must be initialized with copies of the points!
+
+class Line_seg:
+	def __init__(self, p1, p2):
+		self.p1 = copy_point(p1)
+		self.p2 = copy_point(p2)
+
+So, that is the difference between aliasing and copying.
+
+Unfortunately, the story does not end there!
+
+There is shallow and deep copying!
+
+Some objects are simple in structure, like points (where you just copy the x and the y), others are not so simple, like lists, and copying those things are not so simple.
+
+So, there are two notions of copying.
+
+Shallow copy of an object makes a copy of all of its' attributes. So, if i wanted to make a shallow copy of a line segment:
+>>>seg1 = Line_seg(Point(1,2), Point(3,4))
+>>>sseg2 = Line_seg(seg1.p1, seg2.p2)
+
+What properties would a copy made in this way have? What changes could be made that would or would not be reflected in each other?
+
+Segment 2 is not quite an alias of segment 1, we deid actually pull segment 1 apart and make a new segment. However p1 and p2 are not value data, they are reference data.
+
+If the points that make up segment 1 change their coordinates, the changes are visible in segment 2. This is because all we did was grab p1 and p2, which are reference data, so they are simply aliases from the original! So, since they're aliases, changes are visible in both segments.
+
+Example of things that would be visible:
+
+seg.1.x = seg.1.p1.x + 1 would be visible in segment 2 as well as segment 1.
+
+What would not be visible? Replacing p1 entirely!
+
+So, if segment 1 replaces p1 or p2 with something else,, the change is NOT reflected in segment 2.
+
+Example:
+
+seg.p1 = Point(7,8)
+
+seg2.p1 is unchanged.
+
+Changing something entirely allows the fact that it's a copy come into play, and changes are not reflected!
+
+Segment one references a line segment somewhere in memory and that line segment has two points, which are also referenced elsewhere in memory.
+
+Segment 2, on the other hand, wants to copy the contents of segment 1. It copies the line segment and the addresses it contains. it DOES NOT copy the points! So, at the level of the points, the points are aliases, but at the level of the line segment they are copies.
+
+So, that was shallow copying.
+
+What's a deep copy? It is the one we usually want.
+
+The deep copy, recursively copies all of an objects attributes until value data is reached.
+
+So, if we wanted to make a deep copy of seg1 we would say something like this:
+
+>>>seg 3 = line_seg(Point(seg1.p1.x, seg1.p1.y), Point(seg1.p2.x, seg1.p2.y))
+This way, seg 3 is a complete copy of seg1!!! it becomes it's own object. This means that no changes will be reflected in one another. Hooray!
+
+In deep copy, no changes to seg1 are visible in seg3.
+
+We can create a function that creates deep copies of like segments, if we want to.
+
+def deep_copy_lineseg(seg):
+	return Lin_seg(copy_point(seg.p1), Copy-point(seg.p2))
+
+Deep copies are more thorough than shallow copies, HENCE, they take longer to produce.
+
+Since deep copy seems to do what we want to do, why bother using shallow copies?
+
+Because shallow copies are faster! Hooray!
+
+There are issues associated with deep copies, but they're not important at the moment.
+
+Let's look at shallow and deep copies of lists that we created.
+
+Shallow copy:
+
+def shallow_copy(L):
+	return List(L.hd, L.tl)
+
+The results of this will not be an alias, but the pieces inside of it will be.
+
+Deep copy:
+
+def deep_copy_int_list(L): # this is a list of integers, so you don't need to worry about copy what's in the list!
+	if L == Empty
+		return Empty
+	else:
+		return List(L.hd, deep_copy_int_list(L.tl))
+
+This is probably one of the simplest recursive list function we've ever built! Hooray1
+
+If they were not integers, we would have to be deep copying all the elements of the list! Eeek!

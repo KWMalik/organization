@@ -1,0 +1,64 @@
+CSCI 1105/INFX 1604  Assignment 6
+=================================
+
+Place all of your solutions in a file called a6.py.
+
+Provide appropriate documentation for all functions and classes you write.
+
+1) In this question, you will use the familiar List and Empty classes from 
+  lectures, and additionally the Card class:
+
+      class Card:
+         def __init__(self, suit, rank):
+            self.suit = suit
+            self.rank = rank
+
+  Possible values for the 'suit' attribute are the following four strings:
+  'spades', 'hearts', 'diamonds', and 'clubs'.
+
+  Write a function called dominant_suit that takes a hand (a non-empty list
+  of cards) and returns the string denoting the suit that occurs most often
+  in the hand.  If two or more suits occur equally often, simply return
+  one of those suits.
+
+  To accomplish this goal, you will employ the technique of using additional
+  parameters to pass extra information to recursive calls (as illustrated in
+  the tail-recursive version of count_darts).  In other words, the function
+  dominant_suit will locally define a helper function called count_helper
+  that takes the list, and four additional parameters, representing the
+  total number of spades, hearts, diamonds, and clubs seen so far.
+
+
+2) The solution you provide for this question will be based on the List and
+  Empty classes that were defined in lectures:
+
+class Empty:
+   pass
+
+class List:
+   def __init__(self, head, tail):
+      self.hd = head
+      self.tl = tail
+   def __repr__(self):
+      if self.tl == Empty:
+         return 'List(' + repr(self.hd) + ', Empty)'
+      else:
+         return 'List(' + repr(self.hd) + ', ' + repr(self.tl) + ')'
+
+
+  Write the function tabulate which takes three parameters f, a, and b, with
+  a <= b.  The function tabulate returns the List object containing the values
+  f(a), f(a+1), f(a+2), ..., f(b).  For example, the call
+  tabulate(lambda x:x**2, 2, 4) should return a List object equivalent to
+  List(4, List(9, List(16, Empty))).
+
+3) Just as map provides an abstraction for the notion of transforming the
+  elements of a list, we can do the same for the operation of combining two
+  lists in lockstep.  The function in this case is called zipwith.  The
+  function zipwith takes three parameters:  a function f and two lists L1 and
+  L2.  zipwith(f, L1, L2) produces a list whose i-th element (for each i) is
+  the result of applying f to the i-th elements of L1 and L2.  For example,
+  zipwith(lambda x,y:x+y, List(1, List(2, Empty)), List(3, List(4, Empty)))
+  should produce a List object equivalent to List(4, List(6, Empty)).  Write
+  the function zipwith.
+

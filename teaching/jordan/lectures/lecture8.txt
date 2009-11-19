@@ -1,0 +1,134 @@
+Recap of Lecture Sept 25
+__________________________________
+>>> class Point:
+		pass  #where "pass" does nothing
+
+>>> p = Point()
+
+>>> type (p)
+<type 'instance'>
+
+#p can have "x" and "y" points. 
+>>> p.x = 2
+>>> p.y = 3
+
+#Find the distance of points (p1 and p2)
+>>> def distance(p1, p2):
+	return sqrt(p1.x - p2.x) ** 2 + (p1.y - p2.y) ** 2)
+
+#Find the midpoint of points (p1 and p2)
+>>> def midpoint(p1,p2):
+	p = Point()
+	p.x = (p1.x + p2.x) / 2.0
+	p.y = (p1.y + p2.y) / 2.0
+	return p
+________________________________________
+
+
+
+Today's Lecture Sept 28th
+In the functions yesterday (above) we gave points to the attributes "x" and "y". 
+Without these, the functions will crash.
+Question: So how can we make sure the points are there?
+
+Solution 1: We can document it in our code. This will however leave it to the user's responsibility to fill it in. Sometimes the user isn't reliable. Move on to Solution 2.
+
+Solution 2: Add an initialization function to the class. (The code is below)
+
+Code:_____________________
+>>> class Point:
+	def __init__(self, x, y):
+		self.x = x
+		self.y = y
+
+>>> p1 = Point (3, 4) 
+>>> p1.x
+3
+>>> p1.y
+4
+>>>p1 = Point()
+<Trace back error message> 
+____________________________
+
+Initialization:
+The code contains the special names "__init__" which starts and ends with two underscores "_ _" This is needed to create the initialization function in the class. Another special name that is needed in it is "Self." Self is the first parameter that's always the object being created. 
+
+Once you are about to use "p1 = Point", It is weird that the function is declaring three parameters, but is only calling two. This is because Python is silently using "p1" itself as the first argument. (Hence the "Self") 
+
+Code:____________________________________
+>>> def midpoint(p1, p2):
+	return Point((p1.x + p2.x) / 2.0, (p1.y + p2.y) / 2.0)
+__________________________________________
+
+So now we can guarantee that every point has an "x" or "y". These classes can be the start of making address books (name, number, email, etc.) or other things. 
+
+
+
+GENERAL PROGRAMMING PRINCIPAL IV
+The form of a computer program often follows the structure of the data it's operating on. 
+
+Ex.1
+A function intended to operate on a point will do some calculation on "p.x" and "p.y" 
+________________________
+def F(p):
+	blah...p.x...blah...p.y...blah
+
+Ex.2
+A function intended to operate on two different points will do some calculation on "p1" and "p2"
+___________________________________
+def.different (p1, p2):
+	blah...p1.x...blah...p1.y...blah...p2.x...p2.y
+	return Point(p2.x - p1.x, p2.y - p1.y)
+
+Ex.3
+Turn a point into a string
+___________________________
+def to_string(p): #...p.x....blah....p.y
+	return "<" + str(p.x) "," + str(p.y) + ">"
+
+
+Line Segments
+>>> class LineSegments:
+	def __init__(self, p1, p2):
+		Self.p1 = p1
+		Self.p2 = p2
+
+There are no way to tell that those aren't actually points. They could just be a line segment of two random numbers. This problem we will come to another day. As for right now, I want a function that works over points and line segments. A geometrical object is either a point or a line segment.
+
+
+
+Examples
+Point coordinates:
+	g(1, 2) # g has the coordinates x = 1, y = 2
+	v (1, 1) # we want to shift our point one spot over and up. 
+	shift (g, v) = (2, 3)
+
+Line Segment:
+	g(1, 1) and (3, 3) # A line has two points, one at (1,1) and one at (3,3)
+	v (1, -1) # we want to shift our line over one and down one. 
+	shift (g, v) = (2, 0) and (4, 2)
+
+
+
+This is what we want to do (In English)
+We want to return a new geometric object which is like "g", but it's positioned by vector "v". (aka. we want to shift from one spot to another) 
+
+
+This is what we want to do (In half python/half english)
+def shift (g, v):
+	# if g is a point
+		# do something with g.x, g.y, v.x, v.y
+	# else g is a line segment
+		# do something with g.p1, g.p2, etc.
+			# (g.p1, etc. breaks into g.p1.x, g.p1.y, etc.) 
+
+This is what we want to do (in python)
+Code________________________
+>>> def shift (g, v):
+	if isinstance (g, point): # if g is a point...
+		return Point (g.x + v.x, g.y + v.y) # return new coordinates
+	else: # g is a line segment
+		return (Point (g.p1.x + v.x, g.p1.y + v.y) , Point(g.p2.x + v.x, g.p2.y + v.y))
+___________________________
+
+isistance (o, c) returns True if object "o" was created by instantiating the class "c". It comes out false otherwise.

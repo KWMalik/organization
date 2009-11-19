@@ -1,0 +1,97 @@
+November 6th, 2009
+Dan Doucet
+
+---------------------------------------------------------------------
+Continued from last lecture: Deep and Shallow Copy
+
+This is how to copy lists:
+>>> L1 = [1,2,3,4,5]
+>>> L2 = L1 			# This wil be an alias of L1
+>>> L3 = L1[:]			# This gives you a shallow copy of L1
+>>>
+>>> L1[2] = 10
+[1,2,10,4,5]
+>>> L2
+[1,2,10,4,5]
+>>> L3
+[1,2,3,4,5]
+
+
+Differences between Lists and Tuples:
+Lists are mutable (changable). Where as tuples are not. 
+>>> T1 = (1,2,3)
+>>> T1[2] = 10
+TypeError: 'Tuple' objects does not support item assignment
+
+
+Equality comparisons: What do we mean when we ask weather two expressions are ?
+"==" 	# Objects have equivilent values
+"is"	# NEW: Objects are alias.
+
+
+RECALL: Point Class
+>>> P = Point(1,2)
+>>> q = P		# Create alias
+True
+>>> q is P
+True
+>>> P is Point(1,2)		# Create a new point
+False
+>>> P == Point(1,2)		# Why is this False?
+False
+
+
+We need to tell python how to compare points for equality. 
+Function "__eq__" implements the "==" comparison. 
+You should also do function "__ne__" which is the "!=" comparison.
+
+
+class Point:
+	def __init__(self, x, y):
+		self.x = x
+		self.y = y
+	def __repr__(self):
+		return 'Point(' + repr(self.x) + ', ' + repr(self.y) + ')'
+	def __eq__(self, other):
+		return self.x == other.x and self.y == other.y
+	def __ne__(self, other):
+		return self.x != other.x or self.y != other.y
+	
+Let's try it!
+>>> P = Point(1,2)
+>>> P is Point(1,2)
+False
+>>> P == Point(1,2)
+True
+
+
+-------------------------------------------------------------------------
+Looping Over Natural Numbers
+The "For" construction requires a list or tuple over which to irerate. 
+If we want to iterate over a range of numbers we must first cerate a list of them. 
+>>> range(1,5) 		# Creates a list of numbers starting at 1 and stoping before 5
+
+
+Ex: Create the factorial function. Multiply all numbers from 1 to n
+>>> def factorial(n):
+		result = 1
+		for m in range(1, n+1):			# The n+1 ensures that the range doesn't stop before n
+			result = result * m
+		return result
+	
+Ex: Estimate Pi
+>>> def estimate_pi(n):
+		hits = 0
+		for m in range(0,n):			# The 0 ensures that the range doesn't stop before n
+			x = random()
+			y = random()
+		if x**2 + y**2 <=1:
+			hits = hits+1
+		return hits * 4.0 / n
+		
+
+
+Question for monday to think about:
+Given 2 lists of strings, determine if the 2nd occurs as a sublst of the first
+sublist(['The','Quick','Brown','Fox'], ["Quick", "Brown"]) should return True,
+but sublist(['The','Quick','Brown','Fox'], ['Quick','Fox']) should return False.

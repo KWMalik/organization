@@ -1,0 +1,96 @@
+Lecture 5, Sept. 21, 2009
+=========================
+scribed by Brad Lushman
+
+In our last example, we observed a new type of data:  "A+", "A", etc.
+
+>>>type("A+")
+<type 'str'>  --- a _string_ --- stores text (sequences of characters)
+
+>>>x = "Hello"
+>>>y = "there"
+>>>x + y
+"Hellothere"  --- the + operator *concatenates* strings (glues them end-to-end)
+
+How do we create a string with quotes in it?
+
+   "He said, "Hi""   (second (") closes the string; third one opens a new
+                      string; not what we want)
+
+If we want double quotes in the string, enclose it in single quotes:
+
+   'He said, "Hi"'
+
+If we want single quotes in the string, enclose it in double quotes:
+
+   "don't"
+
+... more on strings later.
+
+
+Larger example:  Income tax
+
+Canada (2009, estimated) Marginal Tax Rates
+
+Taxable Income | Marginal tax rate
+---------------+------------------
+0 - 10320      |     0%
+10321 - 40726  |    15%             Marginal = amount of tax you pay on the
+40727 - 81452  |    22%                        next dollar you make
+81453 - 126264 |    26%
+    > 126264   |    29%
+---------------+------------------
+
+To calculate your tax owing, do *NOT* just multiply your income by the rate
+for your tax bracket!
+
+For example, if you make $100000, your tax payable is NOT
+
+    $100000 * 26% = $26000
+
+Instead, you pay tax on the portion of your income that lies in each bracket.
+
+So if you make $100000, you pay
+
+    0 on the first $10320
+    15% on the next $30406 = $4560.90
+    22% on the next $40726 = $8959.72
+    26% on the last $18548 = $4822.48
+             For a total of: $18343.10
+
+Exercise:  compute tax payable given an income.
+
+Note:  Marginal tax rates and boundary points change yearly.  These should be
+  declared as constants.
+
+bp1 = 10320  # Upper limit of the lowest tax bracket
+rate1 = 0 # Tax rate in the lowest tax bracket
+bp2 = 40726  # Upper limit of the second tax bracket
+rate2 = 0.15 # Tax rate in the second tax bracket
+bp3 = 81452  # Upper limit of the third tax bracket
+rate3 = 0.22 # Tax rate in the third tax bracket
+bp4 = 126264 # Upper limit of the fourth tax bracket
+rate4 = 0.26 # Tax rate in the fourth tax bracket
+rate5 = 0.29 # Tax rate in the highest tax bracket
+
+def tax_payable(income):
+   if income <= bp1:
+      return income * rate1
+   elif income <= bp2:
+      return bp1 * rate1 + (income - bp1) * rate2
+   elif income <= bp3:
+      return bp1 * rate1 + (bp2 - bp1) * rate2 + (income - bp2) * rate3
+   elif income <= bp4:
+      return bp1 * rate1 + (bp2 - bp1) * rate2 + (bp3 - bp2) * rate3 + \
+        (income - bp3) * rate4
+   else:
+      return bp1 * rate1 + (bp2 - bp1) * rate2 + (bp3 - bp2) * rate3 + \
+        (bp4 - bp3) * rate4 + (income - bp4) * rate5
+
+Note: - the calculation gets complicated towards the end.
+      - hard to read, hard to find errors
+      - should name some intermediate computations as constants
+      - BUT those constants will only be useful to tax_payable, and we don't
+        want to clutter the "outside" world with our "private" constants
+        (don't want the function to expose its guts)
+

@@ -1,0 +1,87 @@
+
+Main Objects:
+
+Entity - Something to be rendered (i.e. a mesh, billboard, or particle).
+SceneNode - A position and orientation.
+SceneManager - Can access all Entities and SceneNodes via name (char *)
+
+
+Entity - 
+	setVisible(bool) - Use this instead of creating destroying entities.
+	isVisible() - Query
+	Enable shadows - setCastShadows(true);
+	
+
+SceneNode - 
+	Position is relative to parent.
+	Having a hierarchy Root->Node1->Node2 if you move/rotate/scale Node1 you'll also move/rotate/scale Node2. You can move/rotate/scale Node2 seperately from Node1.
+
+SceneManager - 
+	getSceneNode(str) - Access a SceneNode.
+	getEntity(str) - Access a Entity.
+	Use a SceneManager to create a camera. createCamera("PlayerCam");
+	Set the shadowing type: setShadowTechnique(SHADOWTYPE_*)
+	Create a light: mSceneMgr->createLight("MyLight");
+
+
+Camera - 
+	setPosition(Vec3)
+	lookAt(Vec3)
+	setNearClipDistance(int)
+	setFarClipDistance(int) (Not to be used with stencil shadows??)
+	setAspectRatio(Real(viewport->width/viewport->height));
+
+RenderWindow - 
+	addViewport(Camera);
+
+Viewport - 
+	setBackgroundColour(Color);
+
+
+Shadows - 
+	Modulative Texture Shadows (SHADOWTYPE_TEXTURE_MODULATIVE) - Cheapest. Creates a black to white render-to-texture of shadow casters, which is then applied to the scene.
+	Modulative Stencil Shadows (SHADOWTYPE_STENCIL_MODULATIVE) - Renders all shadow volumes as a modulation after all non-tansparent objects have been rendered to the scene. Not as intensive as Additive Stencil Shadows, but is not as accurate.
+	Additive Stencil Shadows - (SHADOWTYPE_STENCIL_ADDITIVE) - Renders each light as a seperate additive pass on the scene. Requires a additional render pass for each light.
+
+
+Lights - 
+	Point (LT_POINT) - Emits light from a point in every direction.	
+	Spotlight (LT_SPOTLIGHT) - Flashlight.
+	Directional - Moonlight.
+	
+	Create a light with the scene manager. 
+		light->setType(Light::LT_POINT);
+		light->setPosition(Vector3(0, 150, 250));
+	Set Color
+		light->setDiffuseColour(Colour);
+		light->setSpecularColour(Colour);
+	Set Spotlight Range:
+		light->SetSpotlightRange(Degree(30), Degree(50));
+
+Config Files - 
+	plugins.cfg - Configures RenderSystem_*
+				- PluginFolder variable
+
+	resources.cfg - Directories to scan for resources.
+				  - Absolute/Relative/Not recursive.
+
+	media.cfg - ??
+	
+	ogre.cfg - Setup by Ogre's config screen. 
+
+	quake3settings.cfg - Only for Quake3 BSP
+
+
+
+
+Creating a plane:
+	Plane plane(Vector3::UNIT_Y, 0);
+	MeshManager::getSingleton().createPlane("ground", ResourceGroupManager::DEFAULTRESOURCE_GROUP_NAME, plane, 1500, 1500, 20, 20, true, 1, 5, 5, Vector3::UNIT_Z);
+	Entity * ent = mSceneMgr->createEntity("GroundEntity", "ground");
+	mSceneMgr->getRootSceneNode()->createChildSceneNode()->attachObject("ent");
+	ent->setMaterialName("Examples/Rockwall");
+	ent->setCastShadows(false);
+
+
+
+

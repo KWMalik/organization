@@ -1,0 +1,26 @@
+Password (PS2/PSP Devnet):
+	tbanks (user name)
+	Apon187hello
+
+EA Nation:
+	Username: tobyb
+	Email: tobyb@hb-studios.com
+	Password: Asdfqwer
+	Postal Code: B3N-1B9
+
+Audio Books - 
+	The Post-American World by Fareed Zakaria
+	Havana Nocturne: How the Mob Owned Cuba... and Then Lost It to the Revolution by T J English
+	The Time Paradox (Artemis Fowl, Book 6) by Eoin Colfer 
+	The Revolution: A Manifesto by Ron Paul  
+ 	In Defense of Food: An Eater's Manifesto by Michael Pollan 
+	World Without End by Ken Follett
+	The Omnivore's Dilemma: A Natural History of Four Meals by Michael Pollan 
+
+Password for Wireless at HB:
+	h0n3y   (**Might be lowercase)
+	DNS -- 159.153.128.19
+
+Revert the following that you accidentally checked in:
+	//wc/psp/Branches/Release/PSP/packages/FusionDiscPipeline/1.04.12/source/CustomTasks/FusionPspDiscPipelineTask.cs
+

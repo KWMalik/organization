@@ -1,0 +1,147 @@
+Friday,  9th October, 2009.
+
+continuation of previous lecture:
+
+
+What if you want to count up instead of down?
+
+In this case, it is just the other way round of counting down which is as follows:
+
+
+An integer less than or equal to k is either
+1)k or
+2)m where m-1 is an integer less than or equal to k.
+
+
+Example: Given a value of n,construct the list List(0,List(1,...List(n-1),List(n,Empty))...))
+
+Template for the given question;
+
+>>>def count_up_fn(n,k):
+     # if n == k:
+       # base case
+     #else:
+       #....n...count_up_fn(n+1,k).......
+
+
+#list of numbers from m to n
+
+>>>def count_help(m,n): # integers less than or equal to n
+     if m == n:
+       return List(n,Empty)
+     else: #....m....count_help(m+n)
+       return List(m,count__up(m+1,n))
+
+
+>>>def count_up(n):
+     return count_help(0,n):
+
+
+>>>count_up(0,n)
+     List(0....(List(n,Empty))...)     
+
+
+
+
+COMBINING TWO TYPES OF DATA
+
+What if you want to do recursion on two lists? or a list of a number?
+
+There are three common patterns to go about this.
+
+
+
+Pattern 1: Recurse on one; the other is "along for the rise"
+
+Example: Append two lists L1 and L2
+
+Result is a single list consisting of the element of L1 followed by those of L2.
+
+Template:
+
+
+>>>def append(L1,L2): #recurse on L1
+      # if L1 is Empty
+         # base case
+      # else:
+         #...L1.hd....append(L1.tl.L2))
+
+
+>>>def append(L1,L2):
+     if L1 == Empty:
+        return L2
+     else:
+        return List(L1.hd,append(L1.tl.L2))
+
+
+
+Pattern 2: Recurse in lock_step; recurse through corresponding elements at the same time.
+
+Example: Given two lists of numbers of the same length, return the list that results from adding together corresponding elements from the two lists.
+
+add_lists(List(2,List(5,Empty)),List(10,List(30,Empty)))
+
+should return 
+            List(12,List(35,Empty))
+
+Template:
+
+
+>>>def lockstep_fn(L1,L2):
+     # if L1 is Empty: # (L2 is also Empty)
+        # base case 
+     #else:
+        #.....L1.hd.....L2.hd....lockstep_fn(L1.tl,L2.tl)
+
+
+>>>add_lists(L1,L2):
+     if L1 == Empty:
+        return Empty
+     else:
+        return List(L1.hd+L2.hd,add_lists(L1.tl,L2.tl))
+
+
+Example: Given a list l and number n, Find the nth element (where 0 means first and 1 means second, etc) of the list.
+
+
+>>>def nth(l,n):
+     if n == 0:
+       return l.hd
+     else:
+       return nth(l.tl,n-1)
+
+
+
+Pattern 3: "Cross prduct" recursion; at each step of recursing through L1, need to recurse through all of L2.
+
+Example: Given two lists of a string L1 and L2, return a list of a string that can be formed by concatenating a string from L1with one of L2.
+
+
+Use a helper function that performs ordinary recursion on L2, and then use the helper in a recursion on L1.
+
+Template:
+
+>>>def helper(s,L2):
+     # if L2 is Empty:
+       # base case
+     #else:
+       #....s.....L2.hd..helper(s,L2.tl).....
+
+
+>>>def cross_fn(L1,L2):
+     # if L1 is Empty:
+       #base case
+     #......helper(L1.hd,L2)...cross_fn(L1.tl,L2)...
+
+
+>>>def cat_helper(s,L2): # Prepend s to every string in L2
+     if L2 == Empty:
+       return Empty
+     else:
+       return List(s+L2.hd,cat_helper(s,L2.tl))
+
+>>>def concat(L1,L2):
+     if L1 == Empty:
+       return Empty
+     else:
+       return append(cat_helper(L1.hd,L2),concat(L1.tl,L2))

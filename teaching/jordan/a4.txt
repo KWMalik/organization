@@ -1,0 +1,79 @@
+CSCI 1105/INFX 1604  Assignment 4
+=================================
+
+Place all of your solutions in a file called a4.py.
+
+Provide appropriate documentation for all functions and classes you write.
+
+0) All of the problems on this assignment must be solved recursively.
+  All of the solutions you provide in this assignment will be based on the
+  List and Empty classes that were defined in lectures:
+
+class Empty:
+   pass
+
+class List:
+   def __init__(self, head, tail):
+      self.hd = head
+      self.tl = tail
+
+1) Write a function called divisors that takes two natural numbers m and n,
+  and returns a List object containing all natural numbers (starting from m,
+  and going down to 2) by which n is divisible.  For example:
+
+  divisors(6, 6)
+
+  should return a List object equivalent to
+
+  List(6, List(3, List(2, Empty))), whereas
+
+  divisors(4, 6)
+
+  should return a List object equivalent to
+
+  List(3, List(2, Empty)).
+
+  Then, use this function as a helper to write the function is_prime, which
+  takes a natural number n and returns True if the number is a prime number,
+  and False otherwise.  A number is prime if its only divisor greater than 1 is
+  the number itself (example:  2, 3, 5, 7, 11, 13, etc.).  0 and 1 are not
+  prime.  For example:
+
+  is_prime(2)  is_prime(3)  is_prime(5)  etc.
+
+  should return True, and all of
+
+  is_prime(0)  is_prime(1)  is_prime(4)  etc.  should return False.
+
+2) Write a function called take that takes a List object L and a natural
+  number n, and returns a List object consisting of the first n elements of L,
+  in order.  If n is greater than or equal to the length of L, return the
+  entire list.  For example, take(2, List(1, List(4, List(7, Empty))))
+  should return the equivalent of List(1, List(4, Empty)).
+
+3) Write a function called drop that takes a List object L and a natural
+  number n, and returns a List object consisting of all objects in the
+  original list L, in order, *except* the first n elements.  If n is greater
+  than or equal to the length of L, return the empty list.  For example,
+  drop(2, List(1, List(4, List(7, Empty)))) should return the equivalent of
+  List(7, Empty).
+
+4) In this and the next question, you will write the same function in two
+  different ways.  The function, called exclude, takes a list L and a natural
+  number n and returns the list consisting of all elements in the original list
+  L, in order, *except* the nth element, where n is counted starting from 0
+  (i.e., n = 0 means exclude the first element, n = 1 means exclude the second
+  element, etc.).  For example, exclude(1, List(1, List(4, List(7, Empty))))
+  should return the equivalent of List(1, List(7, Empty)).
+
+  You may assume that n is at least 0 and is at most the length of the list,
+  minus 1.
+
+  In this question, you will implement exclude by calling take and drop as
+  helper functions.  You may also use the function append, as given in
+  lectures, as an additional helper function.
+
+5) In this question, you will implement exclude (as described in the previous
+  question) directly, using explicit recursion, following the templates for
+  processing lists and natural numbers.
+

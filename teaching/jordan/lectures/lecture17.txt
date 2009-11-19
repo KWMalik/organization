@@ -1,0 +1,127 @@
+Friday,Oct 23rd, 2009:
+LECTURE 17
+
+def concat(L1, L2):
+   def cat_helper(s, L2):
+        if L2 == Empty
+               return Empty
+     else:
+               return List(s + L2.hd, cat_helper(s, L2.tl))
+        if L1 == Empty:
+               return Empty
+     else:
+             return append(cat_helper(L1.hd, L2), concat(L1.tl, L2))
+
+we can use map as follows:
+
+
+def concat(L1,L2):
+    if L1 == Empty:
+           return Empty
+    else:
+           return append(map(lambda x: L1.hd+x ,L2), concat(L1.tl, L2))
+
+
+
+
+
+
+-What else can you do with higher order functions?
+
+*pick out the element of a list that have some property:
+e.g: return all the positive numbers in a list.
+e.g: return all the leap years in a list of years.
+
+
+-if we can express the property we are looking for as a function, we may be able to make the actual filtering part, a higher order function.
+
+def filter(f, l):
+      if l == Empty:
+             return Empty
+      elif f(l.hd): # if the l.hd is true
+             return List(l.hd, filter(l, l.tl)
+      else:
+             return filter(l, l.tl)  #return just the recursion
+
+NOW:
+
+def positive_elements(l):
+     return filter(lambda x: x>0, l)
+
+def leap_years(l); #we assume we have already written the function is_leap_year. 
+     return filter(is_leap_year, l)
+
+def even_element(l):
+     return filter(lambda x:x%2==0, l)
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+
+New Topic:
+                                             ERROR HANDLING
+
+
+
+recall the point class.
+class Point:
+   def __init__(self, x, y):
+         self.x=x
+         self.y=y
+
+x and y should be numbers, but we are not enforcing this.
+
+what should we do if the user does not supply numbers.
+>>> p= Point(2, 'abc')   example
+
+Possible Solutions:
+-we could return a string: "numbers expected"
+it would work in other situations, but not in __init__  , because __init__ does not return anything.
+in general, it's not the best idea anyway.
+
+
+-we could "print a message" - 
+we have not discussed how to do this yet, thus it's a bad idea.
+
+
+
+WHAT does python do?
+if we import the sqrt, then take the square root of a string
+>>> from math import sqrt
+>>> sqrt('ABC')
+python crashes with a traceback on an error message, type error: a float is required
+
+Then can we get python to do the same thing for our point class?
+how do we test if something is a number?
+
+Solution:
+is instance(x,int)-tests whether x is an integer.
+
+is instance(x,float)-tests whether x is a float.
+
+but what if we just want x to be any number?
+
+Generic "number" type Numer in module numbers.
+
+>>> from numbers import Number
+is instance(x, Number)-tests whether x is any number type.
+
+-How do we get python to crash with an error message.
+*****Raise an exception.*****
+
+Type Error is an example of an exception.
+
+class Point:
+    def __init__(self, x, y):
+       if is instance(x, Number) and is instance(y, Number):
+            self.x=x
+            self.y=y
+      else:
+            raise Type Error
+
+-how do we get the explanatory message?
+Type Error can take a message as parameter
+raise Type Error("x and y must be numbers")

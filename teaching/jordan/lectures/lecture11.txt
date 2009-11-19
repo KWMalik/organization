@@ -1,0 +1,107 @@
+October 5th, Monday
+
+Continuing from last day where we were revisiting the 'highest card' scenario from lecture 2.
+
+We used a slightly different definition for list than we have previously been using;
+
+A non-empty list id either
+1) a singleton list ie: one element
+or
+2) List(head, tail), where tail is a non-empty list
+
+>>> def non-empty list.fn(L)
+	# if L is a singleton:
+		# ... L.hd ...
+	# else:
+		... L.hd ... non_empty_list.fn(L.tl)
+
+class Card:
+	def __init__(self, suit, rank):
+		self.suit = suit
+		self.rank = rank
+
+>>> def highest_rank(hand):
+	if hand.tl == Empty:
+		return hand.hd.rank	# We want to return the rank of the card, not the suit or the
+					# value we've assigned to the card. Remember Jack's were given
+					# a value of 11, Queen 12, etc. If a Jack is the highest card
+					# you should return 'Jack' not '11'.
+	else:
+		# ... hand.hd ... highest_rank(head.tl) ...
+		if hand.hd.rank is >= highest_rank(hand.tl):
+			return hand.hd.rank		^
+		else:					|
+			return highest_rank(hand.tl)	|
+						^	|
+						|	|
+				# same recursive call is done twice.
+[verbally went through the math; program does up to 31 comparisons,
+almost 2^5 evaluations when this recursion is used twice]
+
+Optimize: don't issue the same recursive call twice
+
+>>> def highest_rank(hand):
+	if head.tl == Empty:
+		return hand.hd.rank
+	else:
+		highest_in_tail = highest_rank(hand.tl)
+		if hand.hd >= highest_in_tail:
+			return hand.hd
+		else:
+			return highest_in_tail
+[down from 31 to 5 evaluations]
+
+OR
+
+>>> def highest_rank(hand):
+	if head.tl == Empty:
+		return hand.hd.rank
+	else:
+		return max(hand.hd.rank, highest_rank(hand.tl)
+[still 5 evaluations]
+
+Optimize even further: stop if you see an Ace.
+
+Ace = 14
+>>> def highest_rank(hand):
+	if hand.tl == Empty:
+		return hand.hd.rank
+	# if we see an Ace, we don't have to do the recursive part
+	elif hand.hd.rank == Ace:
+		return Ace
+	else:
+		return max(hand.hd.rank, highest_rank(hand.tl))
+
+Example: let’s build ourselves an address book
+
+class Contact:
+	def __init__(self, name, addr):
+		self.name = name
+		self.addr = addr
+
+Given a list of contacts and a name, find the address that goes with it.
+
+What issues will we encounter?
+- Duplicate names (two friends/contacts with the same name)	# for now, take the first one you encounter
+- Name not found			 # we will do error checking later. for now, return an empty string
+
+>>> contacts = List(Contact('Fred', '123 University'), List(Contact('Barney', \
+						'456 Spring Garden'), Empty))
+>>> contacts.hd.name
+'Fred'
+>>> contacts.tl.hd.addr
+'456 Spring Garden'
+
+>> def lookup(addressbook, name):
+	if addressbook == Empty:
+		return ''	# An empty string, two single quotes ( ' ) or two double quotes ( " )
+	# Just because were in the empty case, doesn't mean it started empty.
+	# The program could have been searching for a name but did not find it.
+	# At the end of the search the list would be empty.
+		# ... addressbook.hd ...
+		# ... lookup(addressbook.tl, name)
+		# ... name ....
+		if addressbook.hd.name = name
+			return addressbook.hd.addr
+		else:
+			return lookup(addressbook.tl, name)

@@ -1,0 +1,15 @@
+- A -
+glAccum
+glActiveTexture
+glAlphaFunc
+glAreTexturesResident
+glArrayElement
+glAttachShader
+
+- B -
+glBegin
+glBeginQuery
+
+
+
+

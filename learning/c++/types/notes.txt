@@ -1,0 +1,8 @@
+
+-typedef built in types.
+-alignment of types inside of structs
+-sizeof(functionpointers)
+-sizeof(memberfunctionpointers)
+-classes as types
+
+

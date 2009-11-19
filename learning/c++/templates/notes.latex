@@ -1,0 +1,121 @@
+\documentclass{article}
+
+\usepackage{amsmath}
+\usepackage{listings}
+
+
+%\lstset{ %
+%language=C++,                % choose the language of the code
+%basicstyle=\footnotesize,       % the size of the fonts that are used for the code
+%numbers=left,                   % where to put the line-numbers
+%numberstyle=\footnotesize,      % the size of the fonts that are used for the line-numbers
+%stepnumber=1,                   % the step between two line-numbers. If it's 1 each line will be numbered
+%numbersep=5pt,                  % how far the line-numbers are from the code
+%backgroundcolor=\color{white},  % choose the background color. You must add \usepackage{color}
+%showspaces=false,               % show spaces adding particular underscores
+%showstringspaces=false,         % underline spaces within strings
+%showtabs=false,                 % show tabs within strings adding particular underscores
+%frame=single,	                % adds a frame around the code
+%tabsize=2,	                % sets default tabsize to 2 spaces
+%captionpos=b,                   % sets the caption-position to bottom
+%breaklines=true,                % sets automatic line breaking
+%breakatwhitespace=false,        % sets if automatic breaks should only happen at whitespace
+%escapeinside={\%*}{*)}          % if you want to add a comment within your code
+%}
+
+
+
+\begin{document}
+\lstset{language=C++}
+
+\section{A Simple Example}
+Template functions are the most common and simple way to use templates.
+
+\begin{lstlisting}
+template<typename T>
+const T& max(const T& x, const T& y)	
+{
+	if(y < x)
+	{
+		return x;
+	}
+	return y;
+}
+\end{lstlisting}
+
+Type T is replaced by the type that the user of this template specifies:
+
+\begin{lstlisting}
+int a = 5;
+int b = 10;
+int result = max(int, int);
+\end{lstlisting}
+
+In this example 1 max is compiled as follows:
+
+\begin{lstlisting}
+const int& max(const int& x, const int& y)
+{
+	...
+}
+\end{lstlisting}
+
+\section{Using a template twice causes two functions to be compiled}
+The following example is a simple extension of the above example.
+
+\begin{lstlisting}
+float fresult = max<float>(a, b);
+	...
+const float& max(const float& x, const float& y)
+{
+	...
+}
+\end{lstlisting}
+
+Note that the complier has to convert a and b to a float to execute this function. This will probably result in a warning, depending on your compiler/settings.
+
+
+\section{Overloading Operators}
+Think of templates as preprocessor macros. They basically are used to generate code at compile-time.
+
+So what happens if you have the following:
+
+\begin{lstlisting}
+struct MyStruct
+{
+	int a;
+	int b;
+};
+
+MyStruct str_a;
+MyStruct str_b;
+result = max(str_a, str_b);
+\end{lstlisting}
+
+What happens? Well you'll wind up with a massive compiler error and it's going to be hard to determine what is going on. The solution is to overload the required < operator. This will allow you to compile the solution. 
+
+Note that on line 16 you have to ensure it says \#if 0 to get the example to compile properly.
+
+\section{Different types of Compile-Time Algorithms}
+Specialization based on typedef's that occur inside of classes.  \\
+Specialization based on using IsFloat<> like structures. \\
+Using parameters in functions for making compile time decisions. \\
+Creating lists of Types (TypeList). \\
+
+
+
+Don't Of Template Use:
+	Reflection
+
+Templates are completely bound at compile time. What does this mean? If means that you can't have a list of different types.
+
+vector<list_of_different_types> vec;
+for
+
+
+
+
+
+
+\end{document}
+

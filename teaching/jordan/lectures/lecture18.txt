@@ -1,0 +1,130 @@
+Lecture 18
+October 26, 2009
+Jonathan Moore
+CSCI 1105
+
+
+What happens when you have an Error?
+
+Similar to last day with the Point class, you can input an exception with LineSeg. 
+
+The LineSeg class takes two parameters that are supposed to be Points - we can check this in the same way as we did with Points.
+
+
+	class LineSeg:
+	def __init__ (self,p1,p2):
+		if isinstance (p1, Point) and isinstance (p2, Point):
+			self.p1 = p1
+			self.p1 = p2
+		else:
+			raise TypeError ('p1 and p2 must be Points')
+
+>>> l = LineSeg (Point (1,2), False)
+	.					# a bunch of red text
+	.
+	.
+	TypeError: p1 and p2 must be Points
+
+>>> l = LineSeg (Point (1,2), Point (3, 'abc'))
+	.
+	.
+	.
+	TypeError: x + y must be numbers  	# get error for not having numbers in Point; don't even get to evaluate new code we wrote
+
+Recall: letter_grade
+		- error if the numeric grade is not between 0 and 100.
+		- not really a TypeError if numerics are out of range
+
+We can define our own exceptions (useful if Python does not have the error class for what we want)
+
+- Exceptions are classes:
+	
+	class RangeError (Exception): 		
+		pass
+
+	def letter_grade (numeric):
+		if numberic >= 90 and numeric <= 100: # we defined the upper bound
+			return 'A+'
+		elif . . . .:
+		.
+		.
+		.	
+		else:				# numeric does not fit in any slot; is not in valid range
+			raise RangeError
+
+>>> letter_grade (101)
+	.
+	.
+	.	
+	RangeError	
+
+Maybe we want more info. How do we get the explanation message?
+-Make the message an attribute of the class
+
+	class RangeError (Exception):
+		def __init__ (self, msg):
+			self.msg = msg 		# But how do we get message out?
+
+__repr__    - how Python should diplay the value when it is requested
+
+__str__	   - how a program ought to display an object on the screen. More user friendly version.
+
+	class RangeError (Exception):
+		def __init__ (self, msg):
+			self.msg = msg
+		def __str__ (self):
+			return self.msg
+		def __repr__ (self):
+			return 'RangeError(' + msg + ')'	# assuming msg is a string
+
+Going back we now get:
+	
+	def letter_grade (numeric):
+		.
+		.
+		.
+		.
+		else:
+			raise RangeError ('numeric must be between 0 and 100')
+
+May be better if we can store the 0 and 100 and put into string.
+
+Make the limist parameters of the exception
+	- makes it easier to extract them when recovering from the exception
+
+	class RangeError (Excepetion):
+		def __init__ (self, l, n):	# lower and higher limits
+			self.l = l
+			self.h = h
+		def __str__ (self):
+			return 'value must be in the range' + str (self.l) + 'to' +str(self.h)
+
+Going back again:
+
+	def letter_grade (numeric):
+		.
+		.
+		.	
+		else:
+			raise RangeError (0,100)
+
+How do we recover when an exception occurs?
+	-will come back to this later
+
+For now: an algorithm problem: sorting lists
+		
+	Many different sorting algorithms of varying strengths and weaknesses exist.
+
+We'll do insertion sort
+	- repeat taking new item (outer recursion)
+	- repeat figuring out position (inner recursion)
+
+Therefore helper is the inserting part
+	-given a sorted list and an element, return the list that results from inserting the element where it ought to go in the list.
+
+
+
+
+
+
+

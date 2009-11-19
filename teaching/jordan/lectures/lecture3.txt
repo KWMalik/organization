@@ -1,0 +1,98 @@
+CSCI 1105
+September 16, 2009
+
+Functions (Continued)
+
+From last class:
+>>> def area_of_square(n):
+	return n*n
+>>> area_of_square(5)
+25
+
+Where:
+(n) = formal parameter
+	A parameter is a piece of data that a function expects.
+return n*n = body
+(5) = argument
+
+Reasons and advantages for using the function instead of the direct computation:
+- What we're trying to do is clearer (finding area of a square vs. multiplying 2 numbers together - which has the potential to be forgotten or mistaken)
+- Make your code available to others for re-use or for yourself in the future
+- Makes programs less error-prone because complicated code only needs to be written once
+
+--- Exercise: Find the area of a circle with radius "r":
+
+>>> def area_of_circle(r):
+	return 3.14*r**2
+
+- We're not using "pi" here, because it's in a library - to be covered later
+
+Later, you can come back and say "what is 3.14?"
+- How do we remember that it's an approximation of a constant (pi)?
+- What if in the future we need more accuracy (eg. 3.14 -> 3.14159)
+- How do we ensure we always use the same approximation?
+
+General Programming Principle: Avoid magic numbers (constant values dropped into formulas without explanation)
+
+Better: give the constant a name.
+>>> pi=3.14 (Gives 3.14 the name pi)
+
+>>> def area_of_circle(r):
+	return pi*r**2
+
+To change all pi to more accuracy, use pi=3.14159, and all instances of pi in the code change to the new value
+
+--- Exercise: Volume of a pyramid (square base, side length "b", height "h")
+Formula:
+V = Abase*h/3
+V = b^2*h/3
+
+>>> def volume_of_pyramid(b,h): (takes 2 parameters)
+	return b**2*h/3
+
+Programming Principle: Every program is an act of communication:
+- Between you and the computer
+- Between you and yourself in the future
+- Between you and others
+
+Suppose a few months pass since you write this function, and you come to use it.
+- Are you going to remember how to use it?
+- Will you remember certain things?
+	- Formula only works on square-based pyramids
+	- What did you mean by "b" and "h"?
+	- Etc.
+
+We need a way of embedding essential information (documentation) into the programs we write.
+
+Comments allow us to insert English remarks into our programs to help us understand them
+
+Example:
+>>> # Computes the volume of a pyramid
+>>> # The pyramid must be square-based
+>>> # b is the side length of the base
+>>> # h is the height
+>>> def volume_of_pyramid(b,h):
+	return b**2*h/3
+
+- Any line that starts with a # is called a comment
+- Python ignores these lines
+- They are just for human readers
+
+You can also post comments at the end of a line:
+>>> def area_of_square(n):
+	return n*n # area is tthe square of side length
+- Python ignores the rest of the line after #
+
+--- Exercise: Find the area of a ring with outer radius R1 and inner radius R2
+
+>>> def area_of_ring(r1,r2): (in comments, state what r1 and r2 are)
+	return pi*(r1**2 - r2**2)
+
+OR
+
+>>> def area_of_ring(r1,r2):
+	return area_of_circle(r1)-area_of_circle(r2)
+
+Duplicating previously made computations invites error. Insurance is provided by building functions in reference to other functions.
+
+In this case, area_of_circle is a Helper Function. In general, helper functions are a good idea.

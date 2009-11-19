@@ -1,0 +1,107 @@
+Wednesday, October 14th
+
+
+
+
+Given two lists of strings( L1 and L2)
+find the list of all strings you get by concatenating a string from L1 with one from L2.
+
+def cat_helper(s, L2):
+      if L2 == Empty:
+              return Empty
+      else:
+              return List(s + L2.hd, cat_helper(s, L2.tl))
+
+def concat(L1, L2):
+     if L1 == Empty:
+             return Empty
+     else:
+             return append(cat_helper(L1.hd, L2), concat(L1.tl, L2))
+
+
+
+Again, this function exposes its guts.
+cat_helper is only useful to "concat", so we can declare ir locally as well.
+
+def concat(L1, L2):
+   def cat_helper(s, L2):
+        if L2 == Empty
+               return Empty
+     else:
+               return List(s + L2.hd, cat_helper(s, L2.tl))
+        if L1 == Empty:
+               return Empty
+     else:
+             return append(cat_helper(L1.hd, L2), concat(L1.tl, L2))
+
+---------------------------------------------------------------------------------------
+
+NEW IDEA;
+
+
+lets estimate p.
+suppose we have a unit square with a quarter circle inside.
+
+              1
+        A____________
+         |          |
+         |          |
+       1 |          |
+         |          |         (imagine there is a quarter of a circle inside the square.It extends from point A to Point B) 
+         |          |          (i could not draw it using notepad)
+         |__________|B
+
+
+area of square= 1
+area of 1/4 of a circle= p/4
+
+probability of a random dart to land inside the circle= area of circle / area of square = p/4
+
+if we randomly generate points, the proportion that lie in the circle should approximate p/4.
+Multiply by 4 and we have an estimate.
+
+Do the following n times( countdown recursion on natural numbers)
+
+
+- Generate two random numbers.
+   if they form a point inside the circle, count 1.
+   if they form a point outside the circle, count 0.
+- Take the total count, divide by n, and then multiply by 4.
+
+>>> from random import random
+
+
+
+
+
+def estimate_pi(n): # n is the number of samples you take
+    def count_darts(n): # accumulates the total hits on n dart throws.
+         if n == 0:
+              return 0
+      else:
+        x=random()
+        y=random()
+         if x**2 + y**2 <=1; # asks if the point is inside the circle.
+              return 1 + count_darts(n-1)
+      else:
+             return count_darts(n-1)
+         return count_darts(n) *4.0/n
+
+
+
+if you estimate pi up to a certain limit, python would give you a variety of answers.
+BUT, try to estimate pi for n=1000, PYTHON CRASHES.
+
+
+Why?
+
+>>> import sys
+>>> sys.setrecursionlimit(1000000)   # we increased the number of recursion limit to 1 million.
+
+Yet, when you ask to estimate_pi(4000)
+PYTHON crashes drastically, because it's out of memory.
+
+each recursive call to count_darts requires Python to remember what to do when the recursive call returns ( in this case, it's either add 1 or do nothing).
+EVENTUALLY, the program runs out of memory.
+
+What can be done about this?   (answered in the coming lecture on Friday) 

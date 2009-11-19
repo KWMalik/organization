@@ -1,0 +1,5 @@
+-If online is possible all devkits must be able to be used for online testing.
+-(One-Two) memory cards per developer
+-No build is a final build. There WILL be a build tommorow.
+-System to verify builds EAC makes vs. the builds that we make.
+-All users will have the same path on there computers so that libraries can find the built code and debug information. i.e. D:\Perforce

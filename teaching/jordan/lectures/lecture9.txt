@@ -1,0 +1,96 @@
+September 30, 2009.
+
+>>>mp = midpoint(Point(1,3), Point (3, 5))
+>>>mp.x
+2.0
+>>>mp.y
+4.0
+
+Today: A Really Really Neat Idea.
+
+What if we don't know how much data will make up our objects?
+
+For example: What if I wanted to declare a class for polygons which are built from a set of points... How many? Could have any number of points.
+Since we don't know how many, we can't build an attribute for each one.
+Need some kind of a data structure that accommodates arbitrary amounts of data.
+
+We already have the ability to do this because we can already built classes.
+Build a class that is a list
+
+>>> def __init__(self, ___)
+	___
+
+What is a list?
+Lists can be empty.
+Singleton list → only one entry.
+Multi-element list
+
+How can we describe a list so that it translates well into python?
+
+Some lists are empty... Let's assume they are not infinite. 
+If a list is not empty then we know it has an element in it. In particular it has a first element.
+If you exclude the first element, you still have a list leftover.
+
+We can now say a list is either:
+1)Empty
+2)A first element (the head) paired with another list (the tail)
+
+We need a way to represent an empty list: Use the symbol Empty to mean the empty list.  Declare a class :
+
+>>>class Empty:
+	pass
+
+Use the class and don't instantiate it – behaves like a symbol. 
+>>> my_empty_list = Empty;
+>>>my_empty_list == Empty;
+True
+
+>>> class List:
+	def__init__(self, head, tail):
+		self.hd=head
+		self.tl=tail
+
+now we can create lists as follows:
+
+>>>e = Empty # empty list.
+
+>>> l1=List(2,Empty)  #the list 2
+
+>>> l2=List(3, List(4, List(7, empty)))
+
+#built the list 3,4,7
+
+>>>l3=(list('shoe', l2)
+	#'shoe',3,4,7
+
+>>>l4=l2,tl #this is the list 4,7
+
+To access the elements of the list,
+
+>>>l3.hd – First element.
+	'shoe'
+
+Second element
+
+>>>l3.tl.hd
+3
+Third element
+>>>l3.tl.tl.hd
+4
+
+Fourth element
+
+>>>l3.tl.tl.tl.hd
+7
+
+How do we write functions that work on lists?
+The form of a program follows the structure of the data:
+A list is either empty or list object where hd is the first and tl is another list.
+
+Def list,fn (l)
+# if l is empty
+	#handle the empty case
+# else l is not empty
+	l.hd... l.tl
+
+But l.tl is another list! So what are we likely to want to do with it? The same thing we're doing to the original list.

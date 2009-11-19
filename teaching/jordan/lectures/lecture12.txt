@@ -1,0 +1,111 @@
+Wednesday,  7th October,2009. 
+ 
+Last Lecture
+
+
+>>>lookup(contacts,'Fred')
+"123 University'
+>>>Lookup(contact,'Barney')
+'456 Spring Garden'
+>>>Lookup(contact,'Wilma')
+''
+>>>
+
+Python returns empty string because there is no contact for Wilma on the address book.
+
+
+
+Todays lecture: RECURSION ON NATURAL NUMBERS
+
+
+Can do recursion on data other than just lists. Often, we do repititive computationon numbers, typically from
+0 or 1 to some upper limit.
+
+We can build a data definition for natural numbers (0,1,2,3,.....) as follows:
+A natural number is
+                1) 0 or
+                2) n+1 where n is a natural number(equiv n where n-1 is a natural number)
+
+
+Template for recursive functions on natural numbers
+
+
+>>>def nat_fn(n):
+     # if n == 0:
+        #base case
+     # else:
+        # ....n....nat_fn(n-1)....
+
+
+Example 1: Compute n! (The product 1*2*.....*(n-1)*n)
+                                             
+Hint: 0! = 1
+
+>>>def factorial(n):
+     if n == 0:
+       return 1
+     else:
+       return n*factorial(n-1)
+
+
+Example 2: Construct the list of all numbers from n down to 0:
+
+List(n,List(n-1,.....List(1,List(0,Empty))...))
+
+>>>def countdown(n):
+     if n == 0:
+       return List(0,Empty)
+     else:
+       List(n,countdown(n-1))
+
+
+
+Exercise 1: Write a function that takes strings and a natural number n and returns a list containing n copies os s.
+
+>>>def copies(s,n):
+     if n == 0:
+       return Empty
+     else:
+       return Lists(s,copies(s,n-1))
+
+
+
+Exercise 2: Compute the product of the numbers n*(n+1)*.....*(m-1)*m = m!/(n-1)!
+
+Option 1:
+
+>>>def product_to(n,m):
+     return factorial(m)/factorial(n-1)
+
+Nice to look at but not exactly practical....Expensive
+
+
+Option 2: Now definition for natural numbers greater than k
+
+A natural number greater or equal to k is
+
+1) k or
+2) m where m-1 is a natural number greater or equal to k.
+
+
+>>>def product_to(n,m): # natural numbers greater or equal to n
+     if m == n:
+       return n
+     else:
+       m*product(n,m-1)
+
+
+What happens if we call product_to(n,m) with m<n?
+
+-Will crash because it will run out of memory trying to compute it.
+
+
+We can instead do something sensible.
+
+>>>def product_to(n,m):
+     if m < n:
+       return 1 # we can also return product_to(m,n)
+     elif m == n:
+       return n
+     else:
+       return m*product_to(n,m-1)

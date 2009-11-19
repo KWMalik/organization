@@ -1,0 +1,57 @@
+14/09/09
+
+Programming language must be straight forward for computers to understand; unlike English.
+			- python.org
+
+Exercise: Speaking in a way your computer will understand:
+	Algorithm - A step-by-step procedure for solving a problem, in a finite number of steps.
+
+	- Given  a deck of cards, give an algorithm for finding the highest.
+		Assumptions: Aces are high and suites don?t matter.
+	
+	Method #1:
+	1. Encode ranks
+	2. Sort cards (this assumes a sort program exists)
+	3. Lay them out: Largest = last card
+
+	Method #2
+	1. Encode ranks
+	2. Flip top two of your dealt hand
+	3. Cycke through the cards, discarding the smaller of the current two cards flipped & replace with 	a new card from the hand
+	4. At end, discard the smallest, leaving the largest.
+	Optimize: Stop if you ever see an ace.
+
+- Second algorithm is most efficient because you are only dealing with 2 cards at a time instead of your whole hand.
+
+Python
+1. As a calulator:
+
+	Exercise a: calculate the value of ?2+3?
+		>>>2+3
+		5
+	Exercise b: Calculate ?28/4
+		>>>28/4
+		7
+	Exercise c: Calculate the area of a square, with side length = 5
+		>>>5*5                  or                    >>>5**2
+		25                                                  25
+	Exercise d: Calculate the area of a square, with side length = 9
+		>>>9*9                  or                    >>>9**2
+		81			           81
+
+*Now have had repetitive questions (area of a square).  Should find a way to do it more efficiently
+	- Take that operation and give it a name
+		-Build an abstraction
+	- In this case:
+		- Abstract the idea of finding areas of squares into something we can name and reuse.
+			-Define a FUNCTION:
+				>>>def area_of_sqaure(n)
+					return n*n
+	- Where ?n? represents the data to be input. Also, the cursor is idented because ?function bodies? 	are indented.
+		- First line says, ?To find the area of a square with side length ?n?, do the following:?
+		- second line says, ?The desired result is n*n.?
+	- area_of_square is a function - the squaring operation packed up and given a name.
+
+Example: Find the area of a sqaure with side length = 5.
+		>>>area_of_square (5)
+		25

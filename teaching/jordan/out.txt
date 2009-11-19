@@ -1,0 +1,213 @@
+a3.py:class List:
+a3.py:   if List==Empty:
+a3.py:#Returns the product of Odd numbers within a List.
+a3.py:   if List==Empty:
+a3.py:      return List(lagest_coords(P1))
+a3.py:      return List(largest_coords(P2))
+a3.txt:  List and Empty classes that were defined in lectures:
+a3.txt:class List:
+a3.txt:1) Write a function called sum that takes a List object and returns the sum of
+a3.txt:  the elements in the List.  For example, sum(List(1, List(4, List(7, Empty))))
+a3.txt:  should return 12.  You may assume that List used as the argument of sum
+a3.txt:2) Write a function called prod_odd that takes a List object and returns the
+a3.txt:  product of all of the odd elements in the given List.  For example,
+a3.txt:  prod_odd(List(1, List(2, List(3, List(5, List(6, Empty)))))) should return
+a3.txt:  1 * 3 * 5 = 15.  You may assume that the given List object contains only
+a3.txt:3) Write a function called contains_evens that takes a List object and returns
+a3.txt:  True if the List contains at least one even element, and False otherwise.
+a3.txt:  (If the List is empty, the result should be False.)  You may assume that the
+a3.txt:  given List object contains only integer entries.
+a3.txt:  to the classes Empty and List above.  Write a function called largest_coords
+a3.txt:  that takes a List Object of Point objects as a parameter, and returns a List
+a3.txt:  largest_coords(List(Point(1,4), List (Point(5,2), List(Point(8,7), Empty))))
+a3.txt:  should return a List object equivalent to List(4, List(5, List(8, Empty))).
+a3.txt:5) Write a function called is_ascending that takes a List object and returns
+a3.txt:  True if each element of the List is at least as large as the previous
+a3.txt:  element, and False otherwise.  For Lists containing 0 or 1 elements, the
+a3.txt:  function should return True.  You may assume that the List object given as an
+a3.txt:  not quite match the recursive definition of Lists given in class, but there
+a3.txt:  is a way to recursively describe Lists such that the function's structure
+a3.txt:  matches the description of the List.  For a small BONUS, give such a
+a3.txt:  recursive description of Lists as part of your documentation for this
+a4.py:class List:
+a4.py:def List(L):
+a4.py:      return List(L.hd + L.tl)
+a4.py:#Returns a List containing all natural numbers by which "n" is divisible.
+a4.py:#List begins from "m" and counts down until 2.      
+a4.py:      return List(divisors(n/m-1)
+a4.py:   return List(L.hd*n)take(L.tl)
+a4.py:                     return List
+a4.py:#Will return a List excluding the "Nth" element.
+a4.py:   return List and not (L.hd+n-1)
+a4.txt:  List and Empty classes that were defined in lectures:
+a4.txt:class List:
+a4.txt:  and returns a List object containing all natural numbers (starting from m,
+a4.txt:  should return a List object equivalent to
+a4.txt:  List(6, List(3, List(2, Empty))), whereas
+a4.txt:  should return a List object equivalent to
+a4.txt:  List(3, List(2, Empty)).
+a4.txt:2) Write a function called take that takes a List object L and a natural
+a4.txt:  number n, and returns a List object consisting of the first n elements of L,
+a4.txt:  entire list.  For example, take(2, List(1, List(4, List(7, Empty))))
+a4.txt:  should return the equivalent of List(1, List(4, Empty)).
+a4.txt:3) Write a function called drop that takes a List object L and a natural
+a4.txt:  number n, and returns a List object consisting of all objects in the
+a4.txt:  drop(2, List(1, List(4, List(7, Empty)))) should return the equivalent of
+a4.txt:  List(7, Empty).
+a4.txt:  element, etc.).  For example, exclude(1, List(1, List(4, List(7, Empty))))
+a4.txt:  should return the equivalent of List(1, List(7, Empty)).
+a5.py:class List:
+a5.py:        return List(f(L.hd),map(f,L.tl))
+a5.py:    return List(Point.x)#Returns a list containing X coordinates from a set of Point Objects.
+a5.py:    return List(Point.y)#Returns a list containing Y coordinates from a set of Point Objects.
+a5.py:    return List(sum(Point.x + Point.y) #Returns the sum of x+y coordinates within a given list.
+a5.py:                return List(Point.x)
+a5.py:                return List(Point.y)
+a5.py:    return List(list.reverse)            
+a5.txt:2) The solutions you provide for this question will be based on the List,
+a5.txt:class List:
+a5.txt:         return 'List(' + repr(self.hd) + ', Empty)'
+a5.txt:         return 'List(' + repr(self.hd) + ', ' + repr(self.tl) + ')'
+a5.txt:  following functions on List objects:
+a5.txt:  a)  the function xs that takes a List of Point objects and returns a List
+a5.txt:         xs(List(Point(1,2), List(Point(4,3), Empty)))
+a5.txt:      should return a List object equivalent to
+a5.txt:         List(1, List(4, Empty))
+a5.txt:  b)  the function ys that takes a List of Point objects and returns a List
+a5.txt:         ys(List(Point(1,2), List(Point(4,3), Empty)))
+a5.txt:      should return a List object equivalent to
+a5.txt:         List(2, List(3, Empty))
+a5.txt:  c)  the function sum_coords that takes a List of Point objects and returns
+a5.txt:      a List object in which each entry is the sum of the x- and y-coordinates
+a5.txt:         sum_coords(List(Point(1,2), List(Point(4,3), Empty)))
+a5.txt:      should return a List object equivalent to
+a5.txt:         List(3, List(7, Empty))
+a5.txt:  d)  the function max_coords that takes a List of Point objects and returns
+a5.txt:      a List object in which each entry is the larger of the x- and
+a5.txt:         max_coords(List(Point(1,2), List(Point(4,3), Empty)))
+a5.txt:      should return a List object equivalent to
+a5.txt:         List(2, List(4, Empty))
+a5.txt:  e)  the function reverse_coords that takes a List of Point objects and
+a5.txt:      returns a List object which contains the same Points as the original
+a5.txt:         reverse_coords(List(Point(1,2), List(Point(4,3), Empty)))
+a5.txt:      should return a List object equivalent to
+a5.txt:         List(Point(2,1), List(Point(3,4), Empty))
+a6.py:class List:
+a6.py:         return 'List(' + repr(self.hd) + ', Empty)'
+a6.py:         return 'List(' + repr(self.hd) + ', ' + repr(self.tl) + ')'
+a6.py:   return List(sum count_helper(diamonds),sum count_helper(clubs),sum count_helper(hearts),sum count_helper(spades))
+a6.py:print "the dominant suit is," max(List)
+a6.py:      return List(Tabulate(f(a),f(a+2),f(b))
+a6.py:        return List(L1[f(x)] + L2[f(x)])          
+a6.txt:1) In this question, you will use the familiar List and Empty classes from 
+a6.txt:2) The solution you provide for this question will be based on the List and
+a6.txt:class List:
+a6.txt:         return 'List(' + repr(self.hd) + ', Empty)'
+a6.txt:         return 'List(' + repr(self.hd) + ', ' + repr(self.tl) + ')'
+a6.txt:  a <= b.  The function tabulate returns the List object containing the values
+a6.txt:  tabulate(lambda x:x**2, 2, 4) should return a List object equivalent to
+a6.txt:  List(4, List(9, List(16, Empty))).
+a6.txt:  zipwith(lambda x,y:x+y, List(1, List(2, Empty)), List(3, List(4, Empty)))
+a6.txt:  should produce a List object equivalent to List(4, List(6, Empty)).  Write
+a7.py:class List:
+a7.py:return List(f(L.hd),map(f,L.tl))
+a7.py:             return List(l.hd, filter(l, l.tl)
+a7.py:      return List(Empty)
+a7.py:      return List(L.hd.addr,Empty)
+a7.py:             return List(e, Empty)
+a7.py:             return List(e, L)
+a7.py:             return List(L.hd, insert(e, L.tl))
+a7.txt:1) In this question, you will use the List and Empty classes from lectures,
+a7.txt:  given name, your implementation will return a *List* of all addresses in
+a7.txt:   1) If there is no match, your version of lookup should return an empty List.
+a7.txt:   2) If there is just one match, it should return a singleton List with just
+a7.txt:      multi-element List containing all of the matching elements.
+a7.txt:             return List(e, Empty)
+a7.txt:             return List(e, L)
+a7.txt:             return List(L.hd, insert(e, L.tl))
+a7.txt:3) Write the function unzip that turns a List of pairs into a pair of Lists.
+a7.txt:  For example, the call unzip(List((1, 3), List((2, 5), List((4, 7), Empty))
+a7.txt:  should return the pair of Lists
+a7.txt:    (List(1, List(2, List(4, Empty))), List(3, List(5, List(7, Empty))))
+a7.txt:  Use recursion and the template for functions that operate on Lists, and
+a8.py:	2) In this question, you will use the List and Empty classes from lectures.
+a8.py:	return List(L.hd, L.tl)
+a8.py:		return List(L.hd, deep_copy_int_list(L.tl))
+a8.py:class List:
+a8.py:		return List(f (L.hd), map (f, L.tl))
+a8.txt:2) In this question, you will use the List and Empty classes from lectures.
+a8.txt:3) In this question, you will use the List and Empty classes from lectures.
+a8.txt:   Write a general deep copying routine for List objects that also creates
+a8.txt:  deep copies of the elements in the List, in addition to the List structure
+a8.txt:   deep_copy_list(List(LineSeg(Point(1,2), Point(3,4)), \
+a8.txt:      List(LineSeg(Point(5,6), Point(7,8)), Empty)), deep_copy_lineseg)
+a8.txt:  would create a deep copy of the given List of LineSeg objects.
+lectures/lecture10.txt:>>> length(List(2, Empty))
+lectures/lecture10.txt:>>> length(List('a', List('b', List('c', Empty))))
+lectures/lecture10.txt:>>> length(List('a', List('b', List('c', Empty))))
+lectures/lecture10.txt:=> 1 + length(List('b', List('c', Empty)))
+lectures/lecture10.txt:=> 1 + 1 + length(List('c', Empty))
+lectures/lecture10.txt:=> 1 + 1 + 1 + length(List(Empty))
+lectures/lecture10.txt:List is a recursive data structure  - it uses its own definition to define itself
+lectures/lecture10.txt:		return List(2*l.hd, double(l.tl))
+lectures/lecture10.txt:			return List(l.hd, leap.years(l.tl))		# if the year in the head is a leap
+lectures/lecture10.txt:2) List(head,tail), where tail is a non-empty list	# this looks a lot like the original definition we were given for list, so that's good
+lectures/lecture11.txt:2) List(head, tail), where tail is a non-empty list
+lectures/lecture11.txt:>>> contacts = List(Contact('Fred', '123 University'), List(Contact('Barney', \
+lectures/lecture12.txt:List(n,List(n-1,.....List(1,List(0,Empty))...))
+lectures/lecture12.txt:       return List(0,Empty)
+lectures/lecture12.txt:       List(n,countdown(n-1))
+lectures/lecture12.txt:       return Lists(s,copies(s,n-1))
+lectures/lecture13.txt:Example: Given a value of n,construct the list List(0,List(1,...List(n-1),List(n,Empty))...))
+lectures/lecture13.txt:       return List(n,Empty)
+lectures/lecture13.txt:       return List(m,count__up(m+1,n))
+lectures/lecture13.txt:     List(0....(List(n,Empty))...)     
+lectures/lecture13.txt:        return List(L1.hd,append(L1.tl.L2))
+lectures/lecture13.txt:add_lists(List(2,List(5,Empty)),List(10,List(30,Empty)))
+lectures/lecture13.txt:            List(12,List(35,Empty))
+lectures/lecture13.txt:        return List(L1.hd+L2.hd,add_lists(L1.tl,L2.tl))
+lectures/lecture13.txt:       return List(s+L2.hd,cat_helper(s,L2.tl))
+lectures/lecture14.txt:              return List(s + L2.hd, cat_helper(s, L2.tl))
+lectures/lecture14.txt:               return List(s + L2.hd, cat_helper(s, L2.tl))
+lectures/lecture16.txt:For Lists: need recursion because lists are a recursive data structure.
+lectures/lecture16.txt:	class List:
+lectures/lecture16.txt:				return 'List (' + repr (self.hd) + ',Empty)'
+lectures/lecture16.txt:				return 'List(' + repr(self.hd) + ',' + repr (self.tl) + ')'     # has recursive call on self.tl
+lectures/lecture16.txt:>>> List (1, List (3, List (6, Empty)))
+lectures/lecture16.txt:List (1, List (3, List (6, Empty)))
+lectures/lecture16.txt:>>> l = List (1, List (3, List (6, Empty)))
+lectures/lecture16.txt:List (3, List (6, Empty))
+lectures/lecture16.txt:List (1, List (3, List (6, Empty)))
+lectures/lecture16.txt:			return List (____(L.hd)____, fn (L.tl))  # only difference between functions was the blank ____(L.hd)____ that defined what was done to the head.
+lectures/lecture16.txt:			return List (f (L.hd), map (f, L.tl))
+lectures/lecture16.txt:>>> double_list (List (1, List (2, List (3, Empty))))
+lectures/lecture16.txt:List (2, List (4, List (6, Empty)))
+lectures/lecture16.txt:				return List (s + L.hd, cat_helper (s, L.tl))
+lectures/lecture17.txt:               return List(s + L2.hd, cat_helper(s, L2.tl))
+lectures/lecture17.txt:             return List(l.hd, filter(l, l.tl)
+lectures/lecture20.txt:Lists! (The built-in kind)
+lectures/lecture20.txt:We use Lists when the number of data elements are nto fixed and may be arbitrarily large.
+lectures/lecture20.txt:Lists are indexed the same way as we've seen before with other objects.
+lectures/lecture20.txt:		#... L[0]... List_fn(L[1:])
+lectures/lecture20.txt:for every <var> in <List>:
+lectures/lecture20.txt:<var> takes on the values of successive items in the <List>. For each such value of the vriable, it executes the <commands>
+lectures/lecture21.txt:Jordan DavisExercise: find the product of the odd elements of a list.Def prod_odds(L):	Result=1For x in L:If x % 2 !=0      Result=result*xElse:	PassReturn result.#Also note: if  in this case does not need an else. Under the Òcommand orientedÓ model of programming if the else part would be Òelse do nothingÓ it can be ommited.Excersise: given a list of numbers, return the list that results from squaring every element.Def square_list(L):Result=[ ]For x in L:Result = result + [x**2]Return result.#There is a built in map function for built-in lists.Def square_list(L):Return map(lambda x: x**2,L)#Functions can change attributes.Def inc_x(p):p.x=p.x + 1 def new_inc_x(p):p=point(p.x + 1,p.y)	# to understand why Òdef_incÓ works and Òdef new_incÓ dosenÕt we need a deeper understanding of how data is layed out in memory. There are two types of data: value data and reference data. Ints, Bools, and Floats are value data which does not take up a lot of space. Strings, Tuples, Lists, and Objects are reference data which take up lots of space.# X holds an address that tells us where to find Òpoint.Ó# Lists are a series of value and reference data.# when a value is passed to a function, the function makes a local copy of the argument. Any updates to the copy made by the function are therefore not visible to the caller on completion of the function.# This explains why Ònew_inc,Ó doesnÕt work.# In the working function Òdef incÓ changes to the local copy are still not visible but changes to what the local copy points to are visible.
+lectures/lecture22-Matt.txt:	return List(L.hd, L.tl)
+lectures/lecture22-Matt.txt:		return List(L.hd, deep_copy_int_list(L.tl))
+lectures/lecture23.txt:Differences between Lists and Tuples:
+lectures/lecture23.txt:Lists are mutable (changable). Where as tuples are not. 
+lectures/lecture9.txt:Lists can be empty.
+lectures/lecture9.txt:>>> class List:
+lectures/lecture9.txt:>>> l1=List(2,Empty)  #the list 2
+lectures/lecture9.txt:>>> l2=List(3, List(4, List(7, empty)))
+mtsol.txt:         return List(max(L1.hd, L2.hd), max_lists(L1.tl. L2.tl))
+test.py:	2) In this question, you will use the List and Empty classes from lectures.
+test.py:	return List(L.hd, L.tl)
+test.py:		return List(L.hd, deep_copy_int_list(L.tl))
+test.py:		return List (f (L.hd), map (f, L.tl))
+test.py:	3) In this question, you will use the List and Empty classes from lectures.
+test.py:   Write a general deep copying routine for List objects that also creates
+test.py:  deep copies of the elements in the List, in addition to the List structure
+test.py:   deep_copy_list(List(LineSeg(Point(1,2), Point(3,4)), \
+test.py:      List(LineSeg(Point(5,6), Point(7,8)), Empty)), deep_copy_lineseg)
+test.py:  would create a deep copy of the given List of LineSeg objects.

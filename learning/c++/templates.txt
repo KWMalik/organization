@@ -1,0 +1,23 @@
+
+What are templates?
+What are they useful for?
+	std::copy example
+
+Using structs as types
+Using a series of functions to make a compile-time decision
+Restrictions
+	Must be in header files
+	Must be known at compile-time
+	Cannot be used with virtual functions
+How to tag something as a type?
+
+Meta Programming: 
+	if statement
+	boolean logic
+	static constants
+	Determining things such as enums/derived/pod
+	Creating linked lists
+	Using linked lists to create design patterns
+
+
+
