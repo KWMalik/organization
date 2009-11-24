@@ -1,0 +1,65 @@
+CSCI 1105/INFX 1604  Assignment 9
+=================================
+
+Place all of your solutions in a file called a9.py.
+
+Provide appropriate documentation for all functions and classes you write.
+
+1) Write a function called subsequence that takes two built-in lists as
+  parameters and returns True if the second list is a subsequence of the
+  first, and False otherwise.  A list T is a subsequence of a list S if each
+  element of T occurs in S, in the same order, possibly with additional
+  elements in between.  For example:
+      subsequence([2,4,5,2,6,9], [2,5,6])
+      subsequence([2,4,5,2,6,9], [5,2,6])
+      subsequence([2,4,5,2,6,9], [2,2,6])
+  should all return True, but
+      subsequence([2,4,5,2,6,9], [2,6,5])
+      subsequence([2,4,5,2,6,9], [2,6,7])
+      subsequence([2,4,5,2,6,9], [2,2,5])
+  should all return False.
+
+2) In this question, you will use the List and Empty classes from lectures.
+
+   In question 2 of assignment 7, you implemented the first steps toward a
+   program that will check whether a list contains duplicate entries.  Now
+   that you know how to handle exceptions, you can finish that program.
+
+   Begin with your solution to assignment 7, question 2 -- a function called
+   insertion_sort that raises an exception if it ever encounters a duplicate.
+   Use this function as a helper for your function called contains_duplicates.
+   The function contains_duplicates will take a List object L as a parameter
+   and return True if L contains duplicate entries, and False if it does not.
+
+3) In this question and the next, you will build interactive front-ends for
+   your solution to question 2.  In this question, you will write a function
+   called q3main that takes no parameters.  q3main will ask the user to
+   input a number n.  It then asks n times for the user to enter a number.
+   The n answers that the user supplies will constitute the elements of the
+   List object, and then the program will answer either 'This list contains
+   duplicates.' or 'This list is duplicate-free.'.  If the initial number n
+   is not valid, or if any of the n elements in the list are not valid, print
+   out a friendly error message and exit the program gracefully (do not
+   crash).  For a small BONUS, your program should not give up so easily.
+   If the user enters an invalid value, the program will alert the user that
+   the entry is invalid, and keep asking for the value until it is valid.
+
+4) In this question, you will write a function called q4main that takes no
+   parameters.  Like q3main, it will be a front-end for your solution to
+   question 2.  q4main will ask the user to input numbers to form the elements
+   of the list.  q4main will continue asking for numbers until the user
+   types 'stop' (without the quotes).  The numbers that the user entered up
+   to that point constitute the elements of the List object, and then the
+   program will answer either 'This list contains duplicates.' or 'This list
+   is duplicate-free.'.  If at any point the user enters something other than
+   a valid number or 'stop', the program should print a friendly error message
+   and terminate gracefully, without crashing.  For a small BONUS, do as
+   in question 3:  if the input is not valid, print out a message and then
+   keep asking for the same input until it is valid.
+
+5) Write a function called merge that takes as parameters two built-in lists
+  of numbers L1 and L2.  The lists L1 and L2 are assumed to be sorted.
+  merge(L1, L2) returns a list consisting of the elements from each list, in
+  sorted order.  For example, the call merge([1,3,6,7], [2,4,5,7]) should
+  return the list [1,2,3,4,5,6,7,7].  Use a while loop to solve this problem.
+
