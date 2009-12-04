@@ -1,0 +1,68 @@
+\documentclass{article}
+
+\author{Toby Banks}
+\date{October 23rd, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%%%%%
+\section{}
+Weighted Average Cost of Capital (WACC). 
+
+
+%%%%%%%%%%%%%%%%%%%% Topics in Capital Estimation %%%%%%%%%%%%%%%%%%%%%%%
+\section{Topics in Capital Estimation}
+When a analyst uses the CAPM to estimate the cost of equity, he or she must estimate beta. The estimation of beta presents many choices as well as challenges. \\
+\hfill \\
+One common method of estimating the company's stock beta is to use a market regression of the company's stock returns (R_i) against market returns (R_m) over \emph{T} periods: \\
+\begin{displaymath}
+  R_{it} = a + b * R_{mt}
+\end{displaymath}
+\hfill \\
+Beeta estimates are sensitive to the method of estimation and data used, here are some of the issues: \\
+\begin{enumerate}
+  \item \emph{Estimation period}. The estimated beta is sensitive to the length of the estimation period, with beta commonly estimated using data over two to nine years. Selection of the estimation period is a trade-off between data richness captured by longer estimation periods and company-specific changes that are better reflected with shorted estimation periods. In general, longer estimation periods are applied to companies with a long and stable operating history, and shorter estimation periods are used for companies that have undergone significant structural chagnes in the recent past (such as resturcuting, recent acquisition, or divertiture) or changes in financial and operating leverage. 
+  \item \emph{Periodicity of the return interval} (e.g. daily, weekly, or monthly). Researchers have observed smaller standard error in beta estimmated using smaller return intervals, such as daily returns. 
+  \item \emph{Selection of an appropriate market index}. The choice of market index affects the estimate of beta. 
+  \item \emph{The use of a smoothing technique}. Some analysts adjust historical betas to reflect the tendency of betas to revert to 1. As an example, the expression \( \beta_{i, adj} = 0.33 + 0.67\beta_i \) adjusts betas above and below 1.0 toward 1.0.
+  \item \emph{Adjustments for small-capitalization stocks}. Small-capitalization stocks have generally exhibited greater risks and greater returns than large-capitalization stocks over the long run. Some have arguedd that betas for small-capitalizaition compaies should be adjusted upward.
+\end{enumerate}
+\hfill \\
+
+The beta of a company or project is affected by the systematic components of the business risk and the financila risk. \\
+\hfill \\
+The \textbf{business risk} of a company or project is the risk related to the uncertainty of revenues, reffered to as \textbf{sales risk} and to \textbf{operating risk}, which is the risk attrituted to the company's operating cost structure. \\
+\hfill \\
+\textbf{Financial risk} is the uncertainty of nbet income and net cash flows attributed to the use of financing that has a fixed cost, such as debt and leases. A company that uses a large amount of debt financing is assuming a great deal of financial risk. \\
+\hfill \\
+
+A financial analyst can estimate the betafor a company or project that is not publically traded by using the \textbf{pure-play method}. This method involves comparing a publically traded company's beta and adjusting it for financial leverage differences. \\
+\hfill \\
+
+\subsection{Country Risk}
+The use of a stock's beta to capture the country risks of a roject is well supported in empirical studies that examine developed nations. However, beta does not appear to adequately capture country risk for companies in developing nations. \\
+\hfill \\
+A common approach for dealing with this problem is to adjust the cost of equity estimated using the CAPM by adding a country spread to the market risk premium. The country spread is also referred to as a country equity premium. \\
+\hfill \\
+The simplest estimate of the country spread is the \textbf{sovereign yield spread}. \\
+\hfill \\
+A sovereign yield spread is the difference between the government bond yield in that country, denominated in the currency of a developed country, and the Treasury bond yield on a similar maturity bond in the developed country. \\
+\hfill \\
+The sovereign yield spread may be to coarse for the purposes of quity risk premium estimation. \\
+\hfill \\
+Another approach is to calculate the country equity premium as the product of the sovereign yield spread and hte ratio of the volatility of the developing country equity market to that of the sovereign bond market denominated in the terms of the currency of a developed country. \\
+\hfill \\
+\begin{displaymath}
+  \text{Country Equity Premium} = \textbf{Sovereign Yield Spread} {\text{Annualized Standard Deviation of Equity Index} \over \text{Annualized Standard Deviation of the Sovereign Bond Market in terms of the Developed Market Currency}}
+\end{displaymath}
+\hfill \\
+The logic of this equation is that the sovereign yield spread captures the general risk of the country, which is then adjusted for the volatility of the stock market relative to the bond market. \\
+\hfill \\
+
+\subsection{Marginal Cost of Capital Schedule}
+
+
+
+
+\end{document}
+

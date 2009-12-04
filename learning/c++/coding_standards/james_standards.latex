@@ -1,0 +1,77 @@
+\documentclass{article}
+
+\author{Toby Banks}
+\date{Dec 3rd, 2009}
+
+\begin{document}
+\textbf{Common Mistakes}
+
+\textbf{Documentation}
+\begin{itemize}
+  \item Do all new functions and classes have headers?
+  \item Are all comments consistent with the code?
+  \item Does all code that is commented/preprocessored out have an explanation?
+  \item Are all parameters and variables properly described, either by their names, or by comments?
+\end{itemize}
+
+Perforce
+\begin{itemize}
+  \item Does the changelist description properly describe all the changes?
+  \item Are the changes made against the latest version of the file?
+  \item Are all the necessary data files in the changelist?
+\end{itemize}
+
+\textbf{Coding Standard and Readability}
+\begin{itemize}
+  \item Do all class/function/variable names conform to the HB Coding Standards?
+  \item Do all class/function/variable names have clearly unique, understandable names?
+  \item Is the code properly formatted, in terms of identation, use of whitespace, etc?
+  \item Do sets of functions that process similar parameters have their parameters in a consistent order?
+  \item Has spaghetti code been avoided by appropriate use of functions?
+  \item Are all special values represented by const values or enums?
+\end{itemize}
+
+
+\textbf{Low Level Concepts}
+\begin{itemize}
+  \item Are all variables properly initialized? Do constants have the proper suffix (i.e. float l\_fBlah = 1.5f;)?
+  \item Are there any compiler errors or warnings? Have you checked platforms/builds?
+  \item Are all "off-by-one" errors avoided?
+  \item Are all divide by zero errors avoided?
+  \item Has all allocated memory been freed in the appropriate place?
+  \item Has all floating point comparison for equality been removed?
+  \item Are if/else/switch statements set up properly (i.e. common cases tested first, handling all possible values, etc)?
+  \item Has all c-style casting ((int)l\_fBlah) been replaces with c++ style (static\_cast<int>(l\_fBlah))?
+  \item Are boolean operators (i.e. ==, \&\&, ||, etc) present as intended (i.e. not =, \&, or |)?
+  \item Are switch cases properly seperated by break; statements? Do all switches handle a default case?
+  \item Have all gotos been removed?
+  \item Are all one-line loop/conditional statements re-formatted to be multiple lines?
+  \item Are all statement blocks for loops/conditionals wrapped in curly braces?
+	• Do all function calls have their parameters passed in the proper order?
+\end{itemize}
+
+
+\textbf{High Level Concepts}
+\begin{itemize}
+  \item Have all blocks of repeated code been condensed into a single function?
+  \item Is all platform (pc, ps2, etc) and build (debug, final, etc) specific code wrapped in the proper preprocessor lines?
+  \item Are non-primitive function parameters passed by reference instead of by value?
+  \item Is the const keyword used where it should be?
+  \item Does the changed code do what it is supposed do?
+  \item Has all code that is no longer used been deleted, or at least commented out?
+  \item Are member variables initialized in an initializer list where possible?
+  \item Are member variables and methods as restricted as possible?
+  \item Are all members common to derived classes moved to the base class?
+\end{itemize}
+
+\textbf{Possible Trouble Spots}
+\begin{itemize}
+  \item Has a new class been declared?
+  \item Is the functionality only valid in certain builds? (i.e. debug only, North America only, etc)
+  \item Is there some functionality to the feature that is to be done later?
+  \item Were global variables/data added?
+  \item Do any of the files in the changelist have to be integrated?
+  \item Has in	teraction with data files been added or changed? Have any new data/art files been added to the project?
+\end{itemize}
+
+\end{document}
