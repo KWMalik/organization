@@ -1,0 +1,188 @@
+\documentclass{article}
+
+\title{Market for Factors of Production}
+\author{Toby Banks}
+\date{September 26th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Factor Prices and Incomes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Factor Prices and Incomes}
+
+\begin{itemize}
+  \item Goods and services are produced using four factors of production - labor, capital, land and entrepreneurship.
+  \item Incomes are determined by the quantities of the factors used and by factor prices.
+  \item Factor prices are the \emph{wage} rate earned by labor, the \emph{interest} rate earned by capital, the \emph{rental} rate earned by land, and the \emph{normal profit} rate earned by entrepreneurship. 
+  \item \textbf{Derived demand} is the demand for a factor of production because it is \emph{derived} form the demand for the goods and services produced by the factor.
+  \item The law of demand applies to factors of production just as it does to goods and services.
+  \item The law of supply applies to factors of production just as it does to goods and services. The higher the price of a factor, other things remaining the same, the greater is the quantity supplied of that factor.
+  \item The demand for and supply of a factor of production determines the equilibrium factor price and factor income.
+  \item 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Labor Markets %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Labor Markets}
+\begin{itemize}
+  \item A firm's demand for labor is the flip side of its supply of output.
+  \item The \textbf{marginal revenue product of labor} is the change in total revenue that results from employing one more unit of labor.
+  \item As the quantity of labor increases the marginal revenue product decreases. In perfect competition the marginal revenue product decreases because the marginal product diminishes. In monopoly the marginal revenue product decreases because more labor is hire means more product is being created which means a firm must cut its price to sell the additional product.
+  \item The margainal revenue product of labor determines the demand for labor.
+  \item When marginal revenue product of labor equals the wage rate we maximize profit.
+  \item Profit is maximized when, at the quantity of labor hired, \emph{marginal revenue product} equals the wage rate and when, at the output produced, \emph{marginal revenue} equals \emph{marginal cost}. Recall:
+  \begin{itemize}
+    \item Marginal Revenue Product (MRP) = Marginal Revenue (MR) * Marginal Product (MP)
+    \item MR = MRP / MP (The equation states that when profit is maximized, marginal revenue equals the wage rate divided by the marginal product of labor).
+    \item MR = MC (Where MC is the marginal cost of labor).
+  \end{itemize}
+  \item Wage rates increase because demand increases by more than supply.
+  \item Two conditions for Maximum Profit: \textbf{MR = MC} and \textbf{MRP = W}
+\end{itemize}
+
+\subsection{Changes in Demand for Labor}
+The demand for labor depends on three factors:
+\begin{enumerate}
+  \item The price of the firm's output.
+  \item Other factor prices. \emph{The effect of a change in some other factor price depends on whether the factor is a substitute for or  a complement of labor.}
+  \item Technology and capital. \emph{Computers replaced telephone operators, but increased the demand for electronics manufacture and programming.}
+\end{enumerate}
+\hfill \\
+\hfill \\
+\begin{tabular}{p{6cm} p{6cm}}
+  \multicolumn{2}{l}{\textbf{The Law of Demand}} \\
+  \multicolumn{2}{l}{\textbf{(Movements along the Demand Curve for Labor}} \\
+  \hline
+  \multicolumn{2}{l}{\emph{The quantity of labor demanded by a firm}} \\
+  \emph{Decreases if:} & \emph{Increases if:} \\
+  \(\bullet\) The wage rate increases & \(\bullet\) The wage rate decreases \\
+   & \\
+   & \\
+  \multicolumn{2}{l}{\textbf{Changes in demand}} \\
+  \multicolumn{2}{l}{\textbf{(Shifts in the Demand Curve for Labor}} \\
+  \hline
+  \multicolumn{2}{l}{\emph{A firm's demand for labor}} \\
+  \emph{Decreases if:} & \emph{Increases if} \\
+  \(\bullet\) The price of the firm's output decreases & \(\bullet\) The price of the firm's output increases \\
+  \(\bullet\) The price of a substitute for labor falls & \(\bullet\) The price of a substitute for labor rises \\
+  \(\bullet\) The price of a complement of labor rises & \(\bullet\) The price of a complement of labor falls \\
+  \(\bullet\) A new technology or new capital decreases the marginal product of labor & \(\bullet\) A new technology or new capital increases the marginal product of labor \\
+\end{tabular}
+\hfill \\
+\hfill \\
+
+\subsection{Elasticity of Demand for Labor}
+The elasticity of demand for labor measures the responsiveness of the quantity of labor demanded to the wage rate. This tells us how labor income changes when the supply of labor changes. \\
+The demand for labor is less elastic in the short run, when only the quantity of labor can be varied. \\
+The elasticity of the demand for labor depends on:
+\begin{itemize}
+  \item Labor intensity of the production process.
+  \item Elasticity of demand for the good produced.
+  \item Substitutability of capital for labor.
+\end{itemize}
+\hfill \\
+
+\subsection{The Supply of Labor}
+A wage rate can be interpreted as the opportunity cost of leisure. \\
+\hfill \\
+A example of a \emph{substitution effect} is the tendency for a person to work longer hours for a higher wage rate. \\
+\hfill \\
+The higher a wage rate, the higher the income. A higher income induces someone to have increased demand for most goods. Leisure is one of those goods. Because a increase in income also creates a income in the demand for leisure the quantity of labor supplied is decreased. This is known as a \emph{income effect}. \\
+\hfill \\
+The supply of labor curve is backward bending because of the substitution effect and income effect. \\
+\hfill \\
+The market supply of labor is the sum of the individual supply curves. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Labor Market Power %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Labor Market Power}
+A \textbf{labor union} is an organized group of worker that aim to increase wages and influence other job conditions. Two type of unions are \emph{craft unions} and \emph{industrial unions}. When unions negotiate with employers the process is known as \emph{collective bargaining}. A \emph{strike} and a \emph{lockout} are the two main weapons that a union and employer have. When they cannot come to a agreement they might enter a \emph{binding arbitration}. \\ 
+\hfill \\
+A union has three broad objectives:
+\begin{enumerate}
+  \item Increase compensation.
+  \item Improve working conditions.
+  \item Expand job opportunities.
+\end{enumerate}
+\hfill \\
+Unions try to change the demand for labor in two ways. First, they try to make the demand for union labor less elastic. Second, they try to increase the demand for union labor. Some of the methods used by unions to change the demand for the labor of its members are to:
+\begin{itemize}
+  \item Increase the marginal product of union members.
+  \item Encourage import restrictions.
+  \item Support minimum wage laws.
+  \item Support immigration restrictions.
+  \item Increase demand for the goods produced.
+\end{itemize}
+\hfill \\
+A market in which there is a single buyer is called monopsony. In a monopsony labor market, there is one employer and the wage rate is the lowest at which the firm can attract the labor it plans to hire. \\
+\hfill \\
+A monopsony can lower the wage rate below the competitive level. \\
+\hfill \\
+In a monopoly the seller determines the price. In a monopsony the buyer determines the price. \\
+\hfill \\
+Suppose that a union operates in a monopsony labor market. A union is like a monopoly. If the union (monopoly seller) faces a monopsony buyer, the situation is called a \textbf{bilateral monopoly}. \\
+\hfill \\
+An efficiency wage is a wage rate that a firm pays above the competitive equilibrium wage rate with the aim of attracting the most productive workers. \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Capital Markets %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Capital Markets}
+The factors that determine investment and borrowing plans are the
+\begin{itemize}
+  \item Marginal revenue product of capital. \emph{The change in total revenue that results from employing one more unit of capital.}
+  \item Interest rate. \emph{The opportunity cost of the funds borrowed to finance investment.}
+\end{itemize}
+\hfill \\
+For each firm, the lower the interest rate, the greater is the quantity of capital demanded.  \\
+\hfill \\
+Capital markets determine the interest rate on the financial resources that are used to buy physical capital. \\
+\hfill \\
+To make an investment decision, a firm comares the present value of the marginal revenue product of capital with the expenditure on capital.
+\hfill \\
+The higher the interest rate the greater the amount of saving and the greater the amount of capital supplied. \\
+\hfill \\ 
+Capital market equilibrium determines the real interest rate. \\
+
+
+\subsection{The Supply of Capital}
+The quantity of capital supplied results from people's saving decisions. The main factors that determine saving are:
+\begin{itemize}
+  \item Income
+  \item Expected future income
+  \item Interest rate
+\end{itemize}
+\hfill \\
+The supply curve of capital shows the relationship between the quantity of capital supplied and the interest rate, other things remaining the same. \\
+\hfill \\
+The demand for natural resources is determined by marginal revenue product.  \\
+
+\subsubsection{A paragraph on Capital Market Equilibrium}
+Saving plans and investment plans are coordinated through capital markets, and the interest rate adjusts to make these plans compatible. If the equilibrium interest rate is 6 percent. Then if the interest rate exceeds 6 percent a year, the quantity of capital supplied would exceed the quantity of capital demanded and the interest rate would fall. The interest rate would keep falling until the surplus of capital was eliminated. \emph{Conversely}, if the interest rate were less than 6 percent a year, the quantity of capital demanded would exceed the quantity of capital supplied and the interest rate would rise. The interest rate would keep rising until the shortage of capital was eliminated. \\
+In reality, the real interest rate fluctuates. The reason is that the demand for capital and the supply of capital do not change in lockstep. Sometimes rapid technological change brings an increase in the demand for capital \emph{before} it brings the higher incomes that increase the supply of capital. When this sequence of events occurs, the real interest rate rises. The first half of the eighties were like this. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Natural Resource Markets %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Natural Resource Markets}
+Natural resources, of what economists call \emph{land} fall into two categories:
+\begin{itemize}
+  \item Renewable
+  \item Nonrenewable
+\end{itemize}
+\hfill \\
+The \textbf{Hotelling Principle} is the proposition that the price of a non-renewable resource is expected to rise at a rate equal to the interest rate. This doesn't occur in real life, the reason is as technology advanced, we have become more efficient in our use of nonrenewable natural resources. For example, the price of aluminum has dropped because we have improved the technology used to extract it as well as improved the methods for searching for aluminum reserves. \\
+\hfill \\
+The flow supply of a nonrenewable natural resource is perfects elastic at the present value of next period's expected price. The demand for a nonrenewable natural resource is determined by its marginal revenue product. The price is determined by supply and equals the present value of next period's expected price. \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Economic Rent, Opportunity Cost, and Taxes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Economic Rent, Opportunity Cost, and Taxes}
+The total income of a factor of production is made up of its economic rent and its opportunity cost. \\
+\hfill \\
+\textbf{Economic rent} is the income received by the owner of a factor of production over and above the amount required to induce that owner to offer the factor for use. The concept of economic rent is similar to that of producer surplus. Economic rent is the price a person receives for the use of a factor of production minus the minimum price at which a given quantity of the factor is willingly supplied. Economic rent is a component of the income received by any factor or production. \\
+\hfill \\
+To see why the area below the supply curve measures opportunity cost (and the level above measures economic rent), recall that a suppl curve can be interpreted in two different ways. It shows the quantity supplied at a given price, and it shows the minimum price at which a given quantity is willingly supplied. \\
+\hfill \\
+The ratio between economic rent and opportunity cost is completely dependent on the elasticity of supply of the factor of production. For example, Katie Couric's salary is almost entirely economic rent (supply curve is near vertical), where as a poor Indian worker's salary is completely opportunity cost (a horizontal supply curve). \\
+\hfill \\
+If supply is perfectly inelastic the burden of a tex is borne entirely on the supplier. Taxing economic rent when supply is perfectly inelastic has no effect on the quantity supplied, and is thus efficient. \\
+\hfill \\
+When the entire factor of production is opportunity cost and none is economic rent then the buyer pays the entire tax, which means the tax is inefficient (think minimum wage). \\
+
+\end{document}
+

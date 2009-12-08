@@ -1,0 +1,56 @@
+\documentclass{article}
+
+\title{Understanding the Income Statement}
+\author{Toby Banks}
+\date{October 12th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%% Learning Outcomes %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Understanding the Income Statement}
+\begin{itemize}
+  \item Describe the components of the income statement, and construct a income statement using the alternative presentation formats of that statement.
+  \item Explain the general principles of revenue recognition and accrual accounting, demonstrate specific revenue recognition applications (including accounting for long-term contracts, installment sales, barter transactions, and gross and net reporting of revenue), and discuss the implications of revenue recognition principles for financial analysis.
+  \item Discuss the general principles of expense recognition, such as the matching principle, specific expense recognition applications (including depreciation of long-term assets and inventory methods), and the implications of expense recognition principles for financial analysis.
+  \item Demonstrate the appropriate method of depreciating long-term assets, accounting for inventory, or amortizing intangibles, based on the facts that might influence the decision. 
+  \item Distinguish between the operating and non-operating components of the income statement.
+  \item Discuss the financial reporting treatment and analysis of nonrecurring items (including discontinued operations, extraordinary items, and unusual or infrequent items) and changes in accounting standards.
+  \item describe the components of earnings per share and calculate a company's earnings per share (both basic and diluted earnings per share) for both a simple and complex capital structure.
+  \item Differentiate between dilutive and antidilutive securities, and discuss implications of each for the earnings per share calculation.
+  \item Describe and calculate comprehensive income.
+  \item State the accounting classification for items that are excluded from the income statement but affect owners' equity, and list the major types of items receiving that treatment.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%% Questions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Understanding the Income Statement}
+\begin{enumerate}
+  \item Define and present a equation for net profit, gross revenue, and operating profit.
+  \item What is the difference between grouping by function and grouping by nature?
+  \item What is the definition of income according to the IAS?
+  \item Under the IAS what four conditions are to be met to consider a good to be sold?
+  \item Under the IAS what two main conditions and four sub-conditions that are to be met to consider a service to be sold?
+  \item Under the GAAP what four conditions are to be met to consider a good or service to be sold?
+  \item What are the four special conditions to revenue recognition and what are some appropriate recognition strategies for each?
+  \item Define expenses.
+  \item What is the matching principle?
+  \item Define period costs.
+  \item What are three main issues with expense recognition and how do we handle those on the income statement?
+  \item What is the difference between depreciation and amortization?
+  \item What are the following methods of depreciation: straight line, accelerated methods, diminishing balance, and double declining.
+  \item When can extraordinary items be added to the income statement?
+  \item How do you handle changes in the accounting standards?
+  \item How are non-operating items reported?
+  \item What is the difference between simple and complex capital structure?
+  \item What is diluted EPS? What is basic EPS?
+  \item What is anti-diluted EPS? Give a example.
+  \item How do you calculate diluted EPS when a company has convertible preferred stock outstanding?
+  \item How do you calculate diluted EPS when a company has convertible debt outstanding?
+  \item How do you calculate diluted EPS when a company has stock options, warrants, or their equivalents outstanding?
+  \item What are two analytical tools we can use to analyze the income statement?
+  \item Define the following: net profit margin, gross profit margin, operating margin, and pretax margin.
+  \item What is comprehensive income?
+  \item What are the four types of comprehensive income according to U.S. GAAP?
+\end{enumerate}
+
+\end{document}
+

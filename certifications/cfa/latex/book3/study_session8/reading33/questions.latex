@@ -1,0 +1,45 @@
+\documentclass{article}
+
+\title{Understanding the Balance Sheet}
+\author{Toby Banks}
+\date{October 23rd, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%% Learning Outcomes %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Understanding the Balance Sheet}
+\begin{itemize}
+  \item Illustrate and interpret the components of the balance sheet and discuss the uses of the balance sheet in financial analysis.
+  \item Describe the various formats of balance sheet presentation.
+  \item Explain how assets and liabilities arise from the accrual process. 
+  \item Compare and contrast current and non-current assets and liabilities. 
+  \item Explain the measurement bases (e.g. historical cost and fair value) of assets and liabilities, including current assets, current liabilities, tangible assets, and intangible assets.
+  \item Demonstrate the appropriate classification and related accounting treatments for marketable and non-marketable financial instruments held as assets or owed by the company as liabilities.
+  \item List and explain the components of owners' equity.
+  \item Interpret balance sheets and statements of changes in equity.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%% Questions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Understanding the Balance Sheet}
+\begin{enumerate}
+  \item What underlying equation does the balance sheet represent?
+  \item 
+  \item Define the following liquidity ratios:
+  \begin{itemize}
+    \item Current
+    \item Quick
+    \item Cash
+  \end{itemize}
+  \item Define the following solvency ratios:
+  \begin{itemize}
+    \item Long-term debt to equity
+    \item Debt to equity
+    \item Total Debt
+    \item Financial Leverage
+  \end{itemize}
+  \item State three purposes of financial ratios.
+  \item State four items that limit financial statement analysis.
+\end{enumerate}
+
+\end{document}
+

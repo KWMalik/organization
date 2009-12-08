@@ -1,0 +1,67 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Time Value of Money}
+\author{Toby Banks \\ HB-Studios}
+\email{tobyjbanks@zoho.com}
+\date{August 25th, 2009}
+
+\maketitle
+
+\begin{document}
+
+Future Value of a Single Cash Flow\\
+\begin{displaymath}
+FV_n = PV(1 + r)^n
+\end{displaymath}
+\begin{displaymath}
+FV_n = PV(1 + r)
+\end{displaymath}
+
+Frequency of Compounding\\
+\begin{displaymath}
+FV_n = (1 + {r_s \over m})^{mn}
+\end{displaymath}
+
+Continious Compounding\\
+\begin{displaymath}
+FV_n = PV e^{r_s n}
+\end{displaymath}
+
+Effective Annual Rate\\
+\begin{displaymath}
+EAR = (1 + \text{Periodic Interest Rate})^m - 1
+\end{displaymath}
+
+Ordinary Annuity\\
+\begin{displaymath}
+FV_n = A \left[{(1 + r)^n - 1 \over r}\right]
+\end{displaymath}
+
+Present Value of a Cash Flow\\
+\begin{displaymath}
+PV = FV_n\left(1 + r\right)^{-n}
+\end{displaymath}
+
+Present Value of a Series of Equal Cash Flows\\
+\begin{displaymath}
+PV = \left[{1 - {1 \over \left(1 + r\right)^n} \over r} \right]
+\end{displaymath}
+
+Present Value of a Perpetuity\\
+\begin{displaymath}
+PV = {A \over r}
+\end{displaymath}
+
+Present Value of a Cash Flow (with compounding)\\
+\begin{displaymath}
+PV = FV_n \left(1 + {r_s \over m}\right)^{-mn}
+\end{displaymath}
+
+Growth Rate\\
+\begin{displaymath}
+g = \left({FV_n \over PV}\right)^{1 \over n} - 1
+\end{displaymath}
+
+\end{document}
+

@@ -1,0 +1,86 @@
+\documentclass{article}
+
+\title{Perfect Competition}
+\author{Toby Banks}
+\date{September 20th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% What is Perfect Competition %%%%%%%%%%%%%%%%%%%%%%%%
+\section{What is Perfect Competition?}
+Perfect competition is an industry in which:
+\begin{itemize}
+  \item Many firms sell identical products to many buyers.
+  \item There are no restrictions on entry into the industry.
+  \item Established firms have no advantage over new ones.
+  \item Sellers and buyers are well informed about prices.
+\end{itemize}
+
+\hfill \\
+Perfect competition arises because of two factors:
+\begin{itemize}
+  \item If the minimum efficient scale of a single producer is small relative to the demand for the good or service. A firm's \emph{minimum efficient scale} is the smallest quantity of output at which long-run average cost reaches its lowest level. There is room for many firms in an industry.
+  \item Firms are perceived to produce a good or service that has no unique characteristics so that consumers don't care which firm they buy from.
+\end{itemize}
+
+\hfill \\
+Firms in perfect competition are \textbf{price takers}. A price taker is a firm that cannot influence the market price and that sets its own price at the market price. \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% The Firm's Decisions in Perfect Competition %%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Firm's Decisions in Perfect Competition}
+The firm must make limited decisions about how to act, due to working in a perfectly competitive market. \\
+\begin{itemize}
+  \item Short-Run Decisions
+  \begin{enumerate}
+    \item Whether to produce or to shut down temporarily.
+    \item If the decision is to produce, what quantity to produce.
+  \end{enumerate}
+  \item Long-Run Decisions
+  \begin{enumerate}
+    \item Whether to increase or decrease its plant size.
+    \item Whether to stay in an industry or leave it.
+  \end{enumerate}
+\end{itemize}
+
+\hfill \\
+\textbf{Marginal analysis} can be used to find profit-maximizing output. To do so we compare marginal revenue with marginal cost. As output increases marginal revenue stays the same but marginal cost changes. If MR exceeds MC, then the extra revenue from selling one more unit exceeds the extra cost incurred to produce it. The firm makes an economic profit on the marginal unit, so its economic profit increases if output increase. \\
+\hfill \\
+The profit maximization point occurs when the MC curve intersects the MR curve. \\
+\hfill \\
+A firm has a short-run supply curve that details how much the firm can produce and at what cost. On this curve, near the bottom there is a point called the shutdown point. The \textbf{shutdown point} is the ouput and price at which the firm just covers its total variable cost. At this point a firm has covered its total variable cost but incurs a loss equal to its total fixed cost. A firm should shutdown if the price falls below the minimum of average variable cost. \\
+\hfill \\
+The \textbf{short-run industry supply curve} shows the quantity supplied by the industry at each price when the plant size of each firm and the number of firms remain constant. The quantity supplied by the industry at a given price is the sum of the quantities supplied by all firms in the industry at that price. \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Output, Price, and Profit in Perfect Competition %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Output, Price, and Profit in Perfect Competition}
+Market demand and market supply determine price. \\
+\hfill \\
+Persistent economic profit induces entry. Persistent economic loss induces exit. \\
+\hfill \\
+Entry and plant expansion increase supply and lower price and profit. Exit and downsizing decrease supply and raise price and profit. \\
+\hfill \\
+In long-run equilibrium, economic profit is zero (the entrepreneur makes normal profit). There is no entry, exit, plant expansion, or downsizing. \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Changing Tastes and Advancing Technology %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Changing Tastes and Advancing Technology}
+A permanent decrease in demand leads to a smaller industry output and a smaller number of firms. \\
+\hfill \\
+A permanent increase in demand leads to a larger industry output and a larger number of firms. \\
+\hfill \\
+The long-run effect of a change in demand on price depends on whether there are external economies (the price falls) or external diseconomies (the price rises) or neither (the price remains constant). \\
+\hfill \\
+New technologies increase supply and in the long run lower the price and increases the quantity. \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Competition and Efficiency %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Competition and Efficiency}
+Resources are used efficiently when we produce goods and services in the quantities that people value most highly. \\
+\hfill \\
+When there are no external benefits and external costs, perfect competition achieves and efficient allocation. In long-run equilibrium, consumers pay the lowest possible price, marginal social benefit equals marginal social cost, and the sum of consumer surplus and producer surplus is maximized. \\
+\hfill \\
+If someone can become better off without anyone else becoming worse off, resources are \emph{not} being used efficiently. \\
+
+\end{document}
+

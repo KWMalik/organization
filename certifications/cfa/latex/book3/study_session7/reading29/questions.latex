@@ -1,0 +1,54 @@
+\documentclass{article}
+
+\title{Financial Statement Analysis: An Introduction - Questions}
+\author{Toby Banks}
+\date{October 12th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%% Learning Outcomes %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Financial Statement Analysis: An Introduction - Learning Outcomes}
+\begin{itemize}
+  \item Discuss the roles of financial reporting and financial statement analysis.
+  \item Discuss the role of key financial statements (income statement, balance sheet, statement of cash flows, and statement of changes in owners' equity) in evaluating a company's performance and financial position.
+  \item Discuss the importance of financial statement notes and supplementary information, including disclosures of accounting methods, estimates, and assumptions, and managements' discussion and analysis.
+  \item Discuss the objective of audits of financial statements, the types of audit reports, and the importance of effective internal controls.
+  \item Identify and explain information sources of other than the annual financial statements and supplementary information that analysts use in financial statement analysis.
+  \item Describe the steps in the financial statement analysis framework. 
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%% Questions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Financial Statement Analysis: An Introduction - Questions}
+\begin{enumerate}
+  \item What is the difference between profit and cash flow?
+  \item Give four examples of economic decisions that may rest on financial statement analysis?
+  \item What is the basic equation of a income statement?
+  \item What types of questions would you look to answer with a income statement?
+  \item What are two alternative names for the income statement?
+  \item What are two alternative names for the balance sheet?
+  \item What is the basic equation of a balance sheet?
+  \item What types of questions would you seek to answer with a balance sheet?
+  \item Define financial flexibility, operating activities, investing activities, and financing activities.
+  \item What is the Statement of Change in Owners' Equity?
+  \item What are some examples of footnotes?
+  \item What do the following acronyms stand for: GAAP, I.F.R.S., and F.A.S.B.
+  \item What is the purpose of the MD\&A statement?
+  \item What are the four paragraphs in a auditors report? What does each contain.
+  \item What are the four different auditors opinions that might be expressed? What do they each mean?
+  \item In regards to internal controls, what four requirements are placed on firms by regulators?
+  \item What five things must a management report on internal control contain according to the Sarbanes-Oxley Act?
+
+
+
+  \item What are the six individual phases of Financial Statement Analysis Framework?
+  \item What are the three inputs and four outputs to the "Articulate the purpose and context of the analysis" phase?
+  \item What are the three inputs and three outputs to the "Collect Data" phase?
+  \item What are the one input and four outputs to the "Process Data" phase?
+  \item What are the one input and one output to the "Analyze/Interpret the processed data" phase?
+  \item What are the two inputs and two outputs to the "Develop and Communicate conclusions and recommendations" phase?
+  \item What are the one input and one output to the "Follow Up" phase?
+\end{enumerate}
+
+\end{document}
+

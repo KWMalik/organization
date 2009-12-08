@@ -1,0 +1,173 @@
+\documentclass{article}
+
+\title{Money, the Price Level, and Inflation}
+\author{Toby Banks}
+\date{September 28th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% What is Money? %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{What is Money?}
+Money is any commodity or token that is generally acceptable as a means of payment. If functions as 
+\begin{itemize}
+  \item A medium of exchange
+  \item A unit of account
+  \item A store of value
+\end{itemize}
+\hfill \\
+
+Today, money consists of currency and deposits at banks and other depository institutions. \\
+\hfill \\
+M1 consists of currency and traveler's checks plus checking deposits owned by individuals and businesses. M1 \textbf{does not} include currency held by banks or currency and checking deposits owned by the U.S> government. \\
+\hfill \\
+M2 consists of M1 plus time deposits, savings deposits, and money market mutual funds and other deposits. M2 is almost five times as large as M1 in the United States. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Depository Institutions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Depository Institutions}
+Commercial banks, Thrift institutions (such as SLs, savings banks, and credit unions), as well as  money market mutual funds are depository institutions whose deposts are money. \\
+\hfill \\
+A commercial bank has three types of assets:
+\begin{itemize}
+  \item Liquid assets (such as Treasury Bills and commercial bills).
+  \item Investment securitites (longer-term U.S. government bonds and other bonds).
+  \item Loans (mortgages, small business loans, personal loans, credit card debt).
+\end{itemize}
+\hfill \\
+
+Depository institutuions procide four main economic services: 
+\begin{itemize}
+  \item Create liquidity
+  \item Minimize the cost of obtaining funds
+  \item Minimize the cost of monitoring borrowers
+  \item Pooling risk
+\end{itemize}
+\hfill \\
+
+The three main influences on financial innovation are:
+\begin{itemize}
+  \item Economic Environment
+  \item Technology
+  \item Regulation
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Federal Reserve System %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Federal Reserve System}
+The Fereral Reserve System is the central bank of the United State. \\
+\hfill \\
+The Fed influences the quantity of money by setting the required reserve ratio, the discount rate, and by conducting open market operations. \\
+\hfill \\
+The key elements of the Federal Reserve Bank are:
+\begin{itemize}
+  \item The Board of Governors (Seven members appointed to 14 year terms by the President, one member is the chairman for four year terms).
+  \item The regional Federal Reserve Banks (There are 12 and the New York one is special because it implements the policy decisions of the Federal Open Market Committee).
+  \item The Federal Open Market Committee 
+\end{itemize}
+\hfill \\
+
+The \textbf{Federal Open Market Committee} is the main policymaking organ of the Federal Reserve System. The following voting memvers meet approximately every six weeks to review the state of the economy.
+\begin{itemize}
+  \item The chairman and other six members of the Board of Governors
+  \item The president of the Federal Reserve Bank of New York
+  \item The presidents of the other regional Federal Resere banks (of whom on a yearly rotating basisi only four vote)
+\end{itemize}
+\hfill \\
+
+The Fed has three main policy tools at its disposal:
+\begin{itemize}
+  \item Required Reserve Ratios
+  \item Discount Rate
+  \item Open Market Operations (the purchase and sale of government securities, U.S. T-Bills and bonds to the open market)
+\end{itemize}
+\hfill \\
+
+The Fed has the following assets:
+\begin{enumerate}
+  \item Gold and foreign exchange
+  \item U.S. Government Securities
+  \item Loans to banks
+\end{enumerate}
+\hfill \\
+
+The Fed has the following liabilites:
+\begin{enumerate}
+  \item Federal Reserve Notes
+  \item Banks' deposits
+\end{enumerate}
+\hfill \\
+
+The \textbf{monetary base} is the sum of Federal Reserve notes, coins, and banks' deposits at the Fed. \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% How Banks Create Money %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{How Banks Create Money}
+Banks create money by making loans. \\
+\hfill \\
+The total quantity of money that can be created depends on 
+\begin{itemize}
+  \item Monetary base
+  \item The desired reserve ratio 
+  \item The currency drain ratio
+\end{itemize}
+\hfill \\
+
+A bank's actual \textbf{reserves} consist of the notes and coins in its vaults and its deposit at the Federal Reserve. \\
+\hfill \\
+The \textbf{reserve ratio} is hte fraction of a bank's total deposits that are held in reserves. \\
+\hfill \\
+The \textbf{desired reserve ratio} is the ratio of reserves to bank deposits that a bank wants to hold. This ratio exceed the required reserve ratio by an amount htat the banks determine to be prudent on the basis of their daily business requirements. \\
+\hfill \\
+A bank's \textbf{excess reserves} are its actual reserves minus its desired reserves. Whenever the banking system as a whole has excess reseres, the banks are able to create money. \\
+\hfill \\
+
+The following sequence repeats until the bank has no excess reserves:
+\begin{enumerate}
+  \item Banks have excess reserves.
+  \item Banks lend excess reserves.
+  \item Bank deposits increase.
+  \item The quantity of money increases.
+  \item New money is used to make payments.
+  \item Some of the new money remains on deposit.
+  \item Some of the new money is in a \emph{currency drain}.
+  \item Desired reserves increase because deposits have increased.
+  \item Excess reserves decrease bu remain positive.
+\end{enumerate}
+\hfill \\
+
+The \textbf{money multiplier} is the ratio of the change in the quantity of money to the change in the monetary base. The equation is \(A / (1 - L) \). \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Market for Money %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Market for Money}
+The quantity of money demanded is the amount of money that people plan to hold. \\
+\hfill \\
+The quantity of real money equals the quantity of nominal money divided by the price level. \\
+\hfill \\
+The quantity of real money demanded depends on 
+\begin{itemize}
+  \item The price level
+  \item Nominal interest rate
+  \item Real GDP
+  \item Financial innovation 
+\end{itemize}
+\hfill \\
+
+A rise in the nominal interest rate brings a decrease in the quantity of real money demanded. \\
+\hfill \\
+In the short run, the Fed sets the quantity of money to hit a target nominal interest rate. \\
+\hfill \\
+In the long run, the loanable funs market determines the interest rate and the money market equilibrium determines the price level. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Quantity Theory of Money %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Quantity Theory of Money}
+The quantity theory of money is the proposition that moeny growth and inflation move up and down together in the long run. \\
+\hfill \\
+The U.S. and international evidence is consistent with the quantity theory, on the average. \\
+\hfill \\
+
+
+\end{document}
+

@@ -1,0 +1,201 @@
+\documentclass{article}
+
+\title{Financial Statement Analysis: An Introduction}
+\author{Toby Banks}
+\date{October 12th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Scope of Financial Statement Analysis %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Scope of Financial Statement Analysis}
+\hfill \\ 
+The role of financial statement analysis is to take financial reports prepared by companies, combined with other information, to evaluate the past current, and prospective performance and financial position of a company for the purpose of making investment, credit, and other economic decisions. \\
+\hfill \\ 
+The ability to meet short-term obligations is usually referred to as \textbf{liquidity}. \\
+\hfill \\
+The ability to meet long-term obligations is usually referred to as \textbf{solvency}. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Major Financial Statements and Other Information Sources %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Major Financial Statements and Other Information Sources}
+\hfill \\
+Major financial statements are created annually, semi-annually, and/or quarterly. They allow investors, creditors, analysts and other interested in a company to evaluate the company's performance and financial position. In order to provide assurances they can be audited by independent accountants. \\
+\hfill \\
+
+\subsection{Financial Statements and Supplementary Information}
+\hfill \\
+\subsubsection{Income Statement}
+\hfill \\
+Presents information on the financial results of a company's business activities over a period of time. \\
+\hfill \\
+The income statement communicates how much revenue the company generated during a period and what costs it incurred in connection with generating that revenue. \\
+\hfill \\
+The income statement is sometimes referred to as a \textbf{statement of operations} or \textbf{profit and loss statement} (aka. P\&L Statement). \\
+\hfill \\
+The underlying equation of the income statement is \textbf{Revenue - Expenses = Net Income}. \\
+\hfill \\
+Companies list their basic and diluted earnings per share on the face of the income statement. Earnings per share represents the net income divided by the number of shares of stock outstanding during the period. \\
+\hfill \\
+Basic earnings per share uses the weighted-average number of common shares that were actually outstanding during the period, whereas diluted earnings per share uses diluted shares - the number of shares that would be outstanding if potentially diluted claims on common shares (e.g. stock options) were exercised by their holders. 
+\hfill \\
+A analyst will formulate questions related to profitability, such as the following:
+\begin{itemize}
+  \item Is the growth in revenue related to an increase in units sold, and increase in prices, or some combination?
+  \item After adjusting for growth in the number of stores, is the company still more profitable over time?
+  \item How does the company compare with other companies in the industry?
+\end{itemize}
+
+\subsubsection{Balance Sheet}
+\hfill \\
+The \textbf{balance sheet} (also known as the \textbf{statement of financial position} or \textbf{statement of financial condition} presents a company's current financial position by disclosing resources the company controls (assets) and what it owes (liabilities) at a specific point in time. \\
+\hfill \\
+\textbf{Owners' equity} represents the excess of assets over liabilities. \\
+\hfill \\
+The three parts of the balance sheet are formulated in the accounting relationship known as the accounting equation: \textbf{Assets = Liabilities + Owners' Equity}. \\
+\hfill \\
+Owners' equity can also go by alternative titles such as: "partners' capital" or "shareholders' equity". \\
+\hfill \\
+An analyst will use the balance sheet to answer such questions as:
+\begin{itemize}
+  \item Has the company's liquidity (ability to meet short-term obligations) improved?
+  \item Is the company solvent? (ability to meet long-term obligations)
+  \item What is the company's financial position relative to the industry?
+\end{itemize}
+
+\subsubsection{Statement of Cash Flows}
+\hfill \\
+Cash flow is vital to a company's long-term success. \\
+\hfill \\
+Disclosing the sources and uses of cash helps creditors, investors, and other statement users evaluate the company's liquidity, solvency, and financial flexibility. \\
+\hfill \\
+\textbf{Financial flexibility} is the ability to react and adapt to financial adversities and opportunities. \\
+\hfill \\
+The statement of cash flows classifies all company cash flows into operating, investing and financing activity cash flows. \\
+\hfill \\
+\textbf{Operating activities} involve transactions that enter into the day-to-day business functions of a company. \\
+\hfill \\
+\textbf{Investing activities} are those activities associated with the acquisition and disposal of long-term assets, such as equipment. \\
+\hfill \\
+\textbf{Financing activities} are those activities related to obtaining or repaying capital to be used in the business. \\
+\hfill \\
+\emph{Differences between cash flows and income statements - } Income is reported when earned, not necessarily when the cash is received. The statement of cash flows presents another aspect of performance: the ability of a company to generate cash flow from running its business. Ideally, the analyst would like to see that the primary source of cash flow is from operating activities, as opposed to investing or financing activities. \\
+
+\subsubsection{Statement of Changes in Owners' Equity}
+\hfill \\
+Also known as a "statement of shareholders equity" or "statement of retained earnings". \\
+\hfill \\
+This statement helps the analyst in understanding the changes in financial position reflected on the balance sheet. \\
+
+\subsubsection{Financial Notes and Supplementary Schedules}
+\hfill \\
+Also known as \emph{footnotes}.
+\hfill \\
+Provides explanatory information about the following:
+\begin{itemize}
+  \item Business acquisitions and disposals.
+  \item Commitments and contingencies.
+  \item Legal proceedings.
+  \item Stock option and other employee benefit plans.
+  \item Related-party transactions.
+  \item Significant customers.
+  \item Subsequent events.
+  \item Business and geographic segments.
+  \item Quarterly financial data.
+\end{itemize}
+\hfill \\
+The \textbf{International Accounting Standards Board} based in London sets forth standards under which international financial statements should be prepared. These are referred to as the \textbf{International Financial Reporting Standards}. \\
+\hfill \\
+A similar board exists in the U.S. And is known as the \textbf{Financial Accounting Standards Board (F.A.S.B.)} that constitute a key part of the body of principles known as the generally accepted accounting principles (U.S. GAAP). \\
+\hfill \\
+The two organizations are similar but they do have some differences that analysis's need to be aware of. \\
+\hfill \\
+A company's accounting policies (methods, estimates, and assumptions) are generally presented in the notes to the financial statements. For example, a note containing a summary of significant accounting policies reveals how the company recognizes its revenues and depreciates its capital assets. \\
+
+\subsubsection{Management's Discussion and Analysis}
+\hfill \\
+\textbf{MD\&A} - Management's Discussion and Analysis. \\
+\hfill \\
+Management must highlight any favorable or unfavorable trends and identify significant events and uncertainties that affect the company's liquidity, capital resources, and results of operations. \\
+\hfill \\
+Also provides notes about inflation, changing prices, or other material events and uncertainties that may cause future operating results and financial condition to materially depart from the current reported financial information. \\
+\hfill \\
+Also should disclose critical accounting policies that require management to make subjective judgments and that may have a significant impact on reported financial results. \\
+\hfill \\
+MD\&A section of a company's report provides a good starting place for understanding what is going on in the financial statements. Nevertheless, it is only one input for the analysts in seeking an objective and independent perspective on a company's performance and prospects. \\
+
+\subsubsection{Auditor's Reports}
+\hfill \\
+Audits may be required by contractual arrangement, law or regulation. There are standards of auditing and expressing the auditor's opinion. \\
+\hfill \\
+International standards for auditing have been developed by the \textbf{International Auditing and Assurance Standards Board of the International Federation of Accountants}. 
+\hfill \\
+Publicly traded companies may also have requirements set by regulators or stock exchanges. \\
+\hfill \\
+Independent audit reports provide \emph{reasonable assurance} that the financial statements are \emph{fairly presented}, meaning that there is a high degree of probability that the audited financial statements are free from \emph{material} error, fraud, or illegal acts that have a direct effect on the financial statements. \\
+\hfill \\
+\begin{itemize}
+  \item The first \emph{introductory} paragraph describes the financial statements that were audited and the responsibilities of both management and the independent auditor. 
+  \item The second or \emph{scope} paragraph describes the nature of the audit process and provides the basis for the auditor's expression about the reasonable assurance on the fairness of the financial statements. 
+  \item The third \emph{opinion} paragraph expresses the auditor's opinion on the fairness of the audited financial statements.
+  \begin{itemize}
+    \item An \emph{unqualified} audit opinion states that the financial statements give a "true and fair view" (International) or are "fairly presented" (International and U.S.) in accordance with applicable accounting standards.
+    \item An \emph{qualified} audit opinion is one in which there is some limitation or exception to the accounting standards. Exceptions are described in the audit report with additional explanatory paragraphs so that the analyst can determine the importance of the exception.
+    \item An \emph{adverse} audit opinion occurs when the financial statements materially depart from accounting standards and are not fairly presented. This is essentially a don't bother with this company. 
+    \item A \emph{disclaimer of opinion} occurs when, for some reason, the auditors are unable to issue an opinion. 
+  \end{itemize}
+\end{itemize}
+\hfill \\
+\hfill \\
+Publicly traded companies in the U.S. are now required by securities regulators to:
+\begin{itemize}
+  \item Accept responsibility for the effectiveness of internal control.
+  \item Evaluate the effectiveness of internal control using suitable control criteria.
+  \item Support the evaluation with sufficient competent evidence.
+  \item Provide a report on internal control.
+\end{itemize}
+\hfill \\
+
+The Sarbanes-Oxley Act specifically requires management's report on internal control to:
+\begin{itemize}
+  \item State that it is management's responsibility to establish and maintain adequate internal control.
+  \item Identify management's framework for evaluating internal control.
+  \item Include management's assessment of the effectiveness of the company's internal control over financial reporting as of the end of the most recent year, including a statement as to whether internal control over financial reporting is effective.
+  \item Include a statement that the company's auditors have issued an attestation report on management's assessment.
+  \item Certify that the company's financial statements are fairly presented.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Financial Statement Analysis Framework %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Financial Statement Analysis Framework}
+\begin{tabular}{p{4cm} p{5cm} p{5cm}}
+  \textbf{Phase} & \textbf{Sources of Information} & \textbf{Output} \\
+  \hline
+  1. Articulate the purpose and context of the analysis. & \(\bullet\) The nature of the analyst's functino, such as evaluating and equity or debt investment or issuing a credit rating. & \(\bullet\) Statement of the purpose or objective of analysis. \\
+    & \(\bullet\) Communication with client or supervisor on needs and concerns. & \(\bullet\) A list (written or unwritten) of specific questions to be answered by the analysis. \\
+    & \(\bullet\) Institutional guidelines related to developing specific work product. & \(\bullet\) Nature and content of report to be provided. \\
+    &   & \(\bullet\) Timetable and budgeted resources for completion. \\
+  \hline
+  2. Collect Data & \(\bullet\) Financial statements, other financial data, questionnaires, and industry/economic data. & \(\bullet\)Organized financial statements. \\
+     & \(\bullet\) Discussions with management, suppliers, customers, and competitors. & \(\bullet\) Financial data tables. \\
+     & \(\bullet\) Company site visits (e.g., to production facilities or retail stores). & \(\bullet\) Completed questionnaries, if applicable. \\
+  \hline
+  3. Process Data & \(\bullet\) Data from previous phase. & \(\bullet\) Adjusted financial statements. \\
+    &   & \(\bullet\) Common-size statements. \\
+    &   & \(\bullet\) Ratios and graphs. \\
+    &   & \(\bullet\) Forecasts. \\
+  \hline
+  4. Analyze/interpret the processed data. & \(\bullet\) Input data as well as processed data. & \(\bullet\) Analytical results. \\
+  \hline
+  5. Develop and communicate conclusions and recommendations. & \(\bullet\) Analytical results and previous reports. & \(\bullet\) Analytical report answering questions posed in Phase 1. \\
+    & \(\bullet\) Institutional guidelines for published reports. & \(\bullet\) Recommendation regarding the purpose of the analysis, such as whether to make an investment or grant credit. \\
+  \hline
+  6. Follow up. & \(\bullet\) Information gathered periodically repeating above steps as necessary to determine whether changes to holdings or recommendations are necessary. & \(\bullet\) Updated reports and recommendations. \\
+  \hline
+\end{tabular}
+
+
+\end{document}
+
+
+
+
+

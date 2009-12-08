@@ -1,0 +1,84 @@
+\documentclass{article}
+
+\title{Monopoly}
+\author{Toby Banks}
+\date{September 20th, 2009}
+
+\begin{document}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Market Power %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Market Power}
+\textbf{Market power} is the ability to influence the market, and in particular the market price, by influencing the total quantity offered for sale. \\
+\hfill \\
+\textbf{A monopoly} is a firm that produces a good or service for which no close substitute exists and that is protected by a barrier that prevents other firms from selling that good or service.  \\
+\hfill \\
+A monopoly has two key features: no close substitutes, and barriers to entry. \\
+\hfill \\
+Barriers to entry take the form of legal barriers (public franchise, patent, copyright, government license), natural barriers (one firm can apply the entire market at the lowest possible cost). \\
+\hfill \\
+All monopolies face a trade off between price and the quantity sold. There are two broad monopoly situations that create difference trade offs. They are: \textbf{single price} and \textbf{price discrimination}. \\
+\hfill \\
+A \textbf{single price monopoly} is one in which a firm must sell each unit of its output for the same price to all of its customers. \\
+\hfill \\
+\textbf{Price discrimination} is the process of selling different units of a good or service for different prices. When a firm practices price discrimination it might appear that its doing its customers a favor but in fact it is trying to charge for the highest possible price for each unit sold while making the largest possible profit. \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% A Single-Price Monopoly's Output and Price Decision %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{A Single-Price Monopoly's Output and Price Decision}
+Because in a monopoly there is only one firm, the demand curve facing the firm is the market demand curve. \\
+\hfill \\
+A single-price monopoly's marginal revenue is related to the \emph{elasticity of demand} for its goods or services. If demand is elastic, a fall in price brings an increase in total revenue (the revenue gained from the increase in quantity sold outweighs the revenue loss from the lower price). If demand is inelastic then a fall in price brings a decrease in total revenue. If demand is unit elastic a increase/fall in price has no effect on total revenue. \\
+\hfill \\
+In a monopoly demand is always elastic. The relationship between marginal revenue and elasticity of demand determines that a profit-maximizing monopoly never produces an output in the inelastic range of the market demand curve. If it did so, it could charge a higher price, produce a smaller quantity and increase its profit. \\
+\hfill \\
+Firms try to maximize profit by producing the output at which marginal revenue equals marginal cost. \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Single-Price Monopoly and Competition Compared %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Single-Price Monopoly and Competition Compared}
+Compared with a perfectly competitive industry, a single-price monopoly produces a smaller quantity and charges a higher price. This causes consumer surplus to shrink. \\
+\hfill \\
+Monopolies are inefficient because they create a dead weight loss. Monopolies also bring a redistribution of surpluses, this is not a loss to society, just a redistribution. \\
+\hfill \\
+Any surplus - consumer surplus or producer surplus or economic profit - is called \textbf{economic rent}. \\
+\hfill \\
+\textbf{rent seeking} is the pursuit of wealth by capturing economic rent. Rent seeker pursue their goals in two main ways: buying a monopoly and creating a monopoly. \\ 
+\hfill \\
+Rent-seeking equilibrium is without barrier. If an economic profit is available a new rent seeker will try to get some of it. Competition between rent seekers can cause a increase in costs to the point at which no economic profit is made. \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Price Discrimination %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Price Discrimination}
+To be able to price discriminate a monopoly must:
+\begin{itemize}
+  \item Identify and separate differently buyer types.
+  \item Sell a product that cannot be resold. 
+\end{itemize}
+
+\hfill \\
+Price discrimination seeks to capture as much of the consumer surplus as possible and distribute it to the monopoly. To do so, firms discriminate in two broad ways:
+\begin{itemize}
+  \item Discriminate among units of a good (providing a discount for bulk purchases, as long as the discount doesn't arise from lower cost of producing in bulk)
+  \item Discriminate among groups of buyers (think airlines)
+\end{itemize}
+
+\hfill \\
+\textbf{Perfect price discrimination} occurs if a firm is able to sell each unit of output for the highest price anyone is willing to pay for it. In such a case the entire consumer surplus is captured by the producer. If this occurs then the output is identical to perfect competition. Perfect price discrimination pushes a consumer surplus to zero but increases the monopoly's producer surplus to equal the sum of consumer surplus and producer surplus in perfect competition. Dead-weight loss with perfect price discrimination is zero. So perfect price discrimination achieves efficiency. \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Monopoly Policy Issues %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Monopoly Policy Issues}
+It looks bad for monopolies at this point, but they do bring two main advantages to the table:
+\begin{itemize}
+  \item Incentives to innovate
+  \item Economies of scale and economies of scope
+\end{itemize}
+
+\hfill \\
+Because of monopolies special characteristics they are often regulated by governments. Through regulation some of the worst aspects of monopoly can be avoided or at least moderated. \\
+\hfill \\
+\textbf{A marginal cost pricing rule} sets the price equal to marginal cost. This maximizes total surplus int he regulated industry. This is efficient, but it can leave the monopoly incurring a economic loss. A monopoly can make up this loss via price discrimination, another way would be a two part tariff (such as charging a fixed monthly fee to cover fixed costs as well as a monthly charge to cover marginal cost. If the monopoly cannot cover the costs in this manner then the government will have to step in and subsidize the monopoly. \\
+\hfill \\
+Regulators almost never impose efficient pricing because of its consequences for the firm's economic profit. Instead they compromise by permitting the firm to cover its costs and to break even (make zero economic profit). So pricing to cover total cost means setting price equal to average cost. This is called \textbf{average cost pricing rule}. \\
+
+
+\end{document}
+

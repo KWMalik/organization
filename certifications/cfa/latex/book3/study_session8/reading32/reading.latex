@@ -1,0 +1,334 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Understanding the Income Statement}
+\author{Toby Banks}
+\date{October 20th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Components and Format of the Income Statement %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Components and Format of the Income Statement}
+On the top line of the income statement, companies typically report revenue. \textbf{Revenue} refers to amounts charged for the delivery of goods or services in the ordinary activities of a business. \\
+\hfill \\
+\textbf{Net revenue} means that the revenue number is shown after adjustments (e.g. for estimated returns or for amounts unlikely to be collected).  \\
+\hfill \\
+"Revenue" is often used synonymously with "sales." \\
+\hfill \\
+On the bottom line of the income statement companies typically report net income (aka. Net earnings or profit). \textbf{Net income} contains both gains and losses. \\
+\hfill \\
+IAS \#1 \emph{Presentation of Financial Statements}, requires several things:
+\begin{enumerate}
+  \item Certain items such as revenue, finance costs, and tax expense, be separately stated on the face of the income statement. 
+  \item Headings and subtotals are required to "be presented on the face of the income statement when such presentation is relevant to an understanding of the entity's financial performance". 
+".\item Expenses may be grouped together by either their nature or function. 
+\end{enumerate}
+\hfill \\
+An example of \textbf{Grouping by nature} would be grouping together expenses such as depreciation on manufacturing equipment and depreciation on administrative facilities into a single line item called depreciation. \\ \
+\hfill \\
+An example of \textbf{Grouping by function} would be grouping together expenses into a category such as costs of goods sold. Which would include things such some salaries, material costs, depreciation, and other direct sales-related expenses. \\
+\hfill \\
+One subtotal often shown in an income statement is \textbf{gross profit} (or, synonymously, \textbf{gross margin}). When an income statement shows a gross profit subtotal, it is said to use a \textbf{multi-step format} rather than a \textbf{single-step format}. \\
+\hfill \\
+\textbf{Operating profit} (also known as, \textbf{operating income}), further deducts operating expenses such as selling, general, administrative, and research and development expenses. Operating profit represents a company's profits on its usual business activities before deducting taxes. \\
+\hfill \\
+Gross profit = Revenue - Operating Expenses. \\
+\hfill \\
+Operating Income = Gross Profit - Other operating expenses. \\
+\hfill \\
+Net Income = Gross Profit - Other operating expenses - Interest Expense - Tax Expense. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Revenue Recognition %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Revenue Recognition}
+Profit is a frequently used measure of performance that is composed of income and expenses. \\
+\hfill \\
+\textbf{Income} is defined by the \emph{Framework} as: "Income is increases in economic benefits during the accounting period in the form of inflows or enhancements of assets or decreases of liabilities that result in increases in equity, other than those relating to contributions from equity participants." \\
+\hfill \\
+Income includes both revenue and gains. \\
+\hfill \\
+\textbf{Unearned revenue} is revenue reported in one period, even though the company has yet to deliver the good or service. \\
+\hfill \\
+IASB provides that revenue for the sale of goods is to be recognized (reported on the income statement) when the following conditions are satisfied (\emph{from IAS \#18 Revenue}):
+\begin{itemize}
+  \item The entity has transferred to the buyer the significant risks and rewards of ownership of the goods. 
+  \item The entity retains neither continuing managerial involvement to the degree usually associated with ownership nor effective control over the goods sold.
+  \item The amount of revenue can be measured reliably.
+  \item It is probable that the economic benefits associated with the transaction will flow to the entity.
+  \item The costs incurred or to be incurred in respect of the transaction can be measured reliably.
+\end{itemize}
+\hfill \\
+The IASB standards separately deal with the recognition of revenue for services:
+\begin{itemize}
+  \item When the outcome of a transaction involving the rendering of services can be estimated reliably, revenue associated with the transaction shall be recognized by reference to the stage of completing of the transaction at the balance sheet date.
+  \item The outcome of a transaction can be estimated reliably when all the following conditions are satisfied:
+  \begin{itemize}
+    \item The amount of revenue can be measured reliably.
+    \item It is probable that the economic benefits associated with the transaction will flow to the entity.
+    \item The stage of completion of the transaction at the balance sheet date can be measured reliably
+    \item The cost incurred for the transaction and the costs to complete the transaction can be measured reliably.
+  \end{itemize}
+\end{itemize}
+\hfill \\
+The FASB has slightly different conditions for reporting revenue because the SEC is concerned with the frequency with which overstating revenue is connected to fraud. The four criteria outlined by the FASB are:
+\begin{itemize}
+  \item There is evidence of an arrangement between buyer and seller. For instance, this would disallow the practice of recognizing revenue in a period by delivering the product just before the end of an accounting period and then completing a sales contract \emph{after} the period end.
+  \item The product has been delivered, or the service has been rendered. For instance, this would preclude revenue recognition when the product has been shipped bu the \emph{risks and rewards of ownership have not actually been passed to the buyer}.
+  \item The price is determined, or determinable. For instance, this would preclude a company from recognizing revenue that is based on some \emph{contingency}.
+  \item The seller is reasonably sure of collecting money. For instance, this would preclude a company from recognizing revenue when the customer is \emph{unlikely to pay}.
+\end{itemize}
+\hfill \\
+Revenue recognition policies must be disclosed in the footnotes to their financial statements. \\
+\hfill \\
+
+\subsection{Revenue Recognition in Special Cases}
+There are some areas where revenue recognition is more difficult to determine. For example, in limited circumstances revenue may be recognized before or after goods are delivered or services are rendered. \\
+\hfill \\
+The four most important special cases are \textbf{long-term contracts, installment sales, barter, and gross versus net reporting}. \\
+\hfill \\
+
+\subsubsection{Long-Term Contracts}
+\textbf{A long-term contract} is one that spans a number of accounting periods. Such contracts raise issues in determining when the earnings process has been completed. For example, in a long-term construction contract revenue should be recognized in reference to the stage of completion. To do so a \textbf{percentage-of-completion} method is used. \\
+\hfill \\
+Under IAS \#11 if the outcome of the contract cannot be measured reliably, then revenue is only reported to the extent of contract costs incurred (if it is probable that the costs will be recovered). Cost are expensed in the period incurred. Under this method  (the \textbf{completed contract} method) the company does not report any revenue until the contract is finished. \\
+\hfill \\
+If a loss is expected on the contract then the loss is reported immediately regardless of whether a percentage-complete or completed contract method is used to report gains. \\
+\hfill \\
+
+\subsubsection{Installment Sales}
+For the case of installment sales (such as a mortgage) recognition of revenue or profit may be required to be deferred for the installment sale. In some real estate sales (e.g. mortgages) the buyer doesn't receive a vested interest for a long time. In such a case IAS \#18 where if the down payments and payments received do not provide sufficient evidence of the commitment of the buyer, revenue should only be reported to the extent that cash has been received. The GAAP reports full revenue in the year of the sale but some of the profit is deferred. \\
+\hfill \\
+Two methods may be appropriate when reporting installment sales in limited circumstances: the \textbf{installment method} and the \textbf{cost-recovery method}. \\
+\hfill \\
+Under the \textbf{installment method} the portion of the total profit of the sale that is recognized in each period is determined by the percentage of the total sales price for which the seller has received cash. \\
+\hfill \\
+Under the \textbf{cost-recovery method} of revenue recognition the seller does not report any profit until the cash amounts paid buy the buyer (including principal and interest on any financing from the seller) are greater than all of the seller's costs of the property. \\
+\hfill \\
+
+\subsubsection{Barter}
+Under IFRS, revenue from barter transactions must be measured based on the fair value of revenue from similar non-barter transactions with unrelated parties (parties other than the barter partner). \\
+\hfill \\
+Similarly, the FASB states that revenue can be recognized at fair value only if a company has historically received cash payments for such services and can thus use this historical experience as a basis for determining fair value. \\
+\hfill \\
+
+\subsubsection{Gross Versus Net Reporting}
+Think of a Internet sales company that doesn't actually hold inventory, it instead acts as a middle man making sales and taking a commission.
+\hfill \\
+U.S. GAAP indicates that the approach should be based on the specific situation and provides guidance for determining when revenue should be reported gross versus net. To report gross revenues, the following criteria are relevant: credit risk, can choose its supplier, and has reasonable latitude to establish price. If these criteria are not met the company should report revenues net. \\
+\hfill \\
+
+\subsection{Implications for Financial Analysis}
+A single company can be using multiple different revenue recognition policies for different businesses. \\
+\hfill \\
+Companies disclose their revenue recognition policies in the footnotes to their financial statements, often in the first note. \\
+\hfill \\
+To a analyst its important to know if a company recognizes its revenue sooner or later (sooner is less conservative) and to what extent does this policy cause the company to make estimates. \\
+\hfill \\
+Revenue recognition policies are essential to understand when comparing one company to another (so you can highlight the differences). \\
+\hfill \\
+It may be impossible to know the monetary effect of these different policy but you can categorize a companies relative conservatism and qualitatively assess how differences in policies might affect financial ratios. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Expense Recognition %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Expense Recognition}
+Under the IASB \emph{Framework} \textbf{expenses} are "decreases in economic benefits during the accounting period in the form of outflows or depletions of assets or occurrences of liabilities that result in decreases in equity, other than those relating to distributions to equity participants. \\
+\hfill \\
+In general, a company recognizes expenses in the period that it consumes (e.g. uses up) the economic benefits associated with the expenditure, or loses some previously recognized economic benefit. \\
+\hfill \\
+The \textbf{matching principle} is a general principle of expense recognition that is also known as the "matching of costs with revenues". Under the matching principle a company directly matches some expenses (e.g. cost of goods sold) with associated revenues. The matching principle requires that the company match the costs of goods sold with the revenues of the period it was sold in. \\
+\hfill \\
+\textbf{Period costs} are expenditures that less directly match the timing of revenues, and are reflected in the period when a company makes the expenditure or incurs the liability to pay. For example, administrative costs or depreciation expense. \\
+\hfill \\
+Last In, First Out (LIFO) is not used by IFRS, but can be used in limited situations under GAAP. \\
+\hfill \\
+
+
+\subsection{Issues with Expense Recognition}
+\subsubsection{Doubtful Accounts}
+One possible approach is the \textbf{direct write-off method} in which a company would recognize the credit loss on customer receivables when the customer defaulted. This would not be consistent with generally accepted accounting principles. \\
+\hfill \\
+Under the matching principle company's estimate how much revenue will be non-collectible at the time of the sale. For this they use past experience. \\
+\hfill \\
+
+\subsubsection{Warranties}
+Companies are expected to estimate their losses due to warranty obligations and under the matching principle the company is required to report the loss during the period of the sale. \\
+\hfill \\
+
+\subsubsection{Depreciation and Amortization}
+Companies commonly incur costs to obtain long-lived assets. \textbf{Long-lived assets} are assets expected to provide economic benefits over a future period of time greater than one year. Examples are land (property), plant, equipment, and \textbf{intangible assets} (assets lacking physical substance) such as trademarks. The costs of most long-lived assets are allocated over the period of time during which they provide economic benefits. The two main types of long-lived assets whose costs are \emph{not} allocated over time are land and those intangible assets with indefinite useful lives. \\
+\hfill \\
+Land is not depreciated. \\
+\hfill \\
+\textbf{Amortization} is the term commonly applied to this process for intangible long-lived assets with a finite useful life. Examples of intangible assets with a finite useful life include a acquired mailing list, an acquired patent with a set expiration, and an acquired copyright with a set life. \\
+\hfill \\
+IAS \#16 \emph{Property, Plant, and Equipment} requires that the depreciation amount (cost less residual value) be allocated on a systematic basis over the remaining useful life of the asset. Two methods exist for doing this, the \emph{straight-line method, accelerated method, and diminishing balance method}. \\ 
+\hfill \\
+The \textbf{straight-line method} allocates evenly the cost of long-lived assets less estimated residual value over the estimated useful life of an asset. \\
+\hfill \\
+\textbf{Accelerated methods} of depreciation speed up the timing of depreciation. Accelerated depreciation methods allocate a greater proportion of the cost to the early years of a asset's useful life. This type of method is acceptable if the asset is expected to be used up faster in the early years (e.g. a automobile). \\
+\hfill \\
+\textbf{Diminishing balance method} of depreciation uses a acceleration factor to depreciate the asset quicker. \\
+\hfill \\
+\textbf{Double declining balance depreciation} causes the asset to depreciate at  double the straight-line rate. \\
+\hfill \\
+For intangible assets the methods of amortization are the same only the expense is different. \\
+\hfill \\
+
+\subsection{Implications for Financial Analysis}
+Policies can be characterized by their relative conservatism. \\
+\hfill \\
+Watch for changes in the costs of warranties or non-collectible accounts. If the changes can't be explained by quality or other business operations, it is possible that the estimates are being manipulated to achieve a given effect on the reported net income. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Nonrecurring Items and Non-operating Items %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Nonrecurring Items and Non-operating Items}
+Some items from prior years are clearly not expected to continue in the future periods and are separately disclosed on the income statement. Two such items are:
+\begin{enumerate}
+  \item Discontinued Operations
+  \item Extraordinary Items (this category is no longer permitted under IFRS). 
+\end{enumerate}
+\hfill \\
+
+\subsection{Discontinued Operations}
+Financial standards provide various criteria for reporting discontinued operations separately, which are generally that the discontinued component must be separable both physically and operationally. \\
+\hfill \\
+Analysts can remove discontinued operations from projections about future financial performance. \\
+\hfill \\
+
+\subsection{Extraordinary Items}
+Extraordinary items are \textbf{prohibited} under IAS No.1 of the IFRS. \\
+\hfill \\
+Under GAAP extraordinary items are presented separately on the income statement and allow a reader of the statements to see that these items are not a part of a company's operating activities and are not expected to occur on a ongoing basis. \\
+\hfill \\
+Extraordinary item are shown net of tax and appear on the income statement below discontinued operations. \\
+\hfill \\
+After Katrina, if you live in a place likely to have another natural disaster, then you cannot claim it under extraordinary items. \\
+\hfill \\
+
+\subsection{Unusual or Infrequent Items}
+Highlighting the unusualness or infrequent nature of items assists an analyst in judging the likelihood that such items will reoccur. \\
+\hfill \\
+
+\subsection{Changes in Accounting Standards}
+Sometimes, standard setters issues new pronouncements that require companies to change accounting principles, in other cases the company changes accounting principles (e.g. changing inventory costing methods) to better reflect the company's performance. Changes in accounting principles are reported through retrospective application, unless it is impractical to do so. \\
+\hfill \\
+\textbf{Retrospective application} means that the financial statements for all fiscal years shown in a company's financial report are represented as if the newly adopted accounting principles has been used throughout the entire period. Footnotes to the financial statements describe the change and explain the justification for the change. \\
+\hfill \\
+Prior to 2005 under IFRS and U.S. GAAP the cumulative effect of changes in accounting policies was typically shown at the bottom of the income statement in the year of change instead of using retrospective applications. \\
+\hfill \\
+Footnotes detail how the transition from the old accounting standards to the new ones were handled. \\
+\hfill \\
+Changes in \emph{accounting estimates} and handled prospectively, with the change affecting the financial statements for the period of change and future periods. No adjustments are made to prior statements and the adjustment is not shown on the face of the income statements. Significant changes should be disclosed in the footnotes. \\
+\hfill \\
+\emph{Correction of an error in a prior period} cannot be handled by simply adjusting the current period income statement. Correction of an error for a prior period is handled by restating the financial statements for the prior periods presented in the current financial statements. Footnote disclosures are required. These footnote discloses should be carefully watched by analysts. \\
+\hfill \\
+
+\subsection{Non-operating Items: Investing and Financing Activities}
+Non-financial companies that invest in equity or debt securities issued by another company will show any interest, dividends, or profits from sales of these securities as non-operating income. \\
+\hfill \\
+Financial companies do not consider equity or debt securities as non-operating income. Duh. \\
+\hfill \\
+Why is a company buying equity or debt in another company? Is the company simply investing excess cash in short-term securities to generate income higher than cash deposits, or is the company purchasing securities issued buy other companies for strategic reasons, such as access to raw material supply or research? \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Earnings Per Share %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Earnings Per Share}
+Of particular importance to the equity investor. \\
+\hfill \\
+EPS is a input into ratios such as the price/earnings ratio. \\
+\hfill \\
+Under IFRS EPS is reported on ordinary shares. \\
+\hfill \\
+\textbf{Ordinary shares} are those equity shares that are subordinate to all other types of equity. Under GAAP this equity is referred to as \textbf{common stock, or common shares}. \\
+\hfill \\
+When a company has any securities that are potentially convertible into common stock, it is said to have a complex capital structure. Examples of such are convertible bonds, convertible preferred stock, employee stock options, and warrants. \\
+\hfill \\
+A \textbf{warrant} is a call option typically attached to securities issued by a company, such as bonds. A warrant give the holder the right to acquire the company's stock from the company at a specified price within a specified time period. \\
+\hfill \\
+IFRS and GAAP regard earnings per share apply equally to all options, warrants, and equivalent instruments. \\
+\hfill \\
+\textbf{Diluted EPS} would occur if all dilutive securities were converted. \\
+\hfill \\
+\textbf{Basic EPS} is the ratio of actual earnings available to common stock and the weighted average number of shares outstanding. \\
+\hfill \\
+Basic EPS is calculated as: \\
+\begin{displaymath}
+  \textrm{Basic EPS} = {{\textrm{Net Income} - \textrm{Preferred Dividends}} \over {\textrm{Weighted Average Number of Shares Outstanding}}}
+\end{displaymath}
+\hfill \\
+\hfill \\
+
+Diluted EPS is calculated as: \\
+\( \textrm{Net Income} = \textrm{NI} \) \\
+\( \textrm{Weighted Average Shares Outstanding} = \textrm{WASO} \) \\
+\( \textrm{New common shares that would have been issued at conversion} \) = \textrm{NCS} \\
+\hfill \\
+\begin{displaymath}
+  \textrm{Diluted EPS} = {{\textrm{NI}} \over {\left(\textrm{WASO} + \textrm{NCS}\right) }} 
+\end{displaymath}
+\hfill \\
+
+
+Diluted EPS when the company has convertible debt outstanding is calculated as: \\
+\( \textrm{Net Income} = \textrm{NI} \) \\
+\( \textrm{After-tax income on convertible debt} = \textrm{ATIOCD} \) \\
+\( \textrm{Preferred Dividends} = \textrm{PD} \) \\
+\( \textrm{Weighted Average Shares Outstanding} = \textrm{WASO} \) \\
+\( \textrm{New common shares that would have been issued at conversion} \) = \textrm{NCS} \\
+\hfill \\
+\begin{displaymath}
+  \textrm{Diluted EPS} = {{\textrm{NI} + \textrm{ATIOCD} - \textrm{PD}} \over {\left(\textrm{WASO} + \textrm{NCS}\right) }} 
+\end{displaymath}
+\hfill \\
+
+Diluted EPS when the company has stock options, warrants or their equivalents outstanding is calculated as: \\
+\( \textrm{Net Income} = \textrm{NI} \) \\
+\( \textrm{Preferred Dividends} = \textrm{PD} \) \\
+\( \textrm{Weighted Average Shares Outstanding} = \textrm{WASO} \) \\
+\( \textrm{New common shares that would have been issued upon option exercise} \) = \textrm{NCSOption} \\
+\( \textrm{New shares that could have been purchased with cash received upon exercise} = \textrm{NSP} \) \\
+\hfill \\
+\begin{displaymath}
+  \textrm{Diluted EPS} = {{\textrm{NI} + \textrm{PD}} \over {\left(\textrm{WASO} + \textrm{NCSOption} - \textrm{NSP}\right) }} 
+\end{displaymath}
+\hfill \\
+\hfill \\
+
+A convertible security is considered antidilutive if their inclusion in the computation would result in an EPS higher than the company's basic EPS. \textbf{Antidilutive securities} are not included in the calculation of diluted EPS. Diluted EPS in general reflects maximum potential dilution. \\
+
+\section{Analysis of the Income Statement}
+We cover two tools: \textbf{common-size analysis} and \textbf{income statement ratios}. \\
+\hfill \\
+Common-size analysis consists of stating each line item on the income statement as a percentage of revenue. Common-size statements facilitate comparison across time periods (time-series analysis) and across companies of different sizes (cross-sectional analysis).
+\hfill \\
+Income statement ratios include different types of margins: net profit margin, gross profit margin, operating margin (operating income divided by revenue), and pretax margin (earnings before taxes divided by revenue). \\
+\hfill \\
+\begin{displaymath}
+  \textrm{Net Profit Margin} = {\textrm{Net Income} \over \textrm{Revenue}}
+\end{displaymath}
+\hfill \\
+\begin{displaymath}
+  \textrm{Gross Profit Margin} = {\textrm{Gross Profit} \over \textrm{Revenue}}
+\end{displaymath}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Comprehensive Income %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Comprehensive Income}
+Comprehensive income is defined as "the change in equity [net assets] of a business enterprise during a period from transactions and other events and circumstances from non-owner sources. It includes all changes in equity during a period except those resulting from investments by owners and distributions to owners." \\
+\hfill \\
+The four types of income treated as other comprehensive income are:
+\begin{itemize}
+  \item Foreign currency translation adjustments. In consolidating the financial statements of foreign subsidiaries, the effects of translation the subsidiaries' balance sheet assets and liabilities at current exchange rates are included as other comprehensive income. 
+  \item Unrealized gains or losses on derivatives contracts accounted for as hedges. Changes in the fair value of derivatives are recorded each period, but these changes in value for certain derivatives (those considered hedges) are treated as other comprehensive income and thus bypass the income statement. 
+  \item Unrealized holding gains and losses on a certain category of investment securities, namely, available-for-sale securities. 
+  \item Changes in the funded status of a company's defined benefit post-retirement plans.
+\end{itemize}
+\hfill \\
+
+\end{document}
+

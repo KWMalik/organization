@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\title{Markets in Action - Questions}
+\author{Toby Banks}
+\date{September 19th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%% Learning Outcomes %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Markets in Action - Learning Outcomes}
+\begin{itemize}
+  \item Explain market equilibrium, distinguish between long-term and short-term effects of outside shocks, and describe the effects of rent ceilings on the existence of black markets in the housing sector and on the market's efficiency.
+  \item Describe labor market equilibrium and explain the effects and inefficiencies of a minimum wage above the equilibrium wage.
+  \item Explain the impact of taxes on supply, demand and market equilibrium, and describe tax incidence and its relation to demand and supply elasticity.
+  \item Discuss the impact of subsides, quotas, and markets for illegal goods on demand, supply and market equilibrium.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Questions %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Markets in Action - Questions}
+\begin{enumerate}
+  \item Describe the effects of a price ceiling on rent in the event of a earthquake that destroys a large amount of housing. Draw a graph detailing this. Also draw a graph detailing the inefficiency of a rent ceiling, this graph should include sections for consumer surplus, producer surplus, deadweight loss, and potential loss from housing search.
+  \item What is search activity?
+  \item What is a black market?
+  \item What effect does the minimum wage have on the labor market. What effect does the living wage have?
+  \item Tax incidence is the division of the burden of a tax between the buyer and the seller. Why is it not obvious who pays taxes? 
+  \item What is the effect of the elasticity of demand on who pays the brunt of the taxes (the buyer or seller).
+  \item What effect does taxes have on the efficiency of the marketplace?
+  \item What is a subsidy? What effect does it have on production and consumption of goods and services?
+  \item What is a production quota? What effect does it have on production and consumption of goods and services?
+  \item What effect does having penalties on buyers and sellers of illegal goods or services have?
+\end{enumerate}
+
+\end{document}
+

@@ -1,0 +1,133 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Elasticity}
+\author{Toby Banks \\ HB-Studios}
+\date{September 12th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Elasticity of Demand             %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Elasticity of Demand}
+\textbf{Elasticity} is a measure of the responsiveness of the quantity demanded of a good to a change in its price, other things remaining the same. \\
+\hfill \\ 
+\textbf{Price elasticity of demand} equals the percentage change in the quantity demanded divided by the percentage change in price. It is a unit-free measure of elasticity of demand. The larger the magnitude of the price elasticity of demand, the greater the responsiveness of the quantity demanded to a given change in price. The price elasticity of demand depends on how easily one good serves as a substitutes for another, the proportion of income spent on the good, and the length of time elapsed since the price change.\\ 
+\hfill \\ 
+\textbf{Cross elasticity of demand} measures the responsiveness of demand for one good to a change in the price of a substitute or a complement, other things remaining the same.\\
+\hfill \\ 
+\textbf{Income elasticity} of demand measures the responsiveness of demand to a change in income, other things remaining the same. For a normal good, the income elasticity of demand is positive. For an inferior good, the income elasticity of demand is negative. When the income elasticity of demand is greater than 1 (income elastic), the percentage of income spent on the good increases as income increases. Conversely, when the income elasticity of demand is less than 1 (income inelastic and inferior), the percentage of income spent on the good decreases as income increases. \\
+
+\subsection{Factors that Influence the Elasticity of Demand}
+\subsubsection{Closeness of Substitutes}
+The closer the substitutes for a good or service, the more elastic is the demand for it.
+\subsubsection{Proportion of Income Spent on the Good}
+Other things remaining the same, the greater the proportion of income spent on a good, the more elastic is the demand for it.
+\subsubsection{Time Elapsed since a Price Change}
+The longer the time that has elapsed since a price change, the more elastic is the demand. 
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Elasticity of Supply             %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Elasticity of Supply}
+\textbf{Elasticity of supply} measures the responsiveness of the quantity supplied of a good to a change in its price. The elasticity of supply is usually positive and ranges between zero (vertical supply curve) and infinity (horizontal supply curve). \\
+\subsection{Factors that Influence the Elasticity of Supply}
+\subsubsection{Resource Substitution Possibilities}
+Some goods and services can be produced only by using unique or rare productive resources. These items have a low, even perhaps zero, elasticity of supply. Other goods and services can be produced by using commonly available resources (these goods usually have high elasticity of supply). For example, consider the substitution properties of a Van Gogh painting as compared to corn or wheat.
+\subsubsection{Time Frames}
+\textbf{Momentary supply} refers to the response of sellers to a price change at the instant that price changes. \\
+\hfill \\ 
+\textbf{Short-run supply} refers to the response of sellers to a price change after some of the technologically feasible adjustments in production have been made. \\
+\hfill \\ 
+\textbf{Long-run supply} refers to the response of sellers to a price change when all the technologically feasible adjustments in production have been made. \\
+\hfill \\ 
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Equations                        %%%%%%%%%%%%%%%%%%%%%%%%% 
+
+\section{Equations}
+\(\text{Price Elasticity of Demand} = {{\%\Delta \text{Quantity Demanded}} \over { \%\Delta \text{Price}}}  = {{\Delta / Avg.} \over {\Delta / Avg.}}\) \\
+\hfill \\
+\hfill \\
+\(\text{Cross Elasticity of Demand} = {{\%\Delta \text{Quantity Demanded}} \over { \%\Delta \text{Price of Substitute or Compliment}}} \) \\
+\hfill \\
+\hfill \\
+\(\text{Income Elasticity of Demand} = {{\%\Delta \text{Quantity Demanded}} \over { \%\Delta \text{in Income}}} \) \\
+\hfill \\
+\hfill \\
+\(\text{Elasticity of Supply} = {{\%\Delta \text{Quantity Supplied}} \over { \%\Delta \text{in Price}}} \) \\
+\hfill \\
+\hfill \\
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Glossary of Elasticities         %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{A Compact Glossary of Elasticities}
+This is a quick cheat-sheet for remembering terms related to elasticities. \\
+\hfill \\
+
+\begin{tabular}{|p{3cm}|p{3cm}|p{7cm}|}
+  \hline
+  \multicolumn{3}{|l|}{\textbf{Price Elasticities of Demand}} \\
+  \hline
+  \textbf{Description} & \textbf{Magnitude} & \textbf{Which means} \\
+  \hline
+  Perfectly Elastic & Infinity & The smallest possible increase in price causes an infinitely large decrease in the quantity demanded \\
+  Elastic & Less than infinity but greater than 1 & The percentage decrease in the quantity demanded exceeds the percentage increase in price \\
+  Unit elastic & 1 & The percentage decrease in the quantity demanded equals the percentage increase in price \\
+  Inelastic & Greater than zero but less than 1 & The percentage decrease in the quantity demanded is less than the percentage increase in price \\
+  Perfectly Inelastic & Zero & The quantity demanded is the same at all prices \\
+  \hline
+\end{tabular}
+
+\hfill \\
+\hfill \\
+
+\begin{tabular}{|p{3cm}|p{3cm}|p{7cm}|}
+  \hline
+  \multicolumn{3}{|l|}{\textbf{Cross Elasticities of Demand}} \\
+  \hline
+  \textbf{Description} & \textbf{Magnitude} & \textbf{Which means} \\
+  \hline
+  Close Substitutes & Large & The smallest possible increase in the price of one good causes an infinitely large increase in the quantity demanded of the other good \\
+  Substitutes & Positive & If the price of one good increases, the quantity demanded of the other good also increase \\
+  Unrelated goods & Zero & If the price of one good increases, the quantity demanded of the other good stays the same \\
+  Complements & Negative & If the price of one good increases, the quantity demanded of the other good decreases \\
+  \hline
+\end{tabular}
+
+\hfill \\
+\hfill \\
+
+\begin{tabular}{|p{3cm}|p{3cm}|p{7cm}|}
+  \hline
+  \multicolumn{3}{|l|}{\textbf{Income Elasticities of Demand}} \\
+  \hline
+  \textbf{Description} & \textbf{Magnitude} & \textbf{Which means} \\
+  \hline
+  Income elastic & Greater than 1 & The percentage increase in the quantity demanded is greater than the percentage increase in income \\
+  Income inelastic & Less than 1 but greater than zero & The percentage increase in the quantity demanded is less than the percentage increase in income \\
+  Negative income elastic & Less than zero & When income increases, quantity demanded decreases \\
+  \hline
+\end{tabular}
+
+\hfill \\
+\hfill \\
+
+\begin{tabular}{|p{3cm}|p{3cm}|p{7cm}|}
+  \hline
+  \multicolumn{3}{|l|}{\textbf{Elasticities of Supply}} \\
+  \hline
+  \textbf{Description} & \textbf{Magnitude} & \textbf{Which means} \\
+  \hline
+  Perfectly elastic & Infinity & The smallest possible increase in price causes an infinitely large increase in the quantity supplied \\
+  Elastic & Less than infinity but greater than 1 & The percentage increase in the quantity supplied exceeds the percentage increase in the price \\
+  Inelastic & Greater than zero but less than 1 & The percentage increase in the quantity supplied is less than the percentage increase in the price \\
+  Perfectly inelastic & Zero & The quantity supplied is the same at all prices \\
+  \hline
+\end{tabular}
+
+
+
+\end{document}
+

@@ -1,0 +1,41 @@
+\documentclass{article}
+
+\title{U.S. Inflation, Unemployment, and Business Cycles}
+\author{Toby Banks}
+\date{September 27th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%% Learning Outcomes %%%%%%%%%%%%%%%%%%%%%%%
+\section{U.S. Inflation, Unemployment, and Business Cycles}
+\begin{itemize}
+  \item Differentiate between inflation and the price level.
+  \item Describe and distinguish among the factors resulting in demand-pull and cost-push inflation and describe the evolution of demand-pull and cost-push inflationary processes.
+  \item Explain the costs of anticipated inflation.
+  \item Explain the relation among inflation, nominal interest rates, and the demand and supply of money.
+  \item Explain the impact of inflation on unemployment and describe the short-run and long-run Phillips curve, including the effect of changes in the natural rate of unemployment.
+  \item Explain how economic growth, inflation, and unemployment affect the business cycle.
+  \item Describe mainstream business cycle theory and real business cycle (RBC) theory and distinguish between them, including the role of productivity changes. 
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Questions %%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{U.S. Inflation, Unemployment, and Business Cycles}
+\begin{enumerate}
+  \item Describe in lots of detail Demand-Pull inflation.
+  \item Describe in lots of detail Cost-Push inflation.
+  \item Describe the effect of expected inflation.
+  \item Describe the short-run Phillips curve.
+  \item Describe the long-run Phillips curve.
+  \item Provide a brief overview of the following mainstream business cycle theories:
+  \begin{enumerate}
+    \item Keynesian Cycle Theory.
+    \item Monetarist Cycle Theory.
+    \item New Classical Cycle Theory.
+    \item New Keynesian Cycle Theory.
+  \end{enumerate}
+  \item Describe in great detail the real business cycle theory.
+  \item What are the criticisms and defenses of RBC theory?
+\end{enumerate}
+
+\end{document}
+

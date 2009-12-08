@@ -1,0 +1,159 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Organizing Production}
+\author{Toby Banks}
+\date{September 19th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% What the Fuck?                   %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{What the fuck?}
+...is accounting depreciation? \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% The Firm and its Economic Problem %%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Firm and its Economic Problem}
+\textbf{Opportunity cost} of any action is the highest-valued alternative forgone. Opportunity cost includes both explicit costs and implicit costs. \\
+\hfill \\
+\textbf{Explicit costs} are paid in money. \\
+\hfill \\
+\textbf{Implicit costs} occur when a firm forgoes an alternative action but does not make a payment. For example when a firm uses its own capital, or uses its owner's time or financial resources. \\
+\hfill \\
+\textbf{Implicit rental rate of capital} is the cost of using a firms capital, when it could have rented the capital out. \\
+\hfill \\
+\textbf{Economic depreciation} is the change in the market value of capital over a given period. It is a implicit cost. \\
+\hfill \\
+\textbf{Interest forgone} is the interest lost on the money used to buy capital or that is allocated to some other purpose. It is a implicit cost. \\
+\hfill \\
+\textbf{Accounting costs} largely about explicit costs (for example, the cost of machinery, deprecation of value of assets, etc.) \\
+\hfill \\
+\textbf{Economic costs} include implicit costs, as well as in the case of a single proprietorship entrepreneurial skills and capital. \\
+\hfill \\
+\textbf{Normal profit} is the return that a entrepreneur sees on his business. It is a opportunity cost as it could have been reinvested in the business. \\
+\hfill \\
+\textbf{Economic profit} is \emph{Total Revenue - Total Cost (total cost includes opportunity cost)}. \\
+\hfill \\
+The objective of economic accounting is to maximize economic profit. To do so a firm must make five basic decisions:
+\begin{enumerate}
+  \item What goods and services to produce and in what quantities?
+  \item How to produce - the techniques of production to use.
+  \item How to organize and compensate its managers and workers.
+  \item How to market and price its products.
+  \item What to produce itself and what to buy from other firms.
+\end{enumerate}
+\hfill \\
+There are three features of a firm's environment that limit the maximum profit that it can make:
+\begin{enumerate}
+  \item Technology
+  \item Information
+  \item Market
+\end{enumerate}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Technological and Economic Efficiency %%%%%%%%%%%%%%%%%%%%
+\section{Technological and Economic Efficiency}
+\textbf{Technological efficiency} is a process that uses the least inputs for a given output. \\
+\hfill \\
+\textbf{Economic efficiency} is a process that uses the least cost for a given output. \\
+\hfill \\
+\textbf{Production Efficiency} is a process that is the most technological efficient and economic efficient. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Information and Organization %%%%%%%%%%%%%%%%%%%%
+\section{Information and Organization}
+\textbf{Command systems} Hierarchies used for communicate information upwards and barking commands back downwards. \\
+\hfill \\
+\textbf{Incentive systems} Configuring payments, benefits, and other incentives to employees in a attempt to maximize the profits of the firm. \\
+\hfill \\
+\textbf{The principal-agent problem} is the problem of devising compensation rules that induce an \emph{agent} to act in the best interest of a \emph{principal}. Three ways of attempting to cope with the principal-agent problem are \textbf{ownership, incentive pay, and long-term contracts}. It is important to note that commands do not work for the principal-agent problem because in most firms the shareholders can effectively monitor the managers and the managers can't effectively monitor the employees. \\
+\hfill \\
+
+\begin{tabular}{l p{5cm} p{5cm}}
+  \textbf{Type of Firm} & \textbf{Pros} & \textbf{Cons} \\
+  \hline
+  \textbf{Proprietorship} & Easy to set up & Bad decisions not checked by need for consensus \\
+                          & Simple decision making & Owner's entire wealth at risk \\
+                          & Profits taxed only once as owner's income & Firm dies with owner \\
+                          & & Cost of capital and labor is high relative to that of a corporation \\
+  \hline
+  \textbf{Partnership}    & Easy to set up & Achieving a consensus may be slow and expensive \\
+                          & Diversified decision making & Owners' entire wealth at risk \\
+                          & Can survive withdrawal of partner & Cost of capital and labor is high relative to that of a corporation \\
+                          & Profits taxed only once as owners' incomes & \\
+  \hline
+  \textbf{Corporation}    & Owners have limited liability & Complex management structure can make decisions slow and expensive \\
+                          & Large-scale, low-cost capital available & Retained profits taxed twice: as company profit and as stockholders' capital gains \\
+                          & Professional management not restricted by ability of owners & \\
+                          & Perpetual life & \\
+                          & Long-term labor contracts cut labor costs& \\
+  \hline
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Markets and the Competitive Environment %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Markets and the Competitive Environment}
+
+\hfill \\
+\textbf{Perfect competition} is where there are many firms selling \emph{identical} products, many buyers, and no restrictions on the entry of new firms into the industry. Good examples are worldwide markets for corn,rice, and other grain crops. \\
+\hfill \\
+\textbf{Monopolistic competition} is where a large number of firms compete by making similar but slightly different products. \\
+\hfill \\
+\textbf{Oligopoly} is a market structure in which a small number of firms compete. Good examples are computer software, airplane manufacture, and international air transportation. \\
+\hfill \\
+\textbf{Monopoly} is where there is only one firm which produces a good or service with no close substitutes and there is a large protective barrier to entry of new firms. For example, the electric utility. \\
+\hfill \\
+\hfill \\
+
+\begin{tabular}{l p{6cm}}
+  \multicolumn{2}{l}{\textbf{Measures of Concentration}} \\
+  \hline
+  Four-Firm concentration ratio & The percentage of the value of sales accounted for by the four largest firms in the industry. \\
+  Herfindahl-Hirschman Index & The squared percentage of market share of he largest 50 firms in a industry. \\
+  \hline
+\end{tabular}
+\hfill \\
+\hfill \\
+
+
+\begin{tabular}{l|c||c}
+  \hline
+  \textbf{Competition Level} & Four Firm & Herfindahl-Hirschman \\
+  \hline
+  \textbf{Perfect Competition} & Close to 0 & Less than 100 \\
+  \textbf{Monopolistic Competition} & Low & 101 to 999 \\
+  \textbf{Oligopoly} & High & More than 1000 \\
+  \textbf{Monopoly} & 100 & 10,000 \\
+  \hline
+\end{tabular}
+\hfill \\
+\hfill \\
+
+There are three main limitations of using only concentration measures as determinants of market structure and their failure to take proper account of:
+\begin{enumerate}
+  \item The geographical scope of the market. Concentration measures take a national view of the market, where sometimes a regional or global view is more accurate.
+  \item Barriers to entry and firm turnover. Some industries are highly concentrated but have easy entry and an enormous amount of turnover of firms. For example, a restaurant in a small town. Also, an industry might be competitive because of \emph{potential entry}. For example, there might be only a few firms in a market, but many firms can easily enter the market if economic profits are available.
+  \item The correspondence between a market and an industry. The Department of Commerce classifies each firm as being in a particular industry. Markets do not always correspond closely with industries for three reasons:
+  \begin{enumerate}
+    \item Markets are narrower than industries. For example, the pharmaceutical industry, where there are few firms but many different markets for individual products (drugs). 
+    \item Most firms make several products. For example, General Electric.
+    \item Firms switch from one market to another based on profit opportunities. For examples, newspapers going online.
+  \end{enumerate}
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Markets and Firms                %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Markets and Firms}
+
+Markets are good at coordinating decisions. They do so by adjusting prices and making the decisions of buyers and sellers consistent - making the quantity demanded equal to the quantity supplied for each good and service. \\
+
+Firms are often more efficient than markets as coordinators of economic activity because they can achieve:
+\begin{itemize}
+  \item Lower transaction costs.
+  \item Economies of scale.
+  \item Economies of scope (use of specialization and often expensive resources to produce a \emph{range of goods and services}.
+  \item Economies of team production (individuals in a group specializing in mutually supportive tasks).
+\end{itemize}
+
+
+\end{document}
+

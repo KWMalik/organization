@@ -1,0 +1,34 @@
+\documentclass{article}
+
+\title{Markets in Action}
+\author{Toby Banks}
+\date{September 19th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Housing Markets and Rent Ceilings %%%%%%%%%%%%%%%%%%%%
+\section{Summary}
+This section was definitely more about reading and understanding than definitions. So I'm going to present the summary from the book here:
+
+\begin{itemize}
+  \item A decrease  in the supply of housing raises rents.
+  \item Higher rents stimulate building, and in the long run, the quentity of hoursing increases and rent falls.
+  \item A rent ceiling that is set below the equilibrium rent creates a housing shortage, wasteful search, and a black market.
+  \item A decrease in the demand for low-skilled labor lowers the wage rate and reduces employment. 
+  \item The lower wage rate encourages people with low skills to acquire more skill, which decreases the supply of low-skilled labor and, in the long run, raises the wage rate of low-skilled labor. 
+  \item A minimum wage set above the equilibrium wage rate creates unemployment and increases the amount of time people spend searching for a job. 
+  \item A minimum wage hits low-skilled people the hardest. 
+  \item A tax raises price but usually by less than the tax.
+  \item The shares of a tax paid by buyers and by sellers depend on the elasticity of demand and the elasticity of supply.
+  \item The less elastic the demand or the more elastic the supply, the larger is the share of the tax paid by buyers.
+  \item If demand is perfectly elastic or supply is perfectly inelastic, sellers pay the entire tax. And if demand is perfectly inelsatic of supply is perfectly elastic, buyers pay the entire tax.
+  \item Farm revenues fluctuate becasue supply fluctuates. Beacasue the demand for most farm products is inelastic, a decrease in supply increase farm revenue, while an increase in supply decreases farm revenue.
+  \item A subsidy is like a negative tax. It lowers the price and leads to inefficient overproduction.
+  \item A quota leads to inefficient underproduction, which raises the price.
+  \item Penalties on sellers of an illegal good incrase the cost of selling the good and decrease its supply. Penalties on buyers of an illegal good decrease their willingness to pay and decrease the demand for the good. 
+  \item The higher the penalties and the more effective the law enforcement, the smaller is the quantity bought. 
+  \item A tax that is set at a sufficiently high rate will decrease the quantity of a drug bought, but there willl be a tendency for the tax to be evaded.
+\end{itemize}
+
+\end{document}
+

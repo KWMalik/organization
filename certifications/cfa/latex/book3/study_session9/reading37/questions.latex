@@ -1,0 +1,32 @@
+\documentclass{article}
+
+\title{Inventories}
+\author{Toby Banks}
+\date{November 10th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%% Learning Outcomes %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Inventories}
+\begin{itemize}
+  \item Explain the accounting standards related to the capitalization of expenditures as part of long-lived assets, including interest costs.
+  \item Compute and describe the effects of capitalizing versus expensing on net income, shareholders' equity, cash flow from operations, and financial ratios, including the effect on the interest coverage ratio of capitalizing interest costs.
+  \item Explain the circumstances in which software development costs and research and development costs are capitalized.
+  \item Identify the different depreciation methods for long-lived tangible assets, and discuss how the choice of method, useful lives, and salvage values affect a company's financial statements, ratios, and taxes.
+  \item Discuss the use of fixed asset disclosures to compare companies' average age of depreciable assets and calculate, using such disclosures, the average age and average depreciable life of fixed assets.
+  \item Describe amortization of intangible assets with finite useful lives and the estimates that affect the amortization calculations.
+  \item Discuss the liability for closure, removal, and environmental effects of long-lived operating assets, and discuss the financial statement impact and ratio effects of that liability.
+  \item Discuss teh impact of sales or exchanges of long-lived assets on financial statements.
+  \item Define impairment of long-lived tangible and intangible assets and explain what effect such impairment has on a company's financial statements and ratios. 
+  \item Calculate and describe both the initial and long-lived effects on asset revaluations on financial ratios.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%% Questions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Inventories}
+\begin{enumerate}
+  \item 
+  \item What four considerations should a analyst have when looking at financial statements with revaluations of long lived assets. 
+\end{enumerate}
+
+\end{document}
+
