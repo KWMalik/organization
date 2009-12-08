@@ -1,0 +1,54 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Sampling and Estimation}
+\author{Toby Banks \\ HB-Studios}
+\date{August 25th, 2009}
+
+\begin{document}
+
+\section{The Central Limit Theorem}
+\textbf{The Central Limit Theorem.} Given a population described by any probability distribution having mean \begin{math}\mu\end{math} and finite variance \begin{math}\sigma^2\end{math}, the sampling distribution of the sample mean \begin{math}\bar{x}\end{math} computed from samples of size \emph{n} from this population will be approximately normal with mean \begin{math}\mu\end{math} (the population mean) and variance \begin{math}{\sigma^{2} \div n}\end{math} (the population variance divided by \emph{n}) when the sample size \emph{n} is large.
+
+
+\section{Sampling}
+\textbf{Simple Random Sample}
+A simple random sample is a subset of a larger population created in such a way that each element of the population created in such a way that each element of the population has an equal probability of being selected to the subset. 
+
+\textbf{Systematic Sampling}
+Select every \emph{k}th member until we have a sample of the desired size. This should result in a approximately random sample.
+
+\textbf{Sampling Error}
+Sampling error si the difference between the observedvalue of a statistic and the quantity it is intended to estimate.
+
+\textbf{Sampling Distribution of a Statistic}
+The sampling distribution of a statisitc is the distribution of all the distinct possible values that the statistic can assume when computed from samples of the same size randomly drawn from the same population. 
+
+\textbf{Stratified Random Sampling}
+The population is divided into subpopulations (strata) based on one or more classification criteria. Simple random samples are then drawn from each stratum in sizes proportional to the relative size of teach stratum in the population. These samples are then pooled to form a stratified random sample. 
+
+\section{Bias in Sampling}
+\textbf{Sampling Error}
+Exists whenever one fails to observe every element of the population, because a sample statistic can vary from sample to sample. Because of sampling error we don't expect the sample mean to exactly equal the population mean in any one sample we may take. 
+
+\textbf{Data Mining Biased}
+Performing a massive computation on stocks and there prices/other variable. For example someone might analyze 40 variables on 100 stocks over a 10 year period and come up with a formula for predicting stock erturns. This would be subject to data mining biased. When dealing with a investment strategy that you think might suffer from data-mining biased you should ask yourself if the test tells the story of relationships between variables. Also you should test the test on a sample set of data that the researcher didn't to make sure that the test wasn't designed around the results.
+
+\textbf{Look-Ahead Biased}
+A test is subject to look-ahead biased if the test uses information that was not available on the test date. 
+
+\textbf{Survivorship Biased}
+A test is subject to survivorship biased if it fails to account for all the companies that may have gone bankrupt/left the database.
+
+\textbf{Time-Period Bias}
+Occurs when a test is based on a time period and the result may be time specific.
+
+
+\section{General Knowledge}
+\textbf{Desirable Properties of an estimator}
+-Unbiasedness: The expected value of the estimator is equal to the population parameter.
+-Efficiency: An efficient estimator is unbiased and has a smaller variance than all other unbiased estimators. 
+-Consistency: A consistent estimator tends to produce more accurate estimates of the population parameter as sample size increases.
+
+\end{document}
+

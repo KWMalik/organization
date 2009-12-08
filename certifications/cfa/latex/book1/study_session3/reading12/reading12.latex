@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Technical Analysis}
+\author{Toby Banks \\ HB-Studios}
+\date{September 8th, 2009}
+
+\begin{document}
+
+\section{Assumptions}
+\begin{enumerate}
+  \item The market value for any good or service is determined solely by the interaction of supply and demand.
+  \item Supply and demand are governed by numerous rational and irrational factors. Included in these factors are those economic variables relied on by the fundamental analyst as well as opinions, moods, and guesses. The market weighs all these factors continually and automatically.
+  \item Disregarding minor fluctuations, \emph{the prices for individual securities and thee overall value of the market tend to move in trends, which persist for appreciable lengths of time.}
+  \item Prevailing trends change in reaction to shifts in supply and demand relationships. These shifts, no matter why they occur, \emph{can be detected sooner or later in the action of the market itself}.
+\end{enumerate}
+
+Note that the items that appear in \emph{italics} refer to aspects that critics find controversial and question their validity. Technical analysts believe that new information takes time to penetrate the marketplace. They believe that this can be exploited for profit.
+
+
+\section{Advantages}
+\begin{enumerate}
+  \item Not dependent on financial accounting statements (the major source of information about past performance). 
+  \item Fundamental analysts must process information quickly and correctly so they can act before other investors. Technicians need only to recognize a movement to a new equilibrium (for whatever reason) and they do not need to know about the specific event and determine the effect of that event. 
+  \item Fundamental analysts must still decide (assuming good information) when they must make the sale. Since technical analysts invest when the price is moving to a new equilibrium they believe they are more likely to have ideal timing. 
+\end{enumerate}
+
+Technical analysts see the following problems with fundamental analysts:
+\begin{enumerate}
+  \item They lack a great deal of information needed by security analysts, such as information related to sales, earnings, and capital utilized by product line and customers. 
+  \item GAAP (Generally Accepted Accounting Principals) allow corporations to choose among several procedures for reporting expenses, assets, or liabilities. These alternatives can produce vastly different values, depending on whether or not a firm is aggressive or conservative. As a result a investor can have trouble comparing a statement between two firms in the same industry, much less firms across multiple industries. 
+  \item Psychological factors and other nonquantifiable variables do not appear in financial statements. For example,  Employee training and loyalty, customer goodwill, and general investor attitude toward a industry or company. Also, things such as political risk are not accounted for. 
+\end{enumerate}
+
+
+\section{Challenges to Technical Analysis}
+The assumption that information will be slow to effect market price is debated. According to efficient market hypothesis (EMH) almost all the studies have determined that prices do not move in trends based on statistical tests of auto-correlation and runs. Most all tests have supported the efficient market hypothesis, which holds badly for technical analysis main assumption that you can predict based on trends and the speed of new information affecting the stock price. 
+
+Another challenge is that past price patterns or relationships between market variables and stock prices may not be repeated. This causes technicians to follow several trading rules to try to predict the future market pattern. 
+
+Other critics say that price patterns become self-fulfilling prophecies. For example, a investor expects a \$40 share to go to \$50, and places a automatic buy order in if the price breaks \$45 per share. If other investors have similar ambitions this will cause a artificial inflation of the prices of the stock. 
+
+The success of a particular trading rule will cause others to adopt it. Which will eventually neutralize the technique. 
+
+Also, all of the discussed trading rules require quick a bit of \emph{subjective judgment}.
+
+
+
+\section{Technical Trading Rules and Indicators}
+Investors use terms such as rising/declining/flat trend channel, trough, and peak to describe graphs of stock prices. 
+
+\subsection{Contrary-Opinion Rules}
+This assumes that the majority of investors are wrong when the market approaches peaks and troughs. Therefore the technicians are trying to determine if the majority of investors are bullish or bearish and then they trade in the opposite direction.
+
+\begin{description}
+  \item[Mutual Fund Cash Positions] \hfill \\ 
+  Technicians believe that mutual funds are usually wrong at peaks and troughs. Thus, they expect a mutual fund to have a high percentage (liquid asset ration) of cash near a trough - a time they should be fully invested to take advantage of the market rise. Conversely, they expect a mutual fund to be near fully invested (low liquid asset ratio) near peaks when they should be selling stocks and realizing gains. 
+  \item[Credit Balances in Brokerage Accounts] \hfill \\ 
+  Credit balances result when investors sell stocks and leave the proceeds with their brokers, expecting to reinvest them shortly. The amounts are reported by the SEC and the NYSE in \emph{Barron's}. Because technical analysts view these credit balances as potential purchasing power, a decline in these balances is considered bearish because it indicates lower purchasing power as the market approaches a peak. Alternatively, a buildup of credit balances indicates a increase in buying power and is a bullish signal.
+  \item[OTC versus NYSE Volume] \hfill \\ 
+  This is a ratio of over-the-counter trading compared to the NYSE volume. If the ratio of trading volume (which is considered a measure of speculative activity) is increasing it would indicate a bearish speculative environment. Speculative trading typically peaks at market peaks. This is a ratio of the amount of trading compared to the size of the market.
+  %TJB: Come back to
+  \item[There are several more of these.. I'm not going to get into them] \hfill \\ 
+  ...
+\end{description} 
+
+\subsection{Follow the Smart Money}
+The idea of this is to follow and mimic the movements of smart, sophisticated investors. 
+
+\begin{description}
+  \item[Confidence Index] \hfill \\
+  For example \emph{Barron's} publishes a ratio between the average yield on 10 top-grade corporate bonds to the yield on the Dow Jones average of forty bonds. As the ratio approaches 100 as the spread between the two sets of bonds gets smaller. This ratio is viewed as bullish because during periods of high confidence, investors are willing to invest in lower-quality bonds for the added yield (conversely when investors are pessimistic they will avoid investing in low-quality bonds). \\
+  Unfortunately this interpretation assumes that changes in yield are caused almost exclusively by investor demand. It fails to account for events such as AT\&T issuing a large number of high-grade bonds (which could cause a temporary increase in yields on all high-grade bonds) this will cause the spread in the yield and increase the Confidence Index without any change in investors' attitudes. Such a change can generate a false signal of a change in confidence.
+  \item[T-Bill - Eurodollar Yield Spread] \hfill \\ 
+  It is reasoned that at times of international crisis, this spread widens as the smart money flows to safe-haven U.S. T-bills, which causes a decline in this ratio. It is contended that the stock market typically experiences a trough shortly thereafter.
+  \item[Debit Balances in Brokerage Accounts (Margin Debt)] \hfill \\ 
+  Debit balances in brokerage accounts represent borrowing (margin debt) by knowledgeable investors from their brokers. Therefore, an increase in debut balances implies buying by these sophisticated investors and is considered a sign of a bullish market. While a decline in these balances would indicate selling which would be a bearish indicator. \\
+  Monthly data on margin debt is reported in \emph{Barron's}. Unfortunately this index does not include borrowing by investors from other sources such as banks. Since it is reported as a absolute value technicians would look for changes in the trend of borrowing - the is, increases are bullish, declines are bearish.
+\end{description}
+
+\subsection{Momentum Indicators}
+Indicators of overall market momentum are used to make aggregate market decisions.
+
+\begin{description}
+  \item[Breadth of Market] \hfill \\ 
+  Breadth of market measures the number of issues that have increased each day and the number of issues that have declined. It can help explain the changes in direction of a composite market index such as the S\&P 500 Index. Since indexes are weighted it might take time for general stocks to move up if a major stock makes big gains.
+  \item[Stocks above Their 200-Day Moving Average] \hfill \\ 
+  By calculating things such as a 200-day moving average, a investor can determine which stocks are trading above or below their 200-day average. The market is considered \emph{overbought} if 80 percent of stocks are trading above their 200-day average and is a sign of a market correction. Conversely, if 20 percent of the market is trading above their 200-day average then the market is considered oversold. 
+\end{description}
+ 
+\subsection{Stock Price and Volume Techniques}
+While stock prices patterns alone are important, most technical trading rules consider both stock price and corresponding volume movements.
+
+\begin{description}
+  \item[Dow Theory] \hfill \\ 
+  Among the earliest work in using price and volume data to predict market conditions and it remains the basis for many technical indicators. Dow Theory postulates that there are three types of price movements over time: 1) major trends that are like tides in the ocean, 2) intermediate trends that resemble waves, and 3) short-run movements that are like ripples. Followers of Dow Theory attempt to detect the direction of the major price trend (tide), recognizing that intermediate movements (waves) may occasionally move in the opposite direction. 
+  \item[Importance of Volume] \hfill \\ 
+  Technicians look for a price increase on heavy volume relative to the stock's normal trading volume as an indicator of bullish activity. Conversely, a price decline with heavy volume is considered bearish. A generally bearish patter would be when price increases are accompanied by heavy volume and small price reversals occur with light trading volume.\\
+  Technicians also use a ratio of upside-downside volume as a indicator of short-term momentum for the aggregate stock market. This is the volume of trading in stocks that experienced a increase divided by the volume of trading in stocks that declined. Specifically, technicians believe that an upside-downside volume value of 1.75 or more indicates an overbought position that is bearish. Alternatively a value of 0.75 is considered a oversold position (or bullish). \emph{The Wall Street Journal} publishes this data daily and \emph{Barron's} publishes this data weekly.
+  \item[Support and Resistance Levels] \hfill \\ 
+  A support level is a price range at which the technician would expect a substantial increase in the demand for a stock. For example, a stock has enjoyed a meaningful increase and the stock experiences profit taking. Technicians reason that at some price below the recent peak other investors who did not buy during the first price increase (waiting for a small reversal) will get into the stock. When the price reaches this support price, demand surges and price and volume begin to increase again.\\
+  A resistance level is the price range at which the technician would expect and increase in the supply of stock and a price reversal. A resistance level develops after a significant decline from a higher price level. 
+  \item[Moving Average Lines] \hfill \\ 
+  By plotting the 200-day and 50-day moving average lines we can look for places where the lines intersect and use those as buy/sell points. The intersection of the lines signals a change in the overall trend of the stock price.
+  \item[Relative Strength] \hfill \\ 
+  Technicians believe that once a trend begins, it will continue until some major event causes a change in direction. They believe this also of \emph{relative performance}. Thus, if a individual stock or industry group is outperforming the market, technicians believe it will continue to do so. \\
+  Therefore, technicians compute weekly or monthly \textbf{relative-strength (RS) ratios} for individual stocks and industry groups. The RS ratio is equal to the price of a stock or an industry index divided by the value for some stock-market index such as the S\&P 500. If this ratio increases over time, it shows that the stock or industry is outperforming the overall stock market, and a technician would expect this performance to continue. This also holds true for declining markets and stocks.  
+  \item[Bar Charting] \hfill \\
+  A trend graph that for a given day draws a bar between the high and lowest price points. It also draws a littl etick out to the left/right of the bar to indicate closing price. 
+  \item[Multiple-Indicator Charts] \hfill \\
+  This is just having more than one indicator on a chart (i.e. 200-day with 50-day trendlines on a graph as well as the RS strength). 
+  \item[Point-and-Figure Charts] \hfill \\
+  This is just the swim lanes with the x's moving up and down based on the number of points that a price has changed. These are simple.
+\end{description}
+
+\end{document}
+

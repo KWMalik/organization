@@ -1,0 +1,515 @@
+\documentclass{article}
+
+\title{Financial Analysis Techniques}
+\author{Toby Banks}
+\date{October 31st, 2009}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% The Financial Analysis Process %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{The Financial Analysis Process}
+Due to the complex nature of financial analysis and the substantial amount of data a analyst should clarify purpose and context and clearly understand the following:
+\begin{itemize}
+  \item What is the purpose of the analysis? What questions will this analysis answer?
+  \item What level of detail will be required to accomplish this purpose?
+  \item What data are available for the analysis?
+  \item What are the factors or relationships that will influence the analysis?
+  \item What are the analytical limitations, and will these limitations potentially impair the analysis?
+\end{itemize}
+\hfill \\
+
+Here is a overview of the financial statement analysis framework: \\
+\hfill \\
+\begin{tabular}{p{4cm} p{5cm} p{5cm}}
+  \textbf{Phase} & \textbf{Sources of Information} & \textbf{Output} \\
+  \hline
+  1. Articulate the purpose and context of the analysis. & \(\bullet\) The nature of the analyst's function, such as evaluating and equity or debt investment or issuing a credit rating. & \(\bullet\) Statement of the purpose or objective of analysis. \\
+    & \(\bullet\) Communication with client or supervisor on needs and concerns. & \(\bullet\) A list (written or unwritten) of specific questions to be answered by the analysis. \\
+    & \(\bullet\) Institutional guidelines related to developing specific work product. & \(\bullet\) Nature and content of report to be provided. \\
+    &   & \(\bullet\) Timetable and budgeted resources for completion. \\
+  \hline
+  2. Collect Data & \(\bullet\) Financial statements, other financial data, questionnaires, and industry/economic data. & \(\bullet\)Organized financial statements. \\
+     & \(\bullet\) Discussions with management, suppliers, customers, and competitors. & \(\bullet\) Financial data tables. \\
+     & \(\bullet\) Company site visits (e.g., to production facilities or retail stores). & \(\bullet\) Completed questionnaires, if applicable. \\
+  \hline
+  3. Process Data & \(\bullet\) Data from previous phase. & \(\bullet\) Adjusted financial statements. \\
+    &   & \(\bullet\) Common-size statements. \\
+    &   & \(\bullet\) Ratios and graphs. \\
+    &   & \(\bullet\) Forecasts. \\
+  \hline
+  4. Analyze/interpret the processed data. & \(\bullet\) Input data as well as processed data. & \(\bullet\) Analytical results. \\
+  \hline
+  5. Develop and communicate conclusions and recommendations. & \(\bullet\) Analytical results and previous reports. & \(\bullet\) Analytical report answering questions posed in Phase 1. \\
+    & \(\bullet\) Institutional guidelines for published reports. & \(\bullet\) Recommendation regarding the purpose of the analysis, such as whether to make an investment or grant credit. \\
+  \hline
+  6. Follow up. & \(\bullet\) Information gathered periodically repeating above steps as necessary to determine whether changes to holdings or recommendations are necessary. & \(\bullet\) Updated reports and recommendations. \\
+  \hline
+\end{tabular}
+\hfill \\
+An analyst must be able to understand the "why" behind the numbers and ratios, not just what the numbers and ratios are. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Analysis Tools and Techniques %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Analysis Tools and Techniques}
+We are going to cover four main types of tools: ratios, common-size analysis, graphs, and regression analysis. \\
+\hfill \\
+
+\subsection{Ratios}
+One of the major tools for analysis are financial ratios. Ratios provide insight into the following: \\
+\hfill \\
+\begin{itemize}
+  \item Microeconomic relationships within a company that help analysts project earnings and free cash flow.
+  \item A company's financial flexibility, or ability to obtain the cash required to grow and meet its obligations, even if unexpected circumstances develop.
+  \item The managements ability.
+\end{itemize}
+\hfill \\
+There are also limitations to ratio analysis:
+\hfill \\
+\begin{itemize}
+  \item \emph{The homogeneity of a company's operating activities}. Companies may have divisions operating in many different industries. This can make it difficult to find comparable industry ratios to use for comparison purposes.
+  \item \emph{The need to determine whether the results of the ratio analysis are consistent}. One set of ratios may indicate a problem, whereas another set may prove that the potential problem is only short term in nature.
+  \item \emph{The need to use judgment}. 
+  \item \emph{The use of alternative accounting methods}. Some important accounting considerations include the following:
+  \begin{itemize}
+    \item FIFO vs. LIFO vs. Average Cost inventory valuation (IFRS no longer allow LIFO).
+    \item Cost or equity methods of accounting for unconsolidated affiliates.
+    \item Straight line or accelerated methods of depreciation.
+    \item Capital or operating lease treatment.
+  \end{itemize}
+\end{itemize}
+\hfill \\
+Some ratios can be retrieved from databases such as Bloomberg, Baseline, FactSet, or Thomson Reuters. \\
+\hfill \\
+
+\subsection{Common-Size Analysis}
+Common-size analysis involves expressing financial data, including entire financial statements, in relation to a single financial statement item, or base. Items most frequently used for the bases are total assets or revenue. In essence, common-size analysis creates a ratio between every financial statement item and the base item. \\
+\hfill \\
+It is most common when analyzing the balance sheet to divide each item by the same period's total assets and expressing the result as a percentage to highlight the composition of the balance sheet. This allows the analyst to compare changes in percentages of line items between time periods. \\
+\hfill \\
+Common-size analysis of the income statement divides each income statement item by revenue (or sometimes by total assets). \\
+\hfill \\
+Cross-sectional analysis (sometimes called "relative analysis") compares a specific metric for one company with the same metric for another company or group of companies allowing for comparison even though the companies might be of significantly different sizes or operate in different currencies. \\
+\hfill \\
+Trend analysis is the process of looking through financial statements and ratios and identifying whether or not important metrics are improving or deteriorating. Trend analysis provides important information about historical performance and growth and can be of great assistance as a planning and forecasting tool for management and analysts. \\
+\hfill \\
+Trend data can be compared across different financial statements (duh!). \\
+\hfill \\
+
+\subsection{The Use of Graphs as an Analytical Tool}
+Stacked column graphs are good for showing relative changes between multiple variables (e.g. inventory, receivables, investments, cash, fixed assets net of depreciation). They are also important when the composition and amounts, as well as their change over time are all important. \\
+\hfill \\
+Pie graphs are used to show composition of a total value. \\
+\hfill \\
+Line graphs are useful when the focus is on the change in amount for a limited number of items over a relatively longer time period. \\
+\hfill \\
+
+\subsection{Regression Analysis}
+In statistics, regression analysis includes any techniques for modeling and analyzing several variables, when the focus is on the relationship between a dependent variable and one or more independent variables. More specifically, regression analysis helps us understand how the typical value of the dependent variable changes when any one of the independent variables is varied, while the other independent variables are held fixed. Most commonly, regression analysis estimates the conditional expectation of the dependent variable given the independent variables — that is, the average value of the dependent variable when the independent variables are held fixed. Less commonly, the focus is on a quantile, or other location parameter of the conditional distribution of the dependent variable given the independent variables. In all cases, the estimation target is a function of the independent variables called the regression function. In regression analysis, it is also of interest to characterize the variation of the dependent variable around the regression function, which can be described by a probability distribution. \\
+\hfill \\
+Regression analysis is widely used for prediction (including forecasting of time-series data). Use of regression analysis for prediction has substantial overlap with the field of machine learning. Regression analysis is also used to understand which among the independent variables are related to the dependent variable, and to explore the forms of these relationships. In restricted circumstances, regression analysis can be used to infer causal relationships between the independent and dependent variables. \\
+\hfill \\
+A large body of techniques for carrying out regression analysis has been developed. Familiar methods such as linear regression and ordinary least squares regression are parametric, in that the regression function is defined in terms of a finite number of unknown parameters that are estimated from the data. Nonparametric regression refers to techniques that allow the regression function to lie in a specified set of functions, which may be infinite-dimensional. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Common Ratios Used in Financial Analysis %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Common Ratios Used in Financial Analysis}
+There are five main categories of financial ratios. \\
+
+\begin{tabular}{l p{9cm}}
+  \textbf{Category} & \textbf{Description} \\
+  \hline 
+  Activity      & \textbf{Activity ratios} measure how efficiently a company performs day-to-day tasks, such as collection of receivables and management of inventory. \\
+  Liquidity     & \textbf{Liquidity ratios} measure the company's ability to meet its short-term obligations. \\
+  Solvency      & \textbf{Solvency ratios} measure a company's ability to meet long-term obligations. Subsets of these ratios are also known as "leverage" and "long-term debt" ratios. \\
+  Profitability & \textbf{Profitability ratios} measure the company's ability to generate profitable sales from its resources (assets).  \\
+  Valuation     & \textbf{Valuation ratios} measure the quantity of an asset or flow (e.g. earnings) associated with ownership of a specified claim (e.g. share of ownership). \\
+\end{tabular}
+\hfill \\
+
+\subsection{Interpretation and Context}
+An analyst should evaluate financial ratios based on the following: \\
+\begin{enumerate}
+  \item \emph{Company goals and strategy.} Actual ratios can be compared with company objectives to determine whether objectives are being attained and whether the results are consistent with the company's strategy.
+  \item \emph{Industry norms (cross-sectional analysis)}. A company can be compared with others in its industry by relation its financial ratios to industry norms or to a subset of the companies in an industry. When industry norms are used to make judgments, care must be taken because:
+  \begin{itemize}
+    \item Many ratios are industry specific, and not all ratios are important to all industries.
+    \item Companies may have several different lines of business. This will cause aggregate financial ratios to be distorted. It is better to examine industry-specific ratios by lines of business. 
+    \item Differences in accounting methods used by companies can distort financial ratios. 
+    \item Differences in corporate strategies can affect certain financial ratios.
+  \end{itemize}
+  \item \emph{Economic conditions} For cyclical companies, financial ratios tend to improve when the economy is strong and weaken during recessions. Therefore, financial ratios should be examined in light of the current phase of the business cycle. 
+\end{enumerate}
+
+\subsection{Activity Ratios}
+Also known as \textbf{asset utilization ratios} and \textbf{operating efficiency ratios}. \\
+\begin{tabular}{p{4cm} p{10cm}}
+  \hline
+  \textbf{Inventory Turnover}                  & Costs of Goods Sold / Average Inventory \\
+    & Indicates the resources (money) tied up in inventory (e.g. the carrying costs) and can, therefore, be used to indicate inventory management effectiveness. The higher the ratio, the shorter the period that inventory is held (resulting in lower DOH as well). This should be benchmarked against industry norms.  \\
+  \hline
+  \textbf{Days of Inventory on Hand (DOH)}     & Number of Days in Period / Inventory Turnover \\
+    & The number of days worth of inventory the company keeps. \\
+  \hline
+  \textbf{Receivables Turnover}                & Revenue / Accounts Receivable \\
+    & A relatively high ratio (resulting in a low DSO) might indicate highly efficient credit and collection. Although it is is too high it's credit/collection might be to stringent and causing business to go elsewhere. \\
+  \hline
+  \textbf{Days of Sales Outstanding (DSO)}     & Number of Days In Period / Receivables Turnover \\
+    & The number of DSO represents the elapsed time between a sale and cash collection. Although limiting the numerator to sales made on credit would be more accurate, credit sales information is not available to a analyst.  \\
+  \hline
+  \textbf{Payables Turnover}                   & Purchases / Average Trade Payables \\
+    &  Represents how many times a company pays off its creditors per year. If this ratio is high it might mean that a company is not making full use of its credit (alternatively it might mean that a company is taking advantage of early pay discounts). A low payables turnover ratio might indicate that a company is having trouble meeting its obligations or alternatively exploiting lenient supplier terms. \\
+  \hline
+  \textbf{Number of Days of Payables}          & Number of Days in Period / Payables \\
+    &  Represents the average number of days that a company takes to pay its suppliers. \\
+  \hline
+  \textbf{Working Capital Turnover}            & Revenue / Average Working Capital \\
+    & Working capital is current assets - current liabilities. This ratios details how efficiently a company generates revenue with its working capital. The higher the ratio the greater the efficiency. \\
+  \hline
+  \textbf{Fixed Asset Turnover}                & Revenue / Average Net Fixed Assets \\
+    & Measures how efficiently the company generates revenues from its investments in fixed assets. \\
+  \hline
+  \textbf{Total Asset Turnover}                & Revenue / Average Total Assets \\
+    &  Measures a company's overall ability to generate revenues with a given level of assets. Is used as a measure of efficiency. \\
+  \hline
+\end{tabular}
+
+\subsection{Liquidity Ratios}
+Liquidity ratios are focused largely on cash flows, and are used to measure a company's ability to meet its short-term obligations. \\
+\hfill \\
+
+\begin{tabular}{p{4cm} p{7cm}}
+  \hline
+  \textbf{Current Ratio}                & Current Assets / Current Liabilities \\
+    &  A higher ratio indicates a higher level of liquidity. A value of 1.0 indicates that the book value of its current assets exactly equals the book value of current liabilities. A lower ratio indicates a lower level of liquidity, implying a greater reliance on operating cash flow and outside financing to meet short-term obligations. Liquidity affects the company's capacity to take on debt. \\
+  \hline
+  \textbf{Quick Ratio}                  & Cash + Short-term marketable investments + Receivables / Current Liabilities \\
+    & More conservative than the current ratio because it only includes more liquid current assets. This removes everything except what in the numerator of the equation from the current assets. \\
+  \hline
+  \textbf{Cash Ratio}                   & Cash + Short-term marketable investments / Current Liabilities \\
+    & Represents a reliable measure of a individual entity's liquidity in a crisis situation. \\
+  \hline
+  \textbf{Defensive Interval Ratio}     & Cash + Short-term marketable investments + Receivables / Daily Cash Expenditures \\
+    &  Indicates how long a company can continue to pay its expenses from its existing liquid assets without receiving any additional cash inflow. A defensive interval ratio of 50 would indicate that a company can continue to pay its operating expenses for 50 days before running out of quick assets, assuming no additional cash inflows. \\
+  \hline
+\end{tabular}
+\hfill \\
+
+Another measure of liquidity is the \textbf{cash conversation cycle} which is a financial metric not in ratio form, that measures the length of time required for a company to go from cash (invested in operations) to cash received (as a result of its operations). During this period of time, the company need to finance its investment in operations through other sources (e.g. debt and or equity). \\
+\hfill \\
+\textbf{Cash Conversion Cycle (Net operating Cycle)} = DOH - DSO - Number of Days of Payables.
+\hfill \\
+
+\subsection{Solvency Ratios}
+Solvency refers to a company's ability to meet its long-term debt obligations. \\
+\hfill \\
+
+The following are examples of \emph{debt-ratios}: \\
+\hfill \\
+
+\begin{tabular}{p{4cm} p{7cm}}
+  \hline
+  \textbf{Debt-To-Assets Ratio (Total Debt Ratio)} & Total Debt / Total Assets \\
+    & Measure the percentage of total assets financed with debt. For example a Debt-To-Assets ratio of .6 means 60\% of the company's assets are financed with debt. \\
+  \hline
+  \textbf{Debt-To-Capital Ratio} & Total Debt / Total Debt + Total Shareholders' Equity \\
+    & Measure the percentage of a company's capital that is represented by debt. A higher ratio represents more financial risk and thus indicates weaker solvency. \\
+  \hline
+  \textbf{Debt-To-Equity Ratio} & Total Debt / Total Shareholders' Equity \\
+    & Measures the amount of debt capital to equity capital. A higher ratio means weaker solvency. \\
+  \hline
+  \textbf{Financial Leverage Ratio} & Average Total Assets / Average Total Equity \\
+    & Also known as the "leverage ratio" this ratio measure the amount of total assets supported for each one money unit of equity. A ratio of 3 would mean that for every one dollar in equity supports three dollars in total assets. The higher the financial leverage ratio, the more leveraged the company is in the sense of using debt and other liabilities to finance assets. \\
+  \hline
+\end{tabular}
+\hfill \\
+\hfill \\
+ 
+The following are examples of \emph{coverage-ratios}: \\
+\begin{tabular}{p{4cm} p{7cm}}
+  \hline
+  \textbf{Interest Coverage} & EBIT / Interest Payments \\
+    & Measure the number of times that a company's EBIT could cover its interest payments. A higher ratio indicates stronger solvency, offering greater assurance that the company can service its debt from it operating earnings. \\
+  \hline
+  \textbf{Fixed Charge Coverage} & EBIT + Lease Payments / Interest Payments + Lease Payments \\
+    & This ratio relates fixed charges, or obligations, to the cash flow generated by the company. It measures the number of times a company's earnings (before interest, taxes, and lease payments) can cover the company's interest and lease payments. A higher ratio indicates stronger solvency. This ratio is sometimes used as an indication of the quality of the preferred dividend, with a higher ratio indicating a more secure preferred dividend. \\
+  \hline
+\end{tabular}
+
+\subsection{Profitability Ratios}
+Many analysts focus on the profitability ratios as the key focus on their analytical efforts. Many consider profitability ratios to be a good measure of a company's management. Check on the income statement for most of these. \\
+\hfill \\
+\hfill \\
+
+The following ratios are considered \emph{return on sales} profitability ratios: \\
+\begin{tabular}{p{4cm} p{7cm}}
+  \hline
+  \textbf{Gross Profit Margin} & Gross Profit / Revenue \\
+    & Gross profit margin indicates the percentage of revenue available to cover operating and other expenditures. If it is higher it indicates some combination of higher product pricing and lower product cost. Can be used to access competitive advantage of products. \\
+  \hline
+  \textbf{Operating Profit Margin} & Operating Income / Revenue \\
+    & Operating profit is calculated as gross profit margin minus operating costs. So a operating margin increasing greater than a gross margin can indicate improvements in controlling operating costs, such as administrative overheads. \\
+  \hline
+  \textbf{Pretax Profit Margin} & EBT (earnings before tax but after interest) / Revenue \\
+    & Pretax income (also known as earnings before tax) is calculated as operating profit minus interest, so this ratio reflects the effects on profitability of leverage and other (non-operating) income and expenses. If a company's pretax margin is rising primarily as a result of increasing non-operating income, the analyst should evaluate whether this increase reflects a deliberate change in a company's business focus and, therefore, the likelihood that the increase will continue. \\
+  \hline
+  \textbf{Net Profit Margin} & Net Income / Revenue \\
+    & Used to offer a view of the company's future potential profitability. Not a measure of efficiency. Tells you how much profit is generated from one dollar in sales. \\
+  \hline
+\end{tabular}
+\hfill \\
+\hfill \\
+
+The following ratios are considered \emph{return on investment} profitability ratios: \\
+\begin{tabular}{p{4cm} p{7cm}}
+  \hline
+  \textbf{Operating ROA} & Operating Income / Average Total Assets \\
+    &  This is the "Operating Income or EBIT / Average Total Assets" method mentioned below. \\
+  \hline
+  \textbf{ROA (return on assets)} & Net Income / Average Total Assets \\
+    & The higher the ratio, the more income is generated by a given level of assets. Most databases compute this ratio as "Net Income / Average Total Assets". Some analyst prefer to add back the interest expanse yielding "Net Income + Interest Expense (1 - Tax Rate) / Average Total Assets". Also some analysts compute ROA on pre-interest and pretax basis yielding "Operating Income or EBIT / Average Total Assets". \\
+  \hline
+  \textbf{Return on Total Capital} & EBIT / Short- and long-term debt and equity \\
+    & Measures the profit that a company earned on all of the capital that it employs (short-term debt, long-term debt, and equity). \\
+  \hline
+  \textbf{ROE} & Net Income / Average Total Equity \\
+    & Includes minority equity, preferred equity, and common equity. It is a measure of return on equity. \\
+  \hline
+  \textbf{Return on Common Equity} & Net Income - Preferred Dividends / Average Common Equity \\
+    &  Much like ROE mentioned above only return on common equity is only concerned with common equity. \\
+  \hline
+\end{tabular}
+\hfill \\
+\hfill \\
+
+\subsection{DuPont Analysis: The Decomposition of ROE}
+ROE = Net Income / Average Shareholders' Equity \\
+\hfill \\
+ROE = Net Income / Average Shareholders' Equity \\
+    = (Net Income / Average Total Assets) * (Average Total Assets / Average Shareholder Equity) \\
+\hfill \\
+Which can be expressed as: \\
+\hfill \\
+ROE = ROA * Leverage \\
+\hfill \\
+Using the above equation you can determine the trend in ROE to figure out whether the increase/decrease from ROE is a function of ROA or leverage. \\
+\hfill \\
+Just as ROE can be decomposed we can then further decompose ROE by decomposing ROA: \\
+\hfill \\
+ROE = (Net Income / Average Total Assets) = (Net Income / Revenue) * (Revenue / Average Total Assets) * (Average Total Assets / Average Shareholder Equity) \\
+\hfill \\
+This can be interpreted as:  
+\hfill \\
+ROE = Net Profit Margin * Asset Turnover * Leverage \\
+\hfill \\
+To separate the effects of taxes an interest, we can further decompose the net profit margin and write: \\
+\hfill \\
+(Net Income / Average Shareholders' Equity) = (Net Income / EBT) * (EBT / EBIT) * (EBIT / Revenue) * (Revenue / Average Total Assets) * (Average Total Assets / Average Shareholders' Equity) \\
+\hfill \\
+which can be interpreted as: \\
+\hfill \\
+ROE = Tax burden * Interest Burden * EBIT Margin * Asset Turnover * Leverage \\
+\hfill \\
+NOTE: The interest burden can be described as either (EBT / EBIT) or as (EBT / Operating Income). Using operating income allows for measurement of both the effect of interest expense and non-operating income. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Equity Analysis %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Equity Analysis}
+Analysts are interested in valuing a security to assess its merits for inclusion or retention in a portfolio. Analysts use a variety of methods to value a company's equity, including valuation ratios (e.g., the price-to-earnings ratio), discounted cash flow approaches, and residual income approaches (ROE compared to the cost of capital) amongst others. The valuation process has several steps, including: \\
+\begin{enumerate}
+  \item Understanding the business and the existing financial profile. 
+  \item Forecasting company performance.
+  \item Selecting the appropriate valuation model.
+  \item Converting forecasts to a valuation.
+  \item Making the investment decision.
+\end{enumerate}
+\hfill \\
+
+\subsection{Valuation Ratios}
+\hfill \\
+A few notes about the following ratios: \emph{Price to book} value is equal to 1 when the required rate of return is exactly equal to the returns required by the market. A higher ratio indicates that the future profitability of the company is expected to exceed the required rate of return, and values of this ratio less than one indicate that the company is not expected to earn excess returns. \emph{Price to sales} is often used when a company doesn't have a positive net income. \\
+\hfill \\
+\begin{tabular}{l l}
+  \multicolumn{2}{l}{\textbf{Valuation Ratios}} \\
+  \hline
+  P/E  & Price per Share / Earnings per share \\
+  P/CF & Price per Share / Cash Flow per share \\
+  P/S  & Price per Share / Sales per share \\
+  P/BV & Price per Share / Book value per share \\
+  \hline
+\end{tabular}
+\hfill \\
+\hfill \\
+
+
+\hfill \\
+\begin{tabular}{l p{4cm} p{4cm}}
+    & \textbf{Numerator} & \textbf{Denominator} \\
+  \hline
+  \multicolumn{3}{l}{\textbf{Per-Share Quantities}} \\
+  \hline
+  Basic EPS  & Net Income Minus Preferred Dividends & Weighted Average Number of Ordinary Shares Outstanding \\
+  Diluted EPS & Adjusted Income available for ordinary shares, reflecting conversion of dilutive securities & Weighted average number of ordinary and potentially ordinary shares outstanding \\
+  Cash Flow Per Share & Cash flow from operations & Average number of shares outstanding \\
+  EBITDA per share & EBITDA & Average number of shares outstanding \\
+  Dividends per share & Common dividends declared & weighted average number of ordinary shares outstanding \\
+  \hline
+\end{tabular}
+\hfill \\
+NOTE: EBITDA stands for Earnings Before Interest, Tax, Depreciation, and Amortization. \\
+\hfill \\
+\begin{tabular}{l p{4cm} p{4cm}}
+    & \textbf{Numerator} & \textbf{Denominator} \\
+  \hline
+  \multicolumn{3}{l}{\textbf{Dividend-Related Quantities}} \\
+  \hline
+  Dividend payout ratio & Common share dividends & Net income attributable to common shares \\
+  Retention rate (b) & Net income attributable to common shares - Common Share Dividends & Net income attributable to common shares \\
+  Sustainable Growth Rate & b * ROE & \\
+  \hline
+\end{tabular}
+\hfill \\
+The dividend payout ratio measures the percentage of earnings that the company pays out as dividends to shareholders. The amount of dividends per share tends to be relatively fixed because any reduction in dividends has been shown to result in a disproportionately large reduction in share price. Because dividend amounts are relatively fixed, the dividend payout ratio tends to fluctuate with earnings. Optimal dividend policy, similar to optimal capital structure, has been examined in academic research and continues to be a topic of significant interest in corporate finance. \\
+\hfill \\
+The retention rate is the complement of the payout ratio (1 - payout ratio). Whereas the payout ratio measures the percentage of earnings that a company pays out as dividends, the retention rate is the percentage of earnings that the company retains. \\
+\hfill \\
+A company's sustainable growth rate is viewed as a function of its profitability (measured as ROE) and its ability to finance itself from internally generated funds (measured as the retention rate). A higher ROE and a higher retention rate result in a higher sustainable growth rate. This calculation can be used to estimate a company's growth rate, a factor commonly used in equity valuation. \\
+\hfill \\
+
+\subsection{Industry-Specific Ratios}
+TJB: I'm going to leave this blank for now as I don't expect there will be any questions on it. If when studying I discover questions on it I'll add information here. \\
+\hfill \\
+
+\subsection{Research on Ratios in Equity Analysis}
+TJB: I'm going to leave this blank for now as I don't expect there will be any questions on it. If when studying I discover questions on it I'll add information here. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Credit Analysis  %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Credit Analysis}
+\textbf{Credit risk} is the risk of loss caused by a counter party's or debtor's failure to make a promised payment. \textbf{Credit analysis} is the evaluation of the credit risk. \\
+\hfill \\
+The credit rating process includes many of the following procedures: \\
+\begin{itemize}
+  \item Meeting with management, typically including the chief financial officer, to discuss, for example, industry outlook, overview of major business segments, financial policies and goals, distinctive accounting practices, capital spending plans, and financial contingency plans. 
+  \item Tours of major facilities, time permitting.
+  \item Meeting of a ratings committee where the analyst's recommendations are voted on, after considering factors that include:
+  \begin{itemize}
+    \item Business risk, including the evaluation of:
+    \begin{itemize}
+      \item Operating environment.
+      \item Industry characteristics (e.g. Cyclically and capital intensity). 
+      \item Success factors and areas of vulnerability.
+      \item Company's competitive position, including size and diversification. 
+    \end{itemize}
+    \item Financial risk, including:
+    \begin{itemize}
+      \item The evaluation of capital structure, interest coverage, and profitability using ratio analysis.
+      \item The examination of debt covenants.
+    \end{itemize}
+    \item Evaluation of management.
+  \end{itemize}
+  \item Monitoring of publicly distributed ratings - including reconsideration of ratings due to changing conditions. 
+\end{itemize}
+\hfill \\
+
+Ratings for credit analysis: \\
+\hfill \\
+\begin{tabular}{p{3cm} p{4cm} p{4cm}}
+  \textbf{Credit Ratio} & \textbf{Numerator} & \textbf{Denominator} \\
+  \hline
+  EBIT Interest Coverage  & EBIT & Gross Interest (prior to deductions for capitalized interest or interest income). \\
+  EBITDA Interest Coverage  & EBITDA & Gross Interest (prior to deductions for capitalized interest or interest income). \\
+  Funds from operations to total debt & FFO (net income adjusted for non-cash items) & Total Debt \\
+  Free operating cash flow to total debt & CFO (adjusted) less capital expenditures) & Total Debt \\
+  Total Debt to EBITDA & Total Debt & EBITDA \\
+  Return on Capital & EBIT & Capital = Average Equity (common and preferred stock) and short-term portions of debt, noncurrent deferred taxes, minority interest \\
+  Total Debt to Total Debt plus Equity & Total Debt & Total Debt plus Equity \\
+  \hline
+\end{tabular}
+\hfill \\
+NOTES: FFO = "Funds From Operations", CFO = "Cash Flow from Operations" \\
+\hfill \\
+
+
+\subsection{Research on Ratios in Credit Analysis}
+The Z-score is used to predict financial distress:
+\hfill \\
+Z =   1.2 * (Current Assets - Current Liabilities) / Total Assets \\
+    + 1.4 * (Retained Earnings / Total Assets) \\
+    + 3.3 * (EBIT / Total Assets) \\
+    + 0.6 * (Market value of stock / Book value of liabilities) \\
+    + 1.0 * (Sales / Total Assets) \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Business and Geographic Segments %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Business and Geographic Segments}
+Under IAS 14 (Segment Reporting), disclosures are required for reportable segments. U.S. GAAP is similar to IFRS but less detailed. One noticeable omission under U.S. GAAP is the disclosure of segment liabilities. \\
+\hfill \\
+A reportable segment is defined as a business or geographical segment where both of the following apply:
+\begin{itemize}
+  \item The majority (greater than 50 percent) of its revenue is earned externally.
+  \item Its income from sales, segment results, or assets is greater than or equal to 10 percent of the appropriate total amount of all segments.
+\end{itemize}
+\hfill \\
+For each primary segment, the following should be disclosed: \\
+\begin{itemize}
+  \item Segment revenue, distinguishing between revenue to external customers and revenue from other segments.
+  \item Segment result (segment revenue minus segment expenses).
+  \item Carrying amount of segment assets.
+  \item Segment liabilities.
+  \item Cost of property, plant, and equipment, and intangible assets acquired.
+  \item Depreciation and amortization expense.
+  \item Other non-cash expense.
+  \item Share of the net profit or loss of an investment accounted for under the equity method.
+  \item Reconciliation between the information of reportable segments and the consolidated financial statements in terms of segment revenue, result, assets, and liabilities.
+\end{itemize}
+\hfill \\
+
+For each secondary segment, the following should be disclosed:
+\begin{itemize}
+  \item Revenue from external customers.
+  \item Carrying amount of segment assets.
+  \item Cost of property, plant, and equipment, and intangible assets acquired.
+\end{itemize}
+\hfill \\
+
+Other required disclosures are as follows:
+\begin{itemize}
+  \item Revenue of any segment whereby the external revenue of the segment is greater than or equal to 10 percent of company revenue but that is not a reportable segment (because a majority of its revenue is from internal transfers).
+  \item Basis of pricing inter-segment transfers.
+  \item Changes in segment accounting policies.
+  \item Types of products and services in each business segment.
+  \item Composition of each geographical segment.
+\end{itemize}
+\hfill \\
+
+\subsection{Segment Ratios}
+Based on the limited segment information that companies are required to present, a variety of useful ratios can be computed: \\
+\begin{tabular}{l p{9cm}}
+  \textbf{Segment Margin}      & Segment Profit (loss) / Segment Revenue \\
+  \textbf{Segment Turnover}    & Segment Revenue / Segment Assets \\
+  \textbf{Segment ROA}         & Segment Profit (loss) / Segment Assets \\
+  \textbf{Segment Debt Ratio}  & Segment Liabilities / Segment Assets \\
+\end{tabular}
+
+
+\section{Model Building and Forecasting}
+There are a lot of techniques used in modeling financial forecasts. Here are several:
+\begin{itemize}
+  \item \textbf{Sensitivity Analysis}: Also known as the "what if" analysis. This shows a range of outcomes as specific assumptions are changed. This in turn could influence financing needs or investment in fixed assets.
+  \item \textbf{Scenario Analysis}: Scenario analysis shows the changes in key financial quantities that result from given (economic) events, such as the loss of customers, the loss of a supply source, or a catastrophic event. If the list of events is mutually exclusive and exhaustive and the events can be assigned probabilities, the analyst can evaluate not only the range of outcomes but also standard statistical measures such as the mean and median value for various quantities of interest.
+  \item \textbf{Simulation}: A computer-generated sensitivity or scenario analysis based on probability models for the factors that drive outcomes. Each event or possible outcome is assigned a probability. Multiple scenarios are then run using the probability factors assigned to the possible values of a variable.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Notes (TO DELETE)  %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{NOTES}
+What is efficiency? How should I think about it? \\
+
+
+\end{document}
+

@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Sampling and Estimation}
+\author{Toby Banks \\ HB-Studios}
+\date{August 29th, 2009}
+
+\begin{document}
+
+\section{Definitions}
+\textbf{Null Hypothesis}
+A null hypothesis is the hypothesis to be tested.
+
+\textbf{Alternative Hypothesis}
+Is the hypothesis that is accepted if the null hypothesis is rejected. 
+
+\textbf{Test Statistic}
+A test statistic is a quantity, calculated based on sample, whose value is the basis for deciding whether or not to reject the null hypothesis. 
+%\begin{displaymath}
+\[
+\text{Test Statistic} = {\text{Sample Statistic} }
+%- \text{Value of the Population Parameter under H_0}} \over{\text{Standard Error of the Sample Statistic}}
+\]
+%\end{displaymath}
+
+\textbf{Type I Error}
+A Type I Error occurs when we reject a true null hypothesis. 
+
+\textbf{Type II Error}
+A Type II Error occurs when we do NOT reject a false null hypothesis. 
+
+\textbf{Power of a Test}
+Power of a test is the probability of correctly rejecting the null hypothesis. 
+
+\textbf{Rejection Point (Critical Value)}
+A rejection point (critical value) for a test statistic is a value with which the computed test statistic is compared to decide whether to reject or not reject the null hypothesis.
+
+
+
+\section{Deciding which statistic test to use}
+We make mathematical decisions based on whether we have a normally distributed population, a large sample size, known or unknown variance.
+\subsection{t-statistic}
+It's appropriate to use a t-statistic when there is a normally distributed population with unknown variance. Also when the sample size is small there is no alternative (sample size < 30). When variance is not known, a t-statistic is always to be used. Although with sample sizes >= 30 it is possible to use a z-statistic the t-statistic is a more conservative estimate. 
+
+\subsection{z-statistic} 
+It's appropriate to use a z-statistic when there is a normally distributed population with known variance. You do not need to calculate degrees of freedom when using a z-statistic because we can use variance to calculate the standard error.\\
+
+\textbf{I must remember the following rejection points as they are not a part of a table.}\\
+
+\begin{enumerate}
+  \item Significance level of \(\alpha = 0.10.\)
+  \begin{enumerate}
+      \item \(H_0:\theta = \theta_0\) versus \(H_\emph{a}:\theta \neq \theta_0\). The rejection points are \(z_{0.05} = 1.645\) and \(-z_{0.05} = -1.645\).
+      \item \(H_0:\theta \leq \theta_0\) versus \(H_\emph{a}:\theta > \theta_0\). The rejection points are \(z_{0.10} = 1.28\).
+      \item \(H_0:\theta \geq \theta_0\) versus \(H_\emph{a}:\theta < \theta_0\). The rejection points are \(-z_{0.10} = -1.28\).
+  \end{enumerate}
+  \item Significance level of \(\alpha = 0.05\).
+  \begin{enumerate}
+      \item \(H_0:\theta = \theta_0\) versus \(H_\emph{a}:\theta \neq \theta_0\). The rejection points are \(z_{0.025} = 1.96\) and \(-z_{0.025} = -1.96\).
+      \item \(H_0:\theta \leq \theta_0\) versus \(H_\emph{a}:\theta > \theta_0\). The rejection points are \(z_{0.05} = 1.645\).
+      \item \(H_0:\theta \geq \theta_0\) versus \(H_\emph{a}:\theta < \theta_0\). The rejection points are \(-z_{0.05} = -1.645\).
+  \end{enumerate}
+  \item Significance level of \(\alpha = 0.01\).
+  \begin{enumerate}
+      \item \(H_0:\theta = \theta_0\) versus \(H_\emph{a}:\theta \neq \theta_0\). The rejection points are \(z_{0.005} = 2.575\) and \(-z_{0.025} = -2.575\).
+      \item \(H_0:\theta \leq \theta_0\) versus \(H_\emph{a}:\theta > \theta_0\). The rejection points are \(z_{0.01} = 2.33\).
+      \item \(H_0:\theta \geq \theta_0\) versus \(H_\emph{a}:\theta < \theta_0\). The rejection points are \(-z_{0.01} = -2.33\).
+  \end{enumerate}
+\end{enumerate}
+\textbf{NOTE:} That if the first term in a question is like \(H_0:\mu \leq x\) then the answer will be a positive number.\\
+
+\subsection{chi-square test}
+It's appropriate to use a chi-square test when there is a single normally distributed population and we know variance. 
+\[
+{\chi^2} = \frac{\left(n - 1\right) s^2}{\sigma_0^2}
+\]
+\textit{Rejection Points}
+\begin{enumerate}
+  \item "Not equal to". Reject the null hypothesis if the test statistic is greater than the upper \(\alpha / 2\) point (denoted \(\chi_{\alpha / 2}^2\)) or less than the lower \(\alpha / 2\) point (denoted \(\chi_{1 - \alpha / 2}^2\)) of the chi-square distribution with df = n - 1.
+  \item "Greater than". Reject the null hypothesis if the test statistic is greater than the upper \(\alpha\) point of the chi-square distribution with df = n - 1.
+  \item "Less than". Reject the null hypothesis if the test statistic is less than the lower \(\alpha\) point of the chi-square distribution with df = n - 1.
+\end{enumerate}
+
+\end{document}
+

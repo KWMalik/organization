@@ -1,0 +1,129 @@
+\documentclass{article}
+
+\title{Financial Analysis Techniques}
+\author{Toby Banks}
+\date{October 31st, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%% Learning Outcomes %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Financial Analysis Techniques}
+\begin{itemize}
+  \item Evaluate and compare companies using ratio analysis, common-size financial statements, and charts in financial analysis.
+  \item Describe the limitations of ratio analysis.
+  \item Describe the various techniques of common-size analysis and interpret the results of such analysis.
+  \item Calculate, classify, and interpret activity, liquidity, solvency profitability, and valuation ratios.
+  \item Demonstrate how ratios are related and how to evaluate a company using a combination of different ratios.
+  \item Demonstrate the application of and interpret changes in the component parts of the DuPont analysis (the decomposition of return on equity).
+  \item Calculate and interpret the ratios used in equity analysis, credit analysis, and segment analysis. 
+  \item Describe how ratio analysis and other techniques can be used to model and forecast earnings.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%% Questions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Financial Analysis Techniques}
+\begin{enumerate}
+  \item What five questions should you ask yourself before beginning a financial analysis?
+  \item Detail an overview of the financial statement analysis framework. (LONG ANSWER)
+  \item What are four main limitations of ratio analysis? Go into details for each.
+  \item What is common size analysis? How does it differ for the income and balance sheets?
+  \item When would one use vertical stacks, pie charts or line charts?
+  \item What is regression analysis?
+  \item What are the five categories of financial ratios. List all of the common studied ratios for each.
+  \item Define and describe the use of the following activity ratios:
+  \begin{enumerate}
+    \item Inventory Turnover
+    \item Days of Inventory on Hand (DOH)
+    \item Receivables Turnover
+    \item Days of Sales Outstanding (DSO)
+    \item Payables Turnover
+    \item Number of Days of Payables
+    \item Working Capital Turnover
+    \item Fixed Asset Turnover
+    \item Total Asset Turnover
+  \end{enumerate}
+  \item Define and describe the uses of the following liquidity ratios.
+  \begin{enumerate}
+    \item Current Ratio
+    \item Quick Ratio
+    \item Cash Ratio
+    \item Defensive Interval Ratio
+  \end{enumerate}
+  \item Explain the cash conversion cycle.
+  \item Define and describe the uses of the following solvency debt ratios.
+  \begin{enumerate}
+    \item Debt-To-Assets Ratio (Total Debt Ratio)
+    \item Debt-To-Capital Ratio
+    \item Debt-To-Equity Ratio
+    \item Financial Leverage Ratio
+  \end{enumerate}
+  \item Define and describe the uses of the following solvency coverage ratios.
+  \begin{enumerate}
+    \item Interest Coverage
+    \item Fixed Charge Coverage
+  \end{enumerate}
+  \item Define and describe the uses of the following return on sales profitability.
+  \begin{enumerate}
+    \item Gross Profit Margin
+    \item Operating Profit Margin
+    \item Pretax Profit Margin
+    \item Net Profit Margin
+  \end{enumerate}
+  \item Define and describe the uses of the following return on investment profitability.
+  \begin{enumerate}
+    \item Operating ROA
+    \item ROA (return on assets)
+    \item Return on Total Capital
+    \item ROE
+    \item Return on Common Equity
+  \end{enumerate}
+  \item When decomposing ROE what are the two different mutually exclusive ways of representing the interest burden.
+  \item Draw a full ROE tree. 
+  \item What does each of the elements in a ROE tree mean?
+  \item What are five general steps when evaluating a security for inclusion in a portfolio?
+  \item Define the following valuation ratios and what they mean:
+  \begin{enumerate}
+    \item P/E
+    \item P/CF
+    \item P/S
+    \item P/BV
+  \end{enumerate}
+  \item Define the following as ratios:
+  \begin{enumerate}
+    \item Basic EPS
+    \item Diluted EPS
+    \item Cash Flow Per Share
+    \item EBITDA per share
+    \item Dividends per share
+  \end{enumerate}
+  \item Define the following dividend related quantiles:
+  \begin{enumerate}
+    \item Dividend payout ratio
+    \item Retention rate (b)
+    \item Sustainable Growth Rate
+  \end{enumerate}
+  \item Detail why dividend related quantiles are used and why?
+  \item Define the following credit analysis ratios:
+  \begin{enumerate}
+    \item EBIT Interest Coverage
+    \item EBITDA Interest Coverage 
+    \item Funds from operations to total debt
+    \item Free operating cash flow to total debt
+    \item Total Debt to EBITDA
+    \item Return on Capital
+    \item Total Debt to Total Debt plus Equity
+  \end{enumerate}
+  \item What nine items must be reported for a primary business segment?
+  \item What three items must be reported for a secondary business segment?
+  \item What other five items must be disclosed regarding business/geographic segments?
+  \item Define the following four segment ratios:
+  \begin{enumerate}
+    \item Segment Margin
+    \item Segment Turnover
+    \item Segment ROA
+    \item Segment Debt Ratio
+  \end{enumerate}
+  \item What are three techniques used in model building and forecasting?
+\end{enumerate}
+
+\end{document}
+

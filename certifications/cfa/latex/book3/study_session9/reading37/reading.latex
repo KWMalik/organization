@@ -1,0 +1,304 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Inventories}
+\author{Toby Banks}
+\date{November 1st, 2009}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Accounting for the Acquisition of Long-Lived Assets %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Accounting for the Acquisition of Long-Lived Assets}
+When purchasing a asset the buyer records the asset as well as any expenditures necessary to prepare the asset for its intended use as part of the cost of the asset. This is known as capitalization. \\
+\hfill \\
+Expenditures on long-lived assets are included as part of the recorded value of assets on the balance sheet (capitalized), if they are expected to provide benefits in the future, typically beyond one year. The expenditure also appears as a cash outflow on the statement of cash flows. \\
+\hfill \\
+Depreciation is a non-cash expense and therefore has no effects on the statement of cash flows. \\
+\hfill \\
+Alternatively a expenditure that is expensed reduces net income by the entire amount of the expenditure in the period that it is made. There is no associated depreciation of amortization. An expensed expenditure appears as a operating cash outflow in the period it is made. \\
+\hfill \\
+A capitalized expenditure is typically shown as an investment cash outflow whereas an expense would reduce operating cash. \\
+\hfill \\
+
+\subsection{Costs Incurred at Acquisition}
+In addition to the purchase price the buyer must also capitalize all expenditures with getting the asset ready for its intended use. For example, freight or special installation costs. \\
+\hfill \\
+In a non-monetary exchange, its cost is based on the fair value of the asset given up, or the fair value of the asset acquired if it is more readily determinable. An example of this is a exchange between two companies of real estate, or mineral deposits. \\
+\hfill \\
+
+\subsection{Capitalization of Interest Costs}
+Companies generally must capitalize interest costs associated with acquiring or constructing an asset that requires a long period of time to get ready for its intended use. Any interest cost associated with the construction of a building must be capitalized in the cost of constructing the building. \\
+\hfill \\
+As a consequence of this accounting treatment, a company's interest cost for a period can appear either on the balance sheet (to the extent that they are capitalized) or the income statement (to the extent that they are expensed). \\
+\hfill \\
+Capitalized interest is expensed as part of the costs of goods sold when the asset is sold. \\
+\hfill \\
+Interest can show up as part of investing cash outflows as capitalized interest, as well as expensed interest reducing operating cash flow. Because of this, the entire amount of interest expenditure, both the capitalized portion and the expensed portion, should be used in calculating interest coverage ratios. \\ 
+\hfill \\
+Generally, including capitalized interest int he calculation of interest coverage ratios provides better assessment of a company's solvency. \\
+\hfill \\
+Credit rating agencies include capitalized interest in their coverage ratios. \\
+\hfill \\
+Maintaining a minimum interest coverage ratio is a financial covenant often included in bank loans. \\
+\hfill \\
+Capitaliztion fo interest costs incurred during construction is permitted under both U.S. GAAP and IFRS. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Accounting for the Acquisition of Long-Lived Intangible Assets %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Accounting for the Acquisition of Long-Lived Intangible Assets}
+Intangible assets include items that involve exclusive rights such as patents, copyrights, trademarks, and franchises. They also include goodwill, which arises when one company purchases another and the acquisition price exceeds the fair value of the identifiable assets acquired. \\
+\hfill \\
+There are three ways in which intangible assets are obtained: purchased in situations other than business combinations, developed internally, and acquired in business combinations. \\
+\hfill \\
+NOTE: If two otherwise equal companies acquire a new drug, Company A via acquisition and Company B through development. Then the company that acquired the asset will have higher total assets (because it capitalized the intangible asset) and higer cash flow from operations (because the drug purchase would appear as an investing cash flow). \\
+\hfill \\
+
+\subsection{Intangible Assets Purchased in Situations Other than Business Combinations}
+Treated the same as long-lived tangible assets. Namely they are recorded at fair value when acquired (which is assumed to be purchase price). \\
+\hfill \\
+If acquired as a group, the purchase price is allocated to each asset based on its fair value. \\
+\hfill \\
+A analyst must be aware that a company uses a fair bit of judgment in valuing intangible assets and numerous assumptions are made to determine the fair value of individual intangible assets. \\
+\hfill \\
+
+\subsection{Intangible Assets Developed Internally}
+Costs to internally develop intangible assets are generally expensed when incurred, although there are some exceptions. \\
+\hfill \\
+
+\subsubsection{Developing Internally versus Acquiring}
+When comparing intangible assets developed internally to purchased intangible assets, it's very important to note that since costs of development are usually expensed, internally developed intangible assets will reflect a lower amount of assets than a company that has obtained its intangible assets by acquisition. 
+\hfill \\
+In addition on the statement of cash flows, costs of internally developing intangible assets are treated as operating cash outflows, while costs of acquiring intangible assets are investing cash flows.
+\hfill \\
+Differences in strategy (developing versus acquiring intangible assets) can thus impact financial ratios. \\
+\hfill \\
+
+\subsubsection{Research and Development}
+IFRS required that research (not development) must be expensed rather than capitalized as an intangible asset. \\
+\hfill \\
+IFRS allows companies to recognize an internal asset arising from development if certain criteria are met. The criteria include a demonstration of the technical feasibility of completing the intangible asset and the intent to use or sell the asset. \\
+\hfill \\
+U.S. GAAP requires that research and development be expensed. Although, the standards do require that certain costs related to software development be capitalized. Costs incurred to develop a software product for sale are expensed until the product's feasibility has been established. \\
+\hfill \\
+
+\subsubsection{Intangible Assets Acquired in a Business Combination}
+When one company acquires another company the transaction is accounted for using the \textbf{purchase method} of accounting. \\
+\hfill \\
+Under the purchase method, the company identified as the acquired allocates the purchase price to each asset acquired (and each liability assumed) on the basis of its fair value. If the purchase price exceeds the sum of the amounts that can be allocated to individual assets and liabilities, the excess is recorded as goodwill. \\
+\hfill \\
+Goodwill is a intangible asset that cannot be identified separately from the business as a whole. \\
+\hfill \\
+U.S. GAAP uses two criteria to judge whether an intangible asset should be treated separately from goodwill, namely it must be either an item arising from contractual or legal rights, or an item that can be separated from the acquired company (e.g. patents, copyright, franchises, or licenses). \\
+\hfill \\
+Under U.S. GAAP any R\&D amounts that are considered in-process must be expensed at the time of the acquisition. \\
+\hfill \\
+IFRS does not require the immediate write-off of in-process R\&D acquired in a business combination. A company may identify the amount of in-process R\&D as a separate asset with a finite life, or include the asset as part of goodwill. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Depreciating Long-Lived Tangible Assets %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Depreciating Long-Lived Tangible Assets}
+NOTE: Land is not depreciable. \\
+\hfill \\
+There are three methods of depreciation that I need to know about: straight-line method, accelerated methods, and units-of-production methods. \\
+\hfill \\
+The straight-line method is calculated as the depreciable cost divided by estimated useful life (where the depreciable cost is the historical cost minus the estimated salvage value). \\
+\hfill \\
+Accelerated methods (also known as the declining balance method) has the amount of depreciation expense calculated as some percentage of the remaining balance of cost, net of accumulated depreciation. \\
+\hfill \\
+In the units-of-production method, the amount of depreciation expense is based on the proportion of the asset's production during a period compared to the total estimated productive capacity of the asset over its useful life. \\
+\hfill \\
+In the United States, companies need not use the same depreciation method for financial reporting and taxes (many countries do the exact opposite). Because of this many companies report straight-line depreciation for financial reporting and use an accelerated depreciation method for tax purposes. This causes differences in taxes computed based on financial reporting and the amount that is actually owed. The differences are reported on the balance sheet as deferred taxes. \\
+\hfill \\
+
+\subsection{Estimates Required for Depreciation Calculations}
+Significant estimates are required for depreciation calculations include the useful life of the equipment and its expected residual value at the end of that useful life. \\
+\hfill \\
+Additional estimates are required to allocate depreciation expense between the cost of goods sold and sales, general, and administrative expenses (SG\&A). \\
+\hfill \\
+Footnotes to the financial statements often disclose some information regarding which income statement line item includes depreciation, although the exact amount of detail disclosed by individual companies varies. \\
+\hfill \\
+When comparing two companies, apportionment of depreciation to the cost of goods versus SG\&A can contribute to explaining differences in gross margins and operating expenses. \\
+\hfill \\
+
+\subsection{Using Fixed Asset Disclosures to Compare Companies' Average Age of Depreciable Assets}
+The balance sheet reports PPE at historic cost net of accumulated depreciation. \\
+\hfill \\
+The statement of cash flows typically shows depreciation expense (or depreciation plus amortization) as a line item in the adjustments of net income to cash from operations. \\
+\hfill \\
+The notes to the financial statements describe the company's accounting methods, the range of estimated useful lives, historical cost by main category of fixed asset, and annual depreciation expense. \\
+\hfill \\
+The following estimates simply reflect the following relationships for assets accounted for on a historical cost basis: total historical cost minus accumulated depreciation equals net PPE, and under straight-line depreciation, total historical cost less salvage value divided by estimated useful life equals annual depreciation expense. 
+\hfill \\
+Some formulas for that ass: \\
+\hfill \\
+\begin{displaymath}
+  \text{Estimated Total Useful Life} = \text{Time elapsed since purchase} + \text{Estimated Remaining Life}
+\end{displaymath}
+\hfill \\
+\begin{displaymath}
+  \text{Historical Cost} \div \text{Annual Depreciation Expense} = \text{Estimated Total Useful Life)}
+\end{displaymath}
+\hfill \\
+\begin{displaymath}
+  \text{Historical Cost} = \text{Accumulated Depreciation} + \text{Net PPE}
+\end{displaymath}
+
+Equivalently, 
+\hfill \\
+\begin{displaymath}
+  \text{Estimated Total Useful Life} = \text{Estimated Age of Equipment} + \text{Estimated Remaining Life}
+\end{displaymath}
+\hfill \\
+\begin{displaymath}
+  \text{Historical Cost} \div \text{Annual Depreciation Expense} = \text{Accumulated Depreciation} \div \text{Annual Depreciation Expense} + \text{Net PPE} \div \text{Annual Depreciation Expense}
+\end{displaymath}
+
+\hfill \\
+In practice such estimates are much harder to make, companies use depreciation methods other than straight-line method and have numerous assets with varying useful lives and salvage values, including some assets that are fully depreciated. So this approach produces as estimate only. \\
+\hfill \\
+Another further metric compares annual capital expenditures to annual depreciation expense. This metric provides a very general indicator of the rate at which a company is replacing its PPE relative to the rate at which the PPE is being depreciated. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Amortizing Intangible Assets With Finite Useful Lives %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Amortizing Intangible Assets With Finite Useful Lives}
+This section discusses cost allocation for intangible assets with finite useful lives, (e.g. amortization). \\
+\hfill \\
+Intangible assets with finite useful lives are amortized over their useful lives, following the pattern in which the benefits are used up. Intangible assets with infinite lives are not amortized. But in both cases the assets are periodically reviewed for impairment. \\
+\hfill \\
+There are a lot of estimates in creating cash representation of intangible assets whether or not they are finite or infinite in lifespan. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Asset Retirement Obligations %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Asset Retirement Obligations}
+\textbf{Asset retirement obligations} are obligations that must be fulfilled at the end of the asset's service life (e.g. disposal of nuclear waste). \\
+\hfill \\
+As soon as a company is able to make a reasonable estimate of the costs it will incur as a result of those asset retirement obligations, the company reports the fair value of these estimated costs, with the fair value determined using a discounted cash flow approach. \\
+\hfill \\
+The fair value of the asset retirement obligations is reported as a liability, with the balancing offset being an increase in the carrying value of the asset. \\
+\hfill \\
+Afterward, the amount added to the asset's carrying value is expensed systematically (a concept similar to depreciation). The amount reported as a liability increases each year with the passage of time because it is based on the discounted present value of future cash flows. \\
+\hfill \\
+The increase in the amount of the liability is recognized as an operating expense, referred to as accretion expense. 
+\hfill \\
+Asset retirement obligation's are very debt like in nature. \\
+\hfill \\
+Some companies setup trust fund in excess of their asset retirement obligations. A company might do so if they fear that they might encounter larger than expected asset retirement obligations in the future. Some assets will exist over long time lines that would have made it impossible to predict regulatory changes, monetary changes, or anything else that might adversely effect the asset retirement obligation. It also helps improve their credit rating. \\
+\hfill \\
+Credit analysts would treat a ARO as a interest-bearing liability. The necessary adjustments would be to reduce the ARO by the value of any offsetting assets and future tax benefits, to reclassify accretion expense as interest expense, and to increase total debt by the amount of the ARO. No adjustments to shareholders' equity are needed. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Disposal of Long-Lived Operating Assets %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Disposal of Long-Lived Operating Assets}
+A company may dispose of a long-lived operating asset by selling it, exchanging it, or abandoning it. Assets that are to be sold are classified as assets held for sale, in contrast to assets held for use. \\
+\hfill \\
+
+\subsection{Sale of Long-Lived Assets}
+The gain or loss on the sale of long-lived assets is computed as the sales proceeds minus the carrying value of the asset at the time of sale. An asset's carrying value is typically the net book value (e.g. the historical cost minus accumulated depreciation, unless the asset's carrying value has been changed to reflect impairment and/or revaluation). \\
+\hfill \\
+A gain or loss on the sale of an asset is disclosed on the income statement, either as a component of other gains and losses or in a separate line item when the amount is material. \\
+\hfill \\
+A company typically discloses further detail about the sale in the management discussion and analysis (MD\&A) and/or financial statement footnotes. \\
+\hfill \\
+A statement of cash flows prepared using the indirect method adjusts net income to remove any gain or loss on the sale from operating cash flow, and to include the amount of proceeds from the sale in cash from investing activities. \\
+\hfill \\
+The company measures the value of the held-for-sale asset at the lower of its carrying value or fair value less cost to sell. Costs to sell include items such as legal fees and title transfer fees. The company no longer records depreciation on the asset. If the fair value of the asset, net of the cost to sell it, is less than its carrying value, the company records an impairment loss. Assets that comprise a component of a company are reported in "discontinued operations" if they have been sold or classified as held for sale in a accounting period. \\
+\hfill \\
+Evaluating the company, excluding the asset sales, can provide a better picture of the company's past operating performance and the outlook for its future performance. \\
+\hfill \\
+
+\subsection{Long-Lived Assets Disposed of Other than by a Sale}
+Examples of long-lived assets disposed of other than by a sale include abandoning the asset, exchanging it for another asset, or distributing it to owners (shareholders) in a spin-off. \\
+\hfill \\
+The assets continue to depreciate and are tested for impairment as required for other long-lived assets owned by the company. \\
+\hfill \\
+When a asset is retired or abandoned, the accounting is similar to a sale, except that the company does not record any cash proceeds. Assets are reduced by the carrying value of the asset at the time of retirement or abandonment, and a loss is recorded. \\
+\hfill \\
+When an asset is exchanged for another asset, the asset acquired is recorded at the fair value of the asset given up or the fair value of the asset acquired, whichever is more readily available. Differences in the values of the assets must be reported as a gain or a loss. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Impairment of Long-Lived Assets %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Impairment of Long-Lived Assets}
+Impairment charges reflect an unanticipated decline in the fair value of an asset. \\
+\hfill \\
+Accounting for impairment charges differs with assets held for use versus assets held for sale. Also, when assets are held for use versus held for sale the impairment charge differs. The differences primarily involve when to test for impairment and what test is applied. \\
+\hfill \\
+
+\subsection{Impairment of Long-Lived Tangible Assets Held for Use}
+Impairment losses are recognized went the asset's carrying amount is not recoverable and its carrying value exceeds its fair value. \\
+\hfill \\
+Recoverability, under U.S. Standards, relates to discounted future cash flows, and fair value relates to discounted cash flows. \\
+\hfill \\
+A impairment loss will reduce the carrying value of the asset on the balance sheet and will reduce net income on the income statement. The impairment loss is a \emph{non-cash item} and will not affect cash from operations. \\
+\hfill \\
+As with any accounting estimate, management's estimate of an impairment loss may be affected by motivations to manage earnings. \\
+\hfill \\
+U.S. Standards provide examples of events that give rise to the need to test for impairment, including a significant adverse change in an asset's physical condition, a significant adverse change in legal or economic factors, or a significant decrease in the market price. \\
+\hfill \\
+International Standards differ somewhat in both the guidelines for determining that impairment has occurred and in the measurement of an impairment loss. Measurement of an impairment loss is based on the recoverable amount of the asset (defined as "the higher of its fair value less costs to sell and its value in use") rather than its fair value (generally based on discounted cash flows) as in the United States. \\
+\hfill \\
+
+\subsection{Impairment of Long-Lived Intangible Assets with a Finite Life}
+Impairment accounting for intangible assets with a finite life is essentially the same as for tangible assets. \\
+\hfill \\
+They are only tested for impairment when significant events suggest they need to be tested. \\
+\hfill \\
+
+\subsection{Impairment of Goodwill and other Intangibles with Indefinite Lives}
+Goodwill and other assets with indefinite lives are not amortized. Instead they are carried on the balance sheet at historical cost but tested at least annually for impairment. \\
+\hfill \\
+Impairment exists when the carrying value exceeds its fair value. \\
+\hfill \\
+Goodwill cannot be separated from the overall business and for this reason goodwill is valued for an overall reporting unit, defined as an operating segment or some component of an operating segment. \\
+\hfill \\
+Testing for impairment loss of goodwill involves two steps (U.S. GAAP only): \\
+\begin{itemize}
+  \item If the carrying value of the reporting unit (including associated goodwill) exceeds its fair value, the second step is required; otherwise there is no impairment and the second step is not required. 
+  \item The second step compares the carrying value of the goodwill to the fair value of the goodwill based on the valuation in the first step. If the carrying value exceeds the fair value, an impairment loss is reported. 
+\end{itemize}
+\hfill \\
+Goodwill is not amortized under U.S. GAAP or IFRS. \\
+\hfill \\
+Under IFRS, annual tests of goodwill (under IAS 36) relate to a "cash-generating unit" rather than a reporting unit, as under U.S. GAAP. Under IFRS, calculation of impairment of goodwill involves only one step rather than two steps, namely a comparison of the carrying value of the cash-generating unit with its "recoverable amount". \\
+\hfill \\
+The recoverable amount of an asset, as defined in IAS 36, paragraph 6, is "the higher of its fair value less costs to sell and its value in use." The fair value less costs to sell is based on the amount that would be obtained from selling the asset, and value in use is based on the present value of future cash flows that would be obtained from using the asset. If the carrying value is higher than the recoverable amount, an impairment loss is reported. \\
+\hfill \\
+
+\subsection{Impairment of Long-Lived Assets Held for Sale}
+Long-lived assets held for sale are tested for impairment at the time they are categorized as held for sale. If the carrying value exceeds the fair value less costs to sell, an impairment loss is recognized. \\
+\hfill \\
+
+\subsection{Reversals of Impairments of Long-Lived Assets}
+Under U.S. GAAP, once an impairment loss has been recognized for \emph{assets held for use} it cannot be reversed. \\
+\hfill \\
+If the \emph{asset is held for sale}, if the fair value of an asset increases after an impairment loss, the loss can be reversed.\\
+\hfill \\
+IFRS accounting standards permit impairment losses to be reversed if the value of an asset increases regardless of whether the asset was held for sale. The reversal is recorded as profit. \\
+\hfill \\
+
+\subsection{Implications for Financial Statement Analysis}
+Companies have considerable discretion about the timing of loss recognition. \\
+\hfill \\
+One important consideration in financial statement analysis is how these charges should be included in analyzing past performance and in projecting future performance. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Revaluation of Long-Lived Assets %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Revaluation of Long-Lived Assets}
+Under IFRS, if an asset's carrying value increases, the increase is recognized in profit or loss to the extent that it reverses a revaluation decrease of the same asset previously recognized in profit or loss. \\
+\hfill \\
+Under IFRS, an upward revaluation will increase the asset's carrying value bypassing the income statement and going directly to equity under the heading of revaluation surplus. Any subsequent decrease in asset value will first decrease the revaluation surplus and then go back into income. \\
+\hfill \\
+It's worth noting again that U.S. GAAP does not allow revaluation of fixed assets held for use. \\
+\hfill \\
+Asset revaluations offer several considerations for financial analysts:
+\begin{enumerate}
+  \item An increase in the carrying value of depreciable long-lived assets increases total assets and shareholders' equity; so, asset revaluations that increase the carrying value of an asset can be used to reduce reported leverage (recall leverage id defined as average total assets divided by average shareholders' equity). Therefore, the leverage motivation for the revaluation should be considered in analysis. 
+  \item Asset revaluations that decrease the carrying value of the assets reduce net income. In the year of the revaluation, profitability measures such as return on  assets and return on equity decline. However, because total assets and shareholders; equity are also lower, the company may appear more profitable in future years. Additionally, reversals of downward revaluations also go through income, thus increasing earnings. Managers can then opportunistically time the reversals to manage earnings and increase income. 
+  \item Asset revaluations that increase the carrying value of an asset initially increase depreciation expense, total assets, and shareholders' equity. Therefore, profitability measures, such as return on assets and return on equity, would decline.
+  \item An analyst would want to understand who does the appraisal, e.g. an independent external appraiser or management, and how often revaluations are made.
+\end{enumerate}
+
+\end{document}
+

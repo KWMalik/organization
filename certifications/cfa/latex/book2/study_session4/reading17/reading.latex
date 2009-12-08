@@ -1,0 +1,61 @@
+\documentclass{article}
+
+\title{Output and Costs}
+\author{Toby Banks}
+\date{September 19th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Decision Time Frames %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Decision Time Frames}
+There are two basic decision time frames, the short run and the long run. In the short run one or more variables are fixed (for example, production facilities). In the long run all variables are in play. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Short-Run Technology Constraint %%%%%%%%%%%%%
+\section{Short-Run Technology Constraint}
+We describe the relationship between output and the quantity of labor employed by using three concepts:
+\begin{itemize}
+  \item Total Product
+  \item Marginal Product
+  \item Average Product
+\end{itemize}
+
+\hfill \\
+\textbf{Increasing marginal returns} occur when the marginal product of an additional worker exceeds the marginal product of the previous worker. \\
+\hfill \\
+\textbf{Diminishing marginal returns} occur when the marginal product of an additional worker is less than the marginal product of the previous worker. \\
+\hfill \\
+\emph{Note:} Usually firms will receive increasing marginal returns when initially adding workers, eventually the firm will hit a point where each additional worker provides diminishing marginal returns. \\
+\hfill \\
+
+\begin{tabular}{l l p{4cm} l}
+  \textbf{Term} & \textbf{Symbol} & \textbf{Definition} & \textbf{Equation} \\
+  \hline
+  Fixed Cost            &     & Cost that is independent of the output level; cost of a fixed input & \\
+  Variable Cost         &     & Cost that varies with the output level; cost of a variable input    & \\
+  Total Fixed Cost      & TFC & Cost of the fixed inputs                                            & \\
+  Total Variable Cost   & TCV & Cost of the variable inputs                                         & \\
+  Total Cost            & TC  & Cost of all inputs                                                  & TC = TFC + TVC \\
+  Output (total prod.)  & TP  & Total Quantity produced (output Q)                                  & \\
+  Marginal Cost         & MC  & Change in total cost resulting from a one-unit increase in TP       & MC = \(\bigtriangleup\)TC / \(\bigtriangleup\)Q \\
+  Average Fixed Cost    & AFC & Total fixed cost per unit of output                                 & AFC = TFC / Q \\
+  Average Variable Cost & AVC & Total variable cost per unit of output                              & AVC = TVC / Q \\
+  Average Total Cost    & ATC & Total cost per unit of output                                       & ATC = AFC / AVC \\
+  \hline
+\end{tabular}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Long-Run Cost %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Long-Run Cost}
+\textbf{The long-run average cost curve} is the relationship between the lowest attainable average total cost and output when both the plant size and labor are varied. Also known by the abbreviation LRAC. \\
+\hfill \\
+\textbf{Economies of scale} are the features of a firm's technology that lead to falling long-run average cost as output increases. When economies of scale are present the LRAC curve slopes downward. The main sources of economies of scale are greater specialization of both labor and capital. \\
+\hfill \\
+\textbf{Diseconomies of scale} are features of a firm's technology that lead to rising long-run average cost as output increases. When diseconomies of scales are present, the LRAC curve slopes upward. With given factor prices, diseconomies of scale occur if the percentage increase in output is less than the percentage increase in all factors of production. The main source of diseconomies of scale is the difficulty of managing a very large enterprise. The larger the firm the greater the challenge of organizing it, and the greater the cost of communicating up and down the hierarchy. \\
+\hfill \\
+\textbf{Constant returns to scale} are features of a firm's technology that lead to constant long-run average cost as output increases. When constant returns to scale are present, the LRAC curve is horizontal. \\
+\hfill \\
+\textbf{Minimum efficient scale} is the smallest quantity of output at which long=run average cost reaches its lowest level. A firm experiences economies of scale up to some output level, beyond that it moves into constant returns to scale or diseconomies of scale. \\
+\hfill \\
+
+\end{document}
+

@@ -1,0 +1,81 @@
+\documentclass{article}
+
+\title{Monitoring Jobs and the Price Level}
+\author{Toby Banks}
+\date{September 27th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Jobs and Wages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Jobs and Wages}
+
+The \textbf{working-age population} is defined as the total number of people aged 16 years and over who are not in jail, hospital, or some other form of institutional care. \\
+\hfill \\
+There are three indicators of the state of the labor market that are calculated by the Census Bureau:
+\begin{itemize}
+  \item The unemployment rate. ((Number of People Unemployed / Labor Force) * 100).
+  \item The labor force participation rate. ((Labor Force / Working-age Population) * 100).
+  \item The employment-to-population ratio. ((Number of People Employed / Working-age Population) * 100).
+\end{itemize}
+\hfill \\
+The \textbf{labor force} is the sum of the employed and unemployed. \\
+\hfill \\
+To be counted as unemployed you must be available for work and must be one in one of the following three categories: 
+\begin{enumerate}
+  \item Without work bus has made specific efforts to find a job within the previous four weeks. 
+  \item Waiting to be called back to a job from which he or she has been laid off. 
+  \item Waiting to start a new job within 30 days.
+\end{enumerate}
+\hfill \\
+The unemployment rate averaged 5.9 percent in the U.S. Between 1961 and 2006. It increases in recessions and decreases in expansions. \\
+\hfill \\
+The labor force participation rate and employment-to-population ratio have an upward trend and fluctuate with the business cycle. \\
+\hfill \\
+The labor force participation rate has increased for females and decreased for males. \\
+\hfill \\
+\textbf{Aggregate hours} are the total number of hours worked by all people employed, both full time and part time, during a year.
+\hfill \\
+Aggregate hours have an upward trend, and they fluctuate with the business cycle. \\
+\hfill \\
+\textbf{Real wage rate} is the quantity of goods and services that an hour's work can buy. \\
+\hfill \\
+Real hourly wage rates have been growing, but their growth rates slowed during the 1970s. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Unemployment and Full Employment %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Unemployment and Full Employment}
+People are constantly entering and leaving the state of unemployment. \\
+\hfill \\
+The Duration of unemployment fluctuates over the business cycle. But the demographic patterns of unemployment are constant. \\
+\hfill \\
+Unemployment can be frictional, structural, or cyclical. \\
+\hfill \\
+When all unemployment is frictional and structural, the unemployment rate equals the natural unemployment rate, the economy is at full employment, and the real GDP equals potential GDP. \\
+\hfill \\
+Over the business cycle, real GDP fluctuates around potential GDP and the unemployment rate fluctuates around the natural unemployment rate. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Consumer Price Index %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Consumer Price Index}
+The Consumer Price Index (CPI) is a measure of the average of the prices paid by urban consumers for a fixed basket of consumer goods and services. \\
+\hfill \\
+The CPI is defined to equal 100 for a reference base period - currently 1982-1984. \\
+\hfill \\
+The inflation rate is the percentage change in the CPI from one period to the next. \\
+\hfill \\
+Changes in the CPI probably overstate the inflation rate because of the bias that arises from new goods, quality changes, commodity substitution, and outlet substitution bias. \\
+\hfill \\
+The bias in the CPI distorts private contracts and increases government outlays (a Congressional Advisory Commission found the CPI overstates inflation by 1.1 percentage points per year). \\
+\hfill \\
+The CPI calculation has three steps:
+\begin{enumerate}
+  \item Find the cost of the CPI basket at base-period prices.
+  \item Find the cost of the CPI basket at current-period prices.
+  \item Calculate the CPI for the base period and the current period.
+\end{enumerate}
+\hfill \\
+Inflation rate = ((CPI this year - CPI last year) / CPI last year) * 100.
+\hfill \\
+
+\end{document}
+

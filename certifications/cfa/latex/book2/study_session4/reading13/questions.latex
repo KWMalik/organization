@@ -1,0 +1,42 @@
+\documentclass{article}
+
+\title{Elasticity - Questions}
+\author{Toby Banks}
+\date{September 19th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%% Learning Outcomes %%%%%%%%%%%%%%%%%%%%%%%%
+\section{Elasticity - Learning Outcomes}
+\begin{itemize}
+  \item Calculate and interpret the elasticities of demand (price elasticity, cross elasticity, and income elasticity) and the elasticity of supply and discuss the factors that influence each measure.
+  \item Calculate elasticities on a straight-line demand curve, differentiate among elastic, inelastic, and unit elastic demand, and describe the relation between price elasticity of demand and total revenue.
+\end{itemize}
+
+
+%%%%%%%%%%%%%%%%%%%%% Questions %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Elasticity - Questions}
+\begin{enumerate}
+  \item What is the price elasticity of demand? How do you calculate it?
+  \item define the following: perfectly inelastic demand, inelastic demand, unit elastic demand, elastic demand, perfectly elastic demand. Draw a graph for each.
+  \item How is total revenue effected by the elasticity of demand?
+  \item What is the total revenue test? How is it related to elasticity of demand.
+  \item Can you draw two graphs detailing the relationship between elasticity and total revenue.
+  \item What are the three main factors that influence the magnitude of the elasticity of demand? Detail each.
+  \item What is cross elasticity of demand? How do you tell if a product is a substitute or a complement?
+  \item What is income elasticity of demand?
+  \item How do you define a inferior good? What is the income elasticity of demand for a inferior good?
+  \item Detail five products with elastic demand and five products with inelastic demand.
+  \item What is elasticity of supply? How do you calculate it?
+  \item What are the two factors that influence the elasticity of supply?
+  \item \textbf{BIGGIE} Create a table detailing the description of the relationship, magnitude, and meaning of the following:
+  \begin{enumerate}
+    \item Price Elasticity of Demand
+    \item Cross Elasticity of Demand
+    \item Income Elasticity of Demand
+    \item Elasticity of Supply
+  \end{enumerate}
+\end{enumerate}
+
+\end{document}
+

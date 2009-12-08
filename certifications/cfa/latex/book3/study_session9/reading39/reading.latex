@@ -1,0 +1,247 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Long-Term Liabilities and Leases}
+\author{Toby Banks}
+\date{November 14th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Bonds Payable %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Bonds Payable}
+Bonds payable are the most common form of long-term debt. \\
+\hfill \\
+In some contexts, e.g. some government debt obligations the work "bond" is used only for a debt security with a maturity of 10 years or longer, with "note" referring to a debt security with a maturity between 2 and 10 years, and a "bill" being a debt security with a maturity of less than 2 years. \\
+\hfill \\
+
+\subsection{Accounting for Bond Issuance}
+Ordinarily, bonds consist of two types of future cash payments that are discounted to present value: \\
+\begin{enumerate}
+  \item The face value of the bonds.
+  \item Periodic interest payments.
+\end{enumerate}
+\hfill \\
+
+The \textbf{face value} of the bonds is the amount of cash payable by the company to the bondholders when the bonds mature. The face value is also referred to as the principal, par value, stated value, or maturity value. \\
+\hfill \\
+Periodic interest payments are made based on the interest rate promised in the bond contract applied to the bonds' face value. The rate at which the periodic interest payments are calculated is also referred to as the \textbf{stated rate}, nominal rate, or coupon rate. \\
+\hfill \\
+For fixed-rate bonds the stated rate remains unchanged throughout the life of the bonds. \\
+\hfill \\
+The \textbf{market rate} of interest is the rate demanded by purchasers of the bonds, given the risks associated with future cash payment obligations of the particular bond issue. \\
+\hfill \\
+When a bond is issued at a price equal to its face value, the bond is said to have been issued at par. Alternatively, if the stated rate of interest when the bonds are issued is higher than the market rate, the market value of the bonds, and thus the amount of cash the company receives, will be higher than the face value of the bonds. In other words, the bonds will sell at a premium to face value. \\
+\hfill \\
+If the interest rate is lower than the market rate, the bonds will sell at a discount to face value. \\
+\hfill \\
+On the issuing company's statement of cash flows, the cash received (sales proceeds) from issuing bonds is reported as a financing cash inflow. On the issuing company's balance sheet, bonds payable are normally reported at \textbf{net book value} (e.g. the face value of the bonds minus any unamortized discount, or plus any unamortized premium). \\
+\hfill \\
+The face value of a bond is equivalent to the cash inflow to the company (in most cases, we should assume this). \\
+\hfill \\
+If a bond's coupon rate is less than its YTM, then the bond is selling at a discount. \\
+\hfill \\ 
+If a bond's coupon rate is more than its YTM, then the bond is selling at a premium. \\
+\hfill \\
+A bond is discounted because the buyer pays less than the face value of the bond for the bond. \\
+\hfill \\
+Costs such as printing, legal fees, commissions, and other types of charges are incurred when bonds are issued. Under IFRS, all debt issue costs are included in the measurement of the liability. Under U.S. GAAP, companies generally show these debt issue costs as an asset (a prepaid expense), which is amortized over the life of the bonds. \\
+\hfill \\
+
+\subsection{Accounting for Bond Amortization, Interest Expense, and Interest Payments}
+The amount at which bonds are reported on the company's balance sheet is referred to as the book value, net book value, or carrying value. \\
+\hfill \\
+If a bonds' stated rate differs from the market rate at issuance such that the bonds are issued at a premium or discount, the premium or discount is amortized over the life of the bonds as a component of interest expense. \\
+\hfill \\
+For bonds issued at a premium to face value, the book value of the bonds is initially greater than the face value. As the premium is amortized, the book value of the bonds will decrease to the face value, reducing reported debt. \\
+\hfill \\
+For bonds issued at a discount to face value, the book value of the bonds is initially less than the face value. As the discount is amortized, the book value of the bonds will increase, increasing reported debt. \\
+\hfill \\
+There are two methods for amortizing the book value of bonds that were issued at a price other than par: \\
+\begin{itemize}
+  \item Effective interest rate method (required under IFRS, recommended under GAAP) - applies the market rate in effect when the bonds were issued (historic market rate) to the current amortized cost (book value) of the bonds to obtain interest expense for the period. \\
+  \item Straight-line method - Evenly amortizes the discount or premium over the life of the bond (similar to straight-line depreciation).
+\end{itemize}
+\hfill \\
+Where interest is reported on the statement of cash flows can differ under IFRS and U.S. GAAP: \\
+\begin{itemize}
+  \item U.S. GAAP requires interest payments on bonds to be shown as a reduction of operating cash flows. 
+  \item IFRS allows payments on bonds to be shown as an outflow in the operating section or the financing section. 
+\end{itemize}
+\hfill \\
+
+\subsection{Debt Extinguishment}
+Repayment appears in the statement of cash flows as a financing cash outflow. On the balance sheet, repayment reduces bonds payable by the net book value. \\
+\hfill \\
+If a company decides to redeem bonds before maturity and thus extinguish the liability, a gain or loss on the extinguishment is computed by subtracting the cash required to pay off the bonds from the book value of the bonds at the time of redemption. \\
+\hfill \\
+U.S. GAAP debt issue costs are accounted for separately, so any remaining debt issue costs must be written off and are also included in the gain or loss on debt extinguishment. \\
+\hfill \\
+Under IFRS, debt issue costs are included in the measurement of the liability and are thus part of its book value. \\
+\hfill \\
+A gain or loss on the extinguishment of debt is disclosed on the income statement, in a separate line when the amount is material. A company typically discloses further detail about the extinguishment in the management discussion and analysis and/or other financial statement footnotes. \\
+\hfill \\
+A statement of cash flows prepared using the indirect method adjust net income to remove any gain or loss on the extinguishment of debt from operating cash flow, and to include the amount of payment in cash used for financing activities. \\
+\hfill \\
+
+\subsection{Debt Covenants}
+Covenants are restrictions protect creditors by placing restrictions on a company's ability to invest, pay dividends, or make other operating and strategic decisions that might adversely affect the company's ability to pay interest and principal. \\
+\hfill \\
+Covenants may also include minimum acceptable liquidity and solvency, expressed by particular levels of financial ratios such as debt-to-equity, current ratio, or interest coverage. \\
+\hfill \\
+When a company violates a debt covenant, it is said to be in default. \\
+\hfill \\
+Lenders can choose to waive the covenant, renegotiate, or call for payment of the debt. \\
+\hfill \\
+Bond issues typically require that the decision about whether to call for immediate repayment be made on behalf of all the bondholders by holder of some minimum percentage of the principal amount. \\
+\hfill \\
+
+\subsection{Presentation and Disclosure of Long-Term Debt}
+The long-term liabilities section of the balance sheet usually includes a single line item of the total amount of a company's long-term debt due after one year, with the portion of long-term debt due in the next twelve months shown as a short-term liability. \\
+\hfill \\
+Footnotes provide more information on the type and nature of a company's debt. \\
+\hfill \\
+In the MD\&A, management often provides a qualitative discussion on any material trends, favorable or unfavorable, in capital resources and indicates any expected material change in the mix and relative cost. \\
+\hfill \\
+
+\subsection{Current Market Rates and Fair Values}
+Over time, as market rates change, the bonds' book value diverges from the bonds' fair market value. For instance, when interest rates decline, the market value of debt increases, so a company's reported debt - based on historical market rates - will be lower than the value of its economic liabilities. Using financial statement ratios (e.g. debt-to-total capital) will be underestimated. 
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Debt with Equity Features %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Debt with Equity Features}
+This section discusses two types of debt with equity features: \textbf{convertible debt} and \textbf{debt with warrants}. We then briefly describe reporting for certain financial instruments that have characteristics of both debt and equity. \\
+\hfill \\
+
+\subsection{Convertible Debt}
+Convertible debt typically gives bondholders the right to convert the bonds into a pre-specified number of common equity shares, equivalently expressed as the right to convert at a specific price. \\
+\hfill \\
+Accounting for convertible debt differs under U.S, GAAP and IFRS: \\
+\begin{itemize}
+  \item Under U.S. GAAP accounting for convertible debt is essentially the same as accounting for regular bond issues. If bonds are converted, liabilities decrease by the book value of the bonds and equity increases by the same amount. This method for recording the amount of equity at conversion is referred to as the book value method and does not reflect the market value of the equity issued at conversion. When bonds are converted there is no effect on cash flows. However, the conversion is a significant non-cash financing activity and is reported as supplemental information on the statement of cash flows. \\
+  \item IFRS recognizes the economic effect of issuing convertible debt. Accordingly, a company presents the liability and equity (option) components separately on its balance sheet. The debt is initially valued at fair value. Any difference between the debt's fair value and the issue proceeds is allocated to the conversion feature and reported as equity. \\
+\end{itemize}
+\hfill \\
+
+\subsection{Debt with Warrants}
+Some bonds are issued with warrants giving holders the right to purchase additional shares of the issuer's common stock at a specific price, similar to stock options. \\
+\hfill \\
+Warrants, issued directly by a company, share many characteristics of stock options, such as requiring a specific payment to acquire the stock (strike price), a certain time when they can be exercised (like American or European options), and an expiration date. \\
+\hfill \\
+Under both U.S. GAAP and IFRS accounting for bonds issued with warrants essentially accounts for the bonds and the warrants as two separate securities. \\
+\hfill \\
+The issuer records the issuance by allocating th issue price between the bonds and the warrants, based on their respective fair values that are determined as follows. Initially, debt is valued at fair value and issue proceeds is allocated to the warrants, which are reported in equity. Warrants, too, are potentially dilutive securities that are considered when reporting diluted earnings per share. \\
+\hfill \\
+
+\subsection{Financial Instruments with Characteristics of Both Debt and Equity}
+Broadly, the standards now require that issuers report as liabilities any financial instruments that will require repayment of principal in the future. \\
+\hfill \\
+A few representative examples of financial instruments that must be reported as debt are the following: \\
+\begin{enumerate}
+  \item A financial instrument that includes an unconditional obligation for the issuing company to redeem it in the future (mandatory redeemable financial securities). 
+  \item A financial instrument that includes an obligation for the issuing company to repurchase its own equity in the future (forward future contract). 
+  \item An obligation that the company must settle by issuing a variable number of its own shares, when the amount of the obligation is a fixed monetary amount, known as inception.
+\end{enumerate}
+\hfill \\
+Accounting standards now limit the favorable treatment for many financial instruments that exhibit characteristics of debt and equity. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Leases %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Leases}
+A company can lease an asset for a finite period of time or lease the asset as a means of buying the asset over time. \\
+\hfill \\
+
+\subsection{Advantages of Leasing}
+Advantages to leasing an asset instead of purchasing it: \\
+\begin{itemize}
+  \item Less costly financing.
+  \item Little if any down payment.
+  \item Often at fixed interest rates.
+  \item Because the lease contract is negotiated between the lessor and lessee, the lease may contain less restrictive provisions than other forms of borrowing. 
+  \item Reduce the risk of obsolescence to the lessee because the lessee does not own the asset. 
+  \item Potential financial or tax reporting advantages.
+\end{itemize}
+\hfill \\
+Certain types of leases are not shown as debt on the balance sheet (often they also don't appear as assets on the balance sheet). Therefore, no interest expense or depreciation expense is included in the income statement. \\
+\hfill \\
+In the U.S. Because of differing reporting rules for financial statements and taxes a company may hold a asset for tax purposes (e.g. deducting a depreciation expense) while not reflecting that ownership in its financial statements. \\
+\hfill \\
+A lease that is constructed to allow a company that benefits of ownership while not requiring the asset to be reflected on the company's financial statements is known as a \textbf{synthetic lease}. \\
+\hfill \\
+
+\subsection{Finance (or Capital) Leases versus Operating Leases}
+An \textbf{operating lease} is an agreement allowing the lessee to use some asset for a period of time, essentially a rental. \\
+\hfill \\
+A \textbf{finance lease} is the purchase of some asset (lease to own) by the buyer (lessee) that is directly financed by the seller (lessor). Accounting standards have four specific requirements that define when a lease is a finance lease: \\
+\begin{enumerate}
+  \item Ownership of the leased asset transfers to the lessee at the end of the lease.
+  \item The lease contains an option for the lessee to purchase the leased asset cheaply (bargain purchase option).
+  \item The lease term is 75 percent or more of the useful life of the leased asset. 
+  \item The present value of the lease payments is 90 percent or more of the fair value of the leased asset.
+\end{enumerate}
+\hfill \\
+Only one of these conditions has to be met to be considered a finance lease by the lessee. \\
+\hfill \\
+On the lessor side, satisfying only one of these requirements determines a finance lease plus the lessor must also meet revenue recognition requirements (that is, be reasonably sure that the cash collection is going to be received). \\
+\hfill \\
+IFRS is much less prescriptive, relying on broad definitions of economic substance and managerial judgment to determine whether or not a lease is a financing or operating lease. \\
+\hfill \\
+
+\subsubsection{Accounting and Reporting by the Lessee}
+A company that enters into a operating lease records a lease expense on the income statement during the period in which it uses the asset. No asset or liability is recorded on its balance sheet. \\
+\hfill \\
+The main accounting differences between a finance lease and an operating lease, then, are that reported debt is higher and expenses are generally higher in the early years of a financing lease. \\
+\hfill \\
+Because of the higher debt, lessee's often prefer operating leases to finance leases (lessors generally differ so they don't have to show the asset on their sheets). \\
+\hfill \\
+On the lessee's statement of cash flows, for an operating lease, the full lease payment is shown as an operating cash outflow. \\
+\hfill \\
+For a finance lease (on the lessee's statement of cash flows) only the portion of the lease payment relating to interest expense reduces operating cash flow; the portion of the lease payment that reduces the lease liability appears as a cash outflow in the financing section. \\
+\hfill \\
+In summary, a company reporting a lease as an operating lease will typically show higher profits in the early years, higher return measures in early years, and a stronger solvency position that an identical company reporting an identical lease as a finance lease. \\
+\hfill \\
+Since in the United States four rules are explicit a company can structure a lease so that it can claim a operating lease. \\
+\hfill \\
+Lease disclosures can be used to help estimate the extent of a company's off-balance sheet lease financing through operating leases. \\
+\hfill \\
+
+\subsubsection{Accounting and Reporting by the Lessor}
+From the lessor's perspective, there are two types of finance leases: \\
+\begin{enumerate}
+  \item Direct financing leases.
+  \item Sales-type leases.
+\end{enumerate}
+\hfill \\
+Direct financing leases result when the present value of the lease payments equals the carrying value of the leased asset. Because there is no "profit" on the asset itself, the lessor is essentially providing financing to the lessee, and the revenues earned by the lessor are financing in nature (e.g. interest revenue). \\
+\hfill \\
+If the present value of lease payments exceeds the carrying value of the leased asset, the lease is treated as a sale. \\
+\hfill \\
+In a sales-type lease, the lessor "sells" the asset to the lessee and also provides financing on the sale. Therefore, in a sales-type lease, a lessor reports revenue from the sale, cost of goods sold (e.g. the carrying value of the asset leased), profit on the sale, and interest revenue earned from financing the sale. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Other Types of Off-Balance Sheet Financing %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Other Types of Off-Balance Sheet Financing}
+Off-balance sheet obligations result in \emph{no} additional liabilities recorded on the balance sheet, but they do result in financial obligations. Examples include (but are not limited to) take-or-pay contracts, throughput arrangements, and sales of receivables. \\
+\hfill \\
+
+\subsection{Take-or-Pay and Throughput}
+With a take-or-pay contract, a company commits to buying a minimum quantity of an item over a certain period of time. Even if the company doesn't take delivery, it must pay. \\
+\hfill \\
+Similarity with a throughput arrangement, a company commits to pay a minimum amount for transporting its production through a delivery channel. 
+\\
+\hfill \\
+These arrangements are used to secure resources or to finance large projects. \\
+\hfill \\
+
+\subsection{Sales of Receivables}
+To accelerate cash flows, a company can sell its accounts receivable to a third party. A securitization of receivables typically involves the company first selling the receivables to a trust (set up as a special purpose entity, or SPE) and then the SPE selling the debt securities backed by the receivables. The receivables may be trade receivables, mortgages, or various other types of financial assets. \\
+\hfill \\
+Disclosures about accounts receivable facilitate assessment of a company's financial position. When receivables are transferred, and the transfer is accounted for as a sale, accounts receivable decrease and the operating cash flows increase. To the extent that an analyst considers the transfer of receivables as borrowings, the cash received should be reclassified to financing cash flows from operating cash flows. Additionally accounts receivable and current liabilities should be increased by the amount of receivables that were sold before computing the ratios. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% NOTES %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{NOTES}
+Under U.S. GAAP remember that when converting bonds to equity it's to book value of the bonds that adjust (increase) total equity. \\
+\hfill \\
+
+\end{document}
+

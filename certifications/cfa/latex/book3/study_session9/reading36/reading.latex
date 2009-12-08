@@ -1,0 +1,27 @@
+\documentclass{article}
+
+\title{Inventories}
+\author{Toby Banks}
+\date{November 1st, 2009}
+
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Inventory Cost and Inventory Accounting Methods %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Inventory Cost and Inventory Accounting Methods}
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% RANDOM NOTES %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{RANDOM NOTES}
+Under GAAP, inventory is carried at the lower of cost or market value. After being written down, a new cost basis is determined and further revisions may only reduce the value further. \\
+\hfill \\
+IFRS allows a increase in the value of previously written down inventory to be recorded as higher than its previous value. GAAP does not allow for this. \\
+\hfill \\
+A company that operates in a environment of declining prices reports profits that tend to be \emph{higher} if it accounts for the inventory using the LIFO method. \\
+\hfill \\
+
+
+
+\end{document}
+

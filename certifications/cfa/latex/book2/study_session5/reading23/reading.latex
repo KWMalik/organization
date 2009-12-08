@@ -1,0 +1,110 @@
+\documentclass{article}
+
+\title{Aggregate Supply and Aggregate Demand}
+\author{Toby Banks}
+\date{September 27th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% The Macroeconomic Long Run and Short Run %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{The Macroeconomic Long Run and Short Run}
+The \textbf{macroeconomic long run} is a time frame that is sufficiently long for the real wage rate to have adjusted to achieve full employment: real GDP equals potential GDP. \\
+\hfill \\
+The \textbf{macroeconomic short run} is a period during which some money prices are sticky so that real GDP might be below, above or at potential GDP and the unemployment rate might be above, below, or at the natural unemployment rate. \\
+\hfill \\ 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Aggregate Supply %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Aggregate Supply}
+\textbf{Long-run aggregate supply} is the relationship between the quantity of real GDP supplied and the price level in the long run when real GDP equals potential GDP. It is a vertical bar at the potential GDP labeled \emph{LAS}. \\
+\hfill \\ 
+\textbf{Short-run aggregate supply} is the relationship between the quantity of real GDP supplied and the price level when the money wage rate, the prices of other resources, and potential GDP remain constant. The SAS curve is sloping like 2 o'clock. \\
+\hfill \\ 
+When price levels rise and money wage rate rises by the same percentage there is movement along the LAS curve. \\
+\hfill \\ 
+When price levels rise and money wage rate is unchanged there is movement along the SAS curve. \\
+\hfill \\ 
+What changes potential GDP (aka. Long-run aggregate supply):
+\begin{itemize}
+  \item The full-employment quantity of labor increases.
+  \item The quantity of capital increases.
+  \item Technology advances.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Aggregate Demand %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Aggregate Demand}
+The quantity of real GDP demanded is the sum of he real consumption expenditure (C), investment (I), government expenditure (G), and exports (X) minus imports (M). \\
+\[ Y = C + I + G + X - M\] \\
+\hfill \\
+The buying plans of people, business, governments and foreigners are dependent on many factors. Some of the main ones are:
+\begin{itemize}
+  \item The price level.
+  \item Expectations.
+  \item Fiscal policy and monetary policy.
+  \item The world economy.
+\end{itemize}
+\hfill \\
+\textbf{Aggregate demand} is the relationship between the quantity of real GDP demanded and the price level. \\
+\hfill \\
+The aggregate demand curve slopes downward for two reasons: the wealth effect and substitution effects. \\
+\hfill \\
+\textbf{Wealth effect} When the price level rises but other things remain the same, real wealth decreases. Real wealth is the amount of money in the bank, bonds, stocks, and other assets that people own, measured not in dollars but in terms of the goods and services that the money, bonds, and stock will buy. To compensate for real wealth decreasing people will try to restore their wealth by increasing saving, or decreasing current consumption. \\
+\hfill \\ 
+\textbf{Substitution effects} are related to wealth effects. Basically when the price level rises and other things remain the same, interest rates rise. The reason is that a rise in the price level decreases the real value of the money in people's pockets and bank accounts. With a smaller amount of money around, banks and other lenders can get a higher interest rate on loans. When faced with higher interest rates people and businesses delay plans to buy new capital an consumer durable goods nd they cut back on spending. \\
+\hfill \\ 
+A change in any factor that influences buying plans other than the price level bring a change in aggregate demand. The main factors are:
+\begin{itemize}
+  \item Expectations
+  \item Fiscal policy and monetary policy
+  \item The world economy
+\end{itemize}
+\hfill \\
+\textbf{Fiscal policy} is the governments attempt to influence the economy by setting and changing taxes, making transfer payments, and purchasing goods and services. \\
+\hfill \\
+\textbf{Disposable income} is a aggregate income minus taxes plus transfer payments. \\
+\hfill \\
+\textbf{Monetary policy} consists of changes in the interest rates and in the quantity of money in the economy. In the U.S. this is controlled by the Federal Reserve. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Macroeconomic Equilibrium %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Macroeconomic Equilibrium}
+\textbf{Short-run macroeconomic equilibrium} occurs when the quantity of real GDP demanded equals the quantity of real GDP supplied. \\
+\hfill \\
+\textbf{Long-run macroeconomic equilibrium} occurs when real GDP equals potential GDP. Equivalently, when the economy is on its \emph{long-run} aggregate supply curve. \\
+\hfill \\
+A \textbf{below full-employment equilibrium} is a macroeconomic equilibrium in which potential GDP exceeds real GDP. \\
+\hfill \\
+A \textbf{output gap} is the gap between real GDP and potential GDP. \\
+\hfill \\
+A \textbf{recessionary gap} is when potential GDP exceeds real GDP. \\
+\hfill \\
+\textbf{Full-employment equilibrium} is when real GDP equals potential GDP. \\
+\hfill \\
+\textbf{Above full-employment equilibrium} is a macroeconomic equilibrium in which real GDP exceeds potential GDP. \\ 
+\hfill \\
+\textbf{Inflationary gap} is the name of the output gap that occurs when real GDP exceeds potential GDP. \\
+\hfill \\
+\textbf{Stagflation} is a combination of recession and inflation. It occured in the U.S. in the mid-1970s and early 80s. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Macroeconomic Schools of Thought %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{Macroeconomic Schools of Thought}
+Three main groups of macroeconomic thought are:
+\begin{itemize}
+  \item Classical
+  \item Keynesian
+  \item Monetarist
+\end{itemize}
+\hfill \\
+Classical economists believe that the economy is self-regulating and always at full employment. \\
+\hfill \\
+The \textbf{new classical} view is that business cycle fluctuations are the efficient responses of a well-functioning market economy that is bombarded by shocks that arise from the uneven pace of technological change. \\
+\hfill \\
+Keynesian economists believe that full employment can be achieved only with active policy. \\
+\hfill \\
+\textbf{New Keynesian} views hold that the money wage rate ois sticky but also that prices of goods and services are sticky. With a sticky price level, the short-run aggregate supply curve is horizontal at a fixed price level. \\
+\hfill \\
+Monetarist economists believe that recessions result from inappropriate monetary policy. \\
+\hfill \\
+
+\end{document}
+

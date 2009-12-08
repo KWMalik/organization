@@ -1,0 +1,78 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Financial Reporting Quality: Red Flags and Accounting Warning Signs}
+\author{Toby Banks}
+\date{November 15th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Financial Reporting Quality %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Financial Reporting Quality}
+Portfolio managers and securities analysts find financial statements to be extremely important to them. Unfortunately they only rate the quality of the financial reports at 3.4 out of five. \\
+\hfill \\
+Low financial reporting quality can arise from: \\
+\begin{itemize}
+  \item Following GAAP but selecting alternatives within GAAP that bias or distort reported results to achieve a desired outcome (e.g., selecting a depreciation method that results in higher earnings than the economic depreciation of the asset warrants).
+  \item Using loopholes or bright-lines in accounting principles (e.g., the lessee has a capital lease if the present value of the lease payments is 90 percent or more of the fair value of the property) to structure transactions to achieve a desired outcome that differs from the economic stricture of the transaction (e.g., that allows a lessor to structure a lease solely to qualify for immediate sales treatment while still allowing the lessee to treat it as an off-balance sheet arrangement).
+  \item Using unrealistic of inappropriate estimates and assumptions to achieve a desired outcome (e.g., using extraordinarily long depreciable lives for assets or unrealistically optimistic assumptions about collect-ability of receivables and loans).
+  \item Stretching accounting principles to achieve a desired outcome (e.g., using a narrowly defined rules on consolidation of special-purpose entities (SPEs) for a leasing transaction to justify non-consolidation of SPEs in other types of transactions. 
+  \item Engaging in fraudulent financial reporting. Rather than low quality financial reporting, this category actually has no financial reporting quality.
+\end{itemize}
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Red Flags and Accounting Warning Signs %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Red Flags and Accounting Warning Signs}
+SAS-99 warns practitioners to be alert for the "fraud triangle", or three conditions that are generally present when fraud occurs: \\
+\begin{enumerate}
+  \item \emph{Incentives or pressures} exist that can lead to fraudulent financial reporting, such as pressure to meet debt covenants or analysts' earnings expectations.
+  \item \emph{Opportunities} to commit fraud exist, such as poor internal control. 
+  \item The individuals themselves are able to \emph{rationalize} their behavior, such as a desire to get the company through a difficult time, after which they plan to undo their accounting games.
+\end{enumerate}
+\hfill \\
+Check out Exhibits 1, 2, and 3 on pages 575-577 in the book. \\
+\hfill \\
+The frequency of financial statement restatements by SEC registrants has been growing in recent years. \\
+\begin{itemize}
+  \item 157 in 2000
+  \item 270 in 2001
+  \item 330 in 2002
+  \item etc...
+\end{itemize}
+\hfill \\
+
+The SEC reviewed 515 cases of enforcement actions between July 31st, 1997 and July 30th, 2002. The study classified improper accounting practices into four categories: \\
+\begin{enumerate}
+  \item Improper revenue recognition recognition (126 cases), including reporting revenue in advance through techniques, such as holding the accounting period open, billing without shipping (bill and hold), fictitious revenue, and improper valuation of revenue.
+  \item Improper expense recognition (101 cases), including improper capitalization, overstating inventory, understating bad debts/loan losses, improper use of restructuring reserves, and failure to record asset impairments.
+  \item Improper accounting in connection with business combinations (23 cases).
+  \item Other accounting and reporting issues (130 cases), including inadequate disclosures, failure to disclose related party transactions, inappropriate accounting for non-monetary and round-trip transactions, improper accounting for foreign payments in violation of the Foreign Corrupt Practices Act, improper use of off-balance sheet arrangements, and improper use of non-GAAP financial measures. 
+\end{enumerate}
+\hfill \\
+
+Based on these studies and a review of accounting scandals, several common accounting warning signs are apparent: \\
+\begin{itemize}
+  \item Aggressive revenue recognition.
+  \item Operating cash flow out of line with reported earnings.
+  \item Growth in revenues out of sync with economy, industry, or peer companies and with growth in receivables.
+  \item Growth in inventory out of line with sales growth or days inventory increasing over time.
+  \item Classification of non-operating or nonrecurring income as revenue.
+  \item Deferral of expenses.
+  \item Excessive use of operating leases by lessees.
+  \item Classification of expenses or losses as extraordinary or nonrecurring.
+  \item LIFO liquidations.
+  \item Gross margins or operating margins out of line with peer companies.
+  \item Use of long useful lives for depreciation and amortization.
+  \item Use of aggressive pension plan assumptions.
+  \item Common use of fourth quarter surprises.
+  \item Equity method of accounting/frequent use of off-balance sheet SPEs or variable-interest entities.
+  \item Other off-balance sheet financing or guarantees.
+\end{itemize}
+\hfill \\
+
+To check to see if operating cash flow is out of line with reported earnings. A \textbf{cash flow earnings index} (operating cash flow divided by net income) is useful in identifying underlying potential problems (a ratio consistently below 1.0 or a ratio that is declining from one period to the next). \\
+\hfill \\
+
+
+\end{document}
+

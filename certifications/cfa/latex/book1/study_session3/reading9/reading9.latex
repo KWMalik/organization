@@ -1,0 +1,63 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Common Probability Distributions}
+\author{Toby Banks \\ HB-Studios}
+\date{August 25th, 2009}
+
+\begin{document}
+
+\section{Overview}
+-Four different distributions: uniform, binomial, normal, and lognormal.
+-Probability distributions form the basis for hypothesis testing and regression analysis.
+
+\section{Probability Distribution}
+-A probability distribution lists all possible outcomes of a random variable and the probability that each outcome will occur. 
+-A discrete probability distribution is where a random variable can take on a countable number of outcomes. i.e. Quoted Stock prices when they are quoted in ticks.
+-A continuous probability distribution is one where we cannot count the outcomes. i.e. Rates or return.
+
+A probability function specifies the probability that a random variable takes on a specific value P(X = x) (written p(x)). For a continouous function the appropriate syntax is f(x). f(x) is called the probability density function.
+
+Key properties of a probability function:
+ 1. p(x) lies between 0 and 1.
+ 2. The sunm of the probabilitiies of p(x) over all values of X is equal to 1.
+
+Cumulative Distribution Function (CDF):
+ P(X <= x) (often denoted F(x) for both continuous and discrete random variables).
+
+\section{Discrete Uniform Distribution}
+ The probability of each outsome is the same (uniform). 
+
+\section{Binomial Distribution}
+\subsection{Bernoulli Trials}
+Bernoulli trials refer to trials where there are two possible outcomes. If \emph{p} is used for the probability of success, and Y=1 denotes the outcome being a success and Y=0 a failure then:
+\begin{math}p(1) = P(Y = 1) = p\end{math}
+\begin{math}p(0) = P(Y = 0) = 1 - p\end{math}
+Such a random variable is refered to as a Bertoulli random variable.
+Trials need to be independent.
+If we define X as the number of successes, then X is the binomial random variable. 
+\begin{displaymath} X = Y_1 + Y_2 + ... + Y_n\end{displaymath}
+
+X is described by n and p we write:
+\begin{displaymath} X ~ B(n, p) \end{displaymath}
+
+Which is read "X has a binomial distribution with parameters n and p".
+
+\subsection{Binomial Probability Distribution}
+Used to calculate the probability of x successes from n trials. The trials must be independent, and the probability of success across all of the trials has to be constant.
+\begin{displaymath}
+p\left(x\right) = {n! \over {\left(n - x\right)! x!} p^x\left(1 - p\right)^{n -x}}
+\end{displaymath}
+
+\subsubsection{Mean and Variance of Binomial Random Variables}
+For \begin{math}X ~ B(n, p)\end{math} then the mean is \begin{math}np\end{math}.
+Variance of a Bernoulli trial is p(1-p) (which can be calculated using \begin{math}E\left[\left(Y - EY\right)^{2}\right]\end{math}. Since trials are independent the variance of the Binomial distribution is \begin{math}np\left(1 - p\right)\end{math}.
+
+\textbf{LOOK ELSEWHERE}Know how to construct a binomial tree and use it to describe stock movement.
+
+
+\section{continuous}
+
+
+\end{document}
+

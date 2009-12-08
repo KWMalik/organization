@@ -1,0 +1,78 @@
+\documentclass{article}
+
+\title{Understanding the Balance Sheet}
+\author{Toby Banks}
+\date{October 24th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Components and Format of the Balance Sheet %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Components and Format of the Balance Sheet}
+The balance sheet is the usual place to start analyzing a company. It can provide information about future earnings potential. \\
+\hfill \\
+The balance sheet discloses what a entity owns (assets) and what it owes (liabilities) at a certain point in time. Which is why it is often referred to as a statement of financial position. \\
+\hfill \\
+
+%%ADD MORE HERE
+The \textbf{report format} lists assets, liabilities and equity in a single column. \\
+\hfill \\
+The \textbf{account format} follows the pattern of the traditional general ledger accounts, with the assets as the left and liabilities and equity at the right of a central dividing line. \\
+\hfill \\
+The grouping of various classes of assets and liabilities results in a balance sheet format known as the \textbf{classified balance sheet}. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Uses and Analysis of the Balance Sheet %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Uses and Analysis of the Balance Sheet}
+
+\subsection{Common-Size Analysis of the Balance Sheet}
+This technique is the process of stating all balance sheet items as a percentage of total assets and a combination of shareholders equity and liabilities. \\ 
+\hfill \\
+You can use this to determine things such as whether or not a company is more or less liquid from the previous year. \\
+\hfill \\
+
+\subsection{Balance Sheet Ratios}
+Balance Sheet Ratios fall under the heading of \textbf{liquidity ratios} or \textbf{solvency ratios}. \\
+\hfill \\
+The following are some liquidity ratios: \\
+\begin{itemize}
+  \item Current = Current Assets / Current Liabilities
+  \item Quick (acid test) = (Cash + Marketable Securities + Receivables) / Current Liabilities
+  \item Cash = (Cash + Marketable Securities) / Current Liabilities
+\end{itemize}
+\hfill \\
+
+The following are some solvency ratios: \\
+\begin{itemize}
+  \item Long-term debt to equity = Total Long-term debt / Total Equity
+  \item Debt to Equity = Total Debt / Total Equity
+  \item Total Debt = Total Debt / Total Assets
+  \item Financial Leverage = Total Assets / Total Equity
+\end{itemize}
+\hfill \\
+
+What are the purposes of financial ratios: \\
+\begin{itemize}
+  \item To provide insight into the microeconomic relationships within a company to help analysts project earnings and free cash flow (which is in turn used to determine entity value and credit-worthiness).
+  \item To provide insight into a company's financial flexibility, which is the ability to obtain cash required to meet financial obligations or to make asset acquisitions, even if unexpected circumstances should develop.
+  \item To provide a means of evaluating management's ability. Key performance ratios can serve as a quantitative measure for ranking management's ability relative to a peer group.
+\end{itemize}
+\hfill \\
+
+Financial ratio analysis is limited by: \\
+\begin{itemize}
+  \item The use of alternative accounting methods.
+  \begin{itemize}
+    \item FIFO vs. Weighted vs. LIFO
+    \item Cost of equity methods of accounting for unconsolidated associates
+    \item Straight-line or accelerated consumption methods of deprecation
+    \item Capitalized or operating lease treatment
+  \end{itemize}
+  \item The homogeneity of a company's operating activities. (Think G.E.)
+  \item The need to determine whether the results of the ratio analysis are consistent. One set of ratios might indicate a problem while another would indicate that the problem is short term in nature.
+  \item The need to use judgment. Ratios are useful, but they cannot alone be used to directly value a company or determine its credit-worthiness.
+\end{itemize}
+\hfill \\
+
+\end{document}
+

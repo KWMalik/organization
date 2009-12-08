@@ -1,0 +1,207 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Income Taxes}
+\author{Toby Banks}
+\date{November 10th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Differences Between Accounting Profit and Taxable Income %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Differences Between Accounting Profit and Taxable Income}
+\textbf{Accounting profit} is reported on a company's income statement in accordance with prevailing accounting standards. Accounting profit (also referred to as income before taxes or pretax income) does not include a provision for income tax expense. \\
+\hfill \\
+\textbf{Taxable income} is the portion of a company's income that is subject to income taxes under the laws of its jurisdiction. \\
+\hfill \\
+Taxable income and accounting profit will more than likely differ due to different guidelines. \\
+\hfill \\
+\textbf{Income tax payable/recoverable} is calculated on the basis of the company's tax rate and appears on its balance sheet. \\
+\hfill \\
+\textbf{Tax expense/benefit} appears on the income statement and is aggregate of its income tax payable and any changes in deferred tax assets and liabilities. \\
+\hfill \\
+\textbf{Deferred tax assets}, which appear on the balance sheet, arise when an excess amount is paid for income taxes (taxable income is higher than accounting profit) and the company expects to recover the difference during the course of future operations. Actual income taxes payable will thus exceed the financial accounting income tax expense. \\
+\hfill \\
+A \textbf{valuation allowance} is a reserve against deferred tax assets. The valuation allowance is based on the likelihood of realizing the deferred tax assets in future accounting periods. \\
+\hfill \\
+\textbf{Deferred tax liabilities}, which also appears on the balance sheet, arise when a deficit amount is paid for income taxes and the company expects to eliminate the deficit over the course of future operations. In this case, financial accounting income tax expense exceeds income taxes payable. \\
+\hfill \\
+A deferred tax liability records the fact that the company will, in the future, pay more income tax because of a transaction that took place in the current period. \\
+\hfill \\
+\textbf{Income tax paid} in a period is the actual amount paid for income taxes (not a provision, but the actual cash outflow). The income tax paid may be less than the income expense because of payments in prior periods or refunds received in the current period. Income tax paid reduces the income tax payable, which is carried on the balance sheet as a liability. \\
+\hfill \\
+The \textbf{tax base} of an asset or liability is the amount at which the asset or liability is valued for tax purposes, whereas the \textbf{carrying amount} is the amount at which the asset or liability is valued according to accounting principals. \\
+\hfill \\
+A \textbf{tax loss carry forward} occurs when a company experiences a loss in the current period that may be used to reduce future taxable income. \\
+\hfill \\
+
+\subsection{Current Tax Assets and Liabilities}
+Differences in accounting profit and taxable income are the result of different accounting and tax rules. Differences occur in several ways including: \\
+\begin{itemize}
+  \item Revenues and expenses may be recognized in one period for accounting purposes and a different period for tax purposes.
+  \item Specific revenues and expenses may be either recognized for accounting purposes and not for tax purposes; or not recognized for accounting purposes but recognized for tax purposes.
+  \item The carrying amount and tax base of assets and/or liabilities may differ.
+  \item The deductibility of gains and losses of assets and/or liabilities may vary for accounting and income tax purposes. .
+  \item Subject to tax rules, tax losses of prior years might be used to reduce taxable income in later years, resulting in differences in accounting and taxable income (tax loss carry-forward).
+  \item Adjustments of reported financial data from prior years might not be recognized equally for accounting and tax purposes or might be recognized in different periods. 
+\end{itemize}
+\hfill \\
+
+\subsection{Deferred Tax Assets and Liabilities}
+Deferred tax assets represent taxes that have been paid (or often the carrying forward of losses from previous periods) but have not yet been recognized on the income statement. \\
+\hfill \\
+Deferred tax liabilities occur when financial accounting income tax expense is greater than regulatory income tax expense. \\
+\hfill \\
+Deferred tax assets and liabilities arise when timing of taxes are due at different times, amortization/depreciation methods are different. \\
+\hfill \\
+Under IFRS, deferred tax assets and liabilities are always classified as noncurrent. \\
+\hfill \\
+Under U.S. GAAP, deferred tax assets and liabilities are classified on the balance sheet as current and noncurrent based on the classification of the underlying asset or liability. \\
+\hfill \\
+Because taxes will be recoverable or payable at a future date, it is only a temporary difference and a deferred tax asset or liability is created. \\
+\hfill \\
+Changes in deferred tax assets and liabilities are added to income tax payable to determine the company's income tax expense (or credit) and it is reported on the income statement. \\
+\hfill \\
+Should it be doubtful that future economic benefits will be realized from a temporary difference (such as a company being under liquidation), the temporary difference will not lead to the creation of a deferred tax asset or liability. \\
+\hfill \\
+If a deferred tax asset or liability resulted in the past, but the criteria of economic benefits is not met on the current balance sheet date, then, under IRS, and existing deferred tax asset or liability related to the item will be reversed. \\
+\hfill \\
+Under U.S. GAAP, a valuation allowance is established. \\
+\hfill \\
+In assessing future economic benefits, much is left to the discretion of the auditor in assessing the temporary differences and the issue of future economic benefits. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Determining the Tax Base of Assets and Liabilities %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Determining the Tax Base of Assets and Liabilities}
+The tax base of an asset or liability is the amount attributed to the asset or liability for tax purposes, whereas the carrying amount is based on accounting principles. \\
+\hfill \\
+
+\subsection{Determining the Tax Base of an Asset}
+The tax base of an asset is the amount that will be deductible for tax purposes in future periods as the economic benefits become realized and the company recovers the carrying amount of the asset. \\
+\hfill \\
+For example a fictitious company has accounting deprecation or 10\% per year, the tax authorities allow depreciation of 15\% a year. At the end of the fiscal year, the carrying amount of equipment for accounting purposes is greater than the asset tax base thus resulting in temporary difference. \\
+\hfill \\
+
+\subsection{Determining the Tax Base of an Liability}
+In general, a company will recognize a deferred tax asset or liability when recovery/settlement of the carrying amount will affect future tax payments by either increasing or reducing the taxable profit. \\
+\hfill \\
+IFRS offers specific guidelines for when revenue is received in advance: IAS 12 states that the tax base is the carrying amount less any amount of the revenue that will not be taxed at a future date. Under U.S. GAAP a similar outcome would occur. \\
+\hfill \\
+
+\subsection{Changes in Income Tax Rates}
+If there are changes in tax laws or new income tax rates, then existing deferred tax assets and liabilities must be adjusted for the effects of these changes. \\
+\hfill \\
+If income tax rates increase, then deferred taxes will also increase.
+\hfill \\
+If income tax rates decrease, then deferred taxes will also decrease.
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Temporary and Permanent Differences Between Taxable and Accounting Profit %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Temporary and Permanent Differences Between Taxable and Accounting Profit}
+Both IFRS and U.S. GAAP prescribe the balance sheet liability method for recognition of deferred tax. This balance sheet method focuses on the recognition of a deferred tax asset or liability should there be a temporary difference between the carrying amount and the tax base of the balance sheet items. \\
+\hfill \\
+\textbf{Permanent differences} are differences between tax and financial reporting of revenue (expenses) that \emph{will not} be reversed at some future date. Because they will not be reversed at a future date, these differences do not give rise to deferred tax. These items typically include: \\
+\begin{itemize}
+  \item Income or expense items not allowed by tax legislation.
+  \item Tax credits for some expenditures that directly reduce taxes.
+\end{itemize}
+\hfill \\
+All permanent differences result in a difference between the company's effective tax rate and statutory tax rate. \\
+\hfill \\
+The effective tax rate is also influenced by different statutory taxes should an entity conduct business in more than one tax jurisdiction. \\
+\hfill \\
+The formula for the reported effective tax rate is thus equal to: \\
+\begin{displaymath}
+ \text{Reported Effective Tax Rate} = {\text{Income Tax Expense} \over \text{Pretax Income (Accounting Profit)}}
+\end{displaymath}
+\hfill \\
+The net change in deferred tax during a reporting period is the difference between the balance of the deferred tax asset or liability for the current period and the balance of the previous period. \\
+\hfill \\
+
+\subsection{Taxable Temporary Differences}
+To do: Add notes here.
+
+\subsection{Deductible Temporary Differences}
+
+\subsection{Examples of Taxable and Deductible Temporary Differences}
+
+\subsection{Temporary Differences at Initial Recognition of Assets and Liabilities}
+
+\subsection{Business Combinations and Deferred Taxes}
+
+\subsection{Investments in Subsidiaries, Branches, Associates and Interests in Joint Ventures}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Unused Tax Losses and Tax Credits %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Unused Tax Losses and Tax Credits}
+IAS 12 allows the recognition of unused tax losses and tax credits only to the extent that it is probable that in the future there will be taxable income against which the unused tax losses and credits can be applied. \\
+\hfill \\
+Under U.S. GAAP, a deferred tax asset is recognized in full but is then reduced by a valuation allowance if it is more likely than not that some or all of the deferred tax asset will not be realized. \\
+\hfill \\
+When assessing the probability that sufficient taxable profit will be generated in the future, the following criteria can serve as a guide: \\
+\begin{itemize}
+  \item If there is uncertainty as to the probability of future taxable profits, a deferred tax asset as a result of unused tax losses or tax credits is only recognized to the extent of the available taxable temporary differences. 
+  \item Assess the probability that the entity will in fact generate future taxable profits before the unused tax losses and/or credits expire pursuant to tax rules regarding the carry forward of the unused tax losses. 
+  \item Verify that the above is with the same tax authority and based on the same taxable entity.
+  \item Determine whether the pas tax losses were a result of specific circumstances that are unlikely to be repeated.
+  \item Discover if tax planning opportunities are available to the entity that will result in future profits. These may include changes in tax legislation that is phased in over more than one financial period to the benefit of the company.
+\end{itemize}
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Recognition and Measurement of Current and Deferred Tax %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Recognition and Measurement of Current and Deferred Tax}
+Deferred taxes should be measured at the tax rate that is expected to apply when the asset is realized or the liability settled. \\
+\hfill \\
+Any amount paid in excess of any tax obligation is recognized as an asset. \\
+\hfill \\
+The income tax paid in excess or owed to tax authorities is separate from deferred taxes on the company's balance sheet. \\
+\hfill \\
+Deferred taxes as well as income taxes should always be recognized on the income statement of an entity unless it pertains to: \\
+\begin{itemize}
+  \item Taxes or deferred taxes charged directly to equity.
+  \item A possible provision for deferred taxes relates to a business combination.
+\end{itemize}
+\hfill \\
+The carrying amounts of the deferred tax assets and liabilities should also be assessed. The carrying amounts may change even though there may have been no change in temporary differences during the period evaluated. This can result from: \\
+\begin{itemize}
+  \item Changes in tax rates
+  \item Reassessments of the recoverability of deferred tax assets. 
+  \item Changes in the expectations for how an asset will be recovered and what influences the deferred tax asset or liability. 
+\end{itemize}
+\hfill \\
+
+\subsection{Recognition of a Valuation Allowance}
+Under U.S. GAAP, deferred tax assets are reduced by creating a valuation allowance. Establishing a valuation allowance reduces the deferred tax asset and income in the period in which the allowance is established. Should circumstances change to such an extent that a deferred tax asset valuation allowance may be reduced, the reversal will increase the deferred tax asset and operating income. Because of the subjective judgment involved, an analyst should carefully scrutinize any such changes. \\
+\hfill \\
+
+\subsection{Recognition of Current and Deferred Tax Charged Directly to Equity}
+Should an item that gives rise to a deferred tax liability be taken directly to equity, the same should hold true for the resulting deferred tax. The following are examples of such items:
+\begin{itemize}
+  \item Revaluation of property, plant and equipment (revaluations are not permissible under U.S. GAAP).
+  \item Long-term investments at fair value.
+  \item Changes in accounting practices.
+  \item Errors corrected against the opening balance of retained earnings.
+  \item initial recognition of an equity component related to complex financial instruments.
+  \item Exchange rate differences arising from the currency translation procedures for foreign operations.
+\end{itemize}
+\hfill \\
+Whenever it is determined that a deferred tax liability will not be reversed, an adjustment should be made to the liability. The deferred tax liability will be reduced and the amount by which it is reduced should be taken directly to equity. Any deferred taxes related to a business combination must also be recognized in equity. \\
+\hfill \\
+NOTE: Go over example 5 again, when reviewing these notes. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Presentation and Disclosure %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Presentation and Disclosure}
+This section is just one big example. It is worth reviewing. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% Presentation and Disclosure %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{Presentation and Disclosure}
+This section is just one big table. YOU MUST RETURN AND REVIEW IT. MAKE SURE IT IS ALL UNDERSTOOD. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%%%%%%% NOTES %%%%%%%%%%%%%%%%%%%%%%%%% 
+\section{NOTES}
+What is the difference between the income statement and the consolidated income statement?
+\hfill \\
+
+\end{document}
+

@@ -1,0 +1,66 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\title{Efficiency and Equity}
+\author{Toby Banks}
+\date{September 15th, 2009}
+
+\begin{document}
+
+\section{Resource Allocation Methods}
+
+The following list contains mechanisms fro allocating scarce resources. No one system works perfectly for all situations. \emph{Can I immediately think of a example of each?} \\
+\begin{itemize}
+  \item Market Price
+  \item Command
+  \item Majority Rule
+  \item Contest
+  \item First-Come, First-Served
+  \item Lottery
+  \item Personal Characteristics
+  \item Force
+\end{itemize}
+
+\hfill \\
+
+\section{Demand and Marginal Benefit}
+\begin{itemize}
+  \item \textbf{Marginal benefit} determines demand, and a demand curve is a marginal benefit curve. \\
+  \item \textbf{The market demand curve} is the horizontal sum of the individual demand curves and is also known as the \textbf{marginal social benefit curve}. \\
+  \item \textbf{Value} is what people are willing to pay; \textbf{price} is what they must pay. \\
+  \item \textbf{Consumer surplus} equals value minus price, summed over the quantity bought. \emph{Can I mentally picture this on a graph?}  \\
+\end{itemize}
+
+\section{Supply and Marginal Benefit}
+\begin{itemize}
+  \item The minimum supply price determines supply, and the supply curve is the \textbf{marginal cost curve}. \\
+  \item The \textbf{market supply curve} is the horizontal sum of the individual supply curves and is the \textbf{marginal social cost curve}. \\
+  \item \textbf{Opportunity cost} is what producers pay; price is what producers receive. \\
+  \item \textbf{Producer surplus} equals price minus opportunity cost, summed over the quantity sold. \\ 
+\end{itemize}
+
+\section{Is the Competitive Market Efficient}
+\begin{itemize}
+  \item In a competitive equilibrium, marginal social benefit equals marginal social cost and resource allocation is efficient. \\
+  \item Buyers and sellers acting in their self-interest end up promoting the social interest. \\
+  \item Producing less than or more than the efficient quantity creates \textbf{dead weight loss}. \\
+  \item The following can result in \emph{inefficiency and dead weight loss}: \\
+  \begin{itemize}
+    \item Price and Quantity Regulations
+    \item Taxes and Subsidies
+    \item Externalities
+    \item Public Goods and Common Resources 
+    \item Monopoly
+    \item High Transaction Costs
+  \end{itemize}
+\end{itemize}
+
+\section{Is the Competitive Market Fair?}
+Ideas about fairness can be divided into two groups: \emph{fair results} and \emph{fair rules}. \\
+\begin{itemize}
+  \item \textbf{Fair results} ideas require income transfers from the rich to the poor. \\
+  \item \textbf{Fair rules} ideas require property rights and voluntary exchange. \\
+\end{itemize}
+ 
+\end{document}
+
