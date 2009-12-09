@@ -19,7 +19,7 @@ One common method of estimating the company's stock beta is to use a market regr
   R_{it} = a + b * R_{mt}
 \end{displaymath}
 \hfill \\
-Beeta estimates are sensitive to the method of estimation and data used, here are some of the issues: \\
+Beta estimates are sensitive to the method of estimation and data used, here are some of the issues: \\
 \begin{enumerate}
   \item \emph{Estimation period}. The estimated beta is sensitive to the length of the estimation period, with beta commonly estimated using data over two to nine years. Selection of the estimation period is a trade-off between data richness captured by longer estimation periods and company-specific changes that are better reflected with shorted estimation periods. In general, longer estimation periods are applied to companies with a long and stable operating history, and shorter estimation periods are used for companies that have undergone significant structural chagnes in the recent past (such as resturcuting, recent acquisition, or divertiture) or changes in financial and operating leverage. 
   \item \emph{Periodicity of the return interval} (e.g. daily, weekly, or monthly). Researchers have observed smaller standard error in beta estimmated using smaller return intervals, such as daily returns. 
