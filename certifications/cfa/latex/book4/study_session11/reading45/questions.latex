@@ -1,0 +1,51 @@
+\documentclass{article}
+
+\author{Toby Banks}
+\date{Dec 11th, 2009}
+
+\begin{document}
+
+\section{Cost of Capital - LOS}
+\begin{itemize}
+  \item Calculate and interpret the weighted average cost of capital (WACC) of a company.
+  \item Describe how taxes affect the cost of capital from different capital sources.
+  \item Describe alternative methods of calculating the weights used in the WACC, including the use of the company's target capital structure.
+  \item Explain how the marginal cost of capital and the investment opportunity schedule are used to determine the optimal capital budget.
+  \item Explain the marginal cost of capital's role in determining the net resent value of a project.
+  \item Calculate and interpret the cost of fixed rate debt capital using the yield-to-maturity approach and the debt-rating approach.
+  \item Calculate and interpret the cost of non-callable, nonconvertible preferred stock.
+  \item Calculate and interpret the cost of equity capital using the capital asset pricing model approach, the dividend discount model approach, and the bond-yield-plus risk-premium approach.
+  \item Calculate and interpret the beta and cost of capital for a project.
+  \item Explain the country equity risk premium in the estimation of the cost of equity for a company located in a developing market.
+  \item Describe the marginal cost of capital schedule, explain why it may be upward-sloping with respect to additional capital, and calculate and interpret its break-points.
+  \item Explain and demonstrate the correct treatment of flotation costs.
+\end{itemize}
+
+\section{Cost of Capital - Questions}
+\begin{enumerate}
+  \item What is the formula for the weighted average cost of capital?
+  \item Given the D/E ratio calculate the weight for debt and equity?
+  \item What are three approaches that an analyst might use to estimate the target capital structure of a company?
+  \item Describe the investment opportunity schedule. Draw a diagram of it.
+  \item Calculate the cost of debt using the yield to maturity approach. NOTE: Their are calculator tricks to know.
+  \item What is the debt-rating approach to estimating the cost of debt?
+  \item What are four issues in estimating the cost of debt?
+  \item What is the formula to calculate the value of preferred stock? How can this be rearranged to calculate the cost of preferred stock?
+  \item What is the formula for the CAPM? What does it give you?
+  \item What are the three formulas for the Dividend Discount Model Approach? 
+  \item What is the formula for the sustainable growth rate?
+  \item What is the formula for the Bond Yield plus Risk Premium Approach?
+  \item How can you estimate a companies stock beta by using a market regression model?
+  \item Beta estimates are sensitive to the method of estimation and data used. Give five examples of issues surrounding this.
+  \item What is the formula to calculate the asset beta?
+  \item What is the formula to calculate the equity beta?
+  \item What are the four steps in estimating a beta using the pure-play method?
+  \item What is the formula to calculate the beta of a comparable company?
+  \item Assuming that we have the beta of a comparable company, how do we calculate the beta for our project?
+  \item Calculate the before-tax marginal cost of debt. What is the formula?
+  \item 
+
+\end{enumerate}
+
+\end{document}
+

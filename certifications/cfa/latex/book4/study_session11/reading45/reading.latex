@@ -1,0 +1,309 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\author{Toby Banks}
+\date{October 23rd, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%% Cost of Capital %%%%%%%%%%%%%%%%%%%%%%%
+\section{Cost of Capital}
+Weighted Average Cost of Capital (WACC): \\
+\begin{displaymath}
+  WACC = w_d r_d (1 - t) + w_p r_p + w_e w_r \\
+\end{displaymath}
+\hfill \\
+
+\subsection{Weights of the Weighted Average}
+An analyst must estimate a companies target capital structure using one of several approaches: \\
+\begin{enumerate}
+  \item Assume the company's current capital structure, at market value weights for the components, represents the company's target capital structure. \\
+  \item Examine trends in the company's capital structure or statements by management regarding capital structure policy to infer the target capital structure. \\
+  \item The average of comparable companies' capital structures as the target capital structure. (This can be done as a average or weighted average). \\
+\end{enumerate}
+\hfill \\
+The simple way to determine a company's capital structure is to evaluate the terms of the D/E ratio. If the D/E is given you can determine the debt weighting by dividing the D/E ratio by 1 + D/E. \\
+\begin{displaymath}
+  {D \over E} \div {1 + {D \over E}} \\
+\end{displaymath}
+\hfill \\
+
+\subsection{Applying the Cost of Capital to Capital Budgeting and Security Valuation}
+\textbf{Investment opportunity schedule} is a graphical depiction of a company's investment opportunities ordered from highest to lowest expected return. A company's optimal capital budget is found where the investment opportunity schedule intersects with the company's marginal cost of capital. \\
+\hfill \\
+In the context of a company's investment decision, the optimal capital budget is that amount of capital raised and invested at which the marginal cost of capital is equal to the marginal return from investing. \\
+\hfill \\
+The relation between the MCC and the IOS provides a broad picture of the basic decision-making problem of a company. \\
+\hfill \\
+When evaluating a individual average-risk project, the opportunity cost of capital is the company's WACC. If the systematic risk of the project is above or below average relative to the company's current portfolio or projects, an upward or downward adjustment, respectively, is mad to the company's WACC. \\
+\hfill \\
+If we choose to use the company's WACC in the calculation of the NPV of a project we are assuming that the project:
+\begin{enumerate}
+  \item Has the same risk as the average-risk project of the company.
+  \item Will have a constant target capital structure throughout its useful life. 
+\end{enumerate}
+\hfill \\
+These may not be realistic or appropriate assumptions and are potential drawbacks of using the company's WACC in valuing projects. However, alternative approaches are subject to drawbacks as well, and the approach outlined has wide acceptance. \\
+\hfill \\
+For the analyst, the second key use of the marginal cost of capital is in security valuation using any one of several discounted cash flow valuation models available. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%% Costs of the Different Sources of Capital %%%%%%%%%%%%%%%%%%%%%%%
+\section{Costs of the Different Sources of Capital}
+We focus on the costs of three primary sources of capital: debt, preferred equity, and common equity.\\
+\hfill \\
+
+\subsection{Cost of Debt}
+The \textbf{cost of debt} is the cost of debt financing to a company when it issues a bond or takes out a bank loan. We will discuss two methods to estimate the before-tax cost of debt \emph{\(r_d\)}: yield-to-maturity approach and the debt-rating approach. \\
+\hfill \\
+
+\subsubsection{Yield-to-Maturity Approach}
+The \textbf{yield-to-maturity} (YTM) is the annual return that an investor earns on a bond if the investor purchases the bond today and holds it until maturity. In other words, it is the yield, \emph{\(r_d\)}, that equates the present value of the bond's promised payments to its market price. \\
+\hfill \\
+NOTE: Know how to calculate the after-tax cost of debt with a BA-II Plus. \\
+\hfill \\
+
+\subsubsection{Debt-Rating Approach}
+The \textbf{debt-rating approach} can be used to estimate the before-tax cost of debt when a reliable current market price for a company's debt is not available. That is, based on a companies debt rating, we estimate the before-tax cost of debt by using the yield on comparably rated bonds for maturities that closely match that of the company's existing debt. \\
+\hfill \\
+The debt-rating approach is a simple example of pricing on the basis of valuation-relevant characteristics, which in bond markets has been known as evaluated pricing or \textbf{matrix pricing}. \\
+\hfill \\
+
+\subsubsection{Issues in Estimating the Cost of Debt}
+Some issues that can occur when estimating the cost of debt include:
+\begin{enumerate}
+  \item Fixed-Rate Debt versus Floating-Rate Debt
+  \item Debt with Option like Features
+  \item Non-rated Debt
+  \item Leases
+\end{enumerate}
+
+
+\subsection{Cost of Preferred Stock}
+The \textbf{cost of preferred stock} is the cost that a company has committed to pay preferred stockholders as a preferred dividend when ti issues preferred stock. \\
+\hfill \\
+\textbf{Fixed rate perpetual preferred stock} is stock that is nonconvertible, non-callable preferred stock that has a fixed dividend rate and no maturity date. To find the value of fixed rate perpetual preferred stock we can use the following formula: \\
+\hfill \\
+\[P_p = {D_p \over r_p}\]
+\hfill \\
+\(P_p = \text{the current preferred stock price per share} \) \\
+\(D_p = \text{the preferred stock dividend per share} \) \\
+\(r_p = \text{the cost of preferred stock} \) \\
+\hfill \\
+
+We can rearrange this to solve for the cost of preferred stock: \\
+\[r_p = {D_p \over P_p}\]
+\hfill \\
+
+
+\subsection{Cost of Common Equity}
+The cost of equity is the rate of return required by a company's common shareholders. A company may increase common equity through the reinvestment of earnings - that is retained earnings - or through the issuance of new shares of stock. \\
+\hfill \\
+The estimation of the cost of equity is challenging because of the uncertain nature of the future cash flows in terms of the amount and timing. \\
+\hfill \\
+
+\subsubsection{Capital Asset Pricing Model Approach}
+\[E(R_i) = R_F + \beta_i[E(R_M) - R_F] \]
+\hfill \\
+\(E(R_i) = \text{expected return on the stock}\) \\
+\(R_F = \text{risk-free rate of interest}\) \\
+\(\beta_i = \text{the return sensitivity of stock i to changes in the market return}\) \\
+\(E(R_M) = \text{the expected return on the market}\) \\
+\(E(R_M) - R_F = \text{the expected market risk premium} \) \\
+\(\beta[E(R_M) - R_F] = \text{represents a premium for bearing the stock's market risk.}\) \\
+\hfill \\
+
+An alternative to the CAPM to accommodate risks that may not have been captured by the market portfolio alone. We can add risks for macroeconomic factors: \\
+\hfill \\
+\begin{align*}
+   E(R_i) = R_F & + \beta_{i1}(\text{Factor risk premium})_1 \\
+                & + \beta_{i2}(\text{Factor risk premium})_2 + ... \\
+                & + \beta_{ij}(\text{Factor risk premium})_j 
+\end{align*}
+\hfill \\
+
+\subsubsection{Dividend Discount Model Approach}
+
+The dividend discount model (Gordon growth model) in general states that the intrinsic value of a share of stock is the present value of the share's expected future dividends: \\
+\hfill \\
+\[
+  V_0 = \sum_{t=1}^\infty \left({D_t \over (1 + r_e)^t}\right)
+\]
+\(V_0 = \text{the intrinsic value of a share} \) \\
+\(D_t = \text{the share's dividend at the end of period t} \) \\
+\(r_e = \text{the cost of equity} \) \\
+\hfill \\
+
+Based on Gordon's constant growth formulation, we assume dividends are expected to grow at a constant rage, \emph{g}. Therefore, if we assume that price reflects intrinsic value \((V_0 = P_0\), we can rewrite the valuation of the stock as: \\
+\hfill \\
+\[ P_0 = {D_1 \over {(r_e - g)}} \]
+\hfill \\
+
+We can rewrite the above equation and estimate the cost of equity: \\
+\hfill \\
+\[ r_e = {D_1 \over P_0} + g \]
+\hfill \\
+
+There are two ways to estimate growth:
+\begin{enumerate}
+  \item Use a forecast growth rate from a published source or vendor.
+  \item Use a relationship between the growth rate, retention rate, and the return on equity. Known as the \textbf{sustainable growth rate}
+\end{enumerate}
+\hfill \\
+
+The sustainable growth rate: \\
+\hfill \\
+\[ g = \left(1 - {D \over EPS}\right)ROE \]
+\hfill \\
+
+\subsubsection{Bond Yield plus Risk Premium Approach}
+The \textbf{bond yield plus risk premium approach} is based on the fundamental tenant in financial theory that the cost of capital of riskier cash flows is higher than the cost of less risky cash flows. In this approach, we sum the before-tax cost of debt, \(r_d\), and a risk premium that captures the additional yield on a company's stock relative to its bonds. \\
+\hfill \\
+\[ r_e = r_d + \text{Risk Premium} \]
+\hfill \\
+
+There are great discrepancies when estimating cost of equity, it is not uncommon to see a spread of 8 percent between the methods. \\
+\hfill \\
+
+
+
+%%%%%%%%%%%%%%%%%%%% Topics in Capital Estimation %%%%%%%%%%%%%%%%%%%%%%%
+\section{Topics in Capital Estimation}
+When a analyst uses the CAPM to estimate the cost of equity, he or she must estimate beta. The estimation of beta presents many choices as well as challenges. \\
+\hfill \\
+
+One common method of estimating the company's stock beta is to use a market regression of the company's stock returns \(((R_i)\) against market returns \((R_m\)) over \emph{T} periods: \\
+\[R_{it} = a + b * R_{mt}\] \\
+\hfill \\
+Beta estimates are sensitive to the method of estimation and data used, here are some of the issues: \\
+\begin{enumerate}
+  \item \emph{Estimation period}. The estimated beta is sensitive to the length of the estimation period, with beta commonly estimated using data over two to nine years. Selection of the estimation period is a trade-off between data richness captured by longer estimation periods and company-specific changes that are better reflected with shorted estimation periods. In general, longer estimation periods are applied to companies with a long and stable operating history, and shorter estimation periods are used for companies that have undergone significant structural changes in the recent past (such as restructuring, recent acquisition, or divestiture) or changes in financial and operating leverage. 
+  \item \emph{Periodicity of the return interval} (e.g. daily, weekly, or monthly). Researchers have observed smaller standard error in beta estimated using smaller return intervals, such as daily returns. 
+  \item \emph{Selection of an appropriate market index}. The choice of market index affects the estimate of beta. 
+  \item \emph{The use of a smoothing technique}. Some analysts adjust historical betas to reflect the tendency of betas to revert to 1. As an example, the expression \( \beta_{i, adj} = 0.33 + 0.67\beta_i \) adjusts betas above and below 1.0 toward 1.0.
+  \item \emph{Adjustments for small-capitalization stocks}. Small-capitalization stocks have generally exhibited greater risks and greater returns than large-capitalization stocks over the long run. Some have argued that betas for small-capitalization companies should be adjusted upward.
+\end{enumerate}
+\hfill \\
+
+The beta of a company or project is affected by the systematic components of the business risk and the financial risk. \\
+\hfill \\
+The \textbf{business risk} of a company or project is the risk related to the uncertainty of revenues, referred to as \textbf{sales risk} and to \textbf{operating risk}, which is the risk attributed to the company's operating cost structure. \\
+\hfill \\
+\textbf{Financial risk} is the uncertainty of net income and net cash flows attributed to the use of financing that has a fixed cost, such as debt and leases. A company that uses a large amount of debt financing is assuming a great deal of financial risk. \\
+\hfill \\
+A financial analyst can estimate the beta for a company or project that is not publicly traded by using the \textbf{pure-play method}. This method involves comparing a publicly traded company's beta and adjusting it for financial leverage differences. \\
+\hfill \\
+\textbf{Asset beta} is a unlevered beta that reflects the business risk of the assets. \\
+\hfill \\
+
+For a given company, we can unlever its equity beta to estimate its asset beta. To do this, we must determine the relationship between a company's asset beta and its equity beta. Because the company's risk is shared between creditors and owners, we can represent the company's risk, \(\beta_{asset}\), as the weighted average of the company's creditors' market risk, \(\beta_{debt}\), and the market risk of the owners, \(\beta_{equity}\):
+\hfill \\
+\[\beta_{asset} = \beta_{debt} w_d + \beta_{equity} w_e \]
+\hfill \\
+or,
+\hfill \\
+\[\beta_{asset} = \beta_{debt} \left({D \over D + E}\right) + \beta_{equity} \left({E \over D + E}\right) \]
+\hfill \\
+\(E = \text{market value of equity} \) \\
+\(D = \text{market value of debt} \) \\
+\(w_d = \text{proportion of debt} = D/D+E \) \\
+\(w_e = \text{proportion of equity} = E/D+E \) \\
+\hfill \\
+
+Since the interest on debt is deducted by the company to arrive at taxable income, so the claim that creditors have on the company's assets does not cost the company the full amount, but, rather, the after-tax claim; the burden of debt financing is actually less due to interest deductibility. \\
+\hfill \\
+\[\beta_{asset} = \beta_{debt} \left({(1 - t)D \over (1 - t)D + E}\right) + \beta_{equity} \left({E \over (1 - t)D + E}\right) \]
+\hfill \\
+
+We generally assume that a company's debt does not have market risk, so \(\beta_{debt} = 0\). This means that the returns on debt do not vary with the returns on the market, which we generally assume to be true for most large companies. If \(\beta_{debt} = 0\), then: \\
+\hfill \\
+\[\beta_{asset} = \beta_{equity} \left[{1 \over {1 + \left((1 - t){D \over E}\right)}} \right]  \]
+\hfill \\
+
+Therefore, the market risk of a company's equity is affected by both the asset's market risk, \(\beta_{asset}\), and a factor representing the non-diversifiable portion of a company's financial risk, \(\left[1 + (1 - t){D \over E})\right]\): \\
+\hfill \\
+\[\beta_{equity} = \beta_{asset} \left[{1 + \left((1 - t){D \over E}\right)} \right]  \]
+\hfill \\
+
+\subsection{Estimating a Beta Using the Pure-Play Method}
+\begin{enumerate}
+  \item \textbf{Select the comparable.} Determine comparable company or companies. These are companies with a similar business risk. 
+  \item \textbf{Estimate the comparable beta.} Estimate the equity beta of the comparable company or companies. 
+  \item \textbf{Unlever the comparable beta.} Unlever the beta of the comparable company or companies, removing the financial risk component of the equity beta, leaving the business risk component of the beta. 
+  \item \textbf{Lever the beta for the project's financial risk.} Lever the beta of the project by adjusting the asset beta for the financial risk of the project. \\
+\end{enumerate}
+
+We begin by estimating the levered beta of the comparable company, \(\beta_{L,comparable}\). Using the capital structure and tax rate of the levered company, we estimate the asset beta for the comparable company, \(\beta_{I,comparable}\): \\
+\hfill \\
+\[ \beta_{U,comparable} = {\beta_{L,comparable} \over \left[1 + \left( \left(1 - t_{comparable}\right) {D_{comparable} \over E_{comparable}} \right) \right]} \]
+\hfill \\
+
+We then consider the financial leverage of the project or company and calculate its equity risk, \(\beta){L,project}\): \\
+\hfill \\
+\[ \beta_{L,project} = {\beta_{U,comparable} \left[1 + \left( \left(1 - t_{project}\right) {D_{project} \over E_{project}} \right) \right]} \]
+\hfill \\
+
+\textbf{NOTE: } its worth reviewing examples 9, 10, and 11. \\
+\hfill \\
+
+
+\subsection{Country Risk}
+The use of a stock's beta to capture the country risks of a project is well supported in empirical studies that examine developed nations. However, beta does not appear to adequately capture country risk for companies in developing nations. \\
+\hfill \\
+A common approach for dealing with this problem is to adjust the cost of equity estimated using the CAPM by adding a country spread to the market risk premium. The country spread is also referred to as a country equity premium. \\
+\hfill \\
+The simplest estimate of the country spread is the \textbf{sovereign yield spread}. \\
+\hfill \\
+A sovereign yield spread is the difference between the government bond yield in that country, denominated in the currency of a developed country, and the Treasury bond yield on a similar maturity bond in the developed country. \\
+\hfill \\
+The sovereign yield spread may be to coarse for the purposes of equity risk premium estimation. \\
+\hfill \\
+Another approach is to calculate the country equity premium as the product of the sovereign yield spread and the ratio of the volatility of the developing country equity market to that of the sovereign bond market denominated in the terms of the currency of a developed country. \\
+\hfill \\
+
+\[\text{CEP} = \text{SYS} \left[\text{ASDoEI} \over \text{ASDotSBMitotDMC}\right] \]
+\(CEP = \text{Country Equity Premium} \) \\
+\(SYS = \text{Sovereign Yield Spread} \) \\
+\(ASDoEI = \text{Annualized Standard Deviation of Equity Index} \) \\
+\(ASDotSBMitotDMC = \text{ASDot Sovereign Bond Market in terms of the Developed Market Currency} \) \\
+\hfill \\
+
+The logic of this equation is that the sovereign yield spread captures the general risk of the country, which is then adjusted for the volatility of the stock market relative to the bond market. \\
+\hfill \\
+
+\subsection{Marginal Cost of Capital Schedule}
+Why would the cost of capital changes more capital is raised? One source of a difference in cost depending on the amount of capital raised is that a company may have existing debt with a bond covenant that restricts the company from issuing debt with similar seniority as existing debt. Or, a \textbf{debt occurrence test} may restrict a company's ability to incur additional debt at the same seniority based on one or more financial tests or conditions. \\
+\hfill \\
+Another source of increasing marginal cost of capital is a deviation from the target capital structure. In the ideal, theoretical world, a company has a target capital structure and goes to the market each period and raises capital in these proportions. As the companies experiences deviations from the target capital structure, the marginal cost of capital may increase, reflecting these deviations. \\
+\hfill \\
+A \textbf{breakpoint} is the amount of capital at which the WACC changes. Meaning the cost of one of the sources of capital changes. \\
+\hfill \\
+\[ \text{Breakpoint} = \text{Amount of capital at which the source's cost of capital changes} \over \text{Proportion of new capital raised from source} \]
+\hfill \\
+
+
+\subsection{Flotation Costs}
+Flotation costs are costs incurred when a company tries to raise new capital. The flotation costs for debt and preferred stock is generally under one percent so we are not going to focus on it. The flotation cost of issuing equity via investment banks is often around 7.11 percent in the U.S. In other countries it is different, for example in Germany the cost is about 1.65 percent. A large part of the differences in cost is attributed to the type of offering: cash underwritten offers (e.g. the U.S.) are generally more expensive than rights offerings (which are more common in Europe). \\
+\hfill \\
+We can specify flotation costs in monetary terms, as an amount per share or as a percentage of the share price. The cost of external equity is: \\
+\hfill \\
+\[r_e = \left(D_1 \over {P_0 - F} \right) + g \]
+\hfill \\
+
+As a percentage applied against the price per share, the cost of external equity is: \\
+\hfill \\
+\[r_e = \left(D_1 \over {P_0 (1 - f)} \right) + g \]
+\hfill \\
+
+\subsection{What Do CFOs Do?}
+Surveys have revealed that: \\
+\begin{itemize}
+  \item The most popular method for estimating the cost of equity is the capital asset pricing model.
+  \item Few companies use the dividend cash flow model to estimate a cost of equity.
+  \item Publicly traded companies are more likely to use the capital asset pricing model than are private companies. 
+  \item In evaluating projects, the majority use a single company cost of capital, but a large portion apply some type of risk adjustment for individual projects.
+\end{itemize}
+
+\end{document}
+
