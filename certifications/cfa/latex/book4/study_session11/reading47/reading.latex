@@ -1,0 +1,16 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\author{Toby Banks}
+\date{Dec 12th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%% DuPont Analysis %%%%%%%%%%%%%%%%%%%%%%%
+\section{DuPont Analysis}
+
+%%%%%%%%%%%%%%%%%%%% Pro Forma Analysis %%%%%%%%%%%%%%%%%%%%%%%
+\section{Pro Forma Analysis}
+
+\end{document}
+
