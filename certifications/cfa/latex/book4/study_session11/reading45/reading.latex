@@ -14,6 +14,11 @@ Weighted Average Cost of Capital (WACC): \\
 \end{displaymath}
 \hfill \\
 
+An analyst uses the WACC in valuation. For example, the WACC is used to value a project using the net present value method: \\
+\[ \text{NPV} = \text{Present Value of Inflows} - \text{Present Value of Outflows} \]
+\hfill \\
+
+
 \subsection{Weights of the Weighted Average}
 An analyst must estimate a companies target capital structure using one of several approaches: \\
 \begin{enumerate}
@@ -135,7 +140,7 @@ The dividend discount model (Gordon growth model) in general states that the int
 \(r_e = \text{the cost of equity} \) \\
 \hfill \\
 
-Based on Gordon's constant growth formulation, we assume dividends are expected to grow at a constant rage, \emph{g}. Therefore, if we assume that price reflects intrinsic value \((V_0 = P_0\), we can rewrite the valuation of the stock as: \\
+Based on Gordon's constant growth formulation, we assume dividends are expected to grow at a constant rage, \emph{g}. Therefore, if we assume that price reflects intrinsic value \((V_0 = P_0)\), we can rewrite the valuation of the stock as: \\
 \hfill \\
 \[ P_0 = {D_1 \over {(r_e - g)}} \]
 \hfill \\
@@ -156,6 +161,9 @@ The sustainable growth rate: \\
 \hfill \\
 \[ g = \left(1 - {D \over EPS}\right)ROE \]
 \hfill \\
+NOTE: \(D \over EPS\) is also known as the dividend payout ratio. \\
+\hfill \\
+
 
 \subsubsection{Bond Yield plus Risk Premium Approach}
 The \textbf{bond yield plus risk premium approach} is based on the fundamental tenant in financial theory that the cost of capital of riskier cash flows is higher than the cost of less risky cash flows. In this approach, we sum the before-tax cost of debt, \(r_d\), and a risk premium that captures the additional yield on a company's stock relative to its bonds. \\
@@ -279,7 +287,7 @@ Another source of increasing marginal cost of capital is a deviation from the ta
 \hfill \\
 A \textbf{breakpoint} is the amount of capital at which the WACC changes. Meaning the cost of one of the sources of capital changes. \\
 \hfill \\
-\[ \text{Breakpoint} = \text{Amount of capital at which the source's cost of capital changes} \over \text{Proportion of new capital raised from source} \]
+\[ \text{Breakpoint} = {\text{Amount of capital at which the source's cost of capital changes} \over \text{Proportion of new capital raised from source}} \]
 \hfill \\
 
 
