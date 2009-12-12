@@ -1,0 +1,229 @@
+\documentclass{article}
+\usepackage{amsmath}
+
+\author{Toby Banks}
+\date{Dec 12th, 2009}
+
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%% Managing and Measuring Liquidity %%%%%%%%%%%%%%%%%%%%%%%
+\section{Managing and Measuring Liquidity}
+
+\subsection{Defining Liquidity Management}
+The primary sources of liquidity include: \\
+\begin{itemize}
+  \item Ready cash balances (cash from bank accounts, payment collections, investment income, liquidation of near-cash securities and other cash flows).
+  \item Short-term funds (trade credit, bank lines of credit, short-term investment portfolios).
+  \item Cash flow management (the degree of centralization/decentralization of the collections of payments).
+\end{itemize}
+\hfill \\
+
+Secondary sources of liquidity: \\
+\begin{itemize}
+  \item Negotiating debt contracts, relieving pressures from high interest payments or principal repayments.
+  \item Liquidating assets (hopefully without a substantial loss in value).
+  \item Filing for bankruptcy protection and reorganization.
+\end{itemize}
+\hfill \\
+
+The following major drags on liquidity can occur: \\
+\begin{itemize}
+  \item Uncollected receivables. 
+  \item Obsolete inventory.
+  \item Tight credit.
+\end{itemize}
+\hfill \\
+
+The following major pulls on liquidity can occur: \\
+\begin{itemize}
+  \item Making payments early. 
+  \item Reduced credit limits.
+  \item Limits on short-term lines of credit.
+  \item Low liquidity positions.
+\end{itemize}
+\hfill \\
+
+\subsection{Measuring Liquidity}
+\[ \text{Current Ratio} = {\text{Current Assets} \over \text{Current Liabilities}} \] 
+\hfill \\
+\[ \text{Quick Ratio} = {\text{Cash} + \text{Short-Term Marketable Investments} + \text{Receivables} \over \text{Current Liabilities}} \] 
+\hfill \\
+\[ \text{Accounts Receivable Turnover} = {\text{Credit Sales} \over \text{Average Receivables}} \] 
+\hfill \\
+\[ \text{Inventory Turnover} = {\text{Cost of Goods Sold} \over \text{Average Inventory}} \] 
+\hfill \\
+\begin{align*}
+\text{Number of Days of Receivables} &= {\text{Accounts Receivable} \over \text{Average Days Sales on Credit}} \\
+                                     &= {\text{Accounts Receivable} \over \text{Sales on Credit / 365}} \\
+\end{align*}
+\hfill \\
+\begin{align*}
+\text{Number of Days of Inventory} &= {\text{Inventory} \over \text{Average Days Cost of Goods Sold}} \\
+                                   &= {\text{Inventory} \over \text{Cost of Goods Sold / 365}} \\
+\end{align*}
+\hfill \\
+\begin{align*}
+\text{Number of Days of Payables} &= {\text{Accounts Payable} \over \text{Average Days Purchases}} \\
+                                  &= {\text{Accounts Payable} \over \text{Purchases / 365}} \\
+\end{align*}
+\hfill \\
+\[ \text{Operating Cycle} = \text{Num Days of Inventory} + \text{Num Days of Receivables} \]
+\hfill \\
+\[ \text{Net Operating Cycle} = \text{Operating Cycle} - \text{Num Days of Payables } \]
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%% Managing the Cash Position %%%%%%%%%%%%%%%%%%%%%%%
+\section{Managing the Cash Position}
+This stuff is pretty straight-forward so I'm going to skip writing notes on it right now. I'll leave this here in case something comes up. \\
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%% Investing Short-Term Funds %%%%%%%%%%%%%%%%%%%%%%%
+\section{Investing Short-Term Funds}
+\textbf{The discount interest} is the difference between the purchase price and the face value. \\
+\hfill \\
+\textbf{A nominal rate} is a rate of interest based on the security's face value. (e.g. 5 percent). \\
+\hfill \\
+\textbf{A yield} is the actual return on the investment if it is held to maturity. \\
+\hfill \\
+\[ \text{Money Market Yield} = \left({\text{Face Value} - \text{Purchase Price} \over \text{Purchase Price}}\right) \left(360 \over \text{Number of Days to Maturity}\right) \]
+\hfill \\
+\[ \text{Bond Equivalent Yield} = \left({\text{Face Value} - \text{Purchase Price} \over \text{Purchase Price}}\right) \left(365 \over \text{Number of Days to Maturity}\right) \]
+\hfill \\
+\[ \text{Discount-Basis Yield} = \left({\text{Face Value} - \text{Purchase Price} \over \text{Face Value}}\right) \left(360 \over \text{Number of Days to Maturity}\right) \]
+\hfill \\
+
+A \textbf{passive strategy} is characterized by one or two decision rules for making daily investments. \\
+\hfill \\
+A \textbf{active strategy} involves constant monitoring and may involve matching, mismatching, and ladder strategies. \\
+\hfill \\
+
+A \textbf{matching strategy} is the more conservative of the two and uses many of the same investment types as are used with passive strategies. It involves intentional matching the timing of cash outflows with investment maturities. \\
+\hfill \\
+A \textbf{mismatching strategy} is the more risky and requires much more accurate cash forecasts. It's possible to use derivatives here. \\
+\hfill \\
+A \textbf{ladder strategy} is another form of active strategy, which entails scheduling maturities on a systematic basis within the investment portfolio such that investments are spread out equally over the term of the ladder. A laddering strategy falls somewhere between a matching and passive strategy. \\
+\hfill \\
+Investment returns should be expressed as bond equivalent yields, to allow for comparability among investment alternatives. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%% Managing Accounts Receivable %%%%%%%%%%%%%%%%%%%%%%%
+\section{Managing Accounts Receivable}
+There are three primary activities in accounts receivable management: granting credit and processing transactions, monitoring credit balances, and measuring performance of the credit function. \\
+\hfill \\
+The goals for the accounts receivable management system include the following: \\
+\begin{itemize}
+  \item Efficient processing and maintaining accurate, up-to-date records that are available to credit managers and other interested parties as soon as possible after payments have been received. 
+  \item Control of accounts receivable and ensuring that accounts receivable records are current and that no unauthorized entry into the accounts receivable file has occurred.
+  \item Collection on accounts and coordination with the treasury management function.
+  \item Coordination and notification with the credit managers frequently.
+  \item Preparation of regular performance measurement reports.
+\end{itemize}
+\hfill \\
+
+A \textbf{captive finance subsidiary} is a wholly owned subsidiary of the company that is established to provide financing of the sales of the parent company. \\
+\hfill \\
+
+The major types of credit accounts include the following: \\
+\begin{itemize}
+  \item Open book, which is the most common for company to company.
+  \item Documentary, with or without lines of credit, most common for cross-border transactions.
+  \item Installment credit, with regular timed payments.
+  \item Revolving credit.
+\end{itemize}
+
+The different forms of terms of credit other than cash include the following: \\
+\begin{itemize}
+  \item Ordinary terms (e.g. \(net t\) or \(d/t_1 net t_2\) ).
+  \item Cash before delivery (CBD)
+  \item Cash on delivery (COD)
+  \item Bill-to-Bill
+  \item Monthly billing
+\end{itemize}
+
+A good perfomance measure for check deposits is a calculated \textbf{float factor}. The \textbf{float} in this contet is the amount of money that is in transit between payments made by customers and the funds that are usable by the company. We comput the float factor by dividing the average daily deposit in dollars into the average daily float: \\
+\begin{align*}
+  \text{Float Factor} &= {\text{Average Daily Float} \over \text{Average Daily Deposit}} \\
+                      &= {\text{Average Daily Float} \over \text{Total amount of checks deposited / Number of Days}} \\
+\end{align*}
+\hfill \\
+
+An \textbf{aging schedule} breaks down the accounts receivable into categories of days outstanding. \\
+\hfill \\
+
+%%%%%%%%%%%%%%%%%%%% Managing Inventory %%%%%%%%%%%%%%%%%%%%%%%
+\section{Managing Inventory}
+The \textbf{transactions motive} reflects the need for inventory as part of the routine production-sales cycle. Inventory need is equal to the planned manufacturing activity, and the approach to inventory will be dictated by the manufacturing plan. \\
+\hfill \\
+\textbf{Precautionary stocks} also may be desirable to avoid any \textbf{stock-out losses}, which are profits lost from not having sufficient inventory on hand to satisfy demand. \\
+\hfill \\
+A \textbf{economic order quantity-reorder point (EOQ-ROP)} method is based on expected demand and the predictabilty of demand, and it requires determining the level of inventory at which new inventory is ordered. For EOQ-ROP to work well there must be a reliable short-term forecast. \\
+\hfill \\
+\textbf{Manufacturing resource planning (MRP} systems incorporate production planning into inventory management. \\
+\hfill \\
+
+Four components of inventory cost are: \\
+\begin{enumerate}
+  \item Ordering
+  \item Carrying 
+  \item Stock-out
+  \item Policy (think workers overtime, data processing, training).
+\end{enumerate}
+
+%%%%%%%%%%%%%%%%%%%% Managing Accounts Payable %%%%%%%%%%%%%%%%%%%%%%%
+\section{Managing Accounts Payable}
+There are several factors that a company should consider as guidelines for effectively managoing its accounts payable, including:
+\begin{itemize}
+  \item Financial organization's centralization.
+  \item Number, size, and location of vendors.
+  \item Trade credit and cost of borrowing or alternative cost.
+  \item Control of disbursement float (the amount of time between a check issuance and the check clearing).
+  \item Inventory Management (JIT, MRP, etc..)
+  \item E-Commerce and Electronic Data Interchange (EDI). 
+\end{itemize}
+\hfill \\
+
+\[ \text{Cost of Trade Credit} = \left(1 + {\text{Discount} \over 1 - \text{Discount}}\right)^{365 \over \text{Days beyond Discount Period}} - 1 \]
+\hfill \\
+
+
+%%%%%%%%%%%%%%%%%%%% Managing Short-Term Financing %%%%%%%%%%%%%%%%%%%%%%%
+\section{Managing Short-Term Financing}
+\textbf{Committed lines of credit} are the form of bank line of credit that most companies refer to as regular lines of credit. Regular lines are unsecured and are pre-payable without any penalties. \\
+\hfill \\
+
+The three major objectives of a short-term borrowing strategy include: \\
+\begin{itemize}
+  \item Ensuring that htere is sufficient capacity to handle peak cash needs. 
+  \item Maintaining sufficient sources of credit to be able to fund ongoing cash needs.
+  \item Ensuring that rates obtained are cost-effective and do not substantially exceed market averages.
+\end{itemize}
+\hfill \\
+
+In addition, there are several factors that borrowers should consider as part of their short-term borrowing strategies: \\
+\begin{itemize}
+  \item Size and credit-worthiness.
+  \item Sufficient access.
+  \item Flexibiltiy of borrowing options. 
+\end{itemize}
+\hfill \\
+
+Calculating the cost of a credit line that requires a commitment fee: \\
+\[ \text{Cost} = {\text{Interest} + \text{Commitment Free} \over \text{Loan Amount}} \]
+\hfill \\
+
+Calculating the cost of a credit line that is all inclusive: \\
+\[ \text{Cost} = {\text{Interest} \over \text{Net Proceeds}} = {\text{Interest} \over \text{Loan Amount} - \text{Interest}} \]
+\hfill \\
+
+Calculating the cost of a credit line that has dealer's fees and other fees: \\
+\[ \text{Cost} = {\text{Interest} + \text{Dealer's Commission} + \text{Backup Costs} \over \text{Loan Amount} - \text{Interest}} \]
+\hfill \\
+
+
+
+
+
+\end{document}
+

@@ -1,0 +1,82 @@
+\documentclass{article}
+
+\author{Toby Banks}
+\date{Dec 12th, 2009}
+
+\begin{document}
+
+\section{Working Capital Management - LOS}
+\begin{itemize}
+  \item Describe primary and secondary sources of liquidity and factors that influence a company's liquidity position.
+  \item Compare a company's liquidity measures with those of peer companies.
+  \item Evaluate overall working capital effectiveness of a company, using the operating and cash conversion cycles, and compare its effectiveness with other peer companies. 
+  \item Identify and evaluate the necessary tools to use in managing a company's net daily cash position.
+  \item Compute and interpret comparable yields on various securities, compare portfolio returns against a standard benchmark, and evaluate a company's short-term investment policy guidelines. 
+  \item Assess the performance of a company's accounts receivable, inventory management, and accounts payable functions against historical figures and comparable peer company values.
+  \item Evaluate the choices of short-term funding available to a company and recommend a financing method.
+\end{itemize}
+
+\section{Working Capital Management - Questions}
+\begin{enumerate}
+  \item Name the three primary sources of liquidity.
+  \item Name the three secondary sources of liquidity.
+  \item Name the three major drags on liquidity.
+  \item Name the four major pulls on liquidity.
+  \item What is the current ratio?
+  \item What is the quick ratio?
+  \item What is the acid-test ratio?
+  \item What is the accounts receivable turnover ratio?
+  \item What is the inventory turnover ratio?
+  \item What is the number of days of receivables ratio?
+  \item What is the number of days of inventory ratio?
+  \item What is the number of days of payables ratio?
+  \item What is the formula for operating cycle?
+  \item What is the formula for net operating cycle?
+  \item What is the purpose of managing the cash position?
+%More managing the cash position questions should go here.
+  \item What are the typical maturities, features, and risks for the following short-term investment instruments:
+  \begin{enumerate}
+    \item U.S. Treasury Bills (T-Bills)
+    \item Federal Agency Securities
+    \item Bank Certificates of Deposit (CDs)
+    \item Banker's Acceptances (BAs)
+    \item Eurodollar Time Deposits
+    \item Bank Sweep Services
+    \item Repurchase Agreements (Repos)
+    \item Commercial Paper (CP)
+    \item Mutual Funds and Money Market Mutual Funds
+    \item Tax-Advantaged Securities
+  \end{enumerate}
+  \item What is the formula for a money-market yield?
+  \item What is the formula for a bond equivalent yield?
+  \item What is the formula for a discount-basis yield?
+  \item What is the difference between a passive and active strategy for short-term investment?
+  \item What are the following strategies: matching, mismatching, laddering. How are they different from each other?
+  \item What are the five elements that make up a short-term investment policy?
+% Managing Accounts Receivable
+  \item What are the five goals for the accounts receivable management system?
+  \item What are the four major types of credit accounts?
+  \item What are five different forms of terms of credit other than cash?
+  \item What are the following: EFT, ACH and Giro system?
+  \item What is a lockbox system?
+  \item What is the formula to calculate the float factor? What is the float factor?
+  \item What is a accounts receivable aging schedule?
+%Managing Inventory
+  \item What are the following: transactios motive, precautionaruy stocks, stock-out losses.
+  \item What is economic order quantity-reorder point (EOQ-ROP)? 
+  \item What is manufacturing resource planning MRP?
+%Managing Accounts Payable
+  \item What are six factors that a company should consider as guidelines for effectively managing its accounts payable?
+  \item What is the formula for the cost of trade credit? Why is it important?
+%Managing Accounts Payable
+  \item What are committed lines fo credit?
+  \item What are revolvers?
+  \item What are the three major objectives of a short-term borrowing strategy?
+  \item What are three additional factors that borrowers should consider as part of their short-term borrowing strategies?
+  \item What is a forumla to compute the cost of a credit line that requires a commitment fee?
+  \item What is a forumla to compute the cost of a credit line that is all inclusive?
+  \item What is a forumla to compute the cost of a credit line if dealer's fees and other fees (e.g. backup costs) are included?
+\end{enumerate}
+
+\end{document}
+
