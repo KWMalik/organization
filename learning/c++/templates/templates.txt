@@ -1,4 +1,3 @@
-
 What are templates?
 What are they useful for?
 	std::copy example
@@ -18,6 +17,4 @@ Meta Programming:
 	Determining things such as enums/derived/pod
 	Creating linked lists
 	Using linked lists to create design patterns
-
-
 

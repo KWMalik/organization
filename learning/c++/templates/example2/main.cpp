@@ -1,4 +1,3 @@
-
 #include <iostream>
 
 using namespace std;
@@ -13,6 +12,7 @@ const T& Maximum(const T& x, const T& y)
 	return y;
 }
 
+
 int main(int argc, char **argv)
 {
 	int a = 5;
@@ -26,3 +26,4 @@ int main(int argc, char **argv)
 
 	return 0;
 }
+
