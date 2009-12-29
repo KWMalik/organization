@@ -9,6 +9,57 @@
 %%%%%%%%%%%%%%%%%%%% DuPont Analysis %%%%%%%%%%%%%%%%%%%%%%%
 \section{DuPont Analysis}
 
+\[ \text{ROA} = {\text{Net Income} \over \text{Average Total Assets}} \]
+\hfill \\
+
+\[ \text{ROA} = {\text{Net Income} \over \text{Average Total Assets}}  = {\text{Net Income} \over \text{Revenues}} \times {\text{Revenues} \over \text{Average Total Assets}}  \]
+\hfill \\
+or, \\
+\hfill \\
+\[ \text{ROA} = {\text{Net Profit Margin} \times \text{Total Asset Turnover}} \]
+\hfill \\
+
+\[ \text{Net Profit Margin}  = {\text{Net Income} \over \text{Revenues}} \]
+\hfill \\
+
+\[ \text{Total Asset Turnover}  = {\text{Revenues} \over \text{Average Total Assets}} \]
+\hfill \\
+
+Breaking Net Profit Margin down further we can more accurately analyze a company. \\
+\hfill \\
+\[ \text{Net Profit Margin} = {\text{Operating Profit Margin} \times \text{Effect Of Non-Operating Items} \times \text{Tax Effect}} \]
+\hfill \\
+
+\[ \text{Operating Profit Margin} = {\text{Operating Income} \over \text{Revenues}} \]
+\hfill \\
+\[ \text{Effect of Nonoperating Items} = {\text{Income Before Taxes} \over \text{Operating Income}} \]
+\hfill \\
+\[ \text{Tax Effect} = 1 - {\text{Taxes} \over \text{Income Before Taxes}} \]
+\hfill \\
+
+Breaking this down further we can determine the return on equity as a product of its parts. \\
+\hfill \\
+
+\[  \text{ROE} = {\text{Net Income} \over \text{Average Shareholders' Equity}} \]
+\hfill \\
+
+\begin{align*}
+  \text{ROE} &= {\text{Net Income} \over \text{Average Shareholders' Equity}} \\
+             \\
+             &= {\text{Net Income} \over \text{Revenues}} \times {\text{Revenues} \over \text{Average Total Assets}} \times {\text{Average Total Assets} \over \text{Average Shareholders' Equity}}
+\end{align*}
+\hfill \\
+
+The full version of breaking down ROE: \\
+\hfill \\
+\begin{align*}
+  \text{ROE} &= {\text{Operating Income} \over \text{Revenues}} \times {\text{Income Before Taxes} \over \text{Operating Income}} \times \left[1 - {\text{Taxes} \over \text{Income Before Taxes}} \right] \\
+             \\
+             &\times {\text{Revenues} \over \text{Average Total Assets}} \times {\text{Average Total Assets} \over \text{Average Shareholders' Equity}} \\
+\end{align*}
+\hfill \\
+
+
 %%%%%%%%%%%%%%%%%%%% Pro Forma Analysis %%%%%%%%%%%%%%%%%%%%%%%
 \section{Pro Forma Analysis}
 
