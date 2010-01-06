@@ -2,21 +2,26 @@
 
 HB-Studios - 
 	-Complete integration of FIFA's changes.
-	-Work on lunch-time programming
-	-Get Blair's FE loading file changes.
-	-Talk to Matt Wambolt about kitclash.
-	-Created automated build schedule.
+	-Kitclash
+	-Get download build working
 
 
 Personal - 
 	-Send Peter Wedding Present ($150)
-	-Send Walker a Wedding Present ($100 for restraunt)
-	-Pay water bill
-	-Pay power bill
+	-Get Chrisanna a present.
+		-LuLu Certificate
+		-Zelda Game
 
 CFA -
-	-Test Stella software
-	-Look for more torrents
-	-Finish long-term assets reading
-	-Questions/Notes on inventory reading
+	-Finish Corporate Finance
+	-Finish Portfolio Management
+	-Finish Equity (by Jan 2nd).
+
+Learning - 
+	-Finish OpenGL Red Book
+	-Finish OpenGL Orange Book
+	-Finish Real-Time Rendering
+	-Read Unity Book
+	-Work through Maya tutorials
+	-Work through Unreal video tutorials
 
