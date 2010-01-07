@@ -2,26 +2,19 @@
 
 HB-Studios - 
 	-Complete integration of FIFA's changes.
-	-Kitclash
 	-Get download build working
 
 
 Personal - 
 	-Send Peter Wedding Present ($150)
-	-Get Chrisanna a present.
-		-LuLu Certificate
-		-Zelda Game
+	-Donate $1200 to Plan.ca
 
 CFA -
-	-Finish Corporate Finance
-	-Finish Portfolio Management
-	-Finish Equity (by Jan 2nd).
+	-Finish Equity (by Jan 17th).
+	-Finish Fixed Income (by Jan 31st).
+	-Order either Stalla/Kaplan
 
 Learning - 
 	-Finish OpenGL Red Book
-	-Finish OpenGL Orange Book
-	-Finish Real-Time Rendering
-	-Read Unity Book
-	-Work through Maya tutorials
-	-Work through Unreal video tutorials
+
 
