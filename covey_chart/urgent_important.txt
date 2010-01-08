@@ -3,7 +3,8 @@
 HB-Studios - 
 	-Complete integration of FIFA's changes.
 	-Get download build working
-
+	-Ask Blair about updated boots.
+	-Integration from FIFA 10
 
 Personal - 
 	-Send Peter Wedding Present ($150)
