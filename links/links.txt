@@ -11,3 +11,15 @@ FIFA 10 Sales
 http://www.gamesindustry.biz/articles/fifa-10-sales-top-4.5-million
 
 
+C++ Network Library:
+http://blog.cplusplus-soup.com/2009/12/c-network-library-now-on-github.html?utm_source=feedburner&utm_medium=feed&utm_campaign=Feed%3A+CppSoup+%28c%2B%2B+soup%29
+
+Open Source Hardward:
+http://blog.makezine.com/archive/2009/12/open_source_hardware_2009_-_the_def.html
+
+Other:
+  SRED - http://www.cra-arc.gc.ca/sred/ (up to 35% on 2,000,000)
+  Nova Scotia Equity Tax Refund (35%)
+
+
+

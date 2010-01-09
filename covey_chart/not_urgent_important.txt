@@ -1,9 +1,5 @@
 *****Not Urgent and Important*****
 
-HB-Studios
-	-Get people involved in a teaching others tutorial.
-	-Prepare first lunch time talk.
-
 Friends - 
 	-Call Lisa
 	-Call Diddy/Steve/Davidson/Tim
@@ -13,5 +9,12 @@ Friends -
 
 CFA - 
 	-Go back and bring notes up to date for all Quantitative, Economics, and Financial Statement readings.
-	-
+
+
+Learning - 
+	-Finish OpenGL Orange Book
+	-Finish Real-Time Rendering
+	-Read Unity Book
+	-Work through Maya tutorials
+	-Work through Unreal video tutorials
 

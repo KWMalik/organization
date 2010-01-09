@@ -1,7 +1,13 @@
 *****Not Urgent Not Important*****
 
-
 Personal -
 	-Organize my MacBook
 	-Get backup system for MacBook
+
+Software -
+	-Install Maya on my Windows machine
+	-Buy ActiveState Komodo
+	-Buy Beyond Compare
+	-Buy VS 2010
+	-Buy Visual Assist X
 
