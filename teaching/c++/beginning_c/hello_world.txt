@@ -1,0 +1,12 @@
+Hello world will start off by describing a C program. First we need to talk about the include, the function declaration, printing and the return statement.
+
+	-Include files.
+		-Basically the same as Copy/Paste.
+	-main function declaration
+		-We're not going to get into functions much right now
+			-Important to know what is returned is returned to the operating system
+				-Example of such.
+		-Parameters being handed in. (We'll talk about this later).
+	-printing out a line
+		-The newline at the end.
+

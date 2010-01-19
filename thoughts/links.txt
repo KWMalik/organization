@@ -54,3 +54,30 @@ Revision Control:
  - git server
  - Perforce Server
 
+******************************INTRANET************************************
+
+
+Get Bug/Issue tracking/Project Management software:
+ - Redmine
+ - Trac
+ - Bugzilla
+ - Mantis
+ - Retrospectiva
+
+Code Review:
+ - Review Board
+
+General Wiki:
+ - MediaWiki
+
+General Blog:
+
+General Portal:
+
+General Forums:
+
+
+******************************Software*************************************
+Setup Putty.
+
+
