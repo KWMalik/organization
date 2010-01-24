@@ -1,3 +1,7 @@
+
+
+
+
 Hello world will start off by describing a C program. First we need to talk about the include, the function declaration, printing and the return statement.
 
 	-Include files.
@@ -9,28 +13,4 @@ Hello world will start off by describing a C program. First we need to talk abou
 		-Parameters being handed in. (We'll talk about this later).
 	-printing out a line
 		-The newline at the end.
-
-
-
-
-
-***************************************************************************
-Breakdown - 
-
-	Ch1 - A simple print of hello world.
-			-Covers include files (only slightly)
-			-Introduction to the main function.
-
-
-
-
-***************************************************************************
-
-Need to beef out in further sessions:
-	Include files
-	Main function
-	printf
-	Return types
-
-
 

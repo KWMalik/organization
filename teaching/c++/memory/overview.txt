@@ -1,0 +1,24 @@
+
+OpenCL - Importance of data-driven design.
+
+Memory Pools -
+	-Quick pools
+	-Slower pools
+	-Small Object Allocator
+
+
+
+
+
+
+***************************************************************************
+Breakdown - 
+
+	Ch1 - 
+
+
+
+***************************************************************************
+
+Need to beef out in further sessions:
+
