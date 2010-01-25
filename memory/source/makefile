@@ -22,7 +22,7 @@ TEST1_OBJ = $(patsubst %,$(ODIR)/%,$(_TEST1_OBJ))
 
 default: $(TEST_EXE)
 
-$(ODIR)/%.o:  source/%.cpp tests/%.cpp
+$(ODIR)/%.o:  source/%.cpp
 	$(CC) -c -o $@ $< $(CFLAGS) $(INCDIR)
 
 $(MEMORY_LIB): $(MEMORY_OBJ)
@@ -31,11 +31,14 @@ $(MEMORY_LIB): $(MEMORY_OBJ)
 $(ODIR)/%.o: tests/%.cpp
 	$(CC) -c -o $@ $< $(CFLAGS) $(INCDIR)
 
-$(TEST_EXE): $(MEMORY_LIB) $(TEST1_OBJ)
-	$(CC) $(LKFLAGS) -o $@ $^ $(CFLAGS) $(MEMORY_LIB) $(
+$(TEST_EXE): $(MEMORY_OBJ) $(TEST1_OBJ)
+	$(CC) $(LKFLAGS) -o $@ $^ $(CFLAGS)
 
 .PHONY: clean
-
 clean:
 	rm -f $(ODIR)/*.o $(ODIR)/.exe $(ODIR)/*.stackdump $(ODIR)/*.map $(ODIR)/*.a
+
+.PHONY: run
+run:
+	$(TEST_EXE)
 
