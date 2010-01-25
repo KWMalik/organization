@@ -1,0 +1,23 @@
+
+-High/Low
+	-Visualizing a heap.
+
+-Using Pools (i.e. FIFA)
+	-RENDER
+	-FE
+	-AI
+	-SWAP
+	-AUDIO
+	-GAME
+	-NETWORK
+	-DATABASE
+
+Tools to visualize memory:
+	-MemLog
+
+Embedded System
+	-
+
+
+
+

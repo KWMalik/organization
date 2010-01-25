@@ -1,0 +1,84 @@
+History/Overview of C++
+	-C++ vs. Java vs. Python
+	-History of C++
+	-C as opposed to C++
+
+Beginning C
+	-Program Entry Point
+	-I/O
+	-types
+
+Flow Control
+	-if statements
+	-switch statements
+	-for loops
+	-while statements
+
+Functions
+	-Signatures
+	-inline
+	-Size (i.e. less than 20 lines)
+	-Names of functions should be completely descriptive.
+	-Passing parameters as references
+	-Passing parameters as pointers
+	-Out parameters come last
+	-Doxygen comments
+
+Structs:
+	-POD Plain old data
+	-Alignment issues
+	-Pointers to other structs
+	-malloc/free
+
+Time to learn data structures:
+	-The Stack
+	-The Heap/Freestore
+
+Unions:
+	-Different syntax/Same Data
+	-Matrix example.
+	
+Function Pointers:
+	-Why use them?
+	-What are they useful for?
+	-Tricky syntax
+
+Classes:
+	-Like structs on steriods.	
+	-A struct is a class, the compiler will treat them the same.
+	-Public/Private/Protected.
+	-Nested classes
+	-Constructors/Destructors.
+	-friends
+
+Templates:
+	-General Functions
+	-Different syntax for different compilers
+
+STL:
+	-vector class
+	-list class
+	-map class
+	-tree class
+	-algorithms
+
+Theory/Practice:
+	Representing the real world as classes
+	Keeping classes on point (i.e. small and functional)
+
+Paradigms:
+	-Singleton
+	-Manager classes
+	-Event driven programming (i.e. Signals and Slots)
+	-Update loops
+
+Topics of interest:
+	-Using structs and unions to emulate OOP.
+	-Using the map file.
+	-A complete guide to compiler flags.
+	-Overview of Boost
+	-Overview of Loki
+	-Introduction to GUI programming with QT
+	-C++1x
+
+

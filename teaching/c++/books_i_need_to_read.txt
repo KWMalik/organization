@@ -1,0 +1,15 @@
+The C++ Programming Language - Bjarne Stroustrup
+
+Effective C++ - Scott Meyers
+More Effective C++ - Scott Meyers
+Effective STL = Scott Meyers
+
+Modern C++ Design - Andrei Alexandrescu
+
+Exceptional C++ - Herb Sutter
+More Exceptional C++ - Herb Sutter
+Exceptional C++ Style - Herb Sutter
+C++ Coding Standards - Herb Sutter
+
+C++ Template Metaprogramming - David Abrahams
+
