@@ -1,26 +1,28 @@
-#include "corepch.h"
-#include "memory/chunk.h"
-#include "debug/assert.h"
+#include "chunk.h"
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 
 #include <bitset>
+#include <limits>
 
-using namespace Axe;
-using namespace Axe::Memory;
-using namespace Axe::Debug;
+#define Assert(...) 
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-Bool Chunk::Init(const UInt size, const UInt8 numberOfElements)
+bool Chunk::Init(const unsigned int size, const unsigned char numberOfElements)
 {
     m_uiTotalNumElements = numberOfElements;
     m_uiSize = size;
 
-    const UInt sizeToAllocate = m_uiSize * m_uiTotalNumElements;
-    m_pData = static_cast<UInt8*>(malloc(sizeToAllocate));
+    const unsigned int sizeToAllocate = m_uiSize * m_uiTotalNumElements;
+    m_pData = static_cast<unsigned char*>(malloc(sizeToAllocate));
     memset(m_pData, 0, sizeToAllocate);
 
     Reset();
 
-    return True;
+    return true;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -30,7 +32,7 @@ void * Chunk::Allocate()
     void * pReturn = static_cast<void*>(&(m_pData[m_uiSize * m_uiFirstAvailableBlock]));
     
     //Set our next block
-    UInt8* nextBlock = static_cast<UInt8*>(pReturn);
+    unsigned char* nextBlock = static_cast<unsigned char*>(pReturn);
     m_uiFirstAvailableBlock = *nextBlock;
 
     --m_uiBlocksAvailable;
@@ -41,33 +43,31 @@ void * Chunk::Allocate()
 ///////////////////////////////////////////////////////////////////////////////////////////////
 void Chunk::Deallocate(void *pointer)
 {
-#if AXE_DEBUG
     Assert(ASSERT_ALL, (pointer >= m_pData), "Pointer is outside of the memory range of this block.\n");
     Assert(ASSERT_ALL, (pointer <= static_cast<void*>(m_pData + (m_uiSize * m_uiTotalNumElements))), 
         "Pointer is outside of the memory range of this block.\n");
-#endif // AXE_DEBUG
 
-    UInt8* release = static_cast<UInt8*>(pointer);
+    unsigned char* release = static_cast<unsigned char*>(pointer);
 
-#if AXE_DEBUG
+#if DEBUG
     //Alignment check.
     Assert(ASSERT_ALL, (((release - m_pData) % m_uiSize) == 0));
-#endif // AXE_DEBUG
+#endif // DEBUG
 
     //Calculate the index of this block.
-    UInt8 index = static_cast<UInt8>((release - m_pData) / m_uiSize);
+    unsigned char index = static_cast<unsigned char>((release - m_pData) / m_uiSize);
 
-#if AXE_DEBUG
+#if DEBUG
     //Check to see if the block was already deleted.
     Assert(ASSERT_ALL, m_uiFirstAvailableBlock != index);
-#endif // AXE_DEBUG
+#endif // DEBUG
 
     *release = m_uiFirstAvailableBlock;
     m_uiFirstAvailableBlock = index;
 
-#if AXE_DEBUG
+#if DEBUG
     Assert(ASSERT_ALL, (m_uiFirstAvailableBlock == (release - m_pData) / m_uiSize));
-#endif // AXE_DEBUG
+#endif // DEBUG
 
     ++m_uiBlocksAvailable;
 }
@@ -82,8 +82,8 @@ void Chunk::Reset()
     m_uiFirstAvailableBlock = 0;
     m_uiBlocksAvailable = m_uiTotalNumElements;
 
-    UInt8 i = 1;
-    for(UInt8 * p = m_pData; i != m_uiTotalNumElements; p += m_uiSize)
+    unsigned char i = 1;
+    for(unsigned char * p = m_pData; i != m_uiTotalNumElements; p += m_uiSize)
     {
         *p = i;
         ++i;
@@ -105,33 +105,34 @@ void Chunk::Release()
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-Bool Chunk::IsCorrupt() const 
+bool Chunk::IsCorrupt() const 
 {
     if(m_uiTotalNumElements < m_uiBlocksAvailable)
     {
         Assert(ASSERT_ALL, false, "Chunk is corrupted.\n");
-        return True;
+        return true;
     }
 
     if(IsFull())
     {
         //If we are full we can't do corruption checks on the indexes.
-        return False;
+        return false;
     }
 
     if(m_uiTotalNumElements <= m_uiFirstAvailableBlock)
     {
-        Assert(ASSERT_ALL, False, "Chunk is corrupted.\n");
-        return True;
+        Assert(ASSERT_ALL, false, "Chunk is corrupted.\n");
+        return true;
     }
 
     // Time to test our linked list.
+	const size_t lim = std::numeric_limits<unsigned char>::max();
     std::bitset<UCHAR_MAX> foundBlocks;
-    UInt8 index = m_uiFirstAvailableBlock;
-    UInt8 cc = 0;
-    UInt8 * nextBlock = 0;
+    unsigned char index = m_uiFirstAvailableBlock;
+    unsigned char cc = 0;
+    unsigned char * nextBlock = 0;
 
-    while(True)
+    while(true)
     {
         if(cc >= m_uiBlocksAvailable)
         {
@@ -147,60 +148,60 @@ Bool Chunk::IsCorrupt() const
         if(m_uiTotalNumElements <= index)
         {
             //We have a index that is out of range of this block.
-            Assert(ASSERT_TJB, False, "Index is out of range.\n");
-            return True;
+            Assert(ASSERT_TJB, false, "Index is out of range.\n");
+            return true;
         }
 
         if(foundBlocks.test(index))
         {
             //We have a index that is a duplicate.
             // i.e. 7 -> 10 -> 29 -> 7 (Corrupt list. 7 is a duplicate)
-            Assert(ASSERT_ALL, False, "We have a index that is a duplicate");
-            return True;
+            Assert(ASSERT_ALL, false, "We have a index that is a duplicate");
+            return true;
         }
         ++cc;
-    } // End while(True);
+    } // End while(true);
 
     if(foundBlocks.count() != m_uiBlocksAvailable)
     {
         // The linked list is corrupt.
-        Assert(ASSERT_ALL, False, "The linked list is corrupt.\n");
-        return True;
+        Assert(ASSERT_ALL, false, "The linked list is corrupt.\n");
+        return true;
     }
 
-    return False;
+    return false;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-Bool Chunk::IsBlockAvailable(void * pointer) const
+bool Chunk::IsBlockAvailable(void * pointer) const
 {
     if(IsFull())
     {
-        return False;
+        return false;
     }
-    UInt8 *block = static_cast<UInt8*>(pointer);
+    unsigned char *block = static_cast<unsigned char*>(pointer);
 
     //Alignment check.
     Assert(ASSERT_ALL, (((block - m_pData) * m_uiSize) == 0));
 
     //Calculate the index of block.
-    UInt8 blockIndex = static_cast<UInt8>((block - m_pData) / m_uiSize);
+    unsigned char blockIndex = static_cast<unsigned char>((block - m_pData) / m_uiSize);
 
-    UInt8 index = m_uiFirstAvailableBlock;
+    unsigned char index = m_uiFirstAvailableBlock;
     Assert(ASSERT_ALL, m_uiTotalNumElements > index);
 
     if(index == blockIndex)
     {
         //The index of the parameter pointer is actually pointing to 
         //our first available block (m_uiFirstAvailableBlock).
-        return True;
+        return true;
     }
 
     //We need to iterate over our linked list of available blocks
     std::bitset<UCHAR_MAX> foundBlocks;
-    UInt8 *nextBlock = 0;
-    UInt8 cc = 0;
-    while(True)
+    unsigned char *nextBlock = 0;
+    unsigned char cc = 0;
+    while(true)
     {
         nextBlock = (m_pData + (index * m_uiSize));
         foundBlocks.set(index, true);
@@ -216,12 +217,12 @@ Bool Chunk::IsBlockAvailable(void * pointer) const
         if(index == blockIndex)
         {
             // We found a available block.
-            return True;
+            return true;
         }
         Assert(ASSERT_ALL, m_uiTotalNumElements > index, "Index is out of range.\n");
         Assert(ASSERT_ALL, !foundBlocks.test(index));
-    } // while(True)
+    } // while(true)
 
-    return False;
+    return false;
 }
 

@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "memory/smallobjectallocator.h"
+#include "smallobjectallocator.h"
 
 using namespace std;
 
@@ -16,15 +16,12 @@ using namespace std;
 
 int main()
 {
-	using namespace Axe;
-	using namespace Axe::Memory;
-
 	cout << "Running core-test-memory1" << endl;
 
 #if TEST_CHUNK
 	Chunk chunk;
 	chunk.Init(4, 10);
-	Int32 *i = (Int32*)chunk.Allocate();
+	int *i = (int*)chunk.Allocate();
 	cout << "The value of i " << *i << endl;
 	*i = 100;
 	cout << "The value of i " << *i << endl;
@@ -34,11 +31,11 @@ int main()
 	FixedAllocator fa;
 	fa.Init(4, 5);
 
-	Int32 *a = (Int32*)fa.Allocate();
-	Int32 *b = (Int32*)fa.Allocate();
-	Int32 *c = (Int32*)fa.Allocate();
-	Int32 *d = (Int32*)fa.Allocate();
-	Int32 *e = (Int32*)fa.Allocate();
+	int *a = (int*)fa.Allocate();
+	int *b = (int*)fa.Allocate();
+	int *c = (int*)fa.Allocate();
+	int *d = (int*)fa.Allocate();
+	int *e = (int*)fa.Allocate();
 	cout << "The value of a " << *a << endl;
 	cout << "The value of b " << *b << endl;
 	cout << "The value of c " << *c << endl;
@@ -56,10 +53,10 @@ int main()
 	cout << "The value of d " << *d << endl;
 	cout << "The value of e " << *e << endl;
 
-	int *f = (Int32*)fa.Allocate();
-	int *g = (Int32*)fa.Allocate();
-	int *h = (Int32*)fa.Allocate();
-	int *i = (Int32*)fa.Allocate();
+	int *f = (int*)fa.Allocate();
+	int *g = (int*)fa.Allocate();
+	int *h = (int*)fa.Allocate();
+	int *i = (int*)fa.Allocate();
 
 	cout << "The value of f " << *f << endl;
 	cout << "The value of g " << *g << endl;
@@ -96,10 +93,9 @@ int main()
 	cout << "The value of i " << *i << endl;
 
 
-	//SmallObjectAllocator(Axe::UInt pageSize, Axe::UInt maxObjectSize, Axe::UInt objectAlignSize);
-	const UInt pageSize = 10;
-	const UInt maxObjectSize = 128;
-	const UInt objectAlignSize = 16;
+	const unsigned int pageSize = 10;
+	const unsigned int maxObjectSize = 128;
+	const unsigned int objectAlignSize = 16;
 	SmallObjectAllocator so(pageSize, maxObjectSize, objectAlignSize);
 
 	cout << "Finished running core-test-memory1" << endl;

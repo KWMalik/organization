@@ -1,17 +1,14 @@
-#include "memory/smallobjectallocator.h"
-#include "debug/assert.h"
+#include "smallobjectallocator.h"
 
-using namespace Axe;
-using namespace Axe::Memory;
+#define Assert(...) 
 
 
-/////////////////////////////////////////////////////////////////////////////////
 /// \ingroup SmallObjectGroupInternal
 ///
 /// Calculates index into array where a FixedAllocator of numBytes is located.
-inline UInt GetOffset(UInt numBytes, UInt alignment)
+inline unsigned int GetOffset(unsigned int numBytes, unsigned int alignment)
 {
-    const UInt alignExtra = alignment-1;
+    const unsigned int alignExtra = alignment-1;
     return (numBytes + alignExtra) / alignment;
 }
 
@@ -24,9 +21,9 @@ inline UInt GetOffset(UInt numBytes, UInt alignment)
 /// the size which can be handled by any FixedAllocator.
 ///
 /// \param numBytes number of bytes
-/// \param doThrow True if this function should throw an exception. If false if 
+/// \param doThrow true if this function should throw an exception. If false if 
 ///                it should indicate failure by returning a NULL pointer.
-void * DefaultAllocator( UInt numBytes, bool doThrow )
+void * DefaultAllocator( unsigned int numBytes, bool doThrow )
 {
     return doThrow ? ::operator new(numBytes) : ::operator new(numBytes, std::nothrow_t());
 }
@@ -49,11 +46,11 @@ void DefaultDeallocator( void * p )
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-SmallObjectAllocator::SmallObjectAllocator(UInt pageSize, UInt maxObjectSize, UInt objectAlignSize) : 
+SmallObjectAllocator::SmallObjectAllocator(unsigned int pageSize, unsigned int maxObjectSize, unsigned int objectAlignSize) : 
 					m_pPool(0), m_uiMaxSmallObjectSize(maxObjectSize), m_uiObjectAlignSize(objectAlignSize)
 {
 	Assert(ASSERT_TJB, 0 != objectAlignSize);
-	const UInt allocCount = GetOffset(maxObjectSize, objectAlignSize);
+	const unsigned int allocCount = GetOffset(maxObjectSize, objectAlignSize);
 	m_pPool = new FixedAllocator[allocCount];
 	for(int i = 0; i < allocCount; ++i)
 	{
@@ -70,21 +67,21 @@ SmallObjectAllocator::~SmallObjectAllocator()
 /////////////////////////////////////////////////////////////////////////////////
 bool SmallObjectAllocator::TrimExcessMemory()
 {
-    bool found = False;
-    const UInt allocCount = GetOffset(GetMaxObjectSize(), GetAlignment());
+    bool found = false;
+    const unsigned int allocCount = GetOffset(GetMaxObjectSize(), GetAlignment());
 
-    for(UInt i = 0; i < allocCount; ++i)
+    for(unsigned int i = 0; i < allocCount; ++i)
     {
         if(m_pPool[i].TrimEmptyChunk())
 		{
-            found = True;
+            found = true;
 		}
     }
-    for(UInt i = 0; i < allocCount; ++i)
+    for(unsigned int i = 0; i < allocCount; ++i)
     {
         if(m_pPool[i].TrimChunkContainer())
 		{
-            found = True;
+            found = true;
 	    }
 	}
 
@@ -92,7 +89,7 @@ bool SmallObjectAllocator::TrimExcessMemory()
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-void * SmallObjectAllocator::Allocate(UInt numBytes, bool doThrow)
+void * SmallObjectAllocator::Allocate(unsigned int numBytes, bool doThrow)
 {
     if(numBytes > GetMaxObjectSize() )
 	{
@@ -105,8 +102,8 @@ void * SmallObjectAllocator::Allocate(UInt numBytes, bool doThrow)
 		numBytes = 1;
 	}
 
-    const UInt index = GetOffset(numBytes, GetAlignment()) - 1;
-    const UInt allocCount = GetOffset(GetMaxObjectSize(), GetAlignment());
+    const unsigned int index = GetOffset(numBytes, GetAlignment()) - 1;
+    const unsigned int allocCount = GetOffset(GetMaxObjectSize(), GetAlignment());
     (void) allocCount;
 
     Assert(ASSERT_MEM, index < allocCount);
@@ -135,7 +132,7 @@ void * SmallObjectAllocator::Allocate(UInt numBytes, bool doThrow)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-void SmallObjectAllocator::Deallocate( void * p, UInt numBytes )
+void SmallObjectAllocator::Deallocate( void * p, unsigned int numBytes )
 {
     if(NULL == p)
 	{
@@ -153,8 +150,8 @@ void SmallObjectAllocator::Deallocate( void * p, UInt numBytes )
 	{
 		numBytes = 1;
 	}
-    const UInt index = GetOffset(numBytes, GetAlignment()) - 1;
-    const UInt allocCount = GetOffset(GetMaxObjectSize(), GetAlignment());
+    const unsigned int index = GetOffset(numBytes, GetAlignment()) - 1;
+    const unsigned int allocCount = GetOffset(GetMaxObjectSize(), GetAlignment());
     (void) allocCount;
 
     Assert(ASSERT_MEM, index < allocCount);
@@ -178,10 +175,10 @@ void SmallObjectAllocator::Deallocate(void * p)
     Assert(ASSERT_MEM, NULL != m_pPool);
 
     FixedAllocator * pAllocator = NULL;
-    const UInt allocCount = GetOffset(GetMaxObjectSize(), GetAlignment());
+    const unsigned int allocCount = GetOffset(GetMaxObjectSize(), GetAlignment());
     Chunk * chunk = NULL;
 
-    for (UInt i = 0; i < allocCount; ++i)
+    for (unsigned int i = 0; i < allocCount; ++i)
     {
         chunk = m_pPool[i].HasBlock(p);
         if(chunk)
@@ -208,27 +205,27 @@ bool SmallObjectAllocator::IsCorrupt( void ) const
 {
     if ( NULL == m_pPool )
     {
-        Assert(ASSERT_MEM, False );
-        return True;
+        Assert(ASSERT_MEM, false );
+        return true;
     }
     if ( 0 == GetAlignment() )
     {
-        Assert(ASSERT_MEM, False );
-        return True;
+        Assert(ASSERT_MEM, false );
+        return true;
     }
     if ( 0 == GetMaxObjectSize() )
     {
-        Assert(ASSERT_MEM, False );
-        return True;
+        Assert(ASSERT_MEM, false );
+        return true;
     }
-    const UInt allocCount = GetOffset( GetMaxObjectSize(), GetAlignment() );
-    for ( UInt i = 0; i < allocCount; ++i )
+    const unsigned int allocCount = GetOffset( GetMaxObjectSize(), GetAlignment() );
+    for ( unsigned int i = 0; i < allocCount; ++i )
     {
         if ( m_pPool[i].IsCorrupt() )
 		{
-            return True;
+            return true;
 		}
     }
-    return False;
+    return false;
 }
 

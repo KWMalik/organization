@@ -1,13 +1,7 @@
-#ifndef _AXE_MEMORY_SMALL_OBJECT_ALLOCATOR_H_
-#define _AXE_MEMORY_SMALL_OBJECT_ALLOCATOR_H_
+#ifndef _SMALL_OBJECT_ALLOCATOR_H_
+#define _SMALL_OBJECT_ALLOCATOR_H_
 
-//#include "containers/vector/vector.h"
-#include "memory/fixedallocator.h"
-
-namespace Axe
-{
-namespace Memory
-{
+#include "fixedallocator.h"
 
 /// \class SmallObjectAllocator
 /// \author Toby Banks
@@ -16,7 +10,8 @@ namespace Memory
 class SmallObjectAllocator
 {
 public:
-	SmallObjectAllocator(Axe::UInt pageSize, Axe::UInt maxObjectSize, Axe::UInt objectAlignSize);
+	SmallObjectAllocator(unsigned int pageSize, unsigned int maxObjectSize, unsigned int objectAlignSize);
+
 	~SmallObjectAllocator();
 
 	/// \function Allocate
@@ -51,7 +46,7 @@ public:
 	/// \return A pointer to the memory block. If nothing is allocated and doThrow
 	///         is false return NULL. the pointer to an available block of memory.
 	///
-	void * Allocate(Axe::UInt size, Axe::Bool doThrow);
+	void * Allocate(unsigned int size, bool doThrow);
 
 	/// \function Deallocate
 	/// \author Toby Banks
@@ -62,7 +57,7 @@ public:
 	///
 	/// \param p Pointer to the allocation to be freed.
 	/// \param size The size of the allocation
-	void Deallocate( void * p, Axe::UInt size);
+	void Deallocate( void * p, unsigned int size);
 
 	/// \function Deallocate
 	/// \author Toby Banks
@@ -78,13 +73,13 @@ public:
 	void Deallocate( void * p );
 
 	/// \return The max number of bytes which this can allocate.
-	inline Axe::UInt GetMaxObjectSize() const
+	inline unsigned int GetMaxObjectSize() const
 	{
 		return m_uiMaxSmallObjectSize;
 	}
 
 	/// \return The number of bytes between allocation boundaries.
-	inline Axe::UInt GetAlignment() const
+	inline unsigned int GetAlignment() const
 	{ 
 		return m_uiObjectAlignSize;
 	}
@@ -99,7 +94,7 @@ public:
 	/// Loki's allocator, and is called internally when an allocation fails.
 	///
 	/// \return True if any memory released, or false if none released.
-	Axe::Bool TrimExcessMemory();
+	bool TrimExcessMemory();
 
 	/// \function IsCorrupt
 	/// \author Toby Banks
@@ -127,14 +122,11 @@ private:
 	FixedAllocator * m_pPool;
 
 	/// Largest object size supported by allocators.
-	const Axe::UInt m_uiMaxSmallObjectSize;
+	const unsigned int m_uiMaxSmallObjectSize;
 
 	/// Size of alignment boundaries.
-	const Axe::UInt m_uiObjectAlignSize;
+	const unsigned int m_uiObjectAlignSize;
 };
 
-} // namespace Memory
-} // namespace Axe
-
-#endif // _AXE_MEMORY_SMALL_OBJECT_ALLOCATOR_H_
+#endif // _SMALL_OBJECT_ALLOCATOR_H_
 

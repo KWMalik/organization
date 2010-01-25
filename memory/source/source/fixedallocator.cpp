@@ -1,25 +1,23 @@
-#include "corepch.h"
-#include "containers/algorithms/algorithms.h"
-#include "memory/fixedallocator.h"
-#include "debug/assert.h"
+#include <algorithm>
+#include <iostream>
 
-using namespace Axe;
-using namespace Axe::Memory;
-using namespace Axe::Debug;
+#include "fixedallocator.h"
 
-UInt8 FixedAllocator::s_uiMinObjectsPerChunk = 8;
-UInt8 FixedAllocator::s_uiMaxObjectsPerChunk = UCHAR_MAX;
+#define Assert(...) 
+
+unsigned char FixedAllocator::s_uiMinObjectsPerChunk = 8;
+unsigned char FixedAllocator::s_uiMaxObjectsPerChunk = UCHAR_MAX;
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-void FixedAllocator::Init(UInt blockSize, UInt chunkSize)
+void FixedAllocator::Init(unsigned int blockSize, unsigned int chunkSize)
 {
     Assert(ASSERT_TJB, blockSize > 0);
     Assert(ASSERT_TJB, chunkSize >= blockSize);
 
     m_uiBlockSize = blockSize;
 
-    UInt numberOfBlocks = chunkSize / blockSize;
+    unsigned int numberOfBlocks = chunkSize / blockSize;
     if(numberOfBlocks > s_uiMaxObjectsPerChunk)
     {
         numberOfBlocks = s_uiMaxObjectsPerChunk;
@@ -29,7 +27,7 @@ void FixedAllocator::Init(UInt blockSize, UInt chunkSize)
         numberOfBlocks = s_uiMinObjectsPerChunk;
     }
 
-    m_uiNumberOfBlocks = static_cast<UInt8>(numberOfBlocks);
+    m_uiNumberOfBlocks = static_cast<unsigned char>(numberOfBlocks);
     Assert(ASSERT_ALL, numberOfBlocks == m_uiNumberOfBlocks);
 }
 
@@ -50,9 +48,9 @@ void * FixedAllocator::Allocate()
         }
         else
         {
-            for(Iterator it = m_pChunks.Begin(); ; ++it)
+            for(iterator it = m_pChunks.begin(); ; ++it)
             {
-                if(m_pChunks.End() == it)
+                if(m_pChunks.end() == it)
                 {
                     //We are out of chunks; add a new chunk.
                     if(!MakeNewChunk())
@@ -88,20 +86,20 @@ void * FixedAllocator::Allocate()
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-Bool FixedAllocator::Deallocate(void *pointer, Chunk* hint)
+bool FixedAllocator::Deallocate(void *pointer, Chunk* hint)
 {
-    Assert(ASSERT_ALL, !m_pChunks.Empty());
-    Assert(ASSERT_ALL, &m_pChunks.Front() <= m_pAllocChunk);
-    Assert(ASSERT_ALL, &m_pChunks.Front() <= m_pDeallocChunk);
-    Assert(ASSERT_ALL, &m_pChunks.Back() >= m_pAllocChunk);
-    Assert(ASSERT_ALL, &m_pChunks.Back() >= m_pDeallocChunk);
+    Assert(ASSERT_ALL, !m_pChunks.empty());
+    Assert(ASSERT_ALL, &m_pChunks.front() <= m_pAllocChunk);
+    Assert(ASSERT_ALL, &m_pChunks.front() <= m_pDeallocChunk);
+    Assert(ASSERT_ALL, &m_pChunks.back() >= m_pAllocChunk);
+    Assert(ASSERT_ALL, &m_pChunks.back() >= m_pDeallocChunk);
     Assert(ASSERT_ALL, NumberOfEmptyChunks() < 2);
 
     Chunk * foundChunk = (hint == NULL) ? VicinityFind(pointer) : hint;
 
     if(foundChunk == NULL)
     {
-        return False;
+        return false;
     }
 
     Assert(ASSERT_ALL, foundChunk->HasBlock(pointer));
@@ -109,11 +107,11 @@ Bool FixedAllocator::Deallocate(void *pointer, Chunk* hint)
 #if MEMORY_EXTREME_TEST
     if(foundChunk->IsCorrupt())
     {
-        Assert(ASSERT_ALL, False);
+        Assert(ASSERT_ALL, false);
     }
     if(foundChunk->IsBlockAvailable(pointer))
     {
-        Assert(ASSERT_ALL, False);
+        Assert(ASSERT_ALL, false);
     }
 #endif // MEMORY_EXTREME_TEST
     
@@ -121,7 +119,7 @@ Bool FixedAllocator::Deallocate(void *pointer, Chunk* hint)
     DoDeallocate(pointer);
     Assert(ASSERT_TJB, NumberOfEmptyChunks() < 2);
 
-    return True;
+    return true;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
@@ -142,19 +140,18 @@ void FixedAllocator::DoDeallocate(void * pointer)
         {
             //If we have a valid empty chunk and we are about to create 
             //a second empty chunk we should free
-            Chunk *lastChunk = &(m_pChunks.Back());
+            Chunk *lastChunk = &(m_pChunks.back());
             if(lastChunk == m_pDeallocChunk)
             {
                 m_pDeallocChunk = m_pEmptyChunk;
             }
             else if(lastChunk != m_pEmptyChunk)
             {
-                using namespace Axe::Containers::Algorithms;
-                Swap(*m_pEmptyChunk, *lastChunk);
+				std::swap(*m_pEmptyChunk, *lastChunk);
             }
             Assert(ASSERT_ALL, lastChunk->HasAvailable(m_uiNumberOfBlocks));
             lastChunk->Release();
-            m_pChunks.PopBack();
+            m_pChunks.pop_back();
 
             if(m_pAllocChunk == lastChunk || m_pAllocChunk->IsFull())
             {
@@ -167,122 +164,122 @@ void FixedAllocator::DoDeallocate(void * pointer)
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-UInt FixedAllocator::NumberOfEmptyChunks() const
+unsigned int FixedAllocator::NumberOfEmptyChunks() const
 {
     return (0 == m_pEmptyChunk) ? 0 : 1;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-Bool FixedAllocator::IsCorrupt() const
+bool FixedAllocator::IsCorrupt() const
 {
-    const Bool isEmpty = m_pChunks.Empty();
-    ConstIterator begin = m_pChunks.Begin();
-    ConstIterator end = m_pChunks.End();
+    const bool isEmpty = m_pChunks.empty();
+    const_iterator begin = m_pChunks.begin();
+    const_iterator end = m_pChunks.end();
 
-    const UInt numberOfEmptyChunks = NumberOfEmptyChunks();
+    const unsigned int numberOfEmptyChunks = NumberOfEmptyChunks();
 
     if(isEmpty)
     {
         // Test that if we have a empty Chunks vector all of our values are zero'd out.
         if(begin != end)
         {
-            Assert(ASSERT_ALL, False);
-            return True;
+            Assert(ASSERT_ALL, false);
+            return true;
         }
         if(0 < numberOfEmptyChunks)
         {
-            Assert(ASSERT_ALL, False);
-            return True;
+            Assert(ASSERT_ALL, false);
+            return true;
         }
         if(NULL != m_pAllocChunk)
         {
-            Assert(ASSERT_ALL, False);
-            return True;
+            Assert(ASSERT_ALL, false);
+            return true;
         }
         if(NULL != m_pDeallocChunk)
         {
-            Assert(ASSERT_ALL, False);
-            return True;
+            Assert(ASSERT_ALL, false);
+            return true;
         }
         if(NULL != m_pEmptyChunk)
         {
-            Assert(ASSERT_ALL, False);
-            return True;
+            Assert(ASSERT_ALL, false);
+            return true;
         }
     }
     else
     {
-        const Chunk * front = &(m_pChunks.Front());
-        const Chunk * back = &(m_pChunks.Back());
+        const Chunk * front = &(m_pChunks.front());
+        const Chunk * back = &(m_pChunks.back());
 
         if(begin >= end)
         {
-            Assert(ASSERT_ALL, False);
-            return True;
+            Assert(ASSERT_ALL, false);
+            return true;
         }
         if(front > m_pDeallocChunk || back < m_pDeallocChunk)
         {
-            Assert(ASSERT_ALL, False);
-            return True;
+            Assert(ASSERT_ALL, false);
+            return true;
         }
         if(front > m_pAllocChunk || back < m_pAllocChunk)
         {
-            Assert(ASSERT_ALL, False);
-            return True;
+            Assert(ASSERT_ALL, false);
+            return true;
         }
 
         if(numberOfEmptyChunks == 0)
         {
             if(m_pEmptyChunk != NULL)
             {
-                Assert(ASSERT_ALL, False);
-                return True;
+                Assert(ASSERT_ALL, false);
+                return true;
             }
         }
         else if(numberOfEmptyChunks == 1)
         {
             if(m_pEmptyChunk == NULL)
             {
-                Assert(ASSERT_ALL, False);
-                return True;
+                Assert(ASSERT_ALL, false);
+                return true;
             }
             if(front > m_pEmptyChunk || back < m_pEmptyChunk)
             {
-                Assert(ASSERT_ALL, False);
-                return True;
+                Assert(ASSERT_ALL, false);
+                return true;
             }
             if(!m_pEmptyChunk->HasAvailable(m_uiNumberOfBlocks))
             {
-                Assert(ASSERT_ALL, False, "This may imply that a block was deleted twice.\n");
-                return True;
+                Assert(ASSERT_ALL, false, "This may imply that a block was deleted twice.\n");
+                return true;
             }
         }
         else
         {
-            Assert(ASSERT_ALL, False);
-            return True;
+            Assert(ASSERT_ALL, false);
+            return true;
         }
 
-        for(ConstIterator it = begin; it != end; ++it)
+        for(const_iterator it = begin; it != end; ++it)
         {
             if((*it).IsCorrupt())
             {
-                return True;
+                return true;
             }
         }
     }
-    return False;
+    return false;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
-Bool FixedAllocator::MakeNewChunk()
+bool FixedAllocator::MakeNewChunk()
 {
-    Bool allocated = False;
+    bool allocated = false;
     try
     {
-        UInt size = m_pChunks.Size();
+        unsigned int size = m_pChunks.size();
 
-        if(m_pChunks.Capacity() == size)
+        if(m_pChunks.capacity() == size)
         {
             if(size == 0)
             {
@@ -290,35 +287,35 @@ Bool FixedAllocator::MakeNewChunk()
             }
             //Size double each time.. 
             //Should I uses a function pointer to determine the growth rate?
-            m_pChunks.Reserve(size * 2);
+            m_pChunks.reserve(size * 2);
         }
 
         Chunk newChunk;
         allocated = newChunk.Init(m_uiBlockSize, m_uiNumberOfBlocks);
         if(allocated)
         {
-            m_pChunks.PushBack(newChunk);
+            m_pChunks.push_back(newChunk);
         }
     }
     catch (...)
     {
-        allocated = False;
+        allocated = false;
     }
 
     if(!allocated)
     {
-        return False;
+        return false;
     }
 
-    m_pAllocChunk = &(m_pChunks.Back());
-    m_pDeallocChunk = &(m_pChunks.Front());
-    return True;
+    m_pAllocChunk = &(m_pChunks.back());
+    m_pDeallocChunk = &(m_pChunks.front());
+    return true;
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////
 Chunk *FixedAllocator::VicinityFind(void * pointer) const
 {
-    if(m_pChunks.Empty())
+    if(m_pChunks.empty())
     {
         return NULL;
     }
@@ -327,8 +324,8 @@ Chunk *FixedAllocator::VicinityFind(void * pointer) const
     Chunk *lo = m_pDeallocChunk;
     Chunk *hi = m_pDeallocChunk + 1;
 
-    const Chunk * loBound = &(m_pChunks.Front());
-    const Chunk * hiBound = &(m_pChunks.Back()) + 1;
+    const Chunk * loBound = &(m_pChunks.front());
+    const Chunk * hiBound = &(m_pChunks.back()) + 1;
 
     //Handles a special case where m_pDeallocChunk is the last in the array.
     if(hi == hiBound)
@@ -377,30 +374,29 @@ Chunk *FixedAllocator::VicinityFind(void * pointer) const
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-Bool FixedAllocator::TrimEmptyChunk()
+bool FixedAllocator::TrimEmptyChunk()
 {
     Assert(ASSERT_ALL, m_pEmptyChunk == NULL || m_pEmptyChunk->HasAvailable(m_uiNumberOfBlocks));
     
     if(m_pEmptyChunk == NULL)
     {
-        return False;
+        return false;
     }
 
-    Assert(ASSERT_ALL, !m_pChunks.Empty());
+    Assert(ASSERT_ALL, !m_pChunks.empty());
     Assert(ASSERT_ALL, NumberOfEmptyChunks() == 1);
 
-    Chunk * lastChunk = &(m_pChunks.Back());
+    Chunk * lastChunk = &(m_pChunks.back());
     if(lastChunk != m_pEmptyChunk)
     {
-        using namespace Axe::Containers::Algorithms;
-        Swap(*m_pEmptyChunk, *lastChunk);
+		std::swap(*m_pEmptyChunk, *lastChunk);
     }
 
     Assert(ASSERT_ALL, lastChunk->HasAvailable(m_uiNumberOfBlocks));
     lastChunk->Release();
-    m_pChunks.PopBack();
+    m_pChunks.pop_back();
 
-    if(m_pChunks.Empty())
+    if(m_pChunks.empty())
     {
         m_pAllocChunk = NULL;
         m_pDeallocChunk = NULL;
@@ -409,51 +405,51 @@ Bool FixedAllocator::TrimEmptyChunk()
     {
         if(m_pDeallocChunk == m_pEmptyChunk)
         {
-            m_pDeallocChunk = &(m_pChunks.Front());
+            m_pDeallocChunk = &(m_pChunks.front());
             Assert(ASSERT_ALL, m_pDeallocChunk->GetNumberOfBlocksAvailable() < m_uiNumberOfBlocks);
         }
         if(m_pAllocChunk == m_pEmptyChunk)
         {
-            m_pAllocChunk = &(m_pChunks.Back());
+            m_pAllocChunk = &(m_pChunks.back());
             Assert(ASSERT_ALL, m_pAllocChunk->GetNumberOfBlocksAvailable() < m_uiNumberOfBlocks);
         }
     }
     m_pEmptyChunk = NULL;
     Assert(ASSERT_ALL, NumberOfEmptyChunks() == 0);
 
-    return True;
+    return true;
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-Bool FixedAllocator::TrimChunkContainer()
+bool FixedAllocator::TrimChunkContainer()
 {
-    if(m_pChunks.Empty())
+    if(m_pChunks.empty())
     {
         Assert(ASSERT_ALL, m_pAllocChunk == NULL);
         Assert(ASSERT_ALL, m_pDeallocChunk == NULL);
     }
-    if(m_pChunks.Size() == m_pChunks.Capacity())
+    if(m_pChunks.size() == m_pChunks.capacity())
     {
-        return False;
+        return false;
     }
 
-    for(Iterator it = m_pChunks.Begin(); it != m_pChunks.End(); ++it)
+    for(iterator it = m_pChunks.begin(); it != m_pChunks.end(); ++it)
     {
         if(it->GetNumberOfBlocksAvailable() == it->GetTotalNumElements())
         {
             //This is a free Chunk.
-            m_pChunks.Erase(it);
+            m_pChunks.erase(it);
             it->Release();
             break;
         }
     }
 
-    for(Iterator it = m_pChunks.Begin(); it != m_pChunks.End(); ++it)
+    for(iterator it = m_pChunks.begin(); it != m_pChunks.end(); ++it)
     {
         std::cout << "Hello World!!" << std::endl;
     }
 
-    return False;
+    return false;
 }
 
