@@ -1,14 +1,16 @@
-CC=g++
 ODIR=build
 
-CFLAGS = -arch i386
-INCDIR = -Iinclude
-DEPS = 
-
+ifeq ($(OS), Windows_NT)
+CC=g++-4
+CFLAGS = -DWINDOWS
+LKFLAGS = -enable-auto-import -Wl,-Map -Wl,example.map
+else
+CC=g++
+CFLAGS = -arch i386 -DMAC_OSX
 LKFLAGS = 
-# Cygwin version: LKFLAGS = -enable-auto-import -Wl,-Map -Wl,$(ODIR)/test.map
+endif
 
-LIBS=-lm
+INCDIR = -Iinclude
 
 MEMORY_LIB_NAME := memory.a
 MEMORY_LIB = $(ODIR)/$(MEMORY_LIB_NAME)

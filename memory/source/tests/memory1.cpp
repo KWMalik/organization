@@ -1,5 +1,7 @@
 #include <iostream>
 
+#include <stdlib.h>
+
 #include "smallobjectallocator.h"
 
 using namespace std;
@@ -96,8 +98,57 @@ void TestFixedAllocator()
 }
 
 
+//Creating a global small object allocator
+SmallObjectAllocator *so = 0;
+
+
+#define OVERLOAD_NEW_DELETE									\
+void *operator new(size_t size)								\
+{															\
+	using namespace std;									\
+    cout << "Global New" << endl;							\
+    void *p = 0;											\
+    if(so)													\
+    {														\
+        cout	<< "\tNew: Allocate a block of size "		\
+				<< size << endl;							\
+        p = so->Allocate(size, false);						\
+        cout << "\t\tMemory allocated at: " << p << endl;	\
+    }														\
+    if(!p)													\
+    {														\
+        cout 	<< "\tNew: Unable to alloc a block "		\
+				<< size << endl;							\
+        p = malloc(size);									\
+        cout << "\t\tMemory allocated at: " << p << endl;	\
+    }														\
+    return p;												\
+}															\
+															\
+void operator delete(void *p)								\
+{															\
+	using namespace std;									\
+    cout << "Delete" << endl;								\
+    bool ableToDeallocateFromPools = false;					\
+    if(so)													\
+    {														\
+        cout	<< "\tDel: Allocation found pool :"			\
+				<< p << endl;								\
+        ableToDeallocateFromPools = so->Deallocate(p);		\
+    }														\
+    if(!ableToDeallocateFromPools)							\
+    {														\
+        cout	<< "\tDel: Alloc not found in pools " 		\
+				<< p << endl;								\
+        free(p);											\
+    }														\
+}															\
+
+
+
 struct Vector4
 {
+	OVERLOAD_NEW_DELETE
     int x;
     int y;
     int z;
@@ -106,78 +157,43 @@ struct Vector4
 
 struct Size_16 
 {
+	OVERLOAD_NEW_DELETE
     Vector4 objectThatTakes16Bytes;
 };
 
 struct Size_32
 {
+	OVERLOAD_NEW_DELETE
     Size_16 a;
     Size_16 b;
 };
 
 struct Size_64
 {
+	OVERLOAD_NEW_DELETE
     Size_32 c;
     Size_32 d;
 };
 
 struct Size_128
 {
+	OVERLOAD_NEW_DELETE
     Size_64 e;
     Size_64 f;
 };
 
-//Creating a global small object allocator
-SmallObjectAllocator *so = 0;
-
-
-void *operator new(size_t size)
-{
-    std::cout << "Global New" << std::endl;
-    void *p = 0;
-    if(so)
-    {
-        //SmallObjectAllocator exists.. Try to allocate with it.
-        std::cout << "\tGlobal New: Allocate a block of size " << size << std::endl;
-        p = so->Allocate(size, false);
-        std::cout << "\t\tMemory allocated at: " << p << std::endl;
-    }
-    if(!p)
-    {
-        std::cout << "\tGlobal New: Unable to allocate a block of size " << size << std::endl;
-        p = malloc(size);
-        std::cout << "\t\tMemory allocated at: " << p << std::endl;
-    }
-    return p;
-}
-
-void operator delete(void *p)
-{
-    std::cout << "Global Delete" << std::endl;
-    bool ableToDeallocateFromPools = false;
-    if(so)
-    {
-        //SmallObjectAllocator exists.. Try to allocate with it.
-        std::cout << "\tGlobal Delete: Allocation found in pools " << p << std::endl;
-        ableToDeallocateFromPools = so->Deallocate(p);
-    }
-    if(!ableToDeallocateFromPools)
-    {
-        std::cout << "\tGlobal Delete: Allocation not found in pools" << p << std::endl;
-        free(p);
-    }
-}
 
 void TestSmallAllocator()
 {
     const unsigned int pageSize = 10;
     const unsigned int maxObjectSize = 128;
     const unsigned int objectAlignSize = 16;
-    so = new SmallObjectAllocator (pageSize, maxObjectSize, objectAlignSize);
 
+    std::cout << "here 1" << std::endl;
+    so = new SmallObjectAllocator (pageSize, maxObjectSize, objectAlignSize);
+    std::cout << "here 2" << std::endl;
     Size_16 *a1  = new Size_16();
 
-    std::cout << "here" << std::endl;
     Size_32 *b1  = new Size_32();
     Size_32 *b2  = new Size_32();
 
@@ -190,9 +206,9 @@ void TestSmallAllocator()
     Size_128 *d3 = new Size_128();
     Size_128 *d4 = new Size_128();
 
-    so->PrintStats();
-
     delete a1;
+    //so->PrintStats();
+
     
     delete b1;
     delete b2;
@@ -205,8 +221,6 @@ void TestSmallAllocator()
     delete d2;
     delete d3;
     delete d4;
-
-
 }
 
 
