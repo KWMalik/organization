@@ -57,7 +57,8 @@ public:
 	///
 	/// \param p Pointer to the allocation to be freed.
 	/// \param size The size of the allocation
-	void Deallocate( void * p, unsigned int size);
+    /// \return True if if was able to deallocate the pointer.
+	bool Deallocate( void * p, unsigned int size);
 
 	/// \function Deallocate
 	/// \author Toby Banks
@@ -70,7 +71,8 @@ public:
 	/// new operator is used, but a constructor throws an exception.
 	///
 	/// \param p Pointer to the allocation to be freed.
-	void Deallocate( void * p );
+    /// \return True if if was able to deallocate the pointer.
+	bool Deallocate( void * p );
 
 	/// \return The max number of bytes which this can allocate.
 	inline unsigned int GetMaxObjectSize() const
@@ -109,6 +111,14 @@ public:
 	///
 	/// \return True if corruption has been detected.
 	bool IsCorrupt() const;
+
+
+    /// \function PrintStats
+    /// \author Toby Banks
+    ///
+    /// This simple little class just prints out information about our memory pools.
+    ///
+    void PrintStats() const;
 
 private:
 	/// Default-constructor is not implemented.

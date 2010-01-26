@@ -3,7 +3,9 @@
 
 
 /// Maximum size of a 8-bit int.
-const unsigned char UCHAR_MAX = 255;
+#if _WINDOWS
+static const unsigned char UCHAR_MAX = 255;
+#endif //_WINDOWS
 
 /// \class Chunk
 /// \author Toby Banks

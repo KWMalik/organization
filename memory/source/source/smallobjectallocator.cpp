@@ -1,5 +1,7 @@
 #include "smallobjectallocator.h"
 
+#include <iostream>
+
 #define Assert(...) 
 
 
@@ -54,6 +56,7 @@ SmallObjectAllocator::SmallObjectAllocator(unsigned int pageSize, unsigned int m
 	m_pPool = new FixedAllocator[allocCount];
 	for(int i = 0; i < allocCount; ++i)
 	{
+        //Create a pool of objects that increase by the objectAlignSize
 		m_pPool[i].Init((i + 1) * objectAlignSize, pageSize);	
 	}
 }
@@ -132,17 +135,17 @@ void * SmallObjectAllocator::Allocate(unsigned int numBytes, bool doThrow)
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-void SmallObjectAllocator::Deallocate( void * p, unsigned int numBytes )
+bool SmallObjectAllocator::Deallocate( void * p, unsigned int numBytes )
 {
     if(NULL == p)
 	{
-		return;
+		return false;
 	}
 
     if(numBytes > GetMaxObjectSize())
     {
         DefaultDeallocator(p);
-        return;
+        return false;
     }
     Assert(ASSERT_MEM, NULL != m_pPool );
 
@@ -163,14 +166,16 @@ void SmallObjectAllocator::Deallocate( void * p, unsigned int numBytes )
     (void) found;
 
     Assert(ASSERT_MEM, found);
+
+    return found;
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-void SmallObjectAllocator::Deallocate(void * p)
+bool SmallObjectAllocator::Deallocate(void * p)
 {
     if(!p)
 	{
-		return;
+		return false;
 	}
     Assert(ASSERT_MEM, NULL != m_pPool);
 
@@ -190,7 +195,7 @@ void SmallObjectAllocator::Deallocate(void * p)
     if (!pAllocator)
     {
         DefaultDeallocator(p);
-        return;
+        return false;
     }
 
     Assert(ASSERT_MEM, NULL != chunk);
@@ -198,6 +203,7 @@ void SmallObjectAllocator::Deallocate(void * p)
     const bool found = pAllocator->Deallocate(p, chunk);
     (void) found;
     Assert(ASSERT_MEM, found);
+    return found;
 }
 
 /////////////////////////////////////////////////////////////////////////////////
@@ -227,5 +233,19 @@ bool SmallObjectAllocator::IsCorrupt( void ) const
 		}
     }
     return false;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+void SmallObjectAllocator::PrintStats() const
+{
+    std::cout   << "SmallObjectAllocator Statistics:" << std::endl
+                << "Max Object Size " << m_uiMaxSmallObjectSize << std::endl
+	            << "Object Align Size " << m_uiObjectAlignSize << std::endl;
+
+    const unsigned int allocCount = GetOffset(GetMaxObjectSize(), GetAlignment());
+    for(unsigned int i = 0; i < allocCount; ++i)
+    {
+        m_pPool[i].PrintStats();
+    }
 }
 

@@ -453,3 +453,12 @@ bool FixedAllocator::TrimChunkContainer()
     return false;
 }
 
+///////////////////////////////////////////////////////////////////////////////////////////////
+void FixedAllocator::PrintStats() const
+{
+    std::cout   << "\tMin Obj Per Chunk: " << s_uiMinObjectsPerChunk << std::endl
+                << "\tMax Obj Per Chunk: " << s_uiMaxObjectsPerChunk << std::endl
+                << "\tBlock Size: " << m_uiBlockSize << std::endl
+                << "\tNumber of Blocks " << m_uiNumberOfBlocks << std::endl;
+}
+

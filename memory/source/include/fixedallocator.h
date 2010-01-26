@@ -109,6 +109,12 @@ public:
     inline const Chunk * HasBlock(void * pointer) const;
     inline Chunk * HasBlock(void * pointer);
 
+    /// \function PrintStats
+    /// \author Toby Banks
+    ///
+    ///
+    void PrintStats() const;
+
 //Helper functions
 private:
     /// \function DoDeallocate
