@@ -1,25 +1,36 @@
+ODIR=build
+
+ifeq ($(OS), Windows_NT)
 CC=g++-4
-ODIR=obj
+CFLAGS = -DWINDOWS
+LKFLAGS = -enable-auto-import -Wl,-Map -Wl,build/test.map
+else
+CC=g++
+CFLAGS = -arch i386 -DMAC_OSX
+LKFLAGS = 
+endif
 
-CFLAGS = 
-LKFLAGS = -enable-auto-import -Wl,-Map -Wl,example.map
+INCDIR = -Iinclude
 
-LIBS=-lm
+TEST_EXE_NAME := test.exe
+TEST_EXE = $(ODIR)/$(TEST_EXE_NAME)
 
-DEPS = 
+_TEST1_OBJ = main.o 
+TEST1_OBJ = $(patsubst %,$(ODIR)/%,$(_TEST1_OBJ))
 
-_OBJ = main.o
-OBJ = $(patsubst %,$(ODIR)/%,$(_OBJ))
+default: $(TEST_EXE)
 
+$(ODIR)/%.o:  source/%.cpp
+	$(CC) -c -o $@ $< $(CFLAGS) $(INCDIR)
 
-$(ODIR)/%.o: %.cpp $(DEPS)
-	$(CC) -c -o $@ $< $(CFLAGS)
-
-example.exe: $(OBJ)
-	$(CC) $(LKFLAGS) -o $@ $^ $(CFLAGS) $(LIBS)
+$(TEST_EXE): $(TEST1_OBJ)
+	$(CC) $(LKFLAGS) -o $@ $^ $(CFLAGS)
 
 .PHONY: clean
-
 clean:
-	rm -f $(ODIR)/*.o example.exe *.stackdump *.map
+	rm -f $(ODIR)/*.o $(ODIR)/*.exe $(ODIR)/*.stackdump $(ODIR)/*.map $(ODIR)/*.a
+
+.PHONY: run
+run:
+	$(TEST_EXE)
 
