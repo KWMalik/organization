@@ -3,7 +3,7 @@ ODIR=build
 ifeq ($(OS), Windows_NT)
 CC=g++-4
 CFLAGS = -DWINDOWS
-LKFLAGS = -enable-auto-import -Wl,-Map -Wl,example.map
+LKFLAGS = -enable-auto-import -Wl,-Map -Wl,build/example.map
 else
 CC=g++
 CFLAGS = -arch i386 -DMAC_OSX
@@ -40,7 +40,7 @@ $(TEST_EXE): $(MEMORY_OBJ) $(TEST1_OBJ)
 
 .PHONY: clean
 clean:
-	rm -f $(ODIR)/*.o $(ODIR)/.exe $(ODIR)/*.stackdump $(ODIR)/*.map $(ODIR)/*.a
+	rm -f $(ODIR)/*.o $(ODIR)/*.exe $(ODIR)/*.stackdump $(ODIR)/*.map $(ODIR)/*.a
 
 .PHONY: run
 run:

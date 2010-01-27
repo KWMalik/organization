@@ -20,18 +20,23 @@ using namespace std;
 void TestChunk()
 {
 #if TEST_CHUNK
+	cout << "Running TestChunk Test" << endl;
+
     Chunk chunk;
     chunk.Init(4, 10);
     int *i = (int*)chunk.Allocate();
-    cout << "The value of i " << *i << endl;
+    cout << "\tThe value of i " << *i << endl;
     *i = 100;
-    cout << "The value of i " << *i << endl;
+    cout << "\tThe value of i " << *i << endl;
     chunk.Release();
+
+	cout << "Done running TestChunk Test" << endl;
 #endif // TEST_CHUNK
 }
 
 void TestFixedAllocator()
 {
+	cout << "Running FixedAllocator Test" << endl;
     FixedAllocator fa;
     fa.Init(4, 5);
 
@@ -40,41 +45,41 @@ void TestFixedAllocator()
     int *c = (int*)fa.Allocate();
     int *d = (int*)fa.Allocate();
     int *e = (int*)fa.Allocate();
-    cout << "The value of a " << *a << endl;
-    cout << "The value of b " << *b << endl;
-    cout << "The value of c " << *c << endl;
-    cout << "The value of d " << *d << endl;
-    cout << "The value of e " << *e << endl;
+    cout << "\tThe value of a " << *a << endl;
+    cout << "\tThe value of b " << *b << endl;
+    cout << "\tThe value of c " << *c << endl;
+    cout << "\tThe value of d " << *d << endl;
+    cout << "\tThe value of e " << *e << endl;
 
     *a = 5;
     *b = 10;
     *c = 15;
     *d = 20;
     *e = 25;
-    cout << "The value of a " << *a << endl;
-    cout << "The value of b " << *b << endl;
-    cout << "The value of c " << *c << endl;
-    cout << "The value of d " << *d << endl;
-    cout << "The value of e " << *e << endl;
+    cout << "\tThe value of a " << *a << endl;
+    cout << "\tThe value of b " << *b << endl;
+    cout << "\tThe value of c " << *c << endl;
+    cout << "\tThe value of d " << *d << endl;
+    cout << "\tThe value of e " << *e << endl;
 
     int *f = (int*)fa.Allocate();
     int *g = (int*)fa.Allocate();
     int *h = (int*)fa.Allocate();
     int *i = (int*)fa.Allocate();
 
-    cout << "The value of f " << *f << endl;
-    cout << "The value of g " << *g << endl;
-    cout << "The value of h " << *h << endl;
-    cout << "The value of i " << *i << endl;
+    cout << "\tThe value of f " << *f << endl;
+    cout << "\tThe value of g " << *g << endl;
+    cout << "\tThe value of h " << *h << endl;
+    cout << "\tThe value of i " << *i << endl;
 
     *f = 30;
     *g = 35;
     *h = 40;
     *i = 45;
-    cout << "The value of f " << *f << endl;
-    cout << "The value of g " << *g << endl;
-    cout << "The value of h " << *h << endl;
-    cout << "The value of i " << *i << endl;
+    cout << "\tThe value of f " << *f << endl;
+    cout << "\tThe value of g " << *g << endl;
+    cout << "\tThe value of h " << *h << endl;
+    cout << "\tThe value of i " << *i << endl;
 
     fa.Deallocate(i);
     fa.Deallocate(h);
@@ -86,15 +91,17 @@ void TestFixedAllocator()
     fa.Deallocate(b);
     fa.Deallocate(a);
     
-    cout << "The value of a " << *a << endl;
-    cout << "The value of b " << *b << endl;
-    cout << "The value of c " << *c << endl;
-    cout << "The value of d " << *d << endl;
-    cout << "The value of e " << *e << endl;
-    cout << "The value of f " << *f << endl;
-    cout << "The value of g " << *g << endl;
-    cout << "The value of h " << *h << endl;
-    cout << "The value of i " << *i << endl;
+    cout << "\tThe value of a " << *a << endl;
+    cout << "\tThe value of b " << *b << endl;
+    cout << "\tThe value of c " << *c << endl;
+    cout << "\tThe value of d " << *d << endl;
+    cout << "\tThe value of e " << *e << endl;
+    cout << "\tThe value of f " << *f << endl;
+    cout << "\tThe value of g " << *g << endl;
+    cout << "\tThe value of h " << *h << endl;
+    cout << "\tThe value of i " << *i << endl;
+
+	cout << "Done running FixedAllocator Test" << endl << endl;
 }
 
 
@@ -106,7 +113,6 @@ SmallObjectAllocator *so = 0;
 void *operator new(size_t size)								\
 {															\
 	using namespace std;									\
-    cout << "Global New" << endl;							\
     void *p = 0;											\
     if(so)													\
     {														\
@@ -128,17 +134,16 @@ void *operator new(size_t size)								\
 void operator delete(void *p)								\
 {															\
 	using namespace std;									\
-    cout << "Delete" << endl;								\
     bool ableToDeallocateFromPools = false;					\
     if(so)													\
     {														\
-        cout	<< "\tDel: Allocation found pool :"			\
+        cout	<< "\tDelete: Allocation found pool :"		\
 				<< p << endl;								\
         ableToDeallocateFromPools = so->Deallocate(p);		\
     }														\
     if(!ableToDeallocateFromPools)							\
     {														\
-        cout	<< "\tDel: Alloc not found in pools " 		\
+        cout	<< "\tDelete: Alloc not found in pools " 	\
 				<< p << endl;								\
         free(p);											\
     }														\
@@ -185,13 +190,12 @@ struct Size_128
 
 void TestSmallAllocator()
 {
+	cout << "Running SmallObjectAllocator Test" << endl;
     const unsigned int pageSize = 10;
     const unsigned int maxObjectSize = 128;
     const unsigned int objectAlignSize = 16;
 
-    std::cout << "here 1" << std::endl;
     so = new SmallObjectAllocator (pageSize, maxObjectSize, objectAlignSize);
-    std::cout << "here 2" << std::endl;
     Size_16 *a1  = new Size_16();
 
     Size_32 *b1  = new Size_32();
@@ -221,19 +225,17 @@ void TestSmallAllocator()
     delete d2;
     delete d3;
     delete d4;
+
+	cout << "Done running SmallObjectAllocator Test" << endl << endl;
 }
 
 
 
 int main()
 {
-    cout << "Running core-test-memory1" << endl;
-
     TestChunk();
     TestFixedAllocator();
     TestSmallAllocator();
-
-    cout << "Finished running core-test-memory1" << endl;
 
     return 0;
 }
