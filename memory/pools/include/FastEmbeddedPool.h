@@ -104,62 +104,15 @@ public:
 
 private:
 	//Helper Function
-	static inline void * & next_of(void * const pointer)
+	static inline void * & get_next_element(void * const pointer)
 	{
 		return *(static_cast<void **>(pointer));
 	}
 
 };
 
-////////////////////////////////////////////////////////////////////////////
-template<class SizeT>
-void FastEmbeddedPool<SizeT>::add_block(void *block, size_type blockSize, size_type allocSize)
-{
-	//The new end points at the old first (which is 0 the first time in)
-	void *end = first;
-
-	//We need to get the pointer to the last valid chunk to prevent overflow on size calculations.
-	char *old = static_cast<char*>(block) + ((blockSize - allocSize) / allocSize) * allocSize;
-
-	//Set the last element of the new block to be a pointer to the end old first.
-	next_of(old) = end;
-
-	if(old == block)
-	{
-		first = block;
-		return;
-	}
-
-	for(char *iterator = old - allocSize; iterator != block; old = iterator, iterator -= allocSize)
-	{
-		next_of(iterator) = old;
-	}
-
-	next_of(block) = old;
-
-	///Set first to point at this block
-	first = block;
-}
-
-////////////////////////////////////////////////////////////////////////////
-template<class SizeT>
-void * FastEmbeddedPool<SizeT>::malloc()
-{
-	void * ret = first;
-
-	//Increment first
-	first = next_of(first);
-
-	return ret;
-}
-
-////////////////////////////////////////////////////////////////////////////
-template<class SizeT>
-void FastEmbeddedPool<SizeT>::free(void *block)
-{
-	next_of(block) = first;
-	first = block;
-}
+//Include the implementation of this class.
+#include "FastEmbeddedPool.inl"
 
 #endif // _FAST_EMBEDDED_POOL_H_
 
