@@ -31,6 +31,8 @@ private:
 
     /// Only the FixedPageAllocator is allowed to interact with this class.
     friend class FixedAllocator;
+    friend class GrowingFixedAllocator;
+    friend class StagnantFixedAllocator;
 
     /// \function Init
     /// \author Toby Banks

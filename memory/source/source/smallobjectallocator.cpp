@@ -48,17 +48,81 @@ void DefaultDeallocator( void * p )
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-SmallObjectAllocator::SmallObjectAllocator(unsigned int pageSize, unsigned int maxObjectSize, unsigned int objectAlignSize) : 
-					m_pPool(0), m_uiMaxSmallObjectSize(maxObjectSize), m_uiObjectAlignSize(objectAlignSize)
+unsigned int SmallObjectAllocator::FindTotalSizeForTheFixedPool(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors)
 {
-	Assert(ASSERT_TJB, 0 != objectAlignSize);
-	const unsigned int allocCount = GetOffset(maxObjectSize, objectAlignSize);
-	m_pPool = new FixedAllocator[allocCount];
-	for(int i = 0; i < allocCount; ++i)
+    unsigned int fixedPoolSize = 0;
+    for(int i = 0; i < numberOfAllocatorDescriptors; ++i)
+    {
+        fixedPoolSize += fad[i].SingleAllocationSize() * fad[i].NumberOfAllocations();
+
+    }
+    return fixedPoolSize;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+void SmallObjectAllocator::InitializeTheFixedPools(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors)
+{
+    //Create a pointer to track our location in the pool as we create chunks.
+    char * pointerToCurrentBlock = static_cast<char *>(m_pPool);
+
+ 	for(int i = 0; i < numberOfAllocatorDescriptors; ++i)
 	{
         //Create a pool of objects that increase by the objectAlignSize
-		m_pPool[i].Init((i + 1) * objectAlignSize, pageSize);	
+		m_pPool[i].Init(fad[i].SingleAllocationSize(), fad[i].NumberOfAllocations(), pointerToCurrentBlock);
+
+        //Increment the pool pointer
+        pointerToCurrentBlock += fad[i].SingleAllocationSize() * fad[i].NumberOfAllocations();
 	}
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+unsigned int SmallObjectAllocator::DetermineMaxSmallObjectSize(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors)
+{
+    int largestSize = fad[0].SingleAllocationSize();;
+ 	for(int i = 1; i < numberOfAllocatorDescriptors; ++i)
+	{
+        if(fad[i].SingleAllocationSize() > largestSize)
+        {
+            largestSize = fad[i].SingleAllocationSize();
+        }
+    }
+    return largestSize; 
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+unsigned int SmallObjectAllocator::DetermineObjectAlignSize(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors)
+{
+    //We will use the smallest pool size to determine our alignment (anything less than 8 will be considered 8).
+    int smallestSize = fad[0].SingleAllocationSize();;
+ 	for(int i = 1; i < numberOfAllocatorDescriptors; ++i)
+	{
+        if(fad[i].SingleAllocationSize() < smallestSize)
+        {
+            smallestSize = fad[i].SingleAllocationSize();
+        }
+    }
+    if(smallestSize < 8)
+    {
+        smallestSize = 8;
+    }
+    return smallestSize;
+}
+
+/////////////////////////////////////////////////////////////////////////////////
+SmallObjectAllocator::SmallObjectAllocator(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors) : m_pPool(0), m_uiMaxSmallObjectSize(maxObjectSize), m_uiObjectAlignSize(objectAlignSize)
+{
+	Assert(ASSERT_TJB, fad);
+	Assert(ASSERT_TJB, numberOfAllocatorDescriptors > 0);
+
+    //Calculate the total size of the fixed pool.
+    fixedPoolSize = FindTotalSizeForTheFixedPool(fad, numberOfAllocatorDescriptors);
+
+	m_pPool = new FixedAllocator[fixedPoolSize];
+
+    InitializeTheFixedPools(fad, numberOfAllocatorDescriptors);
+
+    m_uiMaxSmallObjectSize = DetermineMaxSmallObjectSize(fad, numberOfAllocatorDescriptors);
+    m_uiObjectAlignSize = DetermineObjectAlignSize(fad, numberOfAllocatorDescriptors);
 }
 
 /////////////////////////////////////////////////////////////////////////////////

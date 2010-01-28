@@ -3,6 +3,18 @@
 
 #include "fixedallocator.h"
 
+/// \class FixedAllocatorDescriptor
+class FixedAllocatorDescriptor
+{
+public:
+    unsigned int SingleAllocationSize() const;
+    unsigned int NumberOfAllocations() const;
+
+private:
+    unsigned int singleAllocationSize;
+    unsigned int numberOfAllocations;;
+};
+
 /// \class SmallObjectAllocator
 /// \author Toby Banks
 ///
@@ -11,6 +23,10 @@ class SmallObjectAllocator
 {
 public:
 	SmallObjectAllocator(unsigned int pageSize, unsigned int maxObjectSize, unsigned int objectAlignSize);
+
+    SmallObjectAllocator(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
+
+
 
 	~SmallObjectAllocator();
 
@@ -120,6 +136,15 @@ public:
     ///
     void PrintStats() const;
 
+
+private:
+
+    //Just a few helper functions for our initialization code.
+    unsigned int FindTotalSizeForTheFixedPool(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
+    void InitializeTheFixedPools(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
+    unsigned int DetermineMaxSmallObjectSize(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
+    unsigned int DetermineObjectAlignSize(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
+ 
 private:
 	/// Default-constructor is not implemented.
 	SmallObjectAllocator(void);
@@ -129,7 +154,7 @@ private:
 	SmallObjectAllocator & operator = (const SmallObjectAllocator &);
 
 	/// Pointer to array of fixed-size allocators.
-	FixedAllocator * m_pPool;
+	GrowingFixedAllocator * m_pPool;
 
 	/// Largest object size supported by allocators.
 	const unsigned int m_uiMaxSmallObjectSize;

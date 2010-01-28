@@ -22,7 +22,7 @@ MEMORY_LIB = $(ODIR)/$(MEMORY_LIB_NAME)
 TEST_EXE_NAME := $(EXE)
 TEST_EXE = $(ODIR)/$(TEST_EXE_NAME)
 
-_MEMORY_OBJ = chunk.o fixedallocator.o smallobjectallocator.o
+_MEMORY_OBJ = chunk.o growingfixedallocator.o smallobjectallocator.o
 MEMORY_OBJ = $(patsubst %,$(ODIR)/%,$(_MEMORY_OBJ))
 
 _TEST1_OBJ = memory1.o 
