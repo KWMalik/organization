@@ -16,17 +16,10 @@ class StagnantFixedAllocator
 public:
     /// Zero's out all non-static members.
     StagnantFixedAllocator() : m_uiBlockSize(0), m_uiNumberOfBlocks(0), m_pAllocChunk(0), 
-                               m_pDeallocChunk(0), m_pEmptyChunk(0),
-                               m_uiMinObjectsPerChunk(8), m_uiMaxObjectsPerChunk(UCHAR_MAX) {}
+                               m_pDeallocChunk(0), m_pEmptyChunk(0) {}
 
-    /// Releases all of the Chunks owned by this class.
-    ~StagnantFixedAllocator()
-    {
-        for(iterator it = m_pChunks.begin(); it != m_pChunks.end(); ++it)
-        {
-            it->Release();
-        }
-    }
+    /// Doesn't need to do anything. The class that creates this one provides the memory to use.
+    ~StagnantFixedAllocator() {}
 
     /// \function Init
     /// \author Toby Banks
@@ -36,7 +29,8 @@ public:
     /// \brief Causes this StagnantFixedAllocator to create blocks that are blockSize by chunkSize.
     /// \param blockSize The size of a single element. 
     /// \param chunkSize The number of elements of blocksize that a single chunk contains.
-    void Init(unsigned int blockSize, unsigned int chunkSize);
+    /// \param buffer The buffer to use for the allocation (assumes correct size)
+    void Init(unsigned int singleAllocationSize, unsigned int numberOfAllocations, char *buffer);
 
     /// \function Allocate
     /// \author Toby Banks
@@ -66,30 +60,6 @@ public:
     /// \return The size this StagnantFixedAllocator was initialized with.
     inline unsigned int BlockSize() const { return m_uiBlockSize; }
 
-    /// \function FreeEmptyChunk
-    /// \author Toby Banks
-    /// 
-    /// \brief If there is a empty chunk it will be freed. 
-    /// \return True if a empty chunk was found and freed; false otherwise.
-    bool TrimEmptyChunk();
-
-    /// \function FreeChunkContainer
-    /// \author Toby Banks
-    ///
-    /// Used to free any unused spots in the chunk container. Takes constant time
-    /// with respect to the number of chunks. 
-    ///
-    /// \brief Frees unused spots in the chunk container.
-    /// \return True if some chunks were found and released; false otherwise.
-    bool TrimChunkContainer();
-
-    /// \function NumberOfEmptyChunks
-    /// \author Toby Banks
-    ///
-    /// \brief Used to return the number of empty chunks.
-    /// \return The number of empty chunks.
-    unsigned int NumberOfEmptyChunks() const;
-
     /// \function IsCorrupt
     /// \author Toby Banks
     ///
@@ -99,15 +69,6 @@ public:
     /// \brief Checks to see if we have any corruption in the chunk container.
     /// \return True if the chunklist is corrupt.
     bool IsCorrupt() const;
-
-    /// \function HasBlock
-    /// \author Toby Banks
-    /// 
-    /// \brief Checks to see if address pointer is owned by this StagnantFixedAllocator.
-    /// \param pointer The address to check to see if this StagnantFixedAllocator owns it.
-    /// \return A pointer to the Chunk that contains pointer; or NULL.
-    inline const Chunk * HasBlock(void * pointer) const;
-    inline Chunk * HasBlock(void * pointer);
 
     /// \function PrintStats
     /// \author Toby Banks
@@ -127,14 +88,6 @@ private:
     /// \param pointer The memory to deallocate.
     void DoDeallocate(void * pointer);
 
-    /// \function MakeNewChunk
-    /// \author Toby Banks
-    ///
-    /// Adds a new chunk to the Chunks container.
-    ///
-    /// \return True if successful; false otherwise.
-    bool MakeNewChunk();
-
     /// \function VicinityFind
     /// \author Toby Banks
     ///
@@ -151,24 +104,6 @@ private:
     /// Not implemented.
     StagnantFixedAllocator& operator=(const StagnantFixedAllocator&);
 
-    /// \typedef Chunks
-    /// \brief Easy access to our Chunks container.
-    typedef std::vector<Chunk> Chunks;
-
-    /// \typedef iterator
-    /// \brief Easy access to a iterator for our Chunks container.
-    typedef Chunks::iterator iterator;
-
-    /// \typedef const_iterator
-    /// \brief Easy access to a const iterator for our Chunks container.
-    typedef Chunks::const_iterator const_iterator;
-
-    /// Least number of objects that a chunk can contain.
-    unsigned char m_uiMinObjectsPerChunk;
-
-    /// Most number of objects that a chunk can contain (can't exceed UCHAR_MAX). 
-    unsigned char m_uiMaxObjectsPerChunk;
-
     /// The size of allocations that our chunks contain.
     unsigned int m_uiBlockSize;
 
@@ -176,37 +111,7 @@ private:
     unsigned char m_uiNumberOfBlocks;
 
     /// Container of chunks.
-    Chunks m_pChunks;
-
-    /// Pointer to the Chunk that was used for the last or next allocation.
-    Chunk * m_pAllocChunk;
-
-    /// Pointer to the Chunk that was used for the last or next deallocation.
-    Chunk * m_pDeallocChunk;
-
-    /// Pointer to the only empty chunk if there is one; else NULL.
-    Chunk * m_pEmptyChunk;
-
+    Chunks *m_pChunks;
 };
-
-///////////////////////////////////////////////////////////////////////////////////////////////
-inline const Chunk * StagnantFixedAllocator::HasBlock(void * pointer) const
-{
-    for (const_iterator it = m_pChunks.begin(); it != m_pChunks.end(); ++it)
-    {
-        const Chunk * chunk = &(*it);
-        if(chunk->HasBlock(pointer))
-        {
-            return chunk;
-        }
-    }
-    return 0;
-}
-
-///////////////////////////////////////////////////////////////////////////////////////////////
-inline Chunk * StagnantFixedAllocator::HasBlock(void * pointer)
-{
-    return const_cast<Chunk *>(const_cast<const StagnantFixedAllocator *>(this)->HasBlock(pointer));
-}
 
 #endif // _STAGNANT_FIXED_ALLOCATOR_H_

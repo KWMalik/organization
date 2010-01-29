@@ -60,10 +60,10 @@ unsigned int SmallObjectAllocator::FindTotalSizeForTheFixedPool(FixedAllocatorDe
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-void SmallObjectAllocator::InitializeTheFixedPools(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors)
+void SmallObjectAllocator::InitializeTheFixedPools(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors, char * buffer)
 {
     //Create a pointer to track our location in the pool as we create chunks.
-    char * pointerToCurrentBlock = static_cast<char *>(m_pPool);
+    char * pointerToCurrentBlock = buffer; 
 
  	for(int i = 0; i < numberOfAllocatorDescriptors; ++i)
 	{
@@ -117,12 +117,20 @@ SmallObjectAllocator::SmallObjectAllocator(FixedAllocatorDescriptor * fad, int n
     //Calculate the total size of the fixed pool.
     fixedPoolSize = FindTotalSizeForTheFixedPool(fad, numberOfAllocatorDescriptors);
 
-	m_pPool = new FixedAllocator[fixedPoolSize];
+    //Allocate a single block of memory to parse out to the Fixed Pools.
+    char *buffer = new char[fixedPoolSize];
 
-    InitializeTheFixedPools(fad, numberOfAllocatorDescriptors);
+    //Allocated a array of FixedAllocator buffers.
+	m_pPool = new FixedAllocator[numberOfAllocatorDescriptors];
 
+    //Determine the largest object size.
     m_uiMaxSmallObjectSize = DetermineMaxSmallObjectSize(fad, numberOfAllocatorDescriptors);
+
+    //Determine the alignment size.
     m_uiObjectAlignSize = DetermineObjectAlignSize(fad, numberOfAllocatorDescriptors);
+
+    //Hand out the memory in buffer to all of the fixed pools to watch over
+    InitializeTheFixedPools(fad, numberOfAllocatorDescriptors, buffer);
 }
 
 /////////////////////////////////////////////////////////////////////////////////

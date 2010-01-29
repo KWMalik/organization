@@ -141,7 +141,7 @@ private:
 
     //Just a few helper functions for our initialization code.
     unsigned int FindTotalSizeForTheFixedPool(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
-    void InitializeTheFixedPools(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
+    void InitializeTheFixedPools(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors, char * buffer);
     unsigned int DetermineMaxSmallObjectSize(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
     unsigned int DetermineObjectAlignSize(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
  
@@ -155,6 +155,9 @@ private:
 
 	/// Pointer to array of fixed-size allocators.
 	GrowingFixedAllocator * m_pPool;
+
+    //OPTINAL -- This needs ot go somewhere else
+    char * buffer;
 
 	/// Largest object size supported by allocators.
 	const unsigned int m_uiMaxSmallObjectSize;
