@@ -1,11 +1,28 @@
 #ifndef _CHUNK_H_
 #define _CHUNK_H_
 
+#include <stdlib.h>
 
 /// Maximum size of a 8-bit int.
 #if WINDOWS
 static const unsigned char UCHAR_MAX = 255;
 #endif //WINDOWS
+
+
+class MallocChunkAllocator
+{
+public:
+    void * _Allocate(unsigned int size) { return malloc(size); }
+    void _Free(void * buffer) { free(buffer); }
+};
+
+class NullChunkAllocator
+{
+public:
+    void * _Allocate(unsigned int size) { /* Do Nothing */ }
+    void _Free(void * buffer) { /* Do Nothing */ }
+};
+
 
 /// \class Chunk
 /// \author Toby Banks
@@ -24,13 +41,13 @@ static const unsigned char UCHAR_MAX = 255;
 /// FixedAllocator, this is to ensure that NO ONE ever hacks this 
 /// with nonsense.
 /// 
-class Chunk
+template<class Allocator = NullChunkAllocator>
+class Chunk : public Allocator
 {
 private:
 //public: // TEMPORARY HACK FOR TESTING CHUNK SEE MEMORYTEST1
 
     /// Only the FixedPageAllocator is allowed to interact with this class.
-    friend class FixedAllocator;
     friend class GrowingFixedAllocator;
     friend class StagnantFixedAllocator;
 
@@ -43,7 +60,7 @@ private:
     /// \brief Creates a block of numberOfElements of size.
     /// \param size The size of data to store in this Block (in bytes).
     /// \param numberOfElements The number of elements of size to store.
-    bool Init(const unsigned int size, const unsigned char numberOfElements);
+    bool Init(const unsigned int size, const unsigned char numberOfElements, char * buffer = 0);
 
     /// \function Allocate
     /// \author Toby Banks
@@ -169,6 +186,8 @@ protected:
     unsigned char  m_uiTotalNumElements;     ///< The number of elements we store. 
     unsigned int   m_uiSize;                 ///< The size in bytes of each element.
 };
+
+#include "chunk.inl"
 
 #endif // _CHUNK_H_
  

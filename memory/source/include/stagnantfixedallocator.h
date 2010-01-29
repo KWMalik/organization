@@ -1,8 +1,6 @@
 #ifndef _STAGNANT_FIXED_ALLOCATOR_H_
 #define _STAGNANT_FIXED_ALLOCATOR_H_
 
-#include <vector>
-
 #include "chunk.h"
 
 /// \class StagnantFixedAllocator
@@ -14,9 +12,10 @@
 class StagnantFixedAllocator
 {
 public:
+    typedef Chunk<NullChunkAllocator> ChunkT;
+
     /// Zero's out all non-static members.
-    StagnantFixedAllocator() : m_uiBlockSize(0), m_uiNumberOfBlocks(0), m_pAllocChunk(0), 
-                               m_pDeallocChunk(0), m_pEmptyChunk(0) {}
+    StagnantFixedAllocator() : m_uiBlockSize(0), m_uiNumberOfBlocks(0), m_Chunk() {}
 
     /// Doesn't need to do anything. The class that creates this one provides the memory to use.
     ~StagnantFixedAllocator() {}
@@ -51,7 +50,7 @@ public:
     /// \param pointer The pointer to free.
     /// \param hint The first block to look in.
     /// \return True if the block was found and freed; false otherwise.
-    bool Deallocate(void *pointer, Chunk* hint = NULL);
+    bool Deallocate(void *pointer, ChunkT * hint = 0);
 
     /// \function BlockSize
     /// \author Toby Banks
@@ -59,6 +58,27 @@ public:
     /// \brief Returns the size this StagnantFixedAllocator was initialized with.
     /// \return The size this StagnantFixedAllocator was initialized with.
     inline unsigned int BlockSize() const { return m_uiBlockSize; }
+
+    /// \function FreeEmptyChunk
+    /// \author Toby Banks
+    /// 
+    /// \brief There will never be a empty chunk. This pool cannot grow.
+    /// \return False, always.
+    bool TrimEmptyChunk() { return false; }
+
+    /// \function FreeChunkContainer
+    /// \author Toby Banks
+    ///
+    /// \brief Does nothing. Just a interface for generic client code.
+    /// \return False, always.
+    bool TrimChunkContainer() { return false; }
+
+    /// \function NumberOfEmptyChunks
+    /// \author Toby Banks
+    ///
+    /// \brief Just a interface to simplify generic code.
+    /// \return 0 Always.
+    unsigned int NumberOfEmptyChunks() const { return 0; }
 
     /// \function IsCorrupt
     /// \author Toby Banks
@@ -70,32 +90,20 @@ public:
     /// \return True if the chunklist is corrupt.
     bool IsCorrupt() const;
 
+    /// \function HasBlock
+    /// \author Toby Banks
+    /// 
+    /// \brief Checks to see if address pointer is owned by this GrowingFixedAllocator.
+    /// \param pointer The address to check to see if this GrowingFixedAllocator owns it.
+    /// \return A pointer to the Chunk that contains pointer; or NULL.
+    inline const ChunkT * HasBlock(void * pointer) const;
+    inline ChunkT * HasBlock(void * pointer);
+
     /// \function PrintStats
     /// \author Toby Banks
     ///
     ///
     void PrintStats() const;
-
-//Helper functions
-private:
-    /// \function DoDeallocate
-    /// \author Toby Banks
-    ///
-    /// Performs the actual deallocation. This is called inside of Deallocate.
-    ///
-    /// \pre Assumes that m_pDeallocChunk pointer to the correct chunk.
-    /// \brief Performs the actual deallocation.
-    /// \param pointer The memory to deallocate.
-    void DoDeallocate(void * pointer);
-
-    /// \function VicinityFind
-    /// \author Toby Banks
-    ///
-    /// \brief Returns a chunk that contains pointer or NULL.
-    /// \param pointer The address to search for.
-    /// \return A pointer to the chunk that container pointer; or NULL if it's not found.
-    Chunk *VicinityFind(void * pointer) const;
-
 
 private:
     /// Not implemented.
@@ -111,7 +119,24 @@ private:
     unsigned char m_uiNumberOfBlocks;
 
     /// Container of chunks.
-    Chunks *m_pChunks;
+    ChunkT m_Chunk;
 };
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+inline const StagnantFixedAllocator::ChunkT * StagnantFixedAllocator::HasBlock(void * pointer) const
+{
+    if(m_Chunk.HasBlock(pointer))
+    {
+        return &m_Chunk;
+    }
+    return 0;
+}
+
+///////////////////////////////////////////////////////////////////////////////////////////////
+inline StagnantFixedAllocator::ChunkT * StagnantFixedAllocator::HasBlock(void * pointer)
+{
+    return const_cast<ChunkT *>(const_cast<const StagnantFixedAllocator *>(this)->HasBlock(pointer));
+}
+
 
 #endif // _STAGNANT_FIXED_ALLOCATOR_H_

@@ -82,7 +82,7 @@ void * GrowingFixedAllocator::Allocate()
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-bool GrowingFixedAllocator::Deallocate(void *pointer, Chunk* hint)
+bool GrowingFixedAllocator::Deallocate(void *pointer)
 {
     Assert(ASSERT_ALL, !m_pChunks.empty());
     Assert(ASSERT_ALL, &m_pChunks.front() <= m_pAllocChunk);
@@ -91,7 +91,7 @@ bool GrowingFixedAllocator::Deallocate(void *pointer, Chunk* hint)
     Assert(ASSERT_ALL, &m_pChunks.back() >= m_pDeallocChunk);
     Assert(ASSERT_ALL, NumberOfEmptyChunks() < 2);
 
-    Chunk * foundChunk = (hint == NULL) ? VicinityFind(pointer) : hint;
+    Chunk * foundChunk = VicinityFind(pointer);
 
     if(foundChunk == NULL)
     {

@@ -3,17 +3,19 @@
 
 #include "fixedallocator.h"
 
+typedef StagnantFixedAllocator FixedAllocator;
+
 /// \class FixedAllocatorDescriptor
 class FixedAllocatorDescriptor
 {
 public:
-    unsigned int SingleAllocationSize() const;
-    unsigned int NumberOfAllocations() const;
+    unsigned int SingleAllocationSize() const { return singleAllocationSize; }
+    unsigned int NumberOfAllocations() const { return numberOfAllocations; }
 
-private:
     unsigned int singleAllocationSize;
-    unsigned int numberOfAllocations;;
+    unsigned int numberOfAllocations;
 };
+
 
 /// \class SmallObjectAllocator
 /// \author Toby Banks
@@ -154,16 +156,16 @@ private:
 	SmallObjectAllocator & operator = (const SmallObjectAllocator &);
 
 	/// Pointer to array of fixed-size allocators.
-	GrowingFixedAllocator * m_pPool;
+	FixedAllocator * m_pPool;
 
     //OPTINAL -- This needs ot go somewhere else
     char * buffer;
 
 	/// Largest object size supported by allocators.
-	const unsigned int m_uiMaxSmallObjectSize;
+	unsigned int m_uiMaxSmallObjectSize;
 
 	/// Size of alignment boundaries.
-	const unsigned int m_uiObjectAlignSize;
+	unsigned int m_uiObjectAlignSize;
 };
 
 #endif // _SMALL_OBJECT_ALLOCATOR_H_

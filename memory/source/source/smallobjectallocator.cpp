@@ -109,13 +109,13 @@ unsigned int SmallObjectAllocator::DetermineObjectAlignSize(FixedAllocatorDescri
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-SmallObjectAllocator::SmallObjectAllocator(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors) : m_pPool(0), m_uiMaxSmallObjectSize(maxObjectSize), m_uiObjectAlignSize(objectAlignSize)
+SmallObjectAllocator::SmallObjectAllocator(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors) : m_pPool(0), m_uiMaxSmallObjectSize(0), m_uiObjectAlignSize(8)
 {
 	Assert(ASSERT_TJB, fad);
 	Assert(ASSERT_TJB, numberOfAllocatorDescriptors > 0);
 
     //Calculate the total size of the fixed pool.
-    fixedPoolSize = FindTotalSizeForTheFixedPool(fad, numberOfAllocatorDescriptors);
+    unsigned int fixedPoolSize = FindTotalSizeForTheFixedPool(fad, numberOfAllocatorDescriptors);
 
     //Allocate a single block of memory to parse out to the Fixed Pools.
     char *buffer = new char[fixedPoolSize];
@@ -234,7 +234,7 @@ bool SmallObjectAllocator::Deallocate( void * p, unsigned int numBytes )
     Assert(ASSERT_MEM, allocator.BlockSize() >= numBytes);
     Assert(ASSERT_MEM, allocator.BlockSize() < numBytes + GetAlignment());
 
-    const bool found = allocator.Deallocate(p, NULL);
+    const bool found = allocator.Deallocate(p);
     (void) found;
 
     Assert(ASSERT_MEM, found);
@@ -253,7 +253,7 @@ bool SmallObjectAllocator::Deallocate(void * p)
 
     FixedAllocator * pAllocator = NULL;
     const unsigned int allocCount = GetOffset(GetMaxObjectSize(), GetAlignment());
-    Chunk * chunk = NULL;
+    FixedAllocator::ChunkT * chunk = NULL;
 
     for (unsigned int i = 0; i < allocCount; ++i)
     {

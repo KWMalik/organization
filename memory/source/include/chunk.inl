@@ -1,5 +1,3 @@
-#include "chunk.h"
-
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -11,17 +9,19 @@
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-bool Chunk::Init(const unsigned int size, const unsigned char numberOfElements, unsigned char * buffer)
+template<class Allocator>
+bool Chunk<Allocator>::Init(const unsigned int size, const unsigned char numberOfElements, char * buffer)
 {
     m_uiTotalNumElements = numberOfElements;
     m_uiSize = size;
 
     //If we are passed a buffer we should allocate from it.
-//  m_pData = buffer;
-//  const unsigned int sizeToAllocate = m_uiSize * m_uiTotalNumElements;
-//  m_pData = static_cast<unsigned char*>(malloc(sizeToAllocate));
-    m_pData = _Allocate(sizeToAllocate);
+    const unsigned int sizeToAllocate = m_uiSize * m_uiTotalNumElements;
+    m_pData = Allocator::_Allocate(sizeToAllocate);
 
+//  m_pData = buffer;
+//  m_pData = static_cast<unsigned char*>(malloc(sizeToAllocate));
+ 
     memset(m_pData, 0, sizeToAllocate);
 
     Reset();
@@ -30,7 +30,8 @@ bool Chunk::Init(const unsigned int size, const unsigned char numberOfElements, 
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-void * Chunk::Allocate()
+template<class Allocator>
+void * Chunk<Allocator>::Allocate()
 {
     Assert(ASSERT_ALL, !IsFull(), "Trying to allocate when this chunk is full.\n");
     void * pReturn = static_cast<void*>(&(m_pData[m_uiSize * m_uiFirstAvailableBlock]));
@@ -45,7 +46,8 @@ void * Chunk::Allocate()
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-void Chunk::Deallocate(void *pointer)
+template<class Allocator>
+void Chunk<Allocator>::Deallocate(void *pointer)
 {
     Assert(ASSERT_ALL, (pointer >= m_pData), "Pointer is outside of the memory range of this block.\n");
     Assert(ASSERT_ALL, (pointer <= static_cast<void*>(m_pData + (m_uiSize * m_uiTotalNumElements))), 
@@ -77,7 +79,8 @@ void Chunk::Deallocate(void *pointer)
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-void Chunk::Reset()
+template<class Allocator>
+void Chunk<Allocator>::Reset()
 {
     Assert(ASSERT_ALL, m_uiSize > 0, "Invalid size");
     Assert(ASSERT_ALL, m_uiTotalNumElements > 0, "There are no blocks available.\n");
@@ -95,11 +98,12 @@ void Chunk::Reset()
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-void Chunk::Release()
+template<class Allocator>
+void Chunk<Allocator>::Release()
 {
     Assert(ASSERT_TJB, m_pData != 0, "You are trying to release a chunk that has not been initialized.\n");
 
-    free(m_pData);
+    Allocator::free(m_pData);
     m_pData = 0;
 
     m_uiFirstAvailableBlock = 0;
@@ -109,7 +113,8 @@ void Chunk::Release()
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-bool Chunk::IsCorrupt() const 
+template<class Allocator>
+bool Chunk<Allocator>::IsCorrupt() const 
 {
     if(m_uiTotalNumElements < m_uiBlocksAvailable)
     {
@@ -177,7 +182,8 @@ bool Chunk::IsCorrupt() const
 }
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
-bool Chunk::IsBlockAvailable(void * pointer) const
+template<class Allocator>
+bool Chunk<Allocator>::IsBlockAvailable(void * pointer) const
 {
     if(IsFull())
     {

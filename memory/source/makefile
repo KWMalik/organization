@@ -1,12 +1,14 @@
 ODIR=build
 
 ifeq ($(OS), Windows_NT)
-EXE=test.exe
+EXE1=test.exe
+EXE2=fixed.exe
 CC=g++-4
 CFLAGS = -DWINDOWS
 LKFLAGS = -enable-auto-import -Wl,-Map -Wl,build/example.map
 else
-EXE=test
+EXE1=test
+EXE2=fixed
 CC=g++
 #CFLAGS = -arch x86_64 -DMAC_OSX -g  -x c -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote 
 #CFLAGS = -arch x86_64 -DMAC_OSX -g  -x c -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -mfix-and-continue -gdwarf-2 
@@ -19,16 +21,25 @@ INCDIR = -Iinclude
 MEMORY_LIB_NAME := memory.a
 MEMORY_LIB = $(ODIR)/$(MEMORY_LIB_NAME)
 
-TEST_EXE_NAME := $(EXE)
+TEST_EXE_NAME := $(EXE1)
 TEST_EXE = $(ODIR)/$(TEST_EXE_NAME)
 
-_MEMORY_OBJ = chunk.o growingfixedallocator.o smallobjectallocator.o
+FIXED_EXE_NAME := $(EXE2)
+FIXED_EXE = $(ODIR)/$(FIXED_EXE_NAME)
+
+
+#_MEMORY_OBJ = chunk.o growingfixedallocator.o smallobjectallocator.o
+#_MEMORY_OBJ = chunk.o stagnantfixedallocator.o smallobjectallocator.o
+_MEMORY_OBJ = stagnantfixedallocator.o smallobjectallocator.o
 MEMORY_OBJ = $(patsubst %,$(ODIR)/%,$(_MEMORY_OBJ))
 
 _TEST1_OBJ = memory1.o 
 TEST1_OBJ = $(patsubst %,$(ODIR)/%,$(_TEST1_OBJ))
 
-default: $(TEST_EXE)
+_FIXED1_OBJ = fixed1.o 
+FIXED1_OBJ = $(patsubst %,$(ODIR)/%,$(_FIXED1_OBJ))
+
+default: $(FIXED_EXE)
 
 $(ODIR)/%.o:  source/%.cpp
 	$(CC) $(CFLAGS) $(INCDIR) -c -o $@ $< 
@@ -39,8 +50,12 @@ $(MEMORY_LIB): $(MEMORY_OBJ)
 $(ODIR)/%.o: tests/%.cpp
 	$(CC) -c -o $@ $< $(CFLAGS) $(INCDIR)
 
-$(TEST_EXE): $(MEMORY_OBJ) $(TEST1_OBJ)
+$(TEST_EXE): $(MEMORY_LIB) $(TEST1_OBJ)
 	$(CC) $(LKFLAGS) -o $@ $^ $(CFLAGS)
+
+$(FIXED_EXE): $(MEMORY_LIB) $(FIXED1_OBJ)
+	$(CC) $(LKFLAGS) -o $@ $^ $(CFLAGS)
+
 
 .PHONY: clean
 clean:
@@ -48,9 +63,25 @@ clean:
 
 .PHONY: run
 run:
-	$(TEST_EXE)
+	$(FIXED_EXE)
 
 .PHONY: debug
 debug:
+	gdb $(FIXED_EXE)
+
+.PHONY: test
+test:
+	$(TEST_EXE)
+
+.PHONY: debug-test
+debug-test:
 	gdb $(TEST_EXE)
+
+.PHONY: fixed 
+fixed:
+	$(FIXED_EXE)
+
+.PHONY: fixed-test
+fixed-test:
+	gdb $(FIXED_EXE)
 
