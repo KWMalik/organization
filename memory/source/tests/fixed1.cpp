@@ -38,7 +38,7 @@ void TestFixedAllocator()
 {
 	cout << "Running FixedAllocator Test" << endl;
 
-    char * buffer = new char[256];
+    unsigned char * buffer = new unsigned char[256];
     FixedAllocator fa;
     fa.Init(sizeof(int), 64, buffer);
 

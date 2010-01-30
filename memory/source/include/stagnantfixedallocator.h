@@ -29,7 +29,7 @@ public:
     /// \param blockSize The size of a single element. 
     /// \param chunkSize The number of elements of blocksize that a single chunk contains.
     /// \param buffer The buffer to use for the allocation (assumes correct size)
-    void Init(unsigned int singleAllocationSize, unsigned int numberOfAllocations, char *buffer);
+    void Init(unsigned int singleAllocationSize, unsigned int numberOfAllocations, unsigned char *buffer);
 
     /// \function Allocate
     /// \author Toby Banks

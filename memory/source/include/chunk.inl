@@ -10,7 +10,7 @@
 
 ///////////////////////////////////////////////////////////////////////////////////////////////
 template<class Allocator>
-bool Chunk<Allocator>::Init(const unsigned int size, const unsigned char numberOfElements, char * buffer)
+bool Chunk<Allocator>::Init(const unsigned int size, const unsigned char numberOfElements, unsigned char * buffer)
 {
     m_uiTotalNumElements = numberOfElements;
     m_uiSize = size;

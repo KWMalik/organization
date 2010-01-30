@@ -12,14 +12,14 @@ static const unsigned char UCHAR_MAX = 255;
 class MallocChunkAllocator
 {
 public:
-    void * _Allocate(unsigned int size) { return malloc(size); }
+    unsigned char * _Allocate(unsigned int size) { return static_cast<unsigned char *>(malloc(size)); }
     void _Free(void * buffer) { free(buffer); }
 };
 
 class NullChunkAllocator
 {
 public:
-    void * _Allocate(unsigned int size) { /* Do Nothing */ }
+    unsigned char * _Allocate(unsigned int size) { /* Do Nothing */ }
     void _Free(void * buffer) { /* Do Nothing */ }
 };
 
@@ -60,7 +60,7 @@ private:
     /// \brief Creates a block of numberOfElements of size.
     /// \param size The size of data to store in this Block (in bytes).
     /// \param numberOfElements The number of elements of size to store.
-    bool Init(const unsigned int size, const unsigned char numberOfElements, char * buffer = 0);
+    bool Init(const unsigned int size, const unsigned char numberOfElements, unsigned char * buffer = 0);
 
     /// \function Allocate
     /// \author Toby Banks

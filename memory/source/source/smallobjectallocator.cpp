@@ -60,10 +60,10 @@ unsigned int SmallObjectAllocator::FindTotalSizeForTheFixedPool(FixedAllocatorDe
 }
 
 /////////////////////////////////////////////////////////////////////////////////
-void SmallObjectAllocator::InitializeTheFixedPools(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors, char * buffer)
+void SmallObjectAllocator::InitializeTheFixedPools(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors, unsigned char * buffer)
 {
     //Create a pointer to track our location in the pool as we create chunks.
-    char * pointerToCurrentBlock = buffer; 
+    unsigned char * pointerToCurrentBlock = buffer; 
 
  	for(int i = 0; i < numberOfAllocatorDescriptors; ++i)
 	{
@@ -118,7 +118,7 @@ SmallObjectAllocator::SmallObjectAllocator(FixedAllocatorDescriptor * fad, int n
     unsigned int fixedPoolSize = FindTotalSizeForTheFixedPool(fad, numberOfAllocatorDescriptors);
 
     //Allocate a single block of memory to parse out to the Fixed Pools.
-    char *buffer = new char[fixedPoolSize];
+    unsigned char *buffer = new unsigned char[fixedPoolSize];
 
     //Allocated a array of FixedAllocator buffers.
 	m_pPool = new FixedAllocator[numberOfAllocatorDescriptors];

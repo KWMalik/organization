@@ -143,7 +143,7 @@ private:
 
     //Just a few helper functions for our initialization code.
     unsigned int FindTotalSizeForTheFixedPool(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
-    void InitializeTheFixedPools(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors, char * buffer);
+    void InitializeTheFixedPools(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors, unsigned char * buffer);
     unsigned int DetermineMaxSmallObjectSize(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
     unsigned int DetermineObjectAlignSize(FixedAllocatorDescriptor * fad, int numberOfAllocatorDescriptors);
  
