@@ -304,6 +304,8 @@
 			<key>Layout</key>
 			<array>
 				<dict>
+					<key>BecomeActive</key>
+					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXBottomSmartGroupGIDs</key>
@@ -397,13 +399,13 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CB2960391113E1A4002413AB</string>
+										<string>CB01153911147E0B00F5E0DC</string>
 										<key>history</key>
 										<array>
 											<string>CB94652A11124997009A0B4F</string>
 											<string>CBF6ACB611124A1E005001E1</string>
 											<string>CB2960291113E194002413AB</string>
-											<string>CB29602A1113E194002413AB</string>
+											<string>CB2960391113E1A4002413AB</string>
 										</array>
 									</dict>
 									<key>SplitCount</key>
@@ -417,18 +419,18 @@
 							<key>GeometryConfiguration</key>
 							<dict>
 								<key>Frame</key>
-								<string>{{0, 0}, {1069, 338}}</string>
+								<string>{{0, 0}, {1069, 327}}</string>
 								<key>RubberWindowFrame</key>
 								<string>4 55 1276 723 0 0 1280 778 </string>
 							</dict>
 							<key>Module</key>
 							<string>PBXNavigatorGroup</string>
 							<key>Proportion</key>
-							<string>338pt</string>
+							<string>327pt</string>
 						</dict>
 						<dict>
 							<key>Proportion</key>
-							<string>339pt</string>
+							<string>350pt</string>
 							<key>Tabs</key>
 							<array>
 								<dict>
@@ -442,7 +444,9 @@
 									<key>GeometryConfiguration</key>
 									<dict>
 										<key>Frame</key>
-										<string>{{10, 27}, {1069, 312}}</string>
+										<string>{{10, 27}, {1069, 323}}</string>
+										<key>RubberWindowFrame</key>
+										<string>4 55 1276 723 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>XCDetailModule</string>
@@ -497,8 +501,6 @@
 									<dict>
 										<key>Frame</key>
 										<string>{{10, 27}, {1069, 312}}</string>
-										<key>RubberWindowFrame</key>
-										<string>4 55 1276 723 0 0 1280 778 </string>
 									</dict>
 									<key>Module</key>
 									<string>PBXBuildResultsModule</string>
@@ -526,11 +528,11 @@
 			</array>
 			<key>TableOfContents</key>
 			<array>
-				<string>CB2960241113DF8C002413AB</string>
+				<string>CB01153A11147E0B00F5E0DC</string>
 				<string>1CA23ED40692098700951B8B</string>
-				<string>CB2960251113DF8C002413AB</string>
+				<string>CB01153B11147E0B00F5E0DC</string>
 				<string>CB4D6DC31112391000DDA059</string>
-				<string>CB2960261113DF8C002413AB</string>
+				<string>CB01153C11147E0B00F5E0DC</string>
 				<string>1CA23EDF0692099D00951B8B</string>
 				<string>1CA23EE00692099D00951B8B</string>
 				<string>1CA23EE10692099D00951B8B</string>
@@ -703,7 +705,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>286515620.06606799</real>
+	<real>286555659.32769501</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -720,9 +722,6 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
-		<string>1C530D5B069F1CE1000CFCEE</string>
-		<string>CB2960331113E194002413AB</string>
-		<string>CB2960341113E194002413AB</string>
 		<string>/Users/tobybanks/projects/organization/memory/source/projects/smallobjectallocator/smallobjectallocator.xcodeproj</string>
 	</array>
 	<key>WindowString</key>

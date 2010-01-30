@@ -3,25 +3,15 @@
 
 #include <stdlib.h>
 
+#include "FastEmbeddedPool.h"
+#include "allocators.h"
+
 /// Maximum size of a 8-bit int.
 #if WINDOWS
 static const unsigned char UCHAR_MAX = 255;
 #endif //WINDOWS
 
 
-class MallocChunkAllocator
-{
-public:
-    unsigned char * _Allocate(unsigned int size) { return static_cast<unsigned char *>(malloc(size)); }
-    void _Free(void * buffer) { free(buffer); }
-};
-
-class NullChunkAllocator
-{
-public:
-    unsigned char * _Allocate(unsigned int size) { /* Do Nothing */ }
-    void _Free(void * buffer) { /* Do Nothing */ }
-};
 
 
 /// \class Chunk
@@ -41,11 +31,11 @@ public:
 /// FixedAllocator, this is to ensure that NO ONE ever hacks this 
 /// with nonsense.
 /// 
-template<class Allocator = NullChunkAllocator>
+template<class Allocator = TypeAllocator<int, 16 * sizeof(int)> >
 class Chunk : public Allocator
 {
 private:
-//public: // TEMPORARY HACK FOR TESTING CHUNK SEE MEMORYTEST1
+public: // TEMPORARY HACK FOR TESTING CHUNK SEE MEMORYTEST1
 
     /// Only the FixedPageAllocator is allowed to interact with this class.
     friend class GrowingFixedAllocator;

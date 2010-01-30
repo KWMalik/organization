@@ -17,7 +17,7 @@ bool Chunk<Allocator>::Init(const unsigned int size, const unsigned char numberO
 
     //If we are passed a buffer we should allocate from it.
     const unsigned int sizeToAllocate = m_uiSize * m_uiTotalNumElements;
-    m_pData = Allocator::_Allocate(sizeToAllocate);
+    m_pData = reinterpret_cast<unsigned char *>(Allocator::allocate(sizeToAllocate));
 
 //  m_pData = buffer;
 //  m_pData = static_cast<unsigned char*>(malloc(sizeToAllocate));
@@ -103,7 +103,7 @@ void Chunk<Allocator>::Release()
 {
     Assert(ASSERT_TJB, m_pData != 0, "You are trying to release a chunk that has not been initialized.\n");
 
-    Allocator::free(m_pData);
+    Allocator::deallocate(reinterpret_cast<>(m_pData));
     m_pData = 0;
 
     m_uiFirstAvailableBlock = 0;

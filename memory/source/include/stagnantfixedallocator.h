@@ -12,7 +12,7 @@
 class StagnantFixedAllocator
 {
 public:
-    typedef Chunk<NullChunkAllocator> ChunkT;
+    typedef Chunk<> ChunkT;
 
     /// Zero's out all non-static members.
     StagnantFixedAllocator() : m_uiBlockSize(0), m_uiNumberOfBlocks(0), m_Chunk() {}
