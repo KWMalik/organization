@@ -31,7 +31,8 @@ static const unsigned char UCHAR_MAX = 255;
 /// FixedAllocator, this is to ensure that NO ONE ever hacks this 
 /// with nonsense.
 /// 
-template<class Allocator = TypeAllocator<int, 16 * sizeof(int)> >
+//template<class Allocator = TypeAllocator<int, 16 * sizeof(int)> >
+template<class Allocator = New_Delete_Allocator>
 class Chunk : public Allocator
 {
 private:

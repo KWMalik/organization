@@ -103,7 +103,7 @@ void Chunk<Allocator>::Release()
 {
     Assert(ASSERT_TJB, m_pData != 0, "You are trying to release a chunk that has not been initialized.\n");
 
-    Allocator::deallocate(reinterpret_cast<>(m_pData));
+    Allocator::deallocate((m_pData));
     m_pData = 0;
 
     m_uiFirstAvailableBlock = 0;
