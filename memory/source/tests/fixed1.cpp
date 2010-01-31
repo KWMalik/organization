@@ -344,7 +344,7 @@ void TestSmallAllocator()
 
 
 
-int main()
+int main()  ///RESOLVE
 {
     TestChunk();
     Test_New_Delete_Allocator();
@@ -357,3 +357,4 @@ int main()
     return 0;
 }
 
+///THIS COMMENT IS MEANT TO FORCE A RESOLVE 
