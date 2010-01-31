@@ -1,8 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-#include "fixedallocator.h"
-#include "smallobjectallocator.h"
+#include "allocators.h"
 
 using namespace std;
 
@@ -20,16 +19,18 @@ struct Vector4f
 void Test_Fixed_Sized_Chunk_Allocator()
 {
     cout << "Running Test_Fixed_Sized_Chunk_Allocator Tests" << endl;
+
+    typedef Fixed_Sized_Allocator<size_t, New_Delete_Allocator, No_Growth_Policy> MyFixedAllocator;
+    //Fixed_Size_Type_Allocator 
+    MyFixedAllocator fixed_allocator; 
+
     const int buffer_count = 4;
-    
-    FixedSizedChunkAllocator<> fixed_allocator; 
     fixed_allocator.construct(buffer_count, sizeof(Vector4f));
 
 	Vector4f *v1 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
 	Vector4f *v2 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
 	Vector4f *v3 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
 	Vector4f *v4 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
-	Vector4f *v5 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());	
 
 	v1->x = 1;
 	v1->y = 2;

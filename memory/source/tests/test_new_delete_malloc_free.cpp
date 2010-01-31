@@ -2,12 +2,8 @@
 #include <stdlib.h>
 
 #include "allocators.h"
-#include "fixedallocator.h"
-#include "smallobjectallocator.h"
 
 using namespace std;
-
-
 
 void Test_New_Delete_Allocator()
 {

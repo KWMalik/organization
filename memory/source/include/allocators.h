@@ -7,7 +7,8 @@
 #ifndef _ALLOCATORS_H_
 #define _ALLOCATORS_H_
 
-#include "fastembeddedpool.h"
+#include "growth_policies.h"
+#include "pool.h"
 
 /// \class New_Delete_Allocator
 ///
@@ -37,16 +38,20 @@ public:
 /// \class FixedSizeChunkAllocator
 ///
 ///
-template<class Allocator = New_Delete_Allocator>
-class FixedSizedChunkAllocator
+template<
+            class SizeT, 
+            class Allocator,
+            template <typename, typename> class GrowthPolicy
+        >
+class Fixed_Sized_Allocator : public GrowthPolicy<SizeT, Allocator>
 {
 public:
-    typedef FastEmbeddedPool<unsigned long> pool;
-    typedef pool::size_type  size_type;
+    typedef MemoryPool<SizeT> pool;
+    typedef SizeT size_type;
 
-    FixedSizedChunkAllocator() {}
+    Fixed_Sized_Allocator() {}
 
-    ~FixedSizedChunkAllocator() 
+    ~Fixed_Sized_Allocator() 
     {
         if(buffer)
         {
@@ -61,11 +66,37 @@ public:
         fixed_pool.add_block(reinterpret_cast<void *>(buffer),
                              numberOfElements * chunkSize,
                              chunkSize);
+
+        GrowthPolicy<size_type, Allocator>::create_growth_policy(numberOfElements, chunkSize);
     }
 
-    unsigned char * allocate() { return static_cast<unsigned char *>( fixed_pool.malloc()); }
+    unsigned char * allocate()
+    {
+        unsigned char * ret = static_cast<unsigned char *>(fixed_pool.allocate());
 
-    void deallocate(unsigned char * buffer) { fixed_pool.free(buffer); }
+        if(ret == NULL && GrowthPolicy<SizeT, Allocator>::can_grow())
+        {
+            //We are out of memory so we should grow
+            void * new_memory_block = GrowthPolicy<SizeT, Allocator>::grow();
+
+            if(new_memory_block)
+            {
+                fixed_pool.add_block(new_memory_block, GrowthPolicy<SizeT, Allocator>::grow_size(), GrowthPolicy<SizeT, Allocator>::element_size());
+            }
+            else
+            {
+                //Assert(TJB, "DEATH!!!!");
+            }
+
+            ret = static_cast<unsigned char *>(fixed_pool.allocate());
+        }
+        return ret;
+    }
+
+    void deallocate(unsigned char * buffer)
+    {
+        fixed_pool.deallocate(buffer);
+    }
 
 private:
     pool fixed_pool;
@@ -74,18 +105,22 @@ private:
 
 /// \class TypeAllocator
 ///
-template<class TElement, class Allocator = New_Delete_Allocator>
-class TypeAllocator 
+template<
+            class TElement,
+            class Allocator,
+            template <typename, typename> class GrowthPolicy
+        >
+class Fixed_Size_Type_Allocator : public GrowthPolicy<size_t, Allocator>
 {
 public:
-    typedef FastEmbeddedPool<unsigned long> pool;
-    typedef pool::size_type size_type;
+    typedef size_t size_type;
+    typedef MemoryPool<size_type> pool;
 
     ///
-    TypeAllocator() {}
+    Fixed_Size_Type_Allocator() {}
 
     ///
-    ~TypeAllocator() 
+    ~Fixed_Size_Type_Allocator() 
     {
         if(buffer)
         {
@@ -102,60 +137,15 @@ public:
     }
 
     ///
-    TElement * allocate() { return reinterpret_cast<TElement *>(type_pool.malloc()); }
+    TElement * allocate() { return reinterpret_cast<TElement *>(type_pool.allocate()); }
 
     ///
-    void deallocate(TElement * element) { type_pool.free(reinterpret_cast<void *>(element)); }
+    void deallocate(TElement * element) { type_pool.deallocate(reinterpret_cast<void *>(element)); }
 
 private:
     pool type_pool;
     unsigned char * buffer;
 };
-
-///// \class GrowingChunkAllocator
-/////
-/////
-//template<class Allocator = New_Delete_Allocator>
-//class GrowingChunkAllocator
-//{
-//public:
-//    typedef FastEmbeddedPool<unsigned long> pool;
-//    typedef pool::size_type  size_type;
-//
-//    GrowingChunkAllocator() {}
-//
-//    ~GrowingChunkAllocator() 
-//    {
-//        if(buffer)
-//        {
-//            Allocator::deallocate(buffer);
-//            buffer = 0;
-//        }
-//    }
-//
-//    void construct(unsigned long numberOfElements, unsigned long chunkSize)
-//    {
-//        buffer = Allocator::allocate(numberOfElements * chunkSize);
-//        fixed_pool.add_block(reinterpret_cast<void *>(buffer),
-//                             numberOfElements * chunkSize,
-//                             chunkSize);
-//    }
-//
-//    unsigned char * allocate()
-//    {
-//        return static_cast<unsigned char *>( fixed_pool.malloc());
-//    }
-//
-//    void deallocate(unsigned char * buffer)
-//    {
-//        fixed_pool.free(buffer);
-//    }
-//
-//private:
-//    pool fixed_pool;
-//    unsigned char * buffer;
-//};
-//
 
 #endif // _ALLOCATORS_H_
 

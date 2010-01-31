@@ -5,7 +5,7 @@
 
 using namespace std;
 
-typedef ObjectAllocator<FixedSizedChunkAllocator<> > MyAllocator;
+typedef Object_Allocator<Growing_New_Allocator> MyAllocator;
 MyAllocator *oa;
 
 #define OVERLOAD_NEW_DELETE									\
@@ -15,7 +15,7 @@ void *operator new(size_t size)								\
     void *p = 0;											\
     if(oa)													\
     {														\
-        p = oa->Allocate(size);     						\
+        p = oa->allocate(size);        						\
 		cout	<< "\tNew: PoolAllocate a block of size "	\
 				<< size << " at " << p << endl;				\
     }														\
@@ -35,11 +35,11 @@ void operator delete(void *p, size_t size)					\
     bool ableToDeallocateFromPools = false;					\
     if(oa)													\
     {														\
-        ableToDeallocateFromPools = oa->Deallocate(p, size);\
+        ableToDeallocateFromPools = oa->deallocate(p, size);\
 		if(ableToDeallocateFromPools)						\
 		{													\
 			cout	<< "\tDelete: Allocation found pool: "	\
-			<< p << endl;									\			
+			<< p << endl;									\
 		}													\
     }														\
     if(!ableToDeallocateFromPools)							\
@@ -110,6 +110,10 @@ void Test_Object_Allocator()
     Size_16 *a2  = new Size_16();
 	Size_16 *a3  = new Size_16();
 	Size_16 *a4  = new Size_16();
+	Size_16 *a5  = new Size_16();
+	Size_16 *a6  = new Size_16();
+	Size_16 *a7  = new Size_16();
+	
 	
     Size_32 *b1  = new Size_32();
     Size_32 *b2  = new Size_32();

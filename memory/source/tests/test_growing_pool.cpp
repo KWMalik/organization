@@ -1,7 +1,7 @@
 #include <iostream>
 #include <stdlib.h>
 
-#include "growing_pool.h"
+#include "object_allocator.h"
 
 using namespace std;
 
@@ -17,23 +17,22 @@ struct Vector4f
 };
 
 
-void Test_Growing_Pool()
+void Test_Pool()
 {
-    typedef GrowingPool<size_t, New_Delete_Allocator, Constant_Growth_Policy> MyGrowingPool;
 
     cout << "Running Test_Growing_Pool Tests" << endl;
     const int buffer_count = 4;
     
-    MyGrowingPool pool; 
+    MemoryPool<size_t> pool;
     unsigned char * buffer = new unsigned char[buffer_count * sizeof(Vector4f)];
     pool.add_block(buffer, buffer_count * sizeof(Vector4f), sizeof(Vector4f));
 
 
-	Vector4f *v1 = reinterpret_cast<Vector4f *>(pool.malloc());
-	Vector4f *v2 = reinterpret_cast<Vector4f *>(pool.malloc());
-	Vector4f *v3 = reinterpret_cast<Vector4f *>(pool.malloc());
-	Vector4f *v4 = reinterpret_cast<Vector4f *>(pool.malloc());
-	Vector4f *v5 = reinterpret_cast<Vector4f *>(pool.malloc());	
+	Vector4f *v1 = reinterpret_cast<Vector4f *>(pool.allocate());
+	Vector4f *v2 = reinterpret_cast<Vector4f *>(pool.allocate());
+	Vector4f *v3 = reinterpret_cast<Vector4f *>(pool.allocate());
+	Vector4f *v4 = reinterpret_cast<Vector4f *>(pool.allocate());
+	Vector4f *v5 = reinterpret_cast<Vector4f *>(pool.allocate());	
 
 	v1->x = 1;
 	v1->y = 2;
@@ -60,8 +59,8 @@ void Test_Growing_Pool()
  	cout << "Vector4f #3: " << *v3 << endl;
 	cout << "Vector4f #4: " << *v4 << endl;
 	
-    pool.free(reinterpret_cast<unsigned char *>(v2));
-    pool.free(reinterpret_cast<unsigned char *>(v4));	
+    pool.deallocate(reinterpret_cast<unsigned char *>(v2));
+    pool.deallocate(reinterpret_cast<unsigned char *>(v4));	
 	
 	
     cout << "DONE Running Test_Growing_Pool Tests" << endl << endl;

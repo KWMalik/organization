@@ -21,7 +21,9 @@ void Test_Type_Allocator()
     cout << "Running Test_Type_Allocator Tests" << endl;
     const int buffer_count = 4;
     
-    TypeAllocator<Vector4f> type_allocator; 
+    typedef Fixed_Size_Type_Allocator<Vector4f, New_Delete_Allocator, No_Growth_Policy> MyTypeAllocator;
+    MyTypeAllocator type_allocator; 
+
     type_allocator.construct(sizeof(Vector4f), buffer_count); 
     Vector4f * vectors = type_allocator.allocate();
 

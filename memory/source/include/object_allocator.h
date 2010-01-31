@@ -3,6 +3,16 @@
 
 #include "allocators.h"
 
+//Fixed size allocators.
+typedef Fixed_Sized_Allocator<size_t, New_Delete_Allocator, No_Growth_Policy> No_Growth_New_Allocator;
+typedef Fixed_Sized_Allocator<size_t, Malloc_Free_Allocator, No_Growth_Policy> No_Growth_Malloc_Allocator;
+
+//Constant growth allocators.
+typedef Fixed_Sized_Allocator<size_t, New_Delete_Allocator, Constant_Growth_Policy> Growing_New_Allocator;
+typedef Fixed_Sized_Allocator<size_t, Malloc_Free_Allocator, Constant_Growth_Policy> Growing_Malloc_Allocator;
+
+typedef No_Growth_New_Allocator Default_Allocator;
+
 /// \struct ObjectAllocationSizes
 ///
 ///
@@ -12,21 +22,23 @@ struct ObjectAllocationSizes
     int fixed_allocator_size;       //< The size of a chunk of memory stored in a the fixed object allocator.
 };
 
-
+/// \class Object_Allocator
+///
+///
 template<class Allocator>
-class ObjectAllocator
-{ 
+class Object_Allocator
+{
 public:
     ///
     /// \precond Assumes that the pools have been created in order from smallest to largest.
     void Init(ObjectAllocationSizes *fixed_pool_sizes, size_t number_of_fixed_pools);
 
-    inline void * Allocate(size_t size);
-    inline bool Deallocate(void * pointer);
-    inline bool Deallocate(void * pointer, size_t size_of_allocation);
+    inline void * allocate(size_t size);
+    //inline bool deallocate(void * pointer);
+    inline bool deallocate(void * pointer, size_t size_of_allocation);
 
 private:
-    Allocator * FindAppropriatePool(size_t size) const;
+    Allocator * find_appropriate_pool(size_t size) const;
 
 private:
     ObjectAllocationSizes *oas;
@@ -36,7 +48,7 @@ private:
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 template<class Allocator>
-void ObjectAllocator<Allocator>::Init(ObjectAllocationSizes *fixed_pool_sizes, size_t number_of_fixed_pools)
+void Object_Allocator<Allocator>::Init(ObjectAllocationSizes *fixed_pool_sizes, size_t number_of_fixed_pools)
 {
     number_of_pools = number_of_fixed_pools;
     oas = fixed_pool_sizes;
@@ -50,7 +62,7 @@ void ObjectAllocator<Allocator>::Init(ObjectAllocationSizes *fixed_pool_sizes, s
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 template<class Allocator>
-inline Allocator * ObjectAllocator<Allocator>::FindAppropriatePool(size_t size) const
+inline Allocator * Object_Allocator<Allocator>::find_appropriate_pool(size_t size) const
 {
     for(int i = 0; i < number_of_pools; ++i)
     {
@@ -66,10 +78,10 @@ inline Allocator * ObjectAllocator<Allocator>::FindAppropriatePool(size_t size) 
  
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 template<class Allocator>
-inline void * ObjectAllocator<Allocator>::Allocate(size_t size)
+inline void * Object_Allocator<Allocator>::allocate(size_t size)
 {
     //Find the appropriate pool.
-    Allocator * appropriate_allocator = FindAppropriatePool(size);
+    Allocator * appropriate_allocator = find_appropriate_pool(size);
     if(appropriate_allocator)
     {
         //We found a allocator
@@ -82,29 +94,29 @@ inline void * ObjectAllocator<Allocator>::Allocate(size_t size)
     }
 }
 
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-template<>
-inline bool ObjectAllocator<FixedSizedChunkAllocator<New_Delete_Allocator> >::Deallocate(void *pointer)
-{
-    //Assert(TJB, "DEATH!!! If the underlying pool is a FastEmbedded then you must track the size of the allocation");
-    //TJB: MAKE THIS FUNCTION DIE HERE!!!
-}
-
-///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-template<>
-inline bool ObjectAllocator<FixedSizedChunkAllocator<Malloc_Free_Allocator> >::Deallocate(void *pointer)
-{
-    //Assert(TJB, "DEATH!!! If the underlying pool is a FastEmbedded then you must track the size of the allocation");
-    //TJB: MAKE THIS FUNCTION DIE HERE!!!
-}
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//template<>
+//inline bool Object_Allocator<No_Growth_Malloc_Allocator>::deallocate(void *pointer)
+//{
+//    //Assert(TJB, "DEATH!!! If the underlying pool is a FastEmbedded then you must track the size of the allocation");
+//    //TJB: MAKE THIS FUNCTION DIE HERE!!!
+//}
+//
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+//template<>
+//inline bool Object_Allocator<No_Growth_New_Allocator>::deallocate(void *pointer)
+//{
+//    //Assert(TJB, "DEATH!!! If the underlying pool is a FastEmbedded then you must track the size of the allocation");
+//    //TJB: MAKE THIS FUNCTION DIE HERE!!!
+//}
 
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 template<class Allocator>
-inline bool ObjectAllocator<Allocator>::Deallocate(void *pointer, size_t size_of_allocation)
+inline bool Object_Allocator<Allocator>::deallocate(void *pointer, size_t size_of_allocation)
 {
     //Find the appropriate pool.
-    Allocator * appropriate_allocator = FindAppropriatePool(size_of_allocation);
+    Allocator * appropriate_allocator = find_appropriate_pool(size_of_allocation);
     bool success = false;
     if(appropriate_allocator)
     {
