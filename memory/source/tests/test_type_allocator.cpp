@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "allocators.h"
+#include "fixed_size_allocators.h"
 
 using namespace std;
 

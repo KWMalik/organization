@@ -2,14 +2,15 @@
 #define _OBJECT_ALLOCATOR_H_
 
 #include "allocators.h"
+#include "fixed_size_allocators.h"
 
 //Fixed size allocators.
-typedef Fixed_Sized_Allocator<size_t, New_Delete_Allocator, No_Growth_Policy> No_Growth_New_Allocator;
-typedef Fixed_Sized_Allocator<size_t, Malloc_Free_Allocator, No_Growth_Policy> No_Growth_Malloc_Allocator;
+typedef Fixed_Size_Allocator<size_t, New_Delete_Allocator, No_Growth_Policy> No_Growth_New_Allocator;
+typedef Fixed_Size_Allocator<size_t, Malloc_Free_Allocator, No_Growth_Policy> No_Growth_Malloc_Allocator;
 
 //Constant growth allocators.
-typedef Fixed_Sized_Allocator<size_t, New_Delete_Allocator, Constant_Growth_Policy> Growing_New_Allocator;
-typedef Fixed_Sized_Allocator<size_t, Malloc_Free_Allocator, Constant_Growth_Policy> Growing_Malloc_Allocator;
+typedef Fixed_Size_Allocator<size_t, New_Delete_Allocator, Constant_Growth_Policy> Growing_New_Allocator;
+typedef Fixed_Size_Allocator<size_t, Malloc_Free_Allocator, Constant_Growth_Policy> Growing_Malloc_Allocator;
 
 typedef No_Growth_New_Allocator Default_Allocator;
 
