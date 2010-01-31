@@ -119,7 +119,7 @@ private:
 	}
 };
 
-#include "impl/memorypool.inl"
+#include "impl/memory_pool.inl"
 
 #endif // _GROWING_POOL_H_
 

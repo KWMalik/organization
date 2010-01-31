@@ -8,7 +8,7 @@
 #define _ALLOCATORS_H_
 
 #include "growth_policies.h"
-#include "memorypool.h"
+#include "memory_pool.h"
 
 /// \class New_Delete_Allocator
 ///
