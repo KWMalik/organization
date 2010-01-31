@@ -9,6 +9,8 @@ extern void Test_Malloc_Free_Allocator();
 
 extern void Test_Fixed_Sized_Chunk_Allocator();
 
+extern void Test_Growing_Pool();
+
 extern void Test_Type_Allocator();
 
 extern void Test_Fixed_Allocator();

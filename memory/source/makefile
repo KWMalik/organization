@@ -42,7 +42,8 @@ _FIXED1_HELPER_OBJS =	test_chunk.o \
 					   	test_new_delete_malloc_free.o \
 					   	test_object_allocator.o \
 					   	test_small_object_allocator.o \
-					   	test_type_allocator.o
+					   	test_type_allocator.o \
+						test_growing_pool.o
 
 _FIXED1_OBJ = fixed1.o $(_FIXED1_HELPER_OBJS)
 FIXED1_OBJ = $(patsubst %,$(ODIR)/%,$(_FIXED1_OBJ))

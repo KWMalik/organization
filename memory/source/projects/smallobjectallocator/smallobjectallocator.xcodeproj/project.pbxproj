@@ -7,6 +7,13 @@
 	objects = {
 
 /* Begin PBXFileReference section */
+		CB0115D31115DF1500F5E0DC /* test_allocators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_allocators.h; sourceTree = "<group>"; };
+		CB0115D41115DF1500F5E0DC /* test_chunk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_chunk.cpp; sourceTree = "<group>"; };
+		CB0115D51115DF1500F5E0DC /* test_fixed_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_fixed_allocator.cpp; sourceTree = "<group>"; };
+		CB0115D61115DF1500F5E0DC /* test_fixed_sized_chunk_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_fixed_sized_chunk_allocator.cpp; sourceTree = "<group>"; };
+		CB0115D71115DF1500F5E0DC /* test_new_delete_malloc_free.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_new_delete_malloc_free.cpp; sourceTree = "<group>"; };
+		CB0115D81115DF1500F5E0DC /* test_small_object_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_small_object_allocator.cpp; sourceTree = "<group>"; };
+		CB0115D91115DF1500F5E0DC /* test_type_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_type_allocator.cpp; sourceTree = "<group>"; };
 		CB4D6DB41112385800DDA059 /* chunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chunk.h; sourceTree = "<group>"; };
 		CB4D6DB51112385800DDA059 /* fixedallocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fixedallocator.h; sourceTree = "<group>"; };
 		CB4D6DB61112385800DDA059 /* memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory.h; sourceTree = "<group>"; };
@@ -56,6 +63,13 @@
 		CB4D6DBE1112388D00DDA059 /* tests */ = {
 			isa = PBXGroup;
 			children = (
+				CB0115D31115DF1500F5E0DC /* test_allocators.h */,
+				CB0115D41115DF1500F5E0DC /* test_chunk.cpp */,
+				CB0115D51115DF1500F5E0DC /* test_fixed_allocator.cpp */,
+				CB0115D61115DF1500F5E0DC /* test_fixed_sized_chunk_allocator.cpp */,
+				CB0115D71115DF1500F5E0DC /* test_new_delete_malloc_free.cpp */,
+				CB0115D81115DF1500F5E0DC /* test_small_object_allocator.cpp */,
+				CB0115D91115DF1500F5E0DC /* test_type_allocator.cpp */,
 				CB4D6DBF1112388D00DDA059 /* memory1.cpp */,
 			);
 			name = tests;

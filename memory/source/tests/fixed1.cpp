@@ -4,6 +4,7 @@
 
 int main()
 {
+    Test_Growing_Pool();
 /*
     Test_Chunk();
     Test_New_Delete_Allocator();
@@ -12,8 +13,8 @@ int main()
     Test_Type_Allocator();
     Test_Fixed_Allocator();
     //Test_Small_Object_Allocator();
-*/
     Test_Object_Allocator();
+*/
     return 0;
 }
 

@@ -1,3 +1,9 @@
+/// \file allocators.h
+/// \author Toby Banks
+///
+/// When accessing these classes it's best to use the typedef's at the bottom of the file.
+///
+///
 #ifndef _ALLOCATORS_H_
 #define _ALLOCATORS_H_
 
@@ -104,10 +110,52 @@ public:
 private:
     pool type_pool;
     unsigned char * buffer;
-
-   // New_Delete_Allocator allocator;
 };
 
+///// \class GrowingChunkAllocator
+/////
+/////
+//template<class Allocator = New_Delete_Allocator>
+//class GrowingChunkAllocator
+//{
+//public:
+//    typedef FastEmbeddedPool<unsigned long> pool;
+//    typedef pool::size_type  size_type;
+//
+//    GrowingChunkAllocator() {}
+//
+//    ~GrowingChunkAllocator() 
+//    {
+//        if(buffer)
+//        {
+//            Allocator::deallocate(buffer);
+//            buffer = 0;
+//        }
+//    }
+//
+//    void construct(unsigned long numberOfElements, unsigned long chunkSize)
+//    {
+//        buffer = Allocator::allocate(numberOfElements * chunkSize);
+//        fixed_pool.add_block(reinterpret_cast<void *>(buffer),
+//                             numberOfElements * chunkSize,
+//                             chunkSize);
+//    }
+//
+//    unsigned char * allocate()
+//    {
+//        return static_cast<unsigned char *>( fixed_pool.malloc());
+//    }
+//
+//    void deallocate(unsigned char * buffer)
+//    {
+//        fixed_pool.free(buffer);
+//    }
+//
+//private:
+//    pool fixed_pool;
+//    unsigned char * buffer;
+//};
+//
 
 #endif // _ALLOCATORS_H_
 

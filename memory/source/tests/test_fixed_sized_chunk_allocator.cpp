@@ -19,28 +19,47 @@ struct Vector4f
 
 void Test_Fixed_Sized_Chunk_Allocator()
 {
-    cout << "Running Test_FixedSizedChunkAllocator Tests" << endl;
+    cout << "Running Test_Fixed_Sized_Chunk_Allocator Tests" << endl;
     const int buffer_count = 4;
     
     FixedSizedChunkAllocator<> fixed_allocator; 
-    fixed_allocator.construct(sizeof(Vector4f), buffer_count);
+    fixed_allocator.construct(buffer_count, sizeof(Vector4f));
 
-    Vector4f * vectors = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
+	Vector4f *v1 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
+	Vector4f *v2 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
+	Vector4f *v3 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
+	Vector4f *v4 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
+	Vector4f *v5 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());	
 
-    for(int i = 0; i < buffer_count; ++i)
-    {
-        vectors[i].x = i + 1;
-        vectors[i].y = i + 2;
-        vectors[i].z = i + 3;
-        vectors[i].x = 1;
-    }
-
-    for(int i = 0; i < buffer_count; ++i)
-    {
-        cout << "Element #" << i << " " << vectors[i] << endl;
-    }
-
-    fixed_allocator.deallocate(reinterpret_cast<unsigned char *>(vectors));
+	v1->x = 1;
+	v1->y = 2;
+	v1->z = 3;
+	v1->w = 4;
+	
+	v2->x = 5;
+	v2->y = 6;
+	v2->z = 7;
+	v2->w = 8;
+	
+	v3->x = 9;
+	v3->y = 10;
+	v3->z = 11;
+	v3->w = 12;
+	
+	v4->x = 13;
+	v4->y = 14;
+	v4->z = 15;
+	v4->w = 16;
+	
+	cout << "Vector4f #1: " << *v1 << endl;
+	cout << "Vector4f #2: " << *v2 << endl;
+ 	cout << "Vector4f #3: " << *v3 << endl;
+	cout << "Vector4f #4: " << *v4 << endl;
+	
+    fixed_allocator.deallocate(reinterpret_cast<unsigned char *>(v2));
+    fixed_allocator.deallocate(reinterpret_cast<unsigned char *>(v4));	
+	
+	
     cout << "DONE Running Test_FixedSizedChunkAllocator Tests" << endl << endl;
 }
 

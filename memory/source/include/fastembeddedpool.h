@@ -1,14 +1,16 @@
 #ifndef _FAST_EMBEDDED_POOL_H_
 #define _FAST_EMBEDDED_POOL_H_
 
-#include <iostream>
-
 /// \class FastEmbeddedPool
 ///
 ///		This class was designed to be as light as possible. It does not 
 /// free memory, call destructors for classes or allocate memory. 
 /// I'm planning on writing a couple more heavy-duty memory pooling 
 /// classes later on. 
+///
+///     It's worth noting that ABSOLUTELY NO error checking goes on here.
+/// While this may scare you, the point of this class is to be incredibly 
+/// light weight and as fast as possible.
 ///
 ///		Here is a example of how this class works.
 ///
@@ -98,15 +100,9 @@ public:
 	/// \param block The allocation to free.
 	inline void free(void *block);
 
-	/// Will print the mem block.
-	friend std::ostream& operator<<(std::ostream& s, FastEmbeddedPool<SizeT>& pool)
-	{
-		s << "ToBy!" << std::endl;	
-	}
-
 private:
 	//Helper Function
-	static inline void * & next_of(void * const pointer)
+	static inline void * & get_next_address(void * const pointer)
 	{
 		return *(static_cast<void **>(pointer));
 	}
@@ -124,7 +120,7 @@ void FastEmbeddedPool<SizeT>::add_block(void *block, size_type blockSize, size_t
 	char *old = static_cast<char*>(block) + ((blockSize - allocSize) / allocSize) * allocSize;
 
 	//Set the last element of the new block to be a pointer to the end old first.
-	next_of(old) = end;
+	get_next_address(old) = end;
 
 	if(old == block)
 	{
@@ -134,10 +130,10 @@ void FastEmbeddedPool<SizeT>::add_block(void *block, size_type blockSize, size_t
 
 	for(char *iterator = old - allocSize; iterator != block; old = iterator, iterator -= allocSize)
 	{
-		next_of(iterator) = old;
+		get_next_address(iterator) = old;
 	}
 
-	next_of(block) = old;
+	get_next_address(block) = old;
 
 	///Set first to point at this block
 	first = block;
@@ -150,7 +146,7 @@ void * FastEmbeddedPool<SizeT>::malloc()
 	void * ret = first;
 
 	//Increment first
-	first = next_of(first);
+	first = get_next_address(first);
 
 	return ret;
 }
@@ -159,7 +155,7 @@ void * FastEmbeddedPool<SizeT>::malloc()
 template<class SizeT>
 void FastEmbeddedPool<SizeT>::free(void *block)
 {
-	next_of(block) = first;
+	get_next_address(block) = first;
 	first = block;
 }
 

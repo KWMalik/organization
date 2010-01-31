@@ -17,9 +17,6 @@ template<class Allocator>
 class ObjectAllocator
 { 
 public:
-    ObjectAllocator() {}
-    ~ObjectAllocator() {}
-
     ///
     /// \precond Assumes that the pools have been created in order from smallest to largest.
     void Init(ObjectAllocationSizes *fixed_pool_sizes, size_t number_of_fixed_pools);
@@ -87,11 +84,20 @@ inline void * ObjectAllocator<Allocator>::Allocate(size_t size)
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 template<>
-inline bool ObjectAllocator<FixedSizedChunkAllocator<> >::Deallocate(void *pointer)
+inline bool ObjectAllocator<FixedSizedChunkAllocator<New_Delete_Allocator> >::Deallocate(void *pointer)
 {
     //Assert(TJB, "DEATH!!! If the underlying pool is a FastEmbedded then you must track the size of the allocation");
     //TJB: MAKE THIS FUNCTION DIE HERE!!!
 }
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+template<>
+inline bool ObjectAllocator<FixedSizedChunkAllocator<Malloc_Free_Allocator> >::Deallocate(void *pointer)
+{
+    //Assert(TJB, "DEATH!!! If the underlying pool is a FastEmbedded then you must track the size of the allocation");
+    //TJB: MAKE THIS FUNCTION DIE HERE!!!
+}
+
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 template<class Allocator>
@@ -110,7 +116,5 @@ inline bool ObjectAllocator<Allocator>::Deallocate(void *pointer, size_t size_of
     return false;
 }
 
-
- 
 #endif // _OBJECT_ALLOCATOR_H_
 

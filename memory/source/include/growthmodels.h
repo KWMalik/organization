@@ -12,9 +12,12 @@ public:
 };
 
 /// 
+template<class TContainer>
 class No_Growth
 {
 public:
+    typedef TContainer Container;
+
     bool Grow(int recommenednumberOfElementsToGrowBy)
     {
         Assert(TJB, "No growth models can never grow");
@@ -27,6 +30,24 @@ public:
         return false;
     }
 };
+
+///
+template<class TContainer>
+class Grow
+{
+public:
+    typedef TContainer Container;
+
+    bool Grow(int recommenednumberOfElementsToGrowBy)
+    {
+
+    }
+
+    bool Trim()
+    {
+    }
+};
+
 
 #endif //_GROWTH_MODELS_H_
 

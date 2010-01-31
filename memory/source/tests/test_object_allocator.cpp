@@ -44,7 +44,7 @@ void operator delete(void *p, size_t size)					\
     }														\
     if(!ableToDeallocateFromPools)							\
     {														\
-        cout	<< "\tDelete: Alloc not found in pools" 	\
+        cout	<< "\tDelete: Alloc not found in pools: " 	\
 				<< p << endl;								\
         free(p);											\
     }														\
