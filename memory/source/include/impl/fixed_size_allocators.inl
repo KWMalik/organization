@@ -19,14 +19,7 @@ template<
             class Allocator,
             template <typename, typename> class GrowthPolicy
         >
-Fixed_Size_Allocator<SizeT, Allocator, GrowthPolicy>::~Fixed_Size_Allocator() 
-{
-    if(buffer)
-    {
-        Allocator::deallocate(buffer);
-        buffer = 0;
-    }
-}
+Fixed_Size_Allocator<SizeT, Allocator, GrowthPolicy>::~Fixed_Size_Allocator() {}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 template<
@@ -36,12 +29,12 @@ template<
         >
 void Fixed_Size_Allocator<SizeT, Allocator, GrowthPolicy>::construct(unsigned long numberOfElements, unsigned long chunkSize)
 {
-    buffer = Allocator::allocate(numberOfElements * chunkSize);
+    unsigned char * buffer = Allocator::allocate(numberOfElements * chunkSize);
     fixed_pool.add_block(reinterpret_cast<void *>(buffer),
                          numberOfElements * chunkSize,
                          chunkSize);
 
-    GrowthPolicy<size_type, Allocator>::create_growth_policy(numberOfElements, chunkSize);
+    GrowthPolicy<size_type, Allocator>::create_growth_policy(numberOfElements, chunkSize, buffer);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -96,14 +89,7 @@ template<
             class Allocator,
             template <typename, typename> class GrowthPolicy
         >
-Fixed_Size_Type_Allocator<TElement, Allocator, GrowthPolicy>::~Fixed_Size_Type_Allocator() 
-{
-    if(buffer)
-    {
-        Allocator::deallocate(buffer);
-        buffer = 0;
-    } 
-}
+Fixed_Size_Type_Allocator<TElement, Allocator, GrowthPolicy>::~Fixed_Size_Type_Allocator() {}
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 template<
@@ -113,8 +99,10 @@ template<
         >
 void Fixed_Size_Type_Allocator<TElement, Allocator, GrowthPolicy>::construct(unsigned long numberOfElements, unsigned long chunkSize)
 {
-    buffer = Allocator::allocate(numberOfElements * chunkSize);
+    unsigned char * buffer = Allocator::allocate(numberOfElements * chunkSize);
     type_pool.add_block(reinterpret_cast<void *>(buffer), numberOfElements * sizeof(TElement), sizeof(TElement));
+
+    GrowthPolicy<size_type, Allocator>::create_growth_policy(numberOfElements, chunkSize, buffer);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

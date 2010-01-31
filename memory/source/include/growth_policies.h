@@ -11,6 +11,8 @@
 #ifndef _GROWTH_POLICIES_H_
 #define _GROWTH_POLICIES_H_
 
+#include <vector>
+
 /// \class No_Growth_Policy
 /// \author Toby Banks
 ///
@@ -30,6 +32,12 @@ public:
     typedef SizeT size_type;	///< It's generally safe to assume this will be size_t.
 
 public:
+    /// Constructor zero's out the member buffer.
+    No_Growth_Policy() : buffer(0) {}
+
+    /// Destroy our buffer.
+    ~No_Growth_Policy()  { if(buffer) { Allocator::deallocate(buffer); buffer = 0; } }
+
 	/// We have a growth policy.. It's to do nothing.
 	///
 	/// NOTE: This is currently not used. It might be though, so I left it here.
@@ -46,10 +54,13 @@ public:
 	
 	/// Usually this function would cache the blockSize and allocSize for further calculations
 	/// on how to grow to store more memory. We don't cache here.
+    ///
+    /// NOTE: We assume that the parameter buffer was created with the same allocator as our template param.
 	///
 	/// \param numberOfElements The number of elements the current block of memory can store.
 	/// \param allocSize The size of a single element (allocation).
-    inline void create_growth_policy(size_type numberOfElements, size_type allocSize) {}
+    /// \param buffer A buffer we created before calling this function this class will now be responsible for it.
+    inline void create_growth_policy(size_type numberOfElements, size_type allocSize, unsigned char * buffer) { this->buffer = buffer; }
 	
 	/// Usually this function would return the number of elements that the clients
 	/// class initally allocated. Since we don't want to have any member variables
@@ -79,6 +90,9 @@ public:
 	///
 	/// \return NULL. This class can't create more memory so NULL is returned.
     inline void * grow() { /* Assert(TJB, "GROWING OF THIS CLASS IS NOT ALLOWED"); */ /*exit();*/ return NULL; }
+
+private:
+    unsigned char * buffer;     ///< The single buffer, that can't be used to grow.
 };
 
 
@@ -103,9 +117,19 @@ protected:
     size_type num_elements;     ///< The number of bytes to request when growing.
     size_type allocation_size;  ///< The size of a single block of memory in the pool.
 
+    typedef std::vector<unsigned char *> Container; ///< We should always refer to Container instead of the vector.
 public:
 	/// Constructor zeros out the member variables
-    Constant_Growth_Policy() : num_elements(0), allocation_size(0) {}
+    Constant_Growth_Policy() : num_elements(0), allocation_size(0) { buffers.reserve(3); }
+
+    /// Destroy the buffers we allocated when we were growing.
+    ~Constant_Growth_Policy()
+    {
+        for(Container::iterator it = buffers.begin(); it != buffers.end(); ++it)
+        {
+            Allocator::deallocate((*it)); 
+        }
+    }
 
 	/// The growth policy is only initialized after calling create_growth_policy.
 	///
@@ -136,10 +160,12 @@ public:
 	///
 	/// \param numberOfElements The number of elements the current block of memory can store.
 	/// \param allocSize The size of a single element (allocation).
-	inline void create_growth_policy(size_type numberOfElements, size_type allocSize)
+    /// \param buffer A already allocated buffer of size numberOfElements * allocSize.
+	inline void create_growth_policy(size_type numberOfElements, size_type allocSize, unsigned char * buffer)
     {
         num_elements = numberOfElements;
         allocation_size = allocSize;
+        buffers.push_back(buffer);
     }
 
 	/// Return the number of elements that the clients class initally allocated. 
@@ -169,8 +195,14 @@ public:
 	/// \return A pointer to a new block of memory of size grow_size().
     inline void * grow()
     {
-        return Allocator::allocate(grow_size());
+        unsigned char * buffer = Allocator::allocate(grow_size());
+        buffers.push_back(buffer);
+        return buffer;
     }
+
+private:
+    Container buffers;     ///< A container full of buffers.
+
 };
 
 #endif //_GROWTH_POLICIES_H_

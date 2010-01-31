@@ -76,7 +76,6 @@ public:
 
 private:
     pool fixed_pool;            ///< Our memory pool.
-    unsigned char * buffer;     ///< TODO: This can't belong here. It doesn't handle multiple buffers being created.
 };
 
 /// \class Fixed_Size_Type_Allocator
@@ -138,7 +137,6 @@ public:
 
 private:
     pool type_pool;             ///< Our memory pool.
-    unsigned char * buffer;     ///< TODO: This can't belong here. It doesn't handle multiple buffers being created.
 };
 
 #include "impl/fixed_size_allocators.inl"
