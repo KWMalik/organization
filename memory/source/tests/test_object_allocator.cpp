@@ -102,6 +102,7 @@ ObjectAllocationSizes g_oas[NumberOfFixedPools] =
 
 void Test_Object_Allocator()
 {
+    cout << "Running Test_Object_Allocator Tests" << endl;
     oa = new MyAllocator();
 
     oa->Init(&(g_oas[0]), NumberOfFixedPools);
@@ -143,5 +144,7 @@ void Test_Object_Allocator()
     delete d2;
     delete d3;
     delete d4;
+
+    cout << "DONE Running Test_Object_Allocator Tests" << endl;
 }
 

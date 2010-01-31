@@ -8,7 +8,7 @@
 #define _ALLOCATORS_H_
 
 #include "growth_policies.h"
-#include "pool.h"
+#include "memorypool.h"
 
 /// \class New_Delete_Allocator
 ///
@@ -46,7 +46,7 @@ template<
 class Fixed_Sized_Allocator : public GrowthPolicy<SizeT, Allocator>
 {
 public:
-    typedef MemoryPool<SizeT> pool;
+    typedef Memory_Pool<SizeT> pool;
     typedef SizeT size_type;
 
     Fixed_Sized_Allocator() {}
@@ -114,7 +114,7 @@ class Fixed_Size_Type_Allocator : public GrowthPolicy<size_t, Allocator>
 {
 public:
     typedef size_t size_type;
-    typedef MemoryPool<size_type> pool;
+    typedef Memory_Pool<size_type> pool;
 
     ///
     Fixed_Size_Type_Allocator() {}

@@ -1,7 +1,6 @@
 #include <iostream>
-#include <stdlib.h>
 
-#include "object_allocator.h"
+#include "memorypool.h"
 
 using namespace std;
 
@@ -17,13 +16,13 @@ struct Vector4f
 };
 
 
-void Test_Pool()
+void Test_Memory_Pool()
 {
 
     cout << "Running Test_Growing_Pool Tests" << endl;
     const int buffer_count = 4;
     
-    MemoryPool<size_t> pool;
+    Memory_Pool<size_t> pool;
     unsigned char * buffer = new unsigned char[buffer_count * sizeof(Vector4f)];
     pool.add_block(buffer, buffer_count * sizeof(Vector4f), sizeof(Vector4f));
 
