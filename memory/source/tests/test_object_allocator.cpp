@@ -105,7 +105,7 @@ void Test_Object_Allocator()
     cout << "Running Test_Object_Allocator Tests" << endl;
     oa = new MyAllocator();
 
-    oa->Init(&(g_oas[0]), NumberOfFixedPools);
+    oa->init(&(g_oas[0]), NumberOfFixedPools);
 
     Size_16 *a1  = new Size_16();
     Size_16 *a2  = new Size_16();

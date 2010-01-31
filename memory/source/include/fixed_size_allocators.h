@@ -11,12 +11,10 @@
 /// that would come along with using the Fixed_Size_Allocator.
 ///
 /// Fixed_Size_Allocator is the class that is used with the memory pools you'll be using.
-///
+
 #ifndef _FIXED_SIZE_ALLOCATORS_H_
 #define _FIXED_SIZE_ALLOCATORS_H_
 
-#include "allocators.h"
-#include "growth_policies.h"
 #include "memory_pool.h"
 
 /// \class FixedSizeChunkAllocator

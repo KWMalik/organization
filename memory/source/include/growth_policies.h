@@ -1,3 +1,13 @@
+/// \file   growth_policies.h
+/// \author Toby Banks
+///
+/// A growth policy tells a pool whether or not that pool is allowed to grow and if so by how much.
+/// The growth policy is responsible for the following:
+///     -Determining how much a pool can grow by (if that pool is allowed to grow).
+///     -Allocating additional memory for a pool (if that pool is allowed to grow).
+///     -Providing a interface so that clients can access the growth policy's state.
+///     -TODO: Pools that can grow, need the new pointers tracked. Growth policies must track these pointers.
+
 #ifndef _GROWTH_POLICIES_H_
 #define _GROWTH_POLICIES_H_
 

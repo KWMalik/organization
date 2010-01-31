@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "allocators.h"
+#include "growth_policies.h"
 #include "fixed_size_allocators.h"
 
 using namespace std;
@@ -17,9 +18,9 @@ struct Vector4f
     }
 };
 
-void Test_Fixed_Sized_Chunk_Allocator()
+void Test_Fixed_Size_Allocator()
 {
-    cout << "Running Test_Fixed_Sized_Chunk_Allocator Tests" << endl;
+    cout << "Running Test_Fixed_Sized_Allocator Tests" << endl;
 
     typedef Fixed_Size_Allocator<size_t, New_Delete_Allocator, No_Growth_Policy> MyFixedAllocator;
     //Fixed_Size_Type_Allocator 

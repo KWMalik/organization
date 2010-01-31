@@ -1,7 +1,9 @@
-/// \file pool.inl
+/// \file   memory_pool.inl
 /// \author Toby Banks
-///
-/// A implementation of the member functions contained in memory_pool.h
+/// 
+/// The implementation of the Memory_Pool interface. I always prefer to have implementations in seperate files.
+/// That way you can scan interfaces much more quickly. The only drawback is the much more verbose syntax as well
+/// as slightly increase compile time due to preprocessing.
 ///
 
 ////////////////////////////////////////////////////////////////////////////

@@ -1,6 +1,12 @@
-#ifndef _GROWING_POOL_H_
-#define _GROWING_POOL_H_
+/// \file   memory_pool.h
+/// \author Toby Banks
+///
+/// This pool is very very fast. It does no error checking whatsoever and has a very simple 
+/// interface.
+///
 
+#ifndef _MEMORY_POOL_H_
+#define _MEMORY_POOL_H_
 
 /// \class Memory_Pool
 ///
@@ -82,9 +88,6 @@ public:
 	/// Default constructor that initializes the internal array to 0
 	Memory_Pool() : first(0) {}
 
-	/// Destructor
-	~Memory_Pool() {}
-
 	///	Checks to see if this class is empty. Meaning that first == 0.
 	///
 	/// \return True if first == 0; false otherwise.
@@ -121,5 +124,5 @@ private:
 
 #include "impl/memory_pool.inl"
 
-#endif // _GROWING_POOL_H_
+#endif // _MEMORY_POOL_H_
 

@@ -9,7 +9,7 @@
 ///    static inline void deallocate(unsigned char * pointer);
 ///
 /// These classes exist to provide a constant interface for use with generic progamming.
-///
+
 #ifndef _ALLOCATORS_H_
 #define _ALLOCATORS_H_
 

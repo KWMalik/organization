@@ -10,8 +10,6 @@ else
 EXE1=test
 EXE2=fixed
 CC=g++
-#CFLAGS = -arch x86_64 -DMAC_OSX -g  -x c -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -isysroot /Developer/SDKs/MacOSX10.6.sdk -mfix-and-continue -mmacosx-version-min=10.6 -gdwarf-2 -iquote 
-#CFLAGS = -arch x86_64 -DMAC_OSX -g  -x c -fmessage-length=0 -pipe -Wno-trigraphs -fpascal-strings -fasm-blocks -O0 -Wreturn-type -Wunused-variable -mfix-and-continue -gdwarf-2 
 CFLAGS = -arch x86_64 -DMAC_OSX -g  -O0 -mfix-and-continue -gdwarf-2 
 LKFLAGS = -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.6 
 endif
@@ -26,12 +24,6 @@ TEST_EXE = $(ODIR)/$(TEST_EXE_NAME)
 
 FIXED_EXE_NAME := $(EXE2)
 FIXED_EXE = $(ODIR)/$(FIXED_EXE_NAME)
-
-
-#_MEMORY_OBJ = chunk.o growingfixedallocator.o smallobjectallocator.o
-#_MEMORY_OBJ = chunk.o stagnantfixedallocator.o smallobjectallocator.o
-#_MEMORY_OBJ = stagnantfixedallocator.o smallobjectallocator.o
-#MEMORY_OBJ = $(patsubst %,$(ODIR)/%,$(_MEMORY_OBJ))
 
 _TEST1_OBJ = memory1.o 
 TEST1_OBJ = $(patsubst %,$(ODIR)/%,$(_TEST1_OBJ))
@@ -49,9 +41,6 @@ default: $(FIXED_EXE)
 
 $(ODIR)/%.o:  source/%.cpp
 	$(CC) $(CFLAGS) $(INCDIR) -c -o $@ $< 
-
-#$(MEMORY_LIB): $(MEMORY_OBJ)
-#	ar rcs $(MEMORY_LIB) $(MEMORY_OBJ)
 
 $(ODIR)/%.o: tests/%.cpp
 	$(CC) -c -o $@ $< $(CFLAGS) $(INCDIR)

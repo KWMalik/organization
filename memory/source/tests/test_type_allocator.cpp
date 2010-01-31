@@ -2,6 +2,7 @@
 #include <stdlib.h>
 
 #include "allocators.h"
+#include "growth_policies.h"
 #include "fixed_size_allocators.h"
 
 using namespace std;
@@ -17,7 +18,7 @@ struct Vector4f
     }
 };
 
-void Test_Type_Allocator()
+void Test_Fixed_Size_Type_Allocator()
 {
     cout << "Running Test_Type_Allocator Tests" << endl;
     const int buffer_count = 4;
