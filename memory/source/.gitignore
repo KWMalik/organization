@@ -2,3 +2,4 @@ build/
 projects/smallobjectallocator/build/
 *.o
 *.map
+*.swp
