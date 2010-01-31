@@ -34,7 +34,7 @@ void Fixed_Size_Allocator<SizeT, Allocator, GrowthPolicy>::construct(unsigned lo
                          numberOfElements * chunkSize,
                          chunkSize);
 
-    GrowthPolicy<size_type, Allocator>::create_growth_policy(numberOfElements, chunkSize, buffer);
+    GrowthPolicy<size_type, Allocator>::create_growth_policy(numberOfElements, chunkSize);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -102,7 +102,7 @@ void Fixed_Size_Type_Allocator<TElement, Allocator, GrowthPolicy>::construct(uns
     unsigned char * buffer = Allocator::allocate(numberOfElements * chunkSize);
     type_pool.add_block(reinterpret_cast<void *>(buffer), numberOfElements * sizeof(TElement), sizeof(TElement));
 
-    GrowthPolicy<size_type, Allocator>::create_growth_policy(numberOfElements, chunkSize, buffer);
+    GrowthPolicy<size_type, Allocator>::create_growth_policy(numberOfElements, chunkSize);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

@@ -6,7 +6,9 @@
 ///     -Determining how much a pool can grow by (if that pool is allowed to grow).
 ///     -Allocating additional memory for a pool (if that pool is allowed to grow).
 ///     -Providing a interface so that clients can access the growth policy's state.
-///     -TODO: Pools that can grow, need the new pointers tracked. Growth policies must track these pointers.
+///     -Pools that can grow, need the new pointers tracked. Growth policies must track these pointers.
+///     -Growth policies are responsible for going external for memory (i.e. using the allocator interface).
+///
 
 #ifndef _GROWTH_POLICIES_H_
 #define _GROWTH_POLICIES_H_
@@ -60,7 +62,11 @@ public:
 	/// \param numberOfElements The number of elements the current block of memory can store.
 	/// \param allocSize The size of a single element (allocation).
     /// \param buffer A buffer we created before calling this function this class will now be responsible for it.
-    inline void create_growth_policy(size_type numberOfElements, size_type allocSize, unsigned char * buffer) { this->buffer = buffer; }
+    inline void create_growth_policy(size_type numberOfElements, size_type allocSize)
+    {
+        // We don't track any statistics for this buffer, because we really don't have to.
+        this->buffer = Allocator::allocate(numberOfElements * allocSize);
+    }
 	
 	/// Usually this function would return the number of elements that the clients
 	/// class initally allocated. Since we don't want to have any member variables
@@ -161,10 +167,11 @@ public:
 	/// \param numberOfElements The number of elements the current block of memory can store.
 	/// \param allocSize The size of a single element (allocation).
     /// \param buffer A already allocated buffer of size numberOfElements * allocSize.
-	inline void create_growth_policy(size_type numberOfElements, size_type allocSize, unsigned char * buffer)
+	inline void create_growth_policy(size_type numberOfElements, size_type allocSize)
     {
         num_elements = numberOfElements;
         allocation_size = allocSize;
+        unsigned char * buffer = Allocator::allocate(numberOfElements * allocSize);
         buffers.push_back(buffer);
     }
 
