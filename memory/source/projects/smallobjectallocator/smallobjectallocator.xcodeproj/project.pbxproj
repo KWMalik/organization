@@ -7,56 +7,69 @@
 	objects = {
 
 /* Begin PBXFileReference section */
-		CB4D6DB41112385800DDA059 /* chunk.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = chunk.h; sourceTree = "<group>"; };
-		CB4D6DB51112385800DDA059 /* fixedallocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fixedallocator.h; sourceTree = "<group>"; };
-		CB4D6DB61112385800DDA059 /* memory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory.h; sourceTree = "<group>"; };
-		CB4D6DB71112385800DDA059 /* smallobject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smallobject.h; sourceTree = "<group>"; };
-		CB4D6DB81112385800DDA059 /* smallobjectallocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = smallobjectallocator.h; sourceTree = "<group>"; };
-		CB4D6DBA1112386A00DDA059 /* chunk.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = chunk.cpp; sourceTree = "<group>"; };
-		CB4D6DBB1112386A00DDA059 /* fixedallocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fixedallocator.cpp; sourceTree = "<group>"; };
-		CB4D6DBC1112386A00DDA059 /* smallobjectallocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = smallobjectallocator.cpp; sourceTree = "<group>"; };
-		CB4D6DBF1112388D00DDA059 /* memory1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = memory1.cpp; sourceTree = "<group>"; };
+		CB8577A5111635D400D6BC08 /* allocators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allocators.h; sourceTree = "<group>"; };
+		CB8577A6111635D400D6BC08 /* fixed_size_allocators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fixed_size_allocators.h; sourceTree = "<group>"; };
+		CB8577A7111635D400D6BC08 /* growth_policies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = growth_policies.h; sourceTree = "<group>"; };
+		CB8577A9111635D400D6BC08 /* fixed_size_allocators.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fixed_size_allocators.inl; sourceTree = "<group>"; };
+		CB8577AA111635D400D6BC08 /* memory_pool.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memory_pool.inl; sourceTree = "<group>"; };
+		CB8577AB111635D400D6BC08 /* object_allocator.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = object_allocator.inl; sourceTree = "<group>"; };
+		CB8577AC111635D400D6BC08 /* memory_pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory_pool.h; sourceTree = "<group>"; };
+		CB8577AD111635D400D6BC08 /* object_allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = object_allocator.h; sourceTree = "<group>"; };
+		CB8577AF111635F500D6BC08 /* fixed1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fixed1.cpp; sourceTree = "<group>"; };
+		CB8577B0111635F500D6BC08 /* test_allocators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_allocators.h; sourceTree = "<group>"; };
+		CB8577B1111635F500D6BC08 /* test_fixed_size_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_fixed_size_allocator.cpp; sourceTree = "<group>"; };
+		CB8577B2111635F500D6BC08 /* test_fixed_size_type_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_fixed_size_type_allocator.cpp; sourceTree = "<group>"; };
+		CB8577B3111635F500D6BC08 /* test_memory_pool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_memory_pool.cpp; sourceTree = "<group>"; };
+		CB8577B4111635F500D6BC08 /* test_new_delete_malloc_free.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_new_delete_malloc_free.cpp; sourceTree = "<group>"; };
+		CB8577B5111635F500D6BC08 /* test_object_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_object_allocator.cpp; sourceTree = "<group>"; };
+		CB8577B61116360400D6BC08 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = ../../makefile; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
 		08FB7794FE84155DC02AAC07 /* smallobjectallocator */ = {
 			isa = PBXGroup;
 			children = (
-				CB4D6DBE1112388D00DDA059 /* tests */,
-				CB4D6DB91112386A00DDA059 /* source */,
-				CB4D6DB31112385800DDA059 /* include */,
+				CB8577B61116360400D6BC08 /* makefile */,
+				CB8577AE111635F500D6BC08 /* tests */,
+				CB8577A4111635D400D6BC08 /* include */,
 			);
 			name = smallobjectallocator;
 			sourceTree = "<group>";
 		};
-		CB4D6DB31112385800DDA059 /* include */ = {
+		CB8577A4111635D400D6BC08 /* include */ = {
 			isa = PBXGroup;
 			children = (
-				CB4D6DB41112385800DDA059 /* chunk.h */,
-				CB4D6DB51112385800DDA059 /* fixedallocator.h */,
-				CB4D6DB61112385800DDA059 /* memory.h */,
-				CB4D6DB71112385800DDA059 /* smallobject.h */,
-				CB4D6DB81112385800DDA059 /* smallobjectallocator.h */,
+				CB8577A5111635D400D6BC08 /* allocators.h */,
+				CB8577A6111635D400D6BC08 /* fixed_size_allocators.h */,
+				CB8577A7111635D400D6BC08 /* growth_policies.h */,
+				CB8577A8111635D400D6BC08 /* impl */,
+				CB8577AC111635D400D6BC08 /* memory_pool.h */,
+				CB8577AD111635D400D6BC08 /* object_allocator.h */,
 			);
 			name = include;
 			path = ../../include;
 			sourceTree = SOURCE_ROOT;
 		};
-		CB4D6DB91112386A00DDA059 /* source */ = {
+		CB8577A8111635D400D6BC08 /* impl */ = {
 			isa = PBXGroup;
 			children = (
-				CB4D6DBA1112386A00DDA059 /* chunk.cpp */,
-				CB4D6DBB1112386A00DDA059 /* fixedallocator.cpp */,
-				CB4D6DBC1112386A00DDA059 /* smallobjectallocator.cpp */,
+				CB8577A9111635D400D6BC08 /* fixed_size_allocators.inl */,
+				CB8577AA111635D400D6BC08 /* memory_pool.inl */,
+				CB8577AB111635D400D6BC08 /* object_allocator.inl */,
 			);
-			name = source;
-			path = ../../source;
-			sourceTree = SOURCE_ROOT;
+			path = impl;
+			sourceTree = "<group>";
 		};
-		CB4D6DBE1112388D00DDA059 /* tests */ = {
+		CB8577AE111635F500D6BC08 /* tests */ = {
 			isa = PBXGroup;
 			children = (
-				CB4D6DBF1112388D00DDA059 /* memory1.cpp */,
+				CB8577AF111635F500D6BC08 /* fixed1.cpp */,
+				CB8577B0111635F500D6BC08 /* test_allocators.h */,
+				CB8577B1111635F500D6BC08 /* test_fixed_size_allocator.cpp */,
+				CB8577B2111635F500D6BC08 /* test_fixed_size_type_allocator.cpp */,
+				CB8577B3111635F500D6BC08 /* test_memory_pool.cpp */,
+				CB8577B4111635F500D6BC08 /* test_new_delete_malloc_free.cpp */,
+				CB8577B5111635F500D6BC08 /* test_object_allocator.cpp */,
 			);
 			name = tests;
 			path = ../../tests;

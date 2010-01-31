@@ -1,3 +1,3 @@
 all:
-	make --directory=../../
+	make -j3 --directory=../../ 
 
