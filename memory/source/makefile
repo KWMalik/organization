@@ -28,11 +28,11 @@ FIXED_EXE = $(ODIR)/$(FIXED_EXE_NAME)
 _TEST1_OBJ = memory1.o 
 TEST1_OBJ = $(patsubst %,$(ODIR)/%,$(_TEST1_OBJ))
 
-_FIXED1_HELPER_OBJS =	test_fixed_size_allocator.o \
-					   	test_new_delete_malloc_free.o \
-					   	test_object_allocator.o \
-					   	test_type_allocator.o \
-						test_memory_pool.o
+_FIXED1_HELPER_OBJS =	test_new_delete_malloc_free.o \
+						test_memory_pool.o \
+						test_fixed_size_allocator.o \
+					   	test_fixed_size_type_allocator.o \
+					   	test_object_allocator.o 
 
 _FIXED1_OBJ = fixed1.o $(_FIXED1_HELPER_OBJS)
 FIXED1_OBJ = $(patsubst %,$(ODIR)/%,$(_FIXED1_OBJ))
