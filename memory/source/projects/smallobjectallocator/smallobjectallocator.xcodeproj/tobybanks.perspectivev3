@@ -395,7 +395,7 @@
 										<key>_historyCapacity</key>
 										<integer>0</integer>
 										<key>bookmark</key>
-										<string>CBA769061116473E00E95028</string>
+										<string>CBA7692111166F1500E95028</string>
 										<key>history</key>
 										<array>
 											<string>CB0116841116062500F5E0DC</string>
@@ -567,8 +567,6 @@
 			<key>Layout</key>
 			<array>
 				<dict>
-					<key>BecomeActive</key>
-					<true/>
 					<key>ContentConfiguration</key>
 					<dict>
 						<key>PBXProjectModuleGUID</key>
@@ -648,13 +646,13 @@
 							<key>DebugVariablesTableConfiguration</key>
 							<array>
 								<string>Name</string>
-								<real>120</real>
+								<real>157</real>
 								<string>Type</string>
 								<real>84</real>
 								<string>Value</string>
 								<real>85</real>
 								<string>Summary</string>
-								<real>132</real>
+								<real>95</real>
 							</array>
 							<key>Frame</key>
 							<string>{{427, 0}, {449, 228}}</string>
@@ -711,7 +709,7 @@
 	<key>StatusbarIsVisible</key>
 	<true/>
 	<key>TimeStamp</key>
-	<real>286672702.27116197</real>
+	<real>286682901.90164</real>
 	<key>ToolbarConfigUserDefaultsMinorVersion</key>
 	<string>2</string>
 	<key>ToolbarDisplayMode</key>
@@ -728,6 +726,8 @@
 	<integer>5</integer>
 	<key>WindowOrderList</key>
 	<array>
+		<string>CBA7691F11166F1500E95028</string>
+		<string>CBA7692011166F1500E95028</string>
 		<string>/Users/tobybanks/projects/organization/memory/source/projects/smallobjectallocator/smallobjectallocator.xcodeproj</string>
 	</array>
 	<key>WindowString</key>
