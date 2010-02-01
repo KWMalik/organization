@@ -20,27 +20,27 @@
 class Hack_Unsigned_Char_Container 
 {
 public:
-    typedef unsigned char * iterator;
+	typedef unsigned char * iterator;
 
-    iterator begin() 
-    {
-        //return _it;
-        return buffer;
-    }
+	iterator begin() 
+	{
+		//return _it;
+		return buffer;
+	}
 
-    iterator end() 
-    {
-        //return (_it.buffer + 1);
-        return buffer + 1;
-    }
+	iterator end() 
+	{
+		//return (_it.buffer + 1);
+		return buffer + 1;
+	}
 
-    void push_back(unsigned char *buffer_to_add)
-    {
-        buffer = buffer_to_add;
-    }
+	void push_back(unsigned char *buffer_to_add)
+	{
+		buffer = buffer_to_add;
+	}
 
 protected:
-    unsigned char * buffer; ///< A pointer to our buffer.
+	unsigned char * buffer; ///< A pointer to our buffer.
 };
 
 

@@ -9,25 +9,25 @@ using namespace std;
 
 struct Vector4f
 {
-    float x, y, z, w;
+	float x, y, z, w;
 
 	friend std::ostream& operator<<(std::ostream& os, Vector4f & vec)
-    {
-        os << "x = " << vec.x << " y = " << vec.y << " z = " << vec.z << " w = " << vec.w;
-        return os;
-    }
+	{
+		os << "x = " << vec.x << " y = " << vec.y << " z = " << vec.z << " w = " << vec.w;
+		return os;
+	}
 };
 
 void Test_Fixed_Size_Type_Allocator()
 {
-    cout << "Running Test_Type_Allocator Tests" << endl;
-    const int buffer_count = 4;
-    
-    typedef Fixed_Size_Type_Allocator<Vector4f, New_Delete_Allocator, No_Growth_Policy> MyTypeAllocator;
-    MyTypeAllocator type_allocator; 
+	cout << "Running Test_Type_Allocator Tests" << endl;
+	const int buffer_count = 4;
+	
+	typedef Fixed_Size_Type_Allocator<Vector4f, New_Delete_Allocator, No_Growth_Policy> MyTypeAllocator;
+	MyTypeAllocator type_allocator; 
 
-    type_allocator.construct(sizeof(Vector4f), buffer_count); 
-    Vector4f * v1 = type_allocator.allocate();
+	type_allocator.construct(sizeof(Vector4f), buffer_count); 
+	Vector4f * v1 = type_allocator.allocate();
 	Vector4f * v2 = type_allocator.allocate();
 	Vector4f * v3 = type_allocator.allocate();
 	Vector4f * v4 = type_allocator.allocate();
@@ -57,11 +57,11 @@ void Test_Fixed_Size_Type_Allocator()
 	cout << "Element #3: " << *v3 << endl;
 	cout << "Element #4: " << *v4 << endl;
 
-    type_allocator.deallocate(v1);
+	type_allocator.deallocate(v1);
 	type_allocator.deallocate(v2);
 	type_allocator.deallocate(v3);
 	type_allocator.deallocate(v4);
 
-    cout << "DONE Running Test_Type_Allocator Tests" << endl << endl;
+	cout << "DONE Running Test_Type_Allocator Tests" << endl << endl;
 }
 

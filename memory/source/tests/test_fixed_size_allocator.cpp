@@ -9,25 +9,25 @@ using namespace std;
 
 struct Vector4f
 {
-    float x, y, z, w;
+	float x, y, z, w;
 
 	friend std::ostream& operator<<(std::ostream& os, Vector4f & vec)
-    {
-        os << "x = " << vec.x << " y = " << vec.y << " z = " << vec.z << " w = " << vec.w;
-        return os;
-    }
+	{
+		os << "x = " << vec.x << " y = " << vec.y << " z = " << vec.z << " w = " << vec.w;
+		return os;
+	}
 };
 
 void Test_Fixed_Size_Allocator()
 {
-    cout << "Running Test_Fixed_Sized_Allocator Tests" << endl;
+	cout << "Running Test_Fixed_Sized_Allocator Tests" << endl;
 
-    typedef Fixed_Size_Allocator<size_t, New_Delete_Allocator, No_Growth_Policy> MyFixedAllocator;
-    //Fixed_Size_Type_Allocator 
-    MyFixedAllocator fixed_allocator; 
+	typedef Fixed_Size_Allocator<size_t, New_Delete_Allocator, No_Growth_Policy> MyFixedAllocator;
+	//Fixed_Size_Type_Allocator 
+	MyFixedAllocator fixed_allocator; 
 
-    const int buffer_count = 4;
-    fixed_allocator.construct(buffer_count, sizeof(Vector4f));
+	const int buffer_count = 4;
+	fixed_allocator.construct(buffer_count, sizeof(Vector4f));
 
 	Vector4f *v1 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
 	Vector4f *v2 = reinterpret_cast<Vector4f *>(fixed_allocator.allocate());
@@ -59,11 +59,11 @@ void Test_Fixed_Size_Allocator()
  	cout << "Vector4f #3: " << *v3 << endl;
 	cout << "Vector4f #4: " << *v4 << endl;
 	
-    fixed_allocator.deallocate(reinterpret_cast<unsigned char *>(v2));
-    fixed_allocator.deallocate(reinterpret_cast<unsigned char *>(v4));	
+	fixed_allocator.deallocate(reinterpret_cast<unsigned char *>(v2));
+	fixed_allocator.deallocate(reinterpret_cast<unsigned char *>(v4));	
 	
 	
-    cout << "DONE Running Test_FixedSizedChunkAllocator Tests" << endl << endl;
+	cout << "DONE Running Test_FixedSizedChunkAllocator Tests" << endl << endl;
 }
 
 

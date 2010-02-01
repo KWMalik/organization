@@ -6,25 +6,25 @@ using namespace std;
 
 struct Vector4f
 {
-    float x, y, z, w;
+	float x, y, z, w;
 
 	friend std::ostream& operator<<(std::ostream& os, Vector4f & vec)
-    {
-        os << "x = " << vec.x << " y = " << vec.y << " z = " << vec.z << " w = " << vec.w;
-        return os;
-    }
+	{
+		os << "x = " << vec.x << " y = " << vec.y << " z = " << vec.z << " w = " << vec.w;
+		return os;
+	}
 };
 
 
 void Test_Memory_Pool()
 {
 
-    cout << "Running Test_Growing_Pool Tests" << endl;
-    const int buffer_count = 4;
-    
-    Memory_Pool<size_t> pool;
-    unsigned char * buffer = new unsigned char[buffer_count * sizeof(Vector4f)];
-    pool.add_block(buffer, buffer_count * sizeof(Vector4f), sizeof(Vector4f));
+	cout << "Running Test_Growing_Pool Tests" << endl;
+	const int buffer_count = 4;
+	
+	Memory_Pool<size_t> pool;
+	unsigned char * buffer = new unsigned char[buffer_count * sizeof(Vector4f)];
+	pool.add_block(buffer, buffer_count * sizeof(Vector4f), sizeof(Vector4f));
 
 
 	Vector4f *v1 = reinterpret_cast<Vector4f *>(pool.allocate());
@@ -58,11 +58,11 @@ void Test_Memory_Pool()
  	cout << "Vector4f #3: " << *v3 << endl;
 	cout << "Vector4f #4: " << *v4 << endl;
 	
-    pool.deallocate(reinterpret_cast<unsigned char *>(v2));
-    pool.deallocate(reinterpret_cast<unsigned char *>(v4));	
+	pool.deallocate(reinterpret_cast<unsigned char *>(v2));
+	pool.deallocate(reinterpret_cast<unsigned char *>(v4));	
 	
 	
-    cout << "DONE Running Test_Growing_Pool Tests" << endl << endl;
+	cout << "DONE Running Test_Growing_Pool Tests" << endl << endl;
 }
 
 

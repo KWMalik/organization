@@ -5,8 +5,8 @@
 /// to work with out memory pools. 
 ///
 /// You can easily add you own allocators as long as you provide the following functions:
-///    static inline unsigned char * allocate(unsigned int size);
-///    static inline void deallocate(unsigned char * pointer);
+///		static inline unsigned char * allocate(unsigned int size);
+///		static inline void deallocate(unsigned char * pointer);
 ///
 /// These classes exist to provide a constant interface for use with generic progamming.
 
@@ -22,8 +22,8 @@
 class New_Delete_Allocator
 {
 public:
-    static inline unsigned char * allocate(unsigned int size) { return new unsigned char[size]; }
-    static inline void deallocate(unsigned char * pointer) { delete []pointer; pointer = 0; }
+	static inline unsigned char * allocate(unsigned int size) { return new unsigned char[size]; }
+	static inline void deallocate(unsigned char * pointer) { delete []pointer; pointer = 0; }
 };
 
 /// \class Malloc_Free_Allocator
@@ -34,8 +34,8 @@ public:
 class Malloc_Free_Allocator
 {
 public:
-    static inline unsigned char * allocate(unsigned int size) { return static_cast<unsigned char *>(malloc(size)); }
-    static inline void deallocate(unsigned char * pointer) { free(pointer); pointer = 0; }
+	static inline unsigned char * allocate(unsigned int size) { return static_cast<unsigned char *>(malloc(size)); }
+	static inline void deallocate(unsigned char * pointer) { free(pointer); pointer = 0; }
 };
 
 #endif // _ALLOCATORS_H_

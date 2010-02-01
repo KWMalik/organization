@@ -1,4 +1,4 @@
-/// \file   memory_pool.h
+/// \file	memory_pool.h
 /// \author Toby Banks
 ///
 /// This pool is very very fast. It does no error checking whatsoever and has a very simple 
@@ -34,7 +34,7 @@
 ///		//
 ///		//For example:
 ///		//	88xxx	///< Pool begins with two allocations of 8, 
-///		//          ///< followed by three unallocated slots.
+///		//			///< followed by three unallocated slots.
 ///		//
 ///		Memory_Pool<int> pool;
 ///
@@ -80,10 +80,10 @@ template<class SizeT>
 class Memory_Pool
 {
 public:
-	typedef SizeT size_type;    ///< It's generally safe to assume this will be size_t.
+	typedef SizeT size_type;	///< It's generally safe to assume this will be size_t.
 
 protected:
-	void *first;	            ///< The first free (unallocated) element in the pool.
+	void *first;				///< The first free (unallocated) element in the pool.
 public:
 	/// Default constructor that initializes the internal array to 0
 	Memory_Pool() : first(0) {}
@@ -97,14 +97,14 @@ public:
 	///	pool allocations from.
 	///
 	/// \param block The block of memory to pool.
-	/// \param blockSize Size (bytes) of the memory allocated 
-	///		   in block.
+	/// \param	blockSize Size (bytes) of the memory allocated 
+	///			in block.
 	/// \param allocSize Size (bytes) that block should be split into
 	void add_block(void *block, size_type blockSize, size_type allocSize);
 
 	///	After a block has been added allocate will return a open allocation, or NULL.
-    ///
-    /// \return A address of a block of memory for use, or NULL if no block exists.
+	///
+	/// \return A address of a block of memory for use, or NULL if no block exists.
 	inline void * allocate();
 
 	///	Used to free up a block of memory.
@@ -113,9 +113,9 @@ public:
 	inline void deallocate(void *block);
 
 private:
-    /// Converts pointer to a pointer-to-a-pointer and then dereferences it.
-    ///
-    /// \return The dereferenced address contained under pointer.
+	/// Converts pointer to a pointer-to-a-pointer and then dereferences it.
+	///
+	/// \return The dereferenced address contained under pointer.
 	static inline void * & get_next_address(void * const pointer)
 	{
 		return *(static_cast<void **>(pointer));

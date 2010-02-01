@@ -40,12 +40,12 @@ void Memory_Pool<SizeT>::add_block(void *block, size_type blockSize, size_type a
 template<class SizeT>
 void * Memory_Pool<SizeT>::allocate()
 {
-    if(first == NULL)
-    {
+	if(first == NULL)
+	{
 		//We have no more free elements. If we were not to bail out
 		//here we would crash dereferencing first on get_next_address(first)
-        return NULL;
-    }
+		return NULL;
+	}
 
 	void * ret = first;
 
