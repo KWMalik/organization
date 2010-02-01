@@ -48,7 +48,9 @@ unsigned char * Fixed_Size_Allocator<SizeT, Allocator, GrowthPolicy>::allocate()
     if(ret == NULL && GrowthPolicy<SizeT, Allocator>::can_grow())
     {
         //We are out of memory so we should grow
-        GrowthPolicy<SizeT, Allocator>::grow();
+		size_t grow_size = GrowthPolicy<SizeT, Allocator>::grow_size();
+        void * buffer = GrowthPolicy<SizeT, Allocator>::grow();
+		fixed_pool.add_block(buffer, grow_size, GrowthPolicy<SizeT, Allocator>::element_size());
         ret = static_cast<unsigned char *>(fixed_pool.allocate());
     }
     return ret;
@@ -87,10 +89,9 @@ template<
         >
 void Fixed_Size_Type_Allocator<TElement, Allocator, GrowthPolicy>::construct(unsigned long numberOfElements, unsigned long chunkSize)
 {
-    unsigned char * buffer = Allocator::allocate(numberOfElements * chunkSize);
+	//NOTE: chunkSize is not used, we use TElement to determine size.
+    unsigned char * buffer = GrowthPolicy<size_type, Allocator>::create_growth_policy(numberOfElements, sizeof(TElement));
     type_pool.add_block(reinterpret_cast<void *>(buffer), numberOfElements * sizeof(TElement), sizeof(TElement));
-
-    GrowthPolicy<size_type, Allocator>::create_growth_policy(numberOfElements, chunkSize);
 }
 
 ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////

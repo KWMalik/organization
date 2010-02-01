@@ -132,6 +132,14 @@ void Test_Object_Allocator()
     Size_128 *d4 = new Size_128();
 
     delete a1;
+    delete a3;
+    delete a5;
+    delete a7;
+
+	a1  = new Size_16();
+	a3  = new Size_16();
+	a5  = new Size_16();
+	a7  = new Size_16();
     
     delete b1;
     delete b2;

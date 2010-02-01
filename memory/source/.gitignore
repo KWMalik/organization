@@ -3,3 +3,4 @@ projects/smallobjectallocator/build/
 *.o
 *.map
 *.swp
+*.ncb

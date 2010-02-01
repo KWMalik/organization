@@ -2,13 +2,13 @@ ODIR=build
 
 ifeq ($(OS), Windows_NT)
 EXE1=test.exe
-EXE2=fixed.exe
-CC=g++-4
-CFLAGS = -DWINDOWS
-LKFLAGS = -enable-auto-import -Wl,-Map -Wl,build/example.map
+EXE=fixed.exe
+#CC=g++-4
+CC = "C:\Program Files\Microsoft Visual Studio 8\VC\bin\cl.exe"
+CFLAGS = /Od /D "DWINDOWS" /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_UNICODE" /D "UNICODE" /Gm /EHsc /RTC1 /MDd /Yu"stdafx.h" /Fp"Debug\test.pch" /Fo"Debug\\" /Fd"Debug\vc80.pdb" /W3 /nologo /c /Wp64 /ZI /TP /errorReport:prompt
+LKFLAGS = 
 else
-EXE1=test
-EXE2=fixed
+EXE=fixed
 CC=g++
 CFLAGS = -arch x86_64 -DMAC_OSX -g  -O0 -mfix-and-continue -gdwarf-2 
 LKFLAGS = -arch x86_64 -isysroot /Developer/SDKs/MacOSX10.6.sdk -mmacosx-version-min=10.6 
@@ -22,7 +22,7 @@ MEMORY_LIB = $(ODIR)/$(MEMORY_LIB_NAME)
 TEST_EXE_NAME := $(EXE1)
 TEST_EXE = $(ODIR)/$(TEST_EXE_NAME)
 
-FIXED_EXE_NAME := $(EXE2)
+FIXED_EXE_NAME := $(EXE)
 FIXED_EXE = $(ODIR)/$(FIXED_EXE_NAME)
 
 _TEST1_OBJ = memory1.o 
@@ -64,19 +64,8 @@ run:
 debug:
 	gdb $(FIXED_EXE)
 
-.PHONY: test
-test:
-	$(TEST_EXE)
+.PHONY: rar
+rar:
+	rar a -r object_allocator
 
-.PHONY: debug-test
-debug-test:
-	gdb $(TEST_EXE)
-
-.PHONY: fixed 
-fixed:
-	$(FIXED_EXE)
-
-.PHONY: fixed-test
-fixed-test:
-	gdb $(FIXED_EXE)
 

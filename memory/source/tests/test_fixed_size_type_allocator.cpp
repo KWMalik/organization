@@ -27,22 +27,41 @@ void Test_Fixed_Size_Type_Allocator()
     MyTypeAllocator type_allocator; 
 
     type_allocator.construct(sizeof(Vector4f), buffer_count); 
-    Vector4f * vectors = type_allocator.allocate();
+    Vector4f * v1 = type_allocator.allocate();
+	Vector4f * v2 = type_allocator.allocate();
+	Vector4f * v3 = type_allocator.allocate();
+	Vector4f * v4 = type_allocator.allocate();
 
-    for(int i = 0; i < buffer_count; ++i)
-    {
-        vectors[i].x = i + 1;
-        vectors[i].y = i + 2;
-        vectors[i].z = i + 3;
-        vectors[i].x = 1;
-    }
+	v1->x = 1;
+	v1->y = 2;
+	v1->z = 3;
+	v1->w = 4;
 
-    for(int i = 0; i < buffer_count; ++i)
-    {
-        cout << "Element #" << i << " " << vectors[i] << endl;
-    }
+	v2->x = 5;
+	v2->y = 6;
+	v2->z = 7;
+	v2->w = 8;
 
-    type_allocator.deallocate(vectors);
+	v3->x = 5;
+	v3->y = 6;
+	v3->z = 7;
+	v3->w = 8;
+
+	v4->x = 9;
+	v4->y = 10;
+	v4->z = 11;
+	v4->w = 12;
+
+	cout << "Element #1: " << *v1 << endl;
+	cout << "Element #2: " << *v2 << endl;
+	cout << "Element #3: " << *v3 << endl;
+	cout << "Element #4: " << *v4 << endl;
+
+    type_allocator.deallocate(v1);
+	type_allocator.deallocate(v2);
+	type_allocator.deallocate(v3);
+	type_allocator.deallocate(v4);
+
     cout << "DONE Running Test_Type_Allocator Tests" << endl << endl;
 }
 
