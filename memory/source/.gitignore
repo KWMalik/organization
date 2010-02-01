@@ -1,6 +1,8 @@
 build/
 projects/smallobjectallocator/build/
+projects/smallobjectallocator_vcproj/debug/
 *.o
 *.map
 *.swp
 *.ncb
+*.suo
