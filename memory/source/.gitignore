@@ -1,6 +1,7 @@
 build/
 projects/smallobjectallocator/build/
 projects/smallobjectallocator_vcproj/Debug/
+projects/smallobjectallocator_vcproj/debug/
 *.o
 *.map
 *.swp
@@ -12,3 +13,4 @@ projects/smallobjectallocator_vcproj/Debug/
 *.pdb
 *.dep
 *.manifest.res
+*.vcproj.*.user
