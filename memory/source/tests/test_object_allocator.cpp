@@ -136,6 +136,7 @@ void Test_Object_Allocator()
     delete a5;
     delete a7;
 
+	cout << "The following four news will be placed across the memory freed in the previous four deletes. Note the addresses, they will be in reverse order of the previous allocations." << endl;
 	a1  = new Size_16();
 	a3  = new Size_16();
 	a5  = new Size_16();
