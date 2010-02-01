@@ -1,3 +1,4 @@
+#include <memory.h>
 #include <iostream>
 
 #include "FastEmbeddedPool.h"
@@ -18,8 +19,13 @@ int main(int argv, char ** argc)
 	FastEmbeddedPool<int> pool;
 
 	//Allocate some memory and give it to the pool.
-	void *pBlock1 = static_cast<void*>(new int[10]);
-	pool.add_block(pBlock1, sizeof(int) * 10, sizeof(int));
+	//
+	//After calling pool.add_block the memory  will look like:
+	//		0000 0000
+	//
+	void *pBlock1 = static_cast<void*>(new int[8]);
+	memset(pBlock1, 0, sizeof(int) * 8);
+	pool.add_block(pBlock1, sizeof(int) * 8, sizeof(int));
 
 	///Fill the first 5 allocations with the number 8
 	int *pa = static_cast<int*>(pool.malloc());
@@ -27,34 +33,68 @@ int main(int argv, char ** argc)
 	int *pc = static_cast<int*>(pool.malloc());
 	int *pd = static_cast<int*>(pool.malloc());
 	int *pe = static_cast<int*>(pool.malloc());
-	*pa = 8;
-	*pb = 8;
-	*pc = 8;
-	*pd = 8;
-	*pe = 8;
+	int *pf = static_cast<int*>(pool.malloc());
+	int *pg = static_cast<int*>(pool.malloc());
+	int *ph = static_cast<int*>(pool.malloc());
 
-	//The pool now looks like 88888xxxxx
+	// The memory will become:
+	// 		1000 0000
+	*pa = 1;
+
+	// The memory will become:
+	// 		1200 0000
+	*pb = 2;
+
+	// The memory will become:
+	// 		1230 0000
+	*pc = 3;
+
+	// The memory will become:
+	// 		1234 0000
+	*pd = 4;
+
+	// The memory will become:
+	// 		1234 5000
+	*pe = 5;
+
+	// The memory will become:
+	// 		1234 5600
+	*pf = 6;
+
+	// The memory will become:
+	// 		1234 5670
+	*pg = 7;
+
+	// The memory will become:
+	// 		1234 5678
+	*ph = 8;
+
 	
-	//free some elements
+	//Free some elements
+	
+	// The memory will become: (x means unallocated)
+	// 		1x34 5670
 	pool.free(pb);
+
+	// The memory will become: (x means unallocated)
+	// 		1x3x 5670
 	pool.free(pd);
-
-	//The pool now looks like 8x8x8xxxxx
 	
-	//After the following allocation/assignment the pool 
-	//will look like 8x858xxxxx
+	// The memory will become: (x means unallocated)
+	// 		1x39 5670
 	pb = static_cast<int*>(pool.malloc());
-	*pb = 5;
+	*pb = 9;
 
-	//After the following allocation/assignment the pool will 
-	//look like 85858xxxxx
+	// The memory will become: (x means unallocated)
+	// 		1939 5670
 	pd = static_cast<int*>(pool.malloc());
-	*pd = 5;
+	*pd = 9;
 
 
 	cout << pool << endl;
 
 	cout << "Finish" << endl;
+
 
 	return 0;
 }
