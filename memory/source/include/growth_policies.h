@@ -17,20 +17,6 @@
 #include "hack_unsigned_char_container.h"
 
 
-template<class T>
-class is_unsigned_char_pointer
-{
-public:
-    static const bool result = false;
-};
-
-template<>
-class is_unsigned_char_pointer<unsigned char *>
-{
-public:
-    static const bool result = true;
-};
-
 /// \class Growth_Policy_Base
 ///
 /// All growth policies should derive from this class and must implement the following functions.

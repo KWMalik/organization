@@ -20,18 +20,6 @@
 class Hack_Unsigned_Char_Container 
 {
 public:
-//    class iterator_class
-//    {
-//    public:
-//        unsigned char&  operator *() { return *buffer; }
-//
-//        unsigned char * operator++(); { return buffer + 1; }
-//
-//        unsigned char * buffer; ///< A pointer to our buffer.
-//    };
-//
-//    typedef iterator_class iterator;
-
     typedef unsigned char * iterator;
 
     iterator begin() 
@@ -52,7 +40,6 @@ public:
     }
 
 protected:
-   // iterator_class _it;
     unsigned char * buffer; ///< A pointer to our buffer.
 };
 
