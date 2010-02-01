@@ -57,6 +57,8 @@ protected:
     Container buffers;
 
     ///HACK ALERT!!! THIS HACK IS NEEDED BECAUSE OF MY Hack_Unsigned_Char_Container hack
+    ///
+    /// I need to remove these Destroy functions before sending to Rick.
     template<class T>
     void Destroy(T it)
     {
