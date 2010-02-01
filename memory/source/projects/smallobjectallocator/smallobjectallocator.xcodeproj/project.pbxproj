@@ -1,0 +1,164 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXFileReference section */
+		CB8577A5111635D400D6BC08 /* allocators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = allocators.h; sourceTree = "<group>"; };
+		CB8577A6111635D400D6BC08 /* fixed_size_allocators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = fixed_size_allocators.h; sourceTree = "<group>"; };
+		CB8577A7111635D400D6BC08 /* growth_policies.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = growth_policies.h; sourceTree = "<group>"; };
+		CB8577A9111635D400D6BC08 /* fixed_size_allocators.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = fixed_size_allocators.inl; sourceTree = "<group>"; };
+		CB8577AA111635D400D6BC08 /* memory_pool.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = memory_pool.inl; sourceTree = "<group>"; };
+		CB8577AB111635D400D6BC08 /* object_allocator.inl */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = object_allocator.inl; sourceTree = "<group>"; };
+		CB8577AC111635D400D6BC08 /* memory_pool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = memory_pool.h; sourceTree = "<group>"; };
+		CB8577AD111635D400D6BC08 /* object_allocator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = object_allocator.h; sourceTree = "<group>"; };
+		CB8577AF111635F500D6BC08 /* fixed1.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = fixed1.cpp; sourceTree = "<group>"; };
+		CB8577B0111635F500D6BC08 /* test_allocators.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test_allocators.h; sourceTree = "<group>"; };
+		CB8577B1111635F500D6BC08 /* test_fixed_size_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_fixed_size_allocator.cpp; sourceTree = "<group>"; };
+		CB8577B2111635F500D6BC08 /* test_fixed_size_type_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_fixed_size_type_allocator.cpp; sourceTree = "<group>"; };
+		CB8577B3111635F500D6BC08 /* test_memory_pool.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_memory_pool.cpp; sourceTree = "<group>"; };
+		CB8577B4111635F500D6BC08 /* test_new_delete_malloc_free.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_new_delete_malloc_free.cpp; sourceTree = "<group>"; };
+		CB8577B5111635F500D6BC08 /* test_object_allocator.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = test_object_allocator.cpp; sourceTree = "<group>"; };
+		CB8577B61116360400D6BC08 /* makefile */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.make; name = makefile; path = ../../makefile; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		08FB7794FE84155DC02AAC07 /* smallobjectallocator */ = {
+			isa = PBXGroup;
+			children = (
+				CB8577B61116360400D6BC08 /* makefile */,
+				CB8577AE111635F500D6BC08 /* tests */,
+				CB8577A4111635D400D6BC08 /* include */,
+			);
+			name = smallobjectallocator;
+			sourceTree = "<group>";
+		};
+		CB8577A4111635D400D6BC08 /* include */ = {
+			isa = PBXGroup;
+			children = (
+				CB8577A5111635D400D6BC08 /* allocators.h */,
+				CB8577A6111635D400D6BC08 /* fixed_size_allocators.h */,
+				CB8577A7111635D400D6BC08 /* growth_policies.h */,
+				CB8577A8111635D400D6BC08 /* impl */,
+				CB8577AC111635D400D6BC08 /* memory_pool.h */,
+				CB8577AD111635D400D6BC08 /* object_allocator.h */,
+			);
+			name = include;
+			path = ../../include;
+			sourceTree = SOURCE_ROOT;
+		};
+		CB8577A8111635D400D6BC08 /* impl */ = {
+			isa = PBXGroup;
+			children = (
+				CB8577A9111635D400D6BC08 /* fixed_size_allocators.inl */,
+				CB8577AA111635D400D6BC08 /* memory_pool.inl */,
+				CB8577AB111635D400D6BC08 /* object_allocator.inl */,
+			);
+			path = impl;
+			sourceTree = "<group>";
+		};
+		CB8577AE111635F500D6BC08 /* tests */ = {
+			isa = PBXGroup;
+			children = (
+				CB8577AF111635F500D6BC08 /* fixed1.cpp */,
+				CB8577B0111635F500D6BC08 /* test_allocators.h */,
+				CB8577B1111635F500D6BC08 /* test_fixed_size_allocator.cpp */,
+				CB8577B2111635F500D6BC08 /* test_fixed_size_type_allocator.cpp */,
+				CB8577B3111635F500D6BC08 /* test_memory_pool.cpp */,
+				CB8577B4111635F500D6BC08 /* test_new_delete_malloc_free.cpp */,
+				CB8577B5111635F500D6BC08 /* test_object_allocator.cpp */,
+			);
+			name = tests;
+			path = ../../tests;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXLegacyTarget section */
+		D28A88AD04BDD90700651E21 /* test */ = {
+			isa = PBXLegacyTarget;
+			buildArgumentsString = "$(ACTION)";
+			buildConfigurationList = 1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "test" */;
+			buildPhases = (
+			);
+			buildToolPath = /usr/bin/make;
+			dependencies = (
+			);
+			name = test;
+			passBuildSettingsInEnvironment = 1;
+			productName = smallobjectallocator;
+		};
+/* End PBXLegacyTarget section */
+
+/* Begin PBXProject section */
+		08FB7793FE84155DC02AAC07 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+			};
+			buildConfigurationList = 1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "smallobjectallocator" */;
+			compatibilityVersion = "Xcode 3.1";
+			hasScannedForEncodings = 1;
+			mainGroup = 08FB7794FE84155DC02AAC07 /* smallobjectallocator */;
+			projectDirPath = "";
+			projectRoot = ../..;
+			targets = (
+				D28A88AD04BDD90700651E21 /* test */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin XCBuildConfiguration section */
+		1DEB919008733D9F0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COPY_PHASE_STRIP = NO;
+				DEBUGGING_SYMBOLS = YES;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_FIX_AND_CONTINUE = YES;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				OTHER_CFLAGS = "";
+				OTHER_LDFLAGS = "";
+				PRODUCT_NAME = smallobjectallocator;
+			};
+			name = Debug;
+		};
+		1DEB919408733D9F0010E9CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PREBINDING = NO;
+				SDKROOT = macosx10.6;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1DEB918F08733D9F0010E9CD /* Build configuration list for PBXLegacyTarget "test" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB919008733D9F0010E9CD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		1DEB919308733D9F0010E9CD /* Build configuration list for PBXProject "smallobjectallocator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1DEB919408733D9F0010E9CD /* Debug */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 08FB7793FE84155DC02AAC07 /* Project object */;
+}
