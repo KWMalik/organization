@@ -51,6 +51,14 @@ debug:
 
 .PHONY: rar
 rar:
+	rm -f $(ODIR)/*.o $(ODIR)/*.exe $(ODIR)/*.stackdump $(ODIR)/*.map $(ODIR)/*.a
+	rm -f *.rar
+	rm -f projects/smallobjectallocator_vcproj/*.ncb projects/smallobjectallocator_vcproj/*.suo 
+	rm -fdr projects/smallobjectallocator_vcproj/debug 
+	rm -fdr projects/smallobjectallocator_vcproj/smallobjectallocator_vcproj/Debug
+	rm -fdr projects/smallobjectallocator_vcproj/smallobjectallocator_vcproj/*.vcproj.*user
+
 	rar a -r object_allocator
+
 
 
