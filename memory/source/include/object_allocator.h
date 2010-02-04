@@ -75,7 +75,7 @@ typedef No_Growth_New_Allocator Default_Allocator;
 struct ObjectAllocationSizes
 {
 	int number_fixed_allocations;	///< The number of fixed sized allocations.
-	int fixed_allocator_size;		///< The size of a chunk of memory stored in the fixed object allocator.
+	unsigned int fixed_allocator_size;		///< The size of a chunk of memory stored in the fixed object allocator.
 };
 
 /// \class  Object_Allocator

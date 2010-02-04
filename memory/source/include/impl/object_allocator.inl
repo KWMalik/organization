@@ -31,7 +31,7 @@ void Object_Allocator<Pool>::init(ObjectAllocationSizes *fixed_pool_sizes, size_
 	oas = fixed_pool_sizes;
 	pools = new Pool[number_of_pools];
 
-	for(int i = 0; i < number_of_pools; ++i)
+	for(size_t i = 0; i < number_of_pools; ++i)
 	{
 		pools[i].construct(oas[i].number_fixed_allocations, oas[i].fixed_allocator_size);
 	}
@@ -41,7 +41,7 @@ void Object_Allocator<Pool>::init(ObjectAllocationSizes *fixed_pool_sizes, size_
 template<class Pool>
 inline Pool * Object_Allocator<Pool>::find_appropriate_pool(size_t size) const
 {
-	for(int i = 0; i < number_of_pools; ++i)
+	for(size_t i = 0; i < number_of_pools; ++i)
 	{
 		if(oas[i].fixed_allocator_size >= size)
 		{

@@ -22,7 +22,7 @@
 class New_Delete_Allocator
 {
 public:
-	static inline unsigned char * allocate(unsigned int size) { return new unsigned char[size]; }
+	static inline unsigned char * allocate(size_t size) { return new unsigned char[size]; }
 	static inline void deallocate(unsigned char * pointer) { delete []pointer; pointer = 0; }
 };
 
@@ -34,7 +34,7 @@ public:
 class Malloc_Free_Allocator
 {
 public:
-	static inline unsigned char * allocate(unsigned int size) { return static_cast<unsigned char *>(malloc(size)); }
+	static inline unsigned char * allocate(size_t size) { return static_cast<unsigned char *>(malloc(size)); }
 	static inline void deallocate(unsigned char * pointer) { free(pointer); pointer = 0; }
 };
 
