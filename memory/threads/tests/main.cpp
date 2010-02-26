@@ -4,10 +4,15 @@
 
 using namespace std;
 
-template<class ThreadingPolicy>
-class Worker : public ThreadingPolicy
+template
+<
+	template <class, class> class ThreadingPolicy = DEFAULT_THREADING
+>
+class Worker
 {
 public:
+	//typedef ThreadingModel<MyAllocator, MutexPolicy> MyThreadingModel;
+
 	Worker() : result(0) {}
 	~Worker() {}
 
@@ -27,16 +32,6 @@ private:
 int main()
 {
 	cout << "Hello World!!" << endl;
-
-	typedef vector<Worker> Container;
-	Container workers;
-
-	for(Container::iterator it = workers.begin(); it != workers.end(); ++it)
-	{
-		it->Execute();
-	}
-
-
 	return 0;
 }
 
