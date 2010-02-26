@@ -1,0 +1,16 @@
+build/
+projects/smallobjectallocator/build/
+projects/smallobjectallocator_vcproj/Debug/
+projects/smallobjectallocator_vcproj/debug/
+*.o
+*.map
+*.swp
+*.ncb
+*.suo
+*.manifest
+*.obj
+*.idb
+*.pdb
+*.dep
+*.manifest.res
+*.vcproj.*.user
